@@ -1,12 +1,10 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>مؤسسة مصباح | الصفحة الرئيسية</title>
-  <meta name="robots" content="noindex, nofollow">
-  <meta name="description" content="مؤسسة مصباح — منظمة أمريكية غير ربحية تسعى إلى رفع الروح من خلال التعليم والخدمة المجتمعية وتعاليم أهل البيت عليهم السلام.">
-
+  <title>مصباح إنك. | رفع الأرواح من خلال الخدمة والإيمان</title>
+  <meta name="description" content="مصباح إنك. منظمة غير ربحية أمريكية تكرّس جهودها للتعليم والخدمة المجتمعية والتفاعل الثقافي، مستلهمةً من تعاليم أهل البيت عليهم السلام.">
   <link rel="canonical" href="https://misbah128.com/ar/">
   <link rel="alternate" hreflang="en"        href="https://misbah128.com/">
   <link rel="alternate" hreflang="ar"        href="https://misbah128.com/ar/">
@@ -15,13 +13,53 @@
   <link rel="alternate" hreflang="x-default" href="https://misbah128.com/">
 
   <!-- Open Graph -->
-  <meta property="og:type"        content="website">
-  <meta property="og:url"         content="https://misbah128.com/ar/">
-  <meta property="og:site_name"   content="مؤسسة مصباح">
-  <meta property="og:title"       content="مؤسسة مصباح | الصفحة الرئيسية">
-  <meta property="og:description" content="منظمة أمريكية غير ربحية تسعى إلى رفع الروح من خلال التعليم والخدمة المجتمعية وتعاليم أهل البيت عليهم السلام.">
-  <meta property="og:image"       content="https://misbah128.com/images/mosque-madinah-hero.jpg">
-  <meta property="og:locale"      content="ar_SA">
+  <meta property="og:type"         content="website">
+  <meta property="og:url"          content="https://misbah128.com/ar/">
+  <meta property="og:site_name"    content="Misbah Inc.">
+  <meta property="og:title"        content="مصباح إنك. | رفع الأرواح من خلال الخدمة والإيمان">
+  <meta property="og:description"  content="منظمة غير ربحية أمريكية تكرّس جهودها للتعليم والخدمة المجتمعية والتفاعل الثقافي، مستلهمةً من تعاليم أهل البيت عليهم السلام.">
+  <meta property="og:image"        content="https://misbah128.com/images/mosque-madinah-hero.jpg">
+  <meta property="og:image:width"  content="1200">
+  <meta property="og:image:height" content="675">
+  <meta property="og:locale"       content="ar_AR">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:title"       content="مصباح إنك. | رفع الأرواح من خلال الخدمة والإيمان">
+  <meta name="twitter:description" content="منظمة غير ربحية أمريكية تكرّس جهودها للتعليم والخدمة المجتمعية والتفاعل الثقافي، مستلهمةً من تعاليم أهل البيت عليهم السلام.">
+  <meta name="twitter:image"       content="https://misbah128.com/images/mosque-madinah-hero.jpg">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://misbah128.com/#website",
+        "url": "https://misbah128.com/",
+        "name": "Misbah Inc.",
+        "inLanguage": "ar",
+        "publisher": {"@id": "https://misbah128.com/#organization"}
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://misbah128.com/#organization",
+        "name": "Misbah Inc.",
+        "url": "https://misbah128.com/",
+        "logo": {"@type": "ImageObject", "url": "https://misbah128.com/assets/logo.png"},
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+1-888-471-7174",
+          "email": "info@misbah128.com",
+          "contactType": "customer service"
+        },
+        "address": {"@type": "PostalAddress", "addressCountry": "US"},
+        "nonprofitStatus": "Nonprofit501c3"
+      }
+    ]
+  }
+  </script>
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -29,111 +67,454 @@
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500;600&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="../assets/style.css">
-
   <style>
-    .lang-hero {
-      min-height: calc(100vh - 70px);
-      background: var(--dark-bg);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 3rem 2rem;
-    }
-    .lang-soon {
-      font-family: var(--font-display, 'Cinzel', serif);
-      font-size: clamp(2.5rem, 8vw, 5rem);
-      color: var(--gold, #c9a46b);
-      letter-spacing: 0.1em;
-      margin-bottom: 1rem;
-      direction: rtl;
-    }
-    .lang-desc {
-      font-size: 1.1rem;
-      color: rgba(255,255,255,0.7);
-      margin-bottom: 2.5rem;
-      direction: rtl;
+    .hero-title, .section-title, .featured-title, .mourning-desc,
+    .event-title, .featured-excerpt, .footer-tagline, .donation-intro {
       font-family: 'Amiri', Georgia, serif;
-      line-height: 1.8;
     }
-    .lang-back-btn {
-      display: inline-block;
-      padding: 0.9rem 2.5rem;
-      background: var(--gold, #c9a46b);
-      color: #1a2a1a;
-      text-decoration: none;
-      font-family: var(--font-display, 'Cinzel', serif);
-      font-size: 0.8rem;
-      letter-spacing: 0.12em;
-      border-radius: 4px;
-      font-weight: 700;
-      transition: opacity 0.2s;
+    .hero-eyebrow, .section-label, .event-type, .featured-cat {
+      font-family: 'Amiri', Georgia, serif;
+      letter-spacing: 0;
+      text-transform: none;
     }
-    .lang-back-btn:hover { opacity: 0.85; }
+    .chapters-label { font-family: 'Amiri', Georgia, serif; }
+    .footer-col h4 { font-family: 'Amiri', Georgia, serif; }
   </style>
 </head>
 <body>
 
+<!-- ═══════════════════════════════════════
+     NAVIGATION
+════════════════════════════════════════ -->
 <header class="site-header">
-  <nav class="nav-inner" role="navigation" aria-label="Main navigation">
-    <a href="/" class="nav-logo" aria-label="Misbah Inc. home">
+  <nav class="nav-inner" role="navigation" aria-label="التنقل الرئيسي">
+
+    <!-- Logo -->
+    <a href="/" class="nav-logo" aria-label="الصفحة الرئيسية لمصباح إنك.">
       <img src="../assets/logo.png" alt="Misbah" onerror="this.style.display='none'">
       <span class="nav-logo-text">MISBAH</span>
     </a>
-    <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
+
+    <!-- Hamburger (mobile) -->
+    <button class="hamburger" id="hamburger" aria-label="تبديل القائمة" aria-expanded="false" aria-controls="nav-links">
       <span></span><span></span><span></span>
     </button>
+
+    <!-- Links -->
     <div class="nav-links" id="nav-links">
-      <a href="/articles" class="nav-link">Articles</a>
-      <a href="https://library.misbah128.com" class="nav-link" target="_blank" rel="noopener">Misbah Library</a>
-      <a href="/hijri-calendar/" class="nav-link">Hijri Calendar</a>
-      <a href="/donate" class="nav-link nav-cta">Donate</a>
-      <a href="/about" class="nav-link">About Us</a>
-      <div class="lang-sw" aria-label="Language">
-        <a href="/" hreflang="en">EN</a>
+      <a href="/articles" class="nav-link">المقالات</a>
+
+      <a href="https://library.misbah128.com" class="nav-link" target="_blank" rel="noopener">
+        مكتبة مصباح
+      </a>
+
+      <div class="nav-dropdown">
+        <button class="nav-link" aria-haspopup="true" aria-expanded="false">
+          تواصل
+          <svg class="dropdown-arrow" viewBox="0 0 10 6" fill="none" aria-hidden="true">
+            <path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </button>
+        <div class="dropdown-panel" role="menu">
+          <a href="/connect#subscribe" class="dropdown-item" role="menuitem">اشترك</a>
+          <a href="/connect#contact"   class="dropdown-item" role="menuitem">اتصل بنا</a>
+        </div>
+      </div>
+
+      <a href="/hijri-calendar/" class="nav-link">التقويم الهجري</a>
+      <a href="/donate" class="nav-link nav-cta">تبرع</a>
+      <a href="/about"  class="nav-link">من نحن</a>
+
+      <!-- Language switcher -->
+      <div class="lang-sw" aria-label="اللغة">
+        <a href="/"    hreflang="en">EN</a>
         <a href="/ar/" hreflang="ar" class="active">AR</a>
         <a href="/fa/" hreflang="fa">FA</a>
         <a href="/ur/" hreflang="ur">UR</a>
       </div>
     </div>
+
   </nav>
 </header>
 
+
 <main>
-  <section class="lang-hero" aria-label="قريباً">
-    <p class="lang-soon">قريباً</p>
-    <p class="lang-desc">نعمل على ترجمة هذا الموقع إلى اللغة العربية</p>
-    <a href="/" class="lang-back-btn">→ النسخة الإنجليزية</a>
-  </section>
+
+<!-- ═══════════════════════════════════════
+     HERO
+════════════════════════════════════════ -->
+<section class="hero" aria-label="مرحباً">
+  <div class="hero-inner">
+
+    <img src="../assets/logo-barak.png" alt="اللهم بارك لمولانا صاحب الزمان" class="hero-logo-top" aria-hidden="true">
+
+    <p class="hero-eyebrow">أيامي تُقضى في خدمة عليّ عليه السلام</p>
+    <h1 class="hero-title">أهلاً بكم في <span class="accent">مصباح</span></h1>
+
+    <div class="hero-logos-pair" aria-hidden="true">
+      <img src="../assets/logo-ajjil.png"   alt="اللهم عجل لوليك الفرج"  class="hero-logo-pair">
+      <img src="../assets/logo-biymnih.png" alt="بيمنه رزق الورى"        class="hero-logo-pair hero-logo-dark">
+    </div>
+
+    <div class="divider" aria-hidden="true">
+      <span class="divider-gem">◆</span>
+    </div>
+
+    <!-- Social icons -->
+    <div class="social-row" aria-label="وسائل التواصل الاجتماعي">
+
+      <!-- WhatsApp -->
+      <div class="social-dropdown" id="wa-dropdown">
+        <button class="social-btn" aria-label="قنوات واتساب" aria-expanded="false" aria-controls="wa-menu">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.477 2 2 6.477 2 12c0 1.9.525 3.677 1.44 5.197L2 22l4.917-1.418A9.96 9.96 0 0 0 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm5.063 14.063c-.212.594-.84 1.088-1.5 1.231-.4.088-.92.158-2.674-.574-2.241-.92-3.683-3.189-3.795-3.338-.107-.146-.9-1.199-.9-2.287 0-1.088.572-1.624.775-1.847.203-.223.44-.278.587-.278l.42.008c.135.006.315-.051.493.376.183.44.622 1.521.677 1.631.054.11.09.238.018.386-.073.147-.11.238-.22.366l-.329.386c-.11.11-.224.228-.097.448.127.22.57.94 1.224 1.523.84.748 1.548.98 1.767 1.09.218.11.347.092.476-.055.129-.147.55-.644.697-.864.146-.22.293-.184.494-.11s1.278.603 1.497.713c.219.11.365.164.42.255.054.092.054.531-.128 1.043z"/></svg>
+        </button>
+        <div class="social-menu" id="wa-menu" role="menu">
+          <a href="https://chat.whatsapp.com/JnOFh4iSCem4b1Sg45RN5n" target="_blank" rel="noopener" role="menuitem">الإنجليزية</a>
+          <a href="https://chat.whatsapp.com/KQPKiHUDehJGOcf29I103Y" target="_blank" rel="noopener" role="menuitem">العربية</a>
+          <a href="https://chat.whatsapp.com/F8A1JzfPU9lAg1oIDeyvDP" target="_blank" rel="noopener" role="menuitem">الفارسية</a>
+          <a href="https://chat.whatsapp.com/BlDfLsmhWQiG6SVoa5LAz5" target="_blank" rel="noopener" role="menuitem">الأردية</a>
+        </div>
+      </div>
+
+      <!-- Telegram -->
+      <div class="social-dropdown" id="tg-dropdown">
+        <button class="social-btn" aria-label="قنوات تيليغرام" aria-expanded="false" aria-controls="tg-menu">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8l-1.69 7.96c-.12.57-.46.71-.93.44l-2.56-1.89-1.24 1.19c-.14.14-.25.25-.51.25l.18-2.6 4.68-4.23c.2-.18-.04-.28-.32-.1L7.2 14.19l-2.52-.79c-.55-.17-.56-.55.11-.81l9.84-3.79c.46-.17.86.11.71.8l-.7-.8z"/></svg>
+        </button>
+        <div class="social-menu" id="tg-menu" role="menu">
+          <a href="https://t.me/misbah110"    target="_blank" rel="noopener" role="menuitem">الفارسية</a>
+          <a href="https://t.me/misbah110_en" target="_blank" rel="noopener" role="menuitem">الإنجليزية</a>
+          <a href="https://t.me/misbah110_ar" target="_blank" rel="noopener" role="menuitem">العربية</a>
+          <a href="https://t.me/misbah110_ur" target="_blank" rel="noopener" role="menuitem">الأردية</a>
+        </div>
+      </div>
+
+      <!-- Instagram -->
+      <a href="https://www.instagram.com/misbah.110/" class="social-btn" aria-label="إنستغرام" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+      </a>
+
+      <!-- Facebook -->
+      <a href="#" class="social-btn" aria-label="فيسبوك" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+      </a>
+
+      <!-- X / Twitter -->
+      <a href="https://x.com/misbahinc110" class="social-btn" aria-label="إكس (تويتر)" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.748l7.73-8.835L1.254 2.25H8.08l4.259 5.631L18.244 2.25zM17.083 20.25h1.833L7.084 4.126H5.117L17.083 20.25z"/></svg>
+      </a>
+
+      <!-- YouTube -->
+      <a href="https://www.youtube.com/@Misbah110" class="social-btn" aria-label="يوتيوب" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+      </a>
+
+      <!-- TikTok -->
+      <a href="https://www.tiktok.com/@misbahinc110" class="social-btn" aria-label="تيك توك" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V9.05a8.16 8.16 0 0 0 4.77 1.52V7.12a4.85 4.85 0 0 1-1-.43z"/></svg>
+      </a>
+
+    </div><!-- /social-row -->
+  </div><!-- /hero-inner -->
+
+  <div class="hero-scroll" aria-hidden="true">
+    <span>انزل</span>
+    <svg viewBox="0 0 16 16"><path d="M8 3v10M4 9l4 4 4-4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════
+     PRAYER TIMES
+════════════════════════════════════════ -->
+<section class="prayer-section" id="prayer-times" aria-label="مواقيت الصلاة">
+  <div class="container">
+    <div class="prayer-bar">
+      <span class="prayer-bar-label">مواقيت الصلاة</span>
+      <button class="prayer-locate-btn" id="prayer-locate-btn" aria-label="تحديد موقعي لمواقيت الصلاة">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+        <span id="prayer-locate-label">موقعي</span>
+      </button>
+      <select class="prayer-method-select" id="prayer-method-select" aria-label="طريقة الحساب">
+        <option value="0"  selected>شيعة اثني عشرية (جعفري)</option>
+        <option value="7">جامعة طهران</option>
+        <option value="2">إيسنا (أمريكا الشمالية)</option>
+        <option value="3">رابطة العالم الإسلامي</option>
+        <option value="4">أم القرى (مكة المكرمة)</option>
+        <option value="1">كراتشي (HH)</option>
+      </select>
+      <span class="prayer-city" id="prayer-city"></span>
+      <div class="prayer-grid" id="prayer-grid" aria-live="polite">
+        <span class="prayer-placeholder">فعّل الموقع لرؤية مواقيت الصلاة</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════
+     SHIA CALENDAR
+════════════════════════════════════════ -->
+<section class="section calendar-section" aria-labelledby="cal-heading">
+  <div class="container">
+    <div class="calendar-header">
+      <span class="section-label">التقويم الشيعي</span>
+      <h2 class="section-title" id="cal-heading">ربيع الأول</h2>
+      <div class="divider" aria-hidden="true"><span class="divider-gem">◆</span></div>
+      <span class="calendar-month">هجري ١٤٤٨ · ربيع الأول</span>
+    </div>
+
+    <div class="events-grid">
+
+      <article class="event-card">
+        <div class="event-day">8<span class="event-greg">أغسطس ٢١</span></div>
+        <div class="event-body">
+          <p class="event-type">استشهاد</p>
+          <p class="event-title">استشهاد الإمام الحسن العسكري عليه السلام — بداية إمامة الإمام المهدي عجل الله فرجه</p>
+          <a href="/articles?tag=imam-hasan-al-askari" class="event-link">اقرأ المقال ←</a>
+        </div>
+      </article>
+
+      <article class="event-card">
+        <div class="event-day">9<span class="event-greg">أغسطس ٢٢</span></div>
+        <div class="event-body">
+          <p class="event-type">احتفال</p>
+          <p class="event-title">الغدير الثاني — بداية إمامة الإمام المهدي عجل الله فرجه</p>
+          <a href="/articles?tag=imam-mahdi" class="event-link">اقرأ المقال ←</a>
+        </div>
+      </article>
+
+      <article class="event-card">
+        <div class="event-day">10<span class="event-greg">أغسطس ٢٣</span></div>
+        <div class="event-body">
+          <p class="event-type">احتفال</p>
+          <p class="event-title">الزواج المبارك للنبي الأكرم صلى الله عليه وآله وسلم والسيدة خديجة عليها السلام</p>
+          <a href="/articles?tag=lady-khadijah" class="event-link">اقرأ المقال ←</a>
+        </div>
+      </article>
+
+      <article class="event-card">
+        <div class="event-day">17<span class="event-greg">أغسطس ٣٠</span></div>
+        <div class="event-body">
+          <p class="event-type">ذكرى الولادة</p>
+          <p class="event-title">ولادة النبي الأكرم محمد صلى الله عليه وآله وسلم والإمام الصادق عليه السلام</p>
+          <a href="/articles?tag=holy-prophet" class="event-link">اقرأ المقال ←</a>
+        </div>
+      </article>
+
+      <article class="event-card">
+        <div class="event-day">24<span class="event-greg">سبتمبر ٦</span></div>
+        <div class="event-body">
+          <p class="event-type">وصول</p>
+          <p class="event-title">وصول السيدة فاطمة المعصومة عليها السلام إلى مدينة قم</p>
+          <a href="/articles" class="event-link">اقرأ المقال ←</a>
+        </div>
+      </article>
+
+      <article class="event-card">
+        <div class="event-day">26<span class="event-greg">سبتمبر ٨</span></div>
+        <div class="event-body">
+          <p class="event-type">هجرة</p>
+          <p class="event-title">ليلة المبيت — بداية هجرة النبي الأكرم من مكة المكرمة إلى المدينة المنورة</p>
+          <a href="/articles?tag=holy-prophet" class="event-link">اقرأ المقال ←</a>
+        </div>
+      </article>
+
+    </div><!-- /events-grid -->
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════
+     FEATURED ARTICLE
+════════════════════════════════════════ -->
+<section class="section featured-section" aria-labelledby="feat-heading">
+  <div class="container">
+    <span class="section-label text-center">مقال جديد في مصباح</span>
+    <h2 class="section-title dark text-center" id="feat-heading">المقال المميز</h2>
+    <div class="divider" aria-hidden="true"><span class="divider-gem">◆</span></div>
+
+    <article class="featured-card">
+      <div class="featured-img">
+        <img src="../images/lady-khadijah-article.jpg" alt="السيدة خديجة الكبرى أم المؤمنين" loading="lazy" decoding="async">
+      </div>
+      <div class="featured-body">
+        <span class="featured-cat">السيدة خديجة عليها السلام</span>
+        <h3 class="featured-title">السيدة خديجة الكبرى عليها السلام، أمّ المؤمنين</h3>
+        <p class="featured-excerpt">
+          كانت السيدة خديجة الكبرى عليها السلام مصدر راحة وقوة للنبي الأكرم صلى الله عليه وآله وسلم، وأول من آمنت به من النساء، وداعمة مخلصة للإسلام. أفنت ثروتها وحياتها في خدمة رسالة النبي، وكانت أمّ السيدة فاطمة الزهراء عليها السلام، وتلقّت تحيات الله عز وجل بواسطة جبريل، وحظيت بمكانة فريدة كرّمها النبي وأئمة أهل البيت عليهم السلام.
+        </p>
+        <a href="/ar/articles/rabi_al_awwal/" class="btn btn-gold">اقرأ المزيد</a>
+      </div>
+    </article>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════
+     MORNING & EVENING MOURNING
+════════════════════════════════════════ -->
+<section class="section mourning-section" aria-labelledby="mourning-heading">
+  <div class="container text-center">
+    <span class="section-label">سلسلة مميزة</span>
+    <h2 class="section-title" id="mourning-heading">العزاء صباحاً ومساءً</h2>
+    <div class="divider" aria-hidden="true"><span class="divider-gem">◆</span></div>
+
+    <p class="mourning-desc">
+      سلسلة تأملية مستوحاة من زيارة الناحية المقدسة، تستكشف حزن الإمام المهدي عجل الله فرجه على الإمام الحسين عليه السلام، صباحاً ومساءً.
+    </p>
+
+    <p class="chapters-label">اختر فصلاً</p>
+    <div class="chapters-row" role="list">
+      <a href="/articles/morning-and-evening-mourning/1"  class="ch-btn" role="listitem" aria-label="الفصل الأول">١</a>
+      <a href="/articles/morning-and-evening-mourning/2"  class="ch-btn" role="listitem" aria-label="الفصل الثاني">٢</a>
+      <a href="/articles/morning-and-evening-mourning/3"  class="ch-btn" role="listitem" aria-label="الفصل الثالث">٣</a>
+      <a href="/articles/morning-and-evening-mourning/4"  class="ch-btn" role="listitem" aria-label="الفصل الرابع">٤</a>
+      <a href="/articles/morning-and-evening-mourning/5"  class="ch-btn" role="listitem" aria-label="الفصل الخامس">٥</a>
+      <a href="/articles/morning-and-evening-mourning/6"  class="ch-btn" role="listitem" aria-label="الفصل السادس">٦</a>
+      <a href="/articles/morning-and-evening-mourning/7"  class="ch-btn" role="listitem" aria-label="الفصل السابع">٧</a>
+      <a href="/articles/morning-and-evening-mourning/8"  class="ch-btn" role="listitem" aria-label="الفصل الثامن">٨</a>
+      <a href="/articles/morning-and-evening-mourning/9"  class="ch-btn" role="listitem" aria-label="الفصل التاسع">٩</a>
+      <a href="/articles/morning-and-evening-mourning/10" class="ch-btn" role="listitem" aria-label="الفصل العاشر">١٠</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════
+     YOUTUBE LATEST
+════════════════════════════════════════ -->
+<section class="section youtube-section" aria-labelledby="yt-heading">
+  <div class="container">
+    <span class="section-label text-center">أحدث مقاطع يوتيوب</span>
+    <h2 class="section-title text-center" id="yt-heading">شاهد</h2>
+    <div class="divider" aria-hidden="true"><span class="divider-gem">◆</span></div>
+
+    <div class="video-wrap">
+      <div class="video-placeholder">
+        <svg viewBox="0 0 24 24" fill="rgba(201,164,107,0.4)" aria-hidden="true">
+          <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+        </svg>
+        <span>سيظهر مقطع الفيديو هنا</span>
+        <a href="https://www.youtube.com/@Misbah110" target="_blank" rel="noopener" class="btn btn-outline">زر قناتنا</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════
+     DONATION WIDGET
+════════════════════════════════════════ -->
+<section class="section donation-section" aria-labelledby="donate-heading">
+  <div class="container">
+    <span class="section-label text-center">ادعم مهمتنا</span>
+    <h2 class="section-title dark text-center" id="donate-heading">كرمكم يُحدث فارقاً</h2>
+    <div class="divider" aria-hidden="true"><span class="divider-gem">◆</span></div>
+
+    <p class="donation-intro">
+      تبرعكم لمصباح إنك. هو عمل مقدس من الرحمة، يُساهم في تقديم وجبات غذائية مغذية، وترجمة الكتب، ونشر تعاليم أهل البيت عليهم السلام.
+    </p>
+
+    <div class="donation-card" role="form" aria-labelledby="donate-heading">
+
+      <div class="freq-tabs" role="tablist" aria-label="تكرار التبرع">
+        <button class="freq-tab active" role="tab" aria-selected="true">مرة واحدة</button>
+        <button class="freq-tab"        role="tab" aria-selected="false">شهري</button>
+        <button class="freq-tab"        role="tab" aria-selected="false">سنوي</button>
+      </div>
+
+      <div class="amount-grid" role="group" aria-label="اختر المبلغ">
+        <button class="amt-btn" data-amount="10"   aria-label="10 دولار">$10</button>
+        <button class="amt-btn" data-amount="20"   aria-label="20 دولار">$20</button>
+        <button class="amt-btn" data-amount="30"   aria-label="30 دولار">$30</button>
+        <button class="amt-btn" data-amount="50"   aria-label="50 دولار">$50</button>
+        <button class="amt-btn" data-amount="100"  aria-label="100 دولار">$100</button>
+        <button class="amt-btn" data-amount="200"  aria-label="200 دولار">$200</button>
+        <button class="amt-btn" data-amount="500"  aria-label="500 دولار">$500</button>
+        <button class="amt-btn" data-amount="1000" aria-label="1000 دولار">$1,000</button>
+      </div>
+
+      <input
+        type="number"
+        id="custom-amount"
+        class="custom-amount"
+        placeholder="مبلغ آخر ($)"
+        min="1"
+        aria-label="أدخل مبلغاً مخصصاً"
+      >
+
+      <a href="/donate" id="donate-btn" class="donate-btn" role="button">تبرع بـ٥٠ دولار — مرة واحدة</a>
+
+      <p class="donation-note">
+        تبرع عبر <a href="https://www.paypal.com" target="_blank" rel="noopener">باي بال</a> أو
+        زيل على <strong>misbahinc128@gmail.com</strong> · ١٠٠٪ تذهب مباشرة إلى القضية
+        <br>
+        <span class="tax-badge">معفى من الضريبة ٥٠١(ج)(٣) · رقم EIN متاح</span>
+      </p>
+    </div>
+  </div>
+</section>
+
 </main>
 
+
+<!-- ═══════════════════════════════════════
+     FOOTER
+════════════════════════════════════════ -->
 <footer class="site-footer" role="contentinfo">
   <div class="container">
     <div class="footer-grid">
+
+      <!-- Brand -->
       <div class="footer-brand">
         <span class="nav-logo-text">MISBAH</span>
-        <p class="footer-tagline">A U.S.-based nonprofit uplifting souls through education, community service, and the teachings of the Ahlul Bayt (p).</p>
+        <p class="footer-tagline">
+          منظمة غير ربحية أمريكية ترفع الأرواح من خلال التعليم والخدمة المجتمعية وتعاليم أهل البيت عليهم السلام.
+        </p>
+        <div class="footer-social" aria-label="وسائل التواصل الاجتماعي">
+          <a href="#" class="social-btn" aria-label="واتساب"><svg viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.477 2 12c0 1.9.525 3.677 1.44 5.197L2 22l4.917-1.418A9.96 9.96 0 0 0 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm5.063 14.063c-.212.594-.84 1.088-1.5 1.231-.4.088-.92.158-2.674-.574-2.241-.92-3.683-3.189-3.795-3.338-.107-.146-.9-1.199-.9-2.287 0-1.088.572-1.624.775-1.847.203-.223.44-.278.587-.278l.42.008c.135.006.315-.051.493.376.183.44.622 1.521.677 1.631.054.11.09.238.018.386-.073.147-.11.238-.22.366l-.329.386c-.11.11-.224.228-.097.448.127.22.57.94 1.224 1.523.84.748 1.548.98 1.767 1.09.218.11.347.092.476-.055.129-.147.55-.644.697-.864.146-.22.293-.184.494-.11s1.278.603 1.497.713c.219.11.365.164.42.255.054.092.054.531-.128 1.043z"/></svg></a>
+          <a href="#" class="social-btn" aria-label="تيليغرام"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8l-1.69 7.96c-.12.57-.46.71-.93.44l-2.56-1.89-1.24 1.19c-.14.14-.25.25-.51.25l.18-2.6 4.68-4.23c.2-.18-.04-.28-.32-.1L7.2 14.19l-2.52-.79c-.55-.17-.56-.55.11-.81l9.84-3.79c.46-.17.86.11.71.8l-.7-.8z"/></svg></a>
+          <a href="#" class="social-btn" aria-label="إنستغرام"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg></a>
+          <a href="#" class="social-btn" aria-label="فيسبوك"><svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+          <a href="#" class="social-btn" aria-label="يوتيوب"><svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+        </div>
       </div>
+
+      <!-- Pages -->
       <div class="footer-col">
-        <h4>Pages</h4>
-        <a href="/articles">Articles</a>
-        <a href="https://library.misbah128.com" target="_blank" rel="noopener">Misbah Library</a>
-        <a href="/donate">Donate</a>
-        <a href="/about">About Us</a>
+        <h4>الصفحات</h4>
+        <a href="/articles">المقالات</a>
+        <a href="https://library.misbah128.com" target="_blank" rel="noopener">مكتبة مصباح</a>
+        <a href="/donate">تبرع</a>
+        <a href="/connect">تواصل</a>
+        <a href="/about">من نحن</a>
       </div>
+
+      <!-- Contact -->
       <div class="footer-col">
-        <h4>Contact</h4>
+        <h4>التواصل</h4>
         <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
           <a href="mailto:info@misbah128.com">info@misbah128.com</a>
         </div>
-        <div class="footer-contact-item">+1 (888) 471-7174</div>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+          <span>+1 (888) 471-7174</span>
+        </div>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          <span>هيوستن · ديترويت · سان فرانسيسكو</span>
+        </div>
       </div>
-    </div>
+
+    </div><!-- /footer-grid -->
+
     <hr class="footer-divider">
+
     <div class="footer-bottom">
-      <span>&copy; 2026 Misbah Inc. All rights reserved.</span>
-      <span>501(c)(3) Nonprofit</span>
+      <span>© ٢٠٢٦ مصباح إنك. جميع الحقوق محفوظة.</span>
+      <span>منظمة غير ربحية ٥٠١(ج)(٣) · رقم EIN متاح · <a href="https://www.benevity.com" target="_blank" rel="noopener">مدرجة على بينيفيتي</a></span>
     </div>
   </div>
 </footer>
