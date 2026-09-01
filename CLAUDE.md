@@ -1,4 +1,4 @@
-# CLAUDE.md — Misbah Inc. Website
+﻿# CLAUDE.md — Misbah Inc. Website
 
 Claude Code instructions for working with this repository.
 
@@ -6,11 +6,11 @@ Claude Code instructions for working with this repository.
 
 ## Project Overview
 
-**misbah-inc.com** — static HTML/CSS/JS website for Misbah Inc., a U.S.-based Shia Islamic nonprofit.
+**misbah128.com** — static HTML/CSS/JS website for Misbah Inc., a U.S.-based Shia Islamic nonprofit.
 
 - Hosted: **GitHub Pages** (branch: `main`, root folder)
 - CDN/DNS: **Cloudflare** (proxied, SSL Full)
-- Custom domain: **misbah-inc.com** (CNAME file at repo root)
+- Custom domain: **misbah128.com** (CNAME file at repo root)
 - No build step, no framework — pure static files
 
 ---
@@ -108,7 +108,7 @@ Every page must have:
 - Homepage / general: `mosque-madinah-hero.jpg` (1200×675)
 - Article pages: use the article's own image
 
-**Organization JSON-LD** (`@id: https://misbah-inc.com/#organization`) is referenced by all pages — define it fully only on the homepage, reference it elsewhere.
+**Organization JSON-LD** (`@id: https://misbah128.com/#organization`) is referenced by all pages — define it fully only on the homepage, reference it elsewhere.
 
 ---
 
@@ -178,7 +178,7 @@ Every page must have:
 - HTTPS enforced via GitHub Pages setting
 
 ### Cloudflare
-- DNS: CNAME `misbah-inc.com` → `<github-username>.github.io` (proxied)
+- DNS: CNAME `misbah128.com` → `<github-username>.github.io` (proxied)
 - SSL mode: **Full** (not Flexible, not Full Strict)
 - Page rules / caching: static assets cached at edge
 - After pointing DNS to GitHub Pages, enable "Enforce HTTPS" in GitHub Pages settings
