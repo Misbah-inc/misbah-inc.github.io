@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hijri Calendar | Misbah Inc.</title>
+  <meta name="description" content="Islamic Hijri calendar with Shia events, Gregorian date mapping, and monthly navigation.">
+
+  <!-- Canonical + hreflang -->
+  <link rel="canonical" href="https://misbah-inc.com/hijri-calendar/">
+  <link rel="alternate" hreflang="en"        href="https://misbah-inc.com/hijri-calendar/">
+  <link rel="alternate" hreflang="x-default" href="https://misbah-inc.com/hijri-calendar/">
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="website">
+  <meta property="og:url"         content="https://misbah-inc.com/hijri-calendar/">
+  <meta property="og:site_name"   content="Misbah Inc.">
+  <meta property="og:title"       content="Hijri Calendar | Misbah Inc.">
+  <meta property="og:description" content="Islamic Hijri calendar with Shia events, Gregorian date mapping, and monthly navigation.">
+  <meta property="og:image"       content="https://misbah-inc.com/images/mosque-madinah-hero.jpg">
+  <meta property="og:locale"      content="en_US">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:title"       content="Hijri Calendar | Misbah Inc.">
+  <meta name="twitter:description" content="Islamic Hijri calendar with Shia events, Gregorian date mapping, and monthly navigation.">
+  <meta name="twitter:image"       content="https://misbah-inc.com/images/mosque-madinah-hero.jpg">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://misbah-inc.com/hijri-calendar/#webpage",
+        "url": "https://misbah-inc.com/hijri-calendar/",
+        "name": "Hijri Calendar",
+        "description": "Islamic Hijri calendar with Shia events, Gregorian date mapping, and monthly navigation.",
+        "inLanguage": "en",
+        "publisher": {"@id": "https://misbah-inc.com/#organization"},
+        "isPartOf": {"@id": "https://misbah-inc.com/#website"}
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "name": "Home",           "item": "https://misbah-inc.com/"},
+          {"@type": "ListItem", "position": 2, "name": "Hijri Calendar", "item": "https://misbah-inc.com/hijri-calendar/"}
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/style.css">
+  <style>
+    body { background: var(--dark-bg); }
+
+    /* ── Page wrapper ─────────────────────────────── */
+    .hcal-page {
+      background: var(--dark-bg);
+      min-height: 100vh;
+      padding-top: var(--nav-h);
+      color: var(--white);
+    }
+
+    /* ── Month navigation header ──────────────────── */
+    .hcal-nav-bar {
+      background: linear-gradient(180deg, var(--nav-bg) 0%, #162516 100%);
+      padding: 2.5rem 0 2rem;
+      text-align: center;
+    }
+
+    .hcal-nav-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    .hcal-arrow {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(201,164,107,0.35);
+      color: var(--gold);
+      width: 44px; height: 44px;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer;
+      font-size: 1.4rem;
+      line-height: 1;
+      font-family: inherit;
+      transition: background 0.2s, border-color 0.2s;
+      flex-shrink: 0;
+    }
+    .hcal-arrow:hover { background: rgba(201,164,107,0.14); border-color: var(--gold); }
+
+    .hcal-month-info { text-align: center; }
+    .hcal-month-en {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(1.6rem, 4vw, 2.6rem);
+      font-weight: 700;
+      color: var(--white);
+      letter-spacing: 0.06em;
+      line-height: 1;
+    }
+    .hcal-month-ar {
+      font-size: clamp(1.1rem, 2.5vw, 1.6rem);
+      color: var(--gold);
+      direction: rtl;
+      margin-top: 0.3rem;
+      line-height: 1.3;
+    }
+    .hcal-month-range {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.72rem;
+      color: rgba(255,255,255,0.38);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-top: 0.5rem;
+    }
+
+    /* ── Calendar grid ────────────────────────────── */
+    .hcal-grid-section { padding: 2rem 0 1rem; }
+
+    .hcal-weekdays {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 3px;
+      margin-bottom: 3px;
+    }
+    .hcal-wd {
+      text-align: center;
+      font-family: 'Cinzel', serif;
+      font-size: 0.62rem;
+      letter-spacing: 0.1em;
+      color: var(--gold);
+      text-transform: uppercase;
+      padding: 0.5rem 0;
+    }
+    .hcal-wd.weekend { color: rgba(201,164,107,0.5); }
+
+    .hcal-grid {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 3px;
+    }
+
+    .hcal-cell {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.05);
+      border-radius: 8px;
+      padding: 0.55rem 0.5rem 0.45rem;
+      min-height: 96px;
+      cursor: default;
+      transition: background 0.18s, border-color 0.18s;
+      position: relative;
+    }
+    .hcal-cell:hover:not(.other-month) { background: rgba(255,255,255,0.07); border-color: rgba(201,164,107,0.18); }
+    .hcal-cell.other-month { opacity: 0.22; pointer-events: none; }
+    .hcal-cell.today {
+      border-color: var(--gold) !important;
+      background: rgba(201,164,107,0.09) !important;
+    }
+    .hcal-cell.has-event { border-color: rgba(255,255,255,0.09); }
+
+    .hcal-hijri {
+      font-family: 'Cinzel', serif;
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--white);
+      line-height: 1;
+    }
+    .hcal-cell.today .hcal-hijri { color: var(--gold); }
+
+    .hcal-greg {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.62rem;
+      color: rgba(255,255,255,0.3);
+      margin-top: 0.15rem;
+    }
+
+    .hcal-dots {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 3px;
+      margin-top: 0.35rem;
+    }
+    .hcal-dot {
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+    .hcal-dot.martyrdom   { background: #c0423a; }
+    .hcal-dot.birth       { background: #3fa98a; }
+    .hcal-dot.celebration { background: var(--gold); }
+    .hcal-dot.commemoration { background: #8a77cc; }
+
+    .hcal-event-label {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.58rem;
+      line-height: 1.35;
+      margin-top: 0.3rem;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .hcal-event-label.martyrdom   { color: #d96060; }
+    .hcal-event-label.birth       { color: #5ac4a8; }
+    .hcal-event-label.celebration { color: var(--gold); }
+    .hcal-event-label.commemoration { color: #a898e0; }
+
+    /* ── Events list ──────────────────────────────── */
+    .hcal-events-section {
+      padding: 2rem 0 5rem;
+      border-top: 1px solid rgba(255,255,255,0.06);
+      margin-top: 1.5rem;
+    }
+
+    .hcal-events-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .hcal-events-heading {
+      font-family: 'Cinzel', serif;
+      font-size: 0.72rem;
+      letter-spacing: 0.14em;
+      color: var(--gold);
+      text-transform: uppercase;
+    }
+
+    .hcal-legend {
+      display: flex;
+      gap: 1.2rem;
+      flex-wrap: wrap;
+    }
+    .hcal-legend-item {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.68rem;
+      color: rgba(255,255,255,0.4);
+    }
+    .hcal-legend-dot {
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    .hcal-event-list { display: flex; flex-direction: column; gap: 0.6rem; }
+
+    .hcal-event-card {
+      display: flex;
+      align-items: stretch;
+      gap: 0;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 10px;
+      overflow: hidden;
+      transition: background 0.2s;
+    }
+    .hcal-event-card:hover { background: rgba(255,255,255,0.055); }
+
+    .hcal-event-stripe {
+      width: 4px;
+      flex-shrink: 0;
+    }
+    .hcal-event-stripe.martyrdom   { background: #c0423a; }
+    .hcal-event-stripe.birth       { background: #3fa98a; }
+    .hcal-event-stripe.celebration { background: var(--gold); }
+    .hcal-event-stripe.commemoration { background: #8a77cc; }
+
+    .hcal-event-inner {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 0.8rem 1rem;
+      flex: 1;
+    }
+
+    .hcal-event-date {
+      text-align: center;
+      min-width: 40px;
+      flex-shrink: 0;
+    }
+    .hcal-event-date .hd {
+      font-family: 'Cinzel', serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1;
+    }
+    .hcal-event-date .gd {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.6rem;
+      color: rgba(255,255,255,0.35);
+      letter-spacing: 0.04em;
+      margin-top: 0.2rem;
+      white-space: nowrap;
+    }
+
+    .hcal-event-sep {
+      width: 1px;
+      background: rgba(255,255,255,0.08);
+      align-self: stretch;
+      flex-shrink: 0;
+      margin: 0.5rem 0;
+    }
+
+    .hcal-event-text {
+      flex: 1;
+      padding-left: 0.75rem;
+    }
+    .hcal-event-title {
+      font-size: 0.88rem;
+      font-weight: 500;
+      color: var(--white);
+      line-height: 1.45;
+    }
+    .hcal-event-type-label {
+      font-size: 0.65rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-top: 0.2rem;
+    }
+    .hcal-event-type-label.martyrdom   { color: #c0423a; }
+    .hcal-event-type-label.birth       { color: #3fa98a; }
+    .hcal-event-type-label.celebration { color: var(--gold); }
+    .hcal-event-type-label.commemoration { color: #8a77cc; }
+
+    .hcal-no-events {
+      color: rgba(255,255,255,0.25);
+      font-size: 0.85rem;
+      padding: 1rem 0;
+    }
+
+    /* ── Mobile ───────────────────────────────────── */
+    @media (max-width: 640px) {
+      .hcal-cell { min-height: 60px; padding: 0.4rem 0.3rem; }
+      .hcal-hijri { font-size: 0.95rem; }
+      .hcal-greg  { font-size: 0.55rem; }
+      .hcal-wd    { font-size: 0.55rem; padding: 0.35rem 0; }
+      .hcal-dot   { width: 5px; height: 5px; }
+      .hcal-event-inner { padding: 0.65rem 0.75rem; gap: 0.75rem; }
+      .hcal-event-date .hd { font-size: 1.2rem; }
+      .hcal-legend { gap: 0.75rem; }
+    }
+    @media (max-width: 420px) {
+      .hcal-wd span.wd-full { display: none; }
+      .hcal-wd span.wd-short { display: inline; }
+    }
+    @media (min-width: 421px) {
+      .hcal-wd span.wd-short { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<header class="site-header">
+  <nav class="nav-inner" role="navigation" aria-label="Main navigation">
+    <a href="/" class="nav-logo" aria-label="Misbah Inc. home">
+      <img src="../assets/logo.png" alt="Misbah" onerror="this.style.display='none'">
+      <span class="nav-logo-text">MISBAH</span>
+    </a>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-links" id="nav-links">
+      <a href="/articles" class="nav-link">Articles</a>
+      <a href="https://library.misbah-inc.com" class="nav-link" target="_blank" rel="noopener">Misbah Library</a>
+      <div class="nav-dropdown">
+        <button class="nav-link" aria-haspopup="true" aria-expanded="false">
+          Connect
+          <svg class="dropdown-arrow" viewBox="0 0 10 6" fill="none" aria-hidden="true">
+            <path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </button>
+        <div class="dropdown-panel" role="menu">
+          <a href="/connect#subscribe" class="dropdown-item" role="menuitem">Subscribe</a>
+          <a href="/connect#contact"   class="dropdown-item" role="menuitem">Contact Us</a>
+        </div>
+      </div>
+      <a href="/hijri-calendar/" class="nav-link" style="color:var(--gold)">Hijri Calendar</a>
+      <a href="/donate" class="nav-link nav-cta">Donate</a>
+      <a href="/about"  class="nav-link">About Us</a>
+      <div class="lang-sw" aria-label="Language">
+        <a href="/"    hreflang="en">EN</a>
+        <a href="/ar/" hreflang="ar">AR</a>
+        <a href="/fa/" hreflang="fa">FA</a>
+        <a href="/ur/" hreflang="ur">UR</a>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main class="hcal-page">
+
+  <!-- Month nav header -->
+  <div class="hcal-nav-bar">
+    <div class="hcal-nav-row">
+      <button class="hcal-arrow" id="cal-prev" aria-label="Previous month">&#8249;</button>
+      <div class="hcal-month-info">
+        <div class="hcal-month-en" id="cal-month-en">RABI AL-AWWAL</div>
+        <div class="hcal-month-ar" id="cal-month-ar">رَبِيعُ الأَوَّل</div>
+        <div class="hcal-month-range" id="cal-month-range">HIJRI 1448</div>
+      </div>
+      <button class="hcal-arrow" id="cal-next" aria-label="Next month">&#8250;</button>
+    </div>
+  </div>
+
+  <div class="container">
+
+    <!-- Calendar grid -->
+    <div class="hcal-grid-section">
+      <div class="hcal-weekdays">
+        <div class="hcal-wd weekend"><span class="wd-full">Sunday</span><span class="wd-short">Su</span></div>
+        <div class="hcal-wd"><span class="wd-full">Monday</span><span class="wd-short">Mo</span></div>
+        <div class="hcal-wd"><span class="wd-full">Tuesday</span><span class="wd-short">Tu</span></div>
+        <div class="hcal-wd"><span class="wd-full">Wednesday</span><span class="wd-short">We</span></div>
+        <div class="hcal-wd"><span class="wd-full">Thursday</span><span class="wd-short">Th</span></div>
+        <div class="hcal-wd"><span class="wd-full">Friday</span><span class="wd-short">Fr</span></div>
+        <div class="hcal-wd weekend"><span class="wd-full">Saturday</span><span class="wd-short">Sa</span></div>
+      </div>
+      <div class="hcal-grid" id="hcal-grid"></div>
+    </div>
+
+    <!-- Events list -->
+    <div class="hcal-events-section">
+      <div class="hcal-events-top">
+        <div class="hcal-events-heading" id="events-heading">Events This Month</div>
+        <div class="hcal-legend">
+          <div class="hcal-legend-item"><div class="hcal-legend-dot" style="background:#c0423a"></div>Martyrdom / Tragedy</div>
+          <div class="hcal-legend-item"><div class="hcal-legend-dot" style="background:#3fa98a"></div>Birth / Anniversary</div>
+          <div class="hcal-legend-item"><div class="hcal-legend-dot" style="background:#c9a46b"></div>Celebration</div>
+          <div class="hcal-legend-item"><div class="hcal-legend-dot" style="background:#8a77cc"></div>Commemoration</div>
+        </div>
+      </div>
+      <div class="hcal-event-list" id="hcal-event-list"></div>
+    </div>
+
+  </div>
+</main>
+
+<script src="../assets/script.js"></script>
+<script>
+/* ─────────────────────────────────────────────────────────
+   HIJRI CALENDAR — data + engine
+───────────────────────────────────────────────────────── */
+
+const MONTHS_EN = ['','Muharram','Safar','Rabi al-Awwal','Rabi al-Thani',
+  'Jumada al-Ula',"Jumada al-Akhirah",'Rajab',"Sha'ban",'Ramadan',
+  'Shawwal',"Dhu al-Qi'dah",'Dhu al-Hijjah'];
+
+const MONTHS_AR = ['','مُحَرَّم','صَفَر','رَبِيعُ الأَوَّل','رَبِيعُ الآخِر',
+  'جُمَادَى الأُولَى','جُمَادَى الآخِرَة','رَجَب','شَعْبَان','رَمَضَان',
+  'شَوَّال','ذُو القَعْدَة','ذُو الحِجَّة'];
+
+const GREG_M = ['','Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+
+const EVENTS = {
+  1: {
+    1:  { t:'Islamic New Year — 1st of Muharram', type:'celebration' },
+    10: { t:'Day of Ashura — Martyrdom of Imam Husayn (p) & Companions in Karbala', type:'martyrdom' },
+  },
+  2: {
+    7:  { t:"Martyrdom of Imam Ali ibn Musa al-Rida (p)", type:'martyrdom' },
+    20: { t:'Arbaeen — 40th Day of Imam Husayn (p)', type:'commemoration' },
+    28: { t:"Martyrdom of Prophet Muhammad (s) & Imam Hasan al-Mujtaba (p)", type:'martyrdom' },
+  },
+  3: {
+    8:  { t:'Martyrdom of Imam Hasan al-Askari (p)', type:'martyrdom' },
+    9:  { t:"Beginning of the Imamate of Imam Mahdi (a.j.) — Second Ghadir", type:'celebration' },
+    10: { t:"Marriage of Lady Khadijah (p) & Prophet Muhammad (s)", type:'celebration' },
+    17: { t:"Birth of Prophet Muhammad (s) & Imam Jafar al-Sadiq (p)", type:'birth' },
+    24: { t:"Arrival of Lady Fatima al-Ma'suma (p) in Qom", type:'commemoration' },
+    26: { t:"Laylat al-Mabit — Imam Ali (p) slept in the Prophet's place", type:'commemoration' },
+  },
+  4: {
+    11: { t:'Birth of Imam Hasan al-Askari (p)', type:'birth' },
+  },
+  5: {
+    5:  { t:'Birth of Lady Zaynab bint Ali (p)', type:'birth' },
+    13: { t:"Birth of Imam Ali ibn Abi Talib (p) inside the Ka'bah", type:'birth' },
+  },
+  6: {
+    3:  { t:'Martyrdom of Lady Fatima al-Zahra (p)', type:'martyrdom' },
+    20: { t:'Birth of Lady Fatima al-Zahra (p)', type:'birth' },
+  },
+  7: {
+    1:  { t:"First of Rajab — Highly recommended fasting", type:'celebration' },
+    3:  { t:'Birth of Imam Ali al-Hadi (p)', type:'birth' },
+    10: { t:'Birth of Imam Muhammad al-Baqir (p)', type:'birth' },
+    25: { t:'Martyrdom of Imam Musa al-Kadhim (p)', type:'martyrdom' },
+    27: { t:"Mi'raj — Night Journey & Ascension of the Prophet (s)", type:'celebration' },
+  },
+  8: {
+    3:  { t:'Birth of Imam Husayn ibn Ali (p)', type:'birth' },
+    4:  { t:'Birth of Abul Fadl al-Abbas (p)', type:'birth' },
+    5:  { t:'Birth of Imam Ali ibn al-Husayn, Zayn al-Abidin (p)', type:'birth' },
+    15: { t:"Birth of Imam Mahdi (a.j.) — Night of Mid-Sha'ban", type:'birth' },
+  },
+  9: {
+    1:  { t:'Beginning of the Holy Month of Ramadan', type:'celebration' },
+    19: { t:"First Night of Qadr — Imam Ali (p) struck by Ibn Muljam", type:'martyrdom' },
+    21: { t:'Martyrdom of Imam Ali ibn Abi Talib, Commander of the Faithful (p)', type:'martyrdom' },
+    23: { t:'Night of Qadr (Laylat al-Qadr)', type:'celebration' },
+    27: { t:'Night of Qadr — alternate narration', type:'celebration' },
+  },
+  10: {
+    1:  { t:'Eid al-Fitr — End of Ramadan', type:'celebration' },
+    25: { t:'Martyrdom of Imam Jafar al-Sadiq (p)', type:'martyrdom' },
+  },
+  11: {
+    1:  { t:"Birth of Lady Fatima al-Ma'suma (p)", type:'birth' },
+    11: { t:'Birth of Imam Ali al-Rida (p)', type:'birth' },
+  },
+  12: {
+    7:  { t:'Martyrdom of Imam Muhammad al-Baqir (p)', type:'martyrdom' },
+    9:  { t:'Day of Arafah', type:'celebration' },
+    10: { t:'Eid al-Adha — Feast of Sacrifice', type:'celebration' },
+    18: { t:"Eid al-Ghadir — Prophet declared Imam Ali (p) as successor", type:'celebration' },
+    24: { t:'Day of Mubahala', type:'celebration' },
+    25: { t:"Dahw al-Ard — Day the Earth was spread", type:'celebration' },
+  },
+};
+
+/* ── Conversion ──────────────────────────────────────── */
+function gToH(gy, gm, gd) {
+  let jd = Math.floor((1461*(gy+4800+Math.floor((gm-14)/12)))/4)
+          +Math.floor((367*(gm-2-12*Math.floor((gm-14)/12)))/12)
+          -Math.floor((3*Math.floor((gy+4900+Math.floor((gm-14)/12))/100))/4)
+          +gd-32075;
+  let l=jd-1948440+10632;
+  let n=Math.floor((l-1)/10631);
+  l=l-10631*n+354;
+  let j=Math.floor((10985-l)/5316)*Math.floor((50*l)/17719)+Math.floor(l/5670)*Math.floor((43*l)/15238);
+  l=l-Math.floor((30-j)/15)*Math.floor((17719*j)/50)-Math.floor(j/16)*Math.floor((15238*j)/43)+29;
+  return { y:30*n+j-30, m:Math.floor((24*l)/709), d:l-Math.floor((709*Math.floor((24*l)/709))/24) };
+}
+
+function hToG(hy, hm, hd) {
+  let jd=Math.floor((11*hy+3)/30)+354*hy+30*hm-Math.floor((hm-1)/2)+hd+1948440-385;
+  let l=jd+68569;
+  const n=Math.floor((4*l)/146097);
+  l=l-Math.floor((146097*n+3)/4);
+  const i=Math.floor((4000*(l+1))/1461001);
+  l=l-Math.floor((1461*i)/4)+31;
+  const j=Math.floor((80*l)/2447);
+  const gd=l-Math.floor((2447*j)/80);
+  l=Math.floor(j/11);
+  return { y:100*(n-49)+i+l, m:j+2-12*l, d:gd };
+}
+
+function hMonthLen(hy, hm) {
+  if (hm===12 && ((11*hy+14)%30)<11) return 30;
+  return hm%2===1 ? 30 : 29;
+}
+
+function weekday(gy, gm, gd) { return new Date(gy, gm-1, gd).getDay(); }
+
+/* ── State ───────────────────────────────────────────── */
+const _today = new Date();
+const _todayH = gToH(_today.getFullYear(), _today.getMonth()+1, _today.getDate());
+let curY = _todayH.y, curM = _todayH.m;
+
+/* ── Render ──────────────────────────────────────────── */
+function render() {
+  const g1    = hToG(curY, curM, 1);
+  const gLast = hToG(curY, curM, hMonthLen(curY, curM));
+  const rangeStr = g1.y === gLast.y
+    ? `Hijri ${curY} · ${GREG_M[g1.m]} – ${GREG_M[gLast.m]} ${g1.y}`
+    : `Hijri ${curY} · ${GREG_M[g1.m]} ${g1.y} – ${GREG_M[gLast.m]} ${gLast.y}`;
+
+  document.getElementById('cal-month-en').textContent = MONTHS_EN[curM].toUpperCase();
+  document.getElementById('cal-month-ar').textContent = MONTHS_AR[curM];
+  document.getElementById('cal-month-range').textContent = rangeStr;
+  document.getElementById('events-heading').textContent =
+    `Events — ${MONTHS_EN[curM]} ${curY}`;
+
+  /* grid */
+  const grid = document.getElementById('hcal-grid');
+  grid.innerHTML = '';
+  const daysInMonth = hMonthLen(curY, curM);
+  const startDow = weekday(g1.y, g1.m, g1.d);
+
+  /* leading filler */
+  for (let i = 0; i < startDow; i++) {
+    const prevM = curM===1?12:curM-1, prevY=curM===1?curY-1:curY;
+    const prevLen = hMonthLen(prevY, prevM);
+    const pd = prevLen - startDow + 1 + i;
+    const pg = hToG(prevY, prevM, pd);
+    grid.appendChild(makeCell(pd, pg, false, null, true));
+  }
+
+  /* month days */
+  for (let d = 1; d <= daysInMonth; d++) {
+    const g = hToG(curY, curM, d);
+    const isToday = (curY===_todayH.y && curM===_todayH.m && d===_todayH.d);
+    const ev = (EVENTS[curM]||{})[d] || null;
+    grid.appendChild(makeCell(d, g, isToday, ev, false));
+  }
+
+  /* trailing filler */
+  const total = startDow + daysInMonth;
+  const trail = total%7===0 ? 0 : 7-(total%7);
+  for (let i = 1; i <= trail; i++) {
+    const nextM = curM===12?1:curM+1, nextY=curM===12?curY+1:curY;
+    const ng = hToG(nextY, nextM, i);
+    grid.appendChild(makeCell(i, ng, false, null, true));
+  }
+
+  /* events list */
+  const list = document.getElementById('hcal-event-list');
+  list.innerHTML = '';
+  const monthEvts = EVENTS[curM] || {};
+  const days = Object.keys(monthEvts).map(Number).sort((a,b)=>a-b);
+
+  if (!days.length) {
+    list.innerHTML = '<p class="hcal-no-events">No recorded events for this month.</p>';
+    return;
+  }
+
+  days.forEach(d => {
+    const ev = monthEvts[d];
+    const g  = hToG(curY, curM, d);
+    const card = document.createElement('div');
+    card.className = 'hcal-event-card';
+    card.innerHTML = `
+      <div class="hcal-event-stripe ${ev.type}"></div>
+      <div class="hcal-event-inner">
+        <div class="hcal-event-date">
+          <div class="hd">${d}</div>
+          <div class="gd">${GREG_M[g.m]} ${g.d}</div>
+        </div>
+        <div class="hcal-event-sep"></div>
+        <div class="hcal-event-text">
+          <div class="hcal-event-title">${ev.t}</div>
+          <div class="hcal-event-type-label ${ev.type}">${ev.type.charAt(0).toUpperCase()+ev.type.slice(1)}</div>
+        </div>
+      </div>`;
+    list.appendChild(card);
+  });
+}
+
+function makeCell(hd, g, isToday, ev, otherMonth) {
+  const cell = document.createElement('div');
+  cell.className = 'hcal-cell'
+    + (isToday ? ' today' : '')
+    + (ev ? ' has-event' : '')
+    + (otherMonth ? ' other-month' : '');
+  cell.innerHTML =
+    `<div class="hcal-hijri">${hd}</div>`
+    +`<div class="hcal-greg">${GREG_M[g.m]} ${g.d}</div>`
+    +(ev
+      ? `<div class="hcal-dots"><div class="hcal-dot ${ev.type}"></div></div>`
+        +`<div class="hcal-event-label ${ev.type}">${ev.t}</div>`
+      : '');
+  return cell;
+}
+
+document.getElementById('cal-prev').addEventListener('click', () => {
+  curM--; if (curM<1){curM=12;curY--;} render();
+});
+document.getElementById('cal-next').addEventListener('click', () => {
+  curM++; if (curM>12){curM=1;curY++;} render();
+});
+
+render();
+</script>
+</body>
+</html>
