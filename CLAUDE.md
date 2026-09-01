@@ -90,25 +90,70 @@ CSS border sides flip: left borders become right borders, etc.
 
 ---
 
-## SEO Standards (apply to every page)
+## SEO Checklist (apply to every page)
 
-Every page must have:
-1. `<title>` — unique, ≤60 chars, format: `Page Name | Misbah Inc.`
-2. `<meta name="description">` — unique, 140–160 chars
-3. `<link rel="canonical">` — absolute URL
-4. `<link rel="alternate" hreflang>` — for every language variant that exists
-5. Open Graph: `og:type`, `og:url`, `og:title`, `og:description`, `og:image`, `og:locale`
-6. Twitter Card: `twitter:card`, `twitter:title`, `twitter:description`, `twitter:image`
-7. JSON-LD structured data:
-   - Homepage → `WebSite` + `Organization`
-   - Article pages → `Article` + `BreadcrumbList` + `Organization`
-   - Other pages → `WebPage` + `BreadcrumbList`
+Run through this checklist whenever creating or updating any page.
 
-**OG image sizes:**
-- Homepage / general: `mosque-madinah-hero.jpg` (1200×675)
-- Article pages: use the article's own image
+### 1. Basic meta tags
+- [ ] `<title>` — unique, ≤60 chars, format: `Page Name | Misbah Inc.`
+- [ ] `<meta name="description">` — unique, 140–160 chars, no keyword stuffing
+- [ ] `<meta name="robots">` — omit on indexable pages; add `noindex, nofollow` on placeholders only
+- [ ] `<html lang="XX" dir="ltr/rtl">` — correct language code and direction
 
-**Organization JSON-LD** (`@id: https://misbah128.com/#organization`) is referenced by all pages — define it fully only on the homepage, reference it elsewhere.
+### 2. Canonical + hreflang
+- [ ] `<link rel="canonical" href="https://misbah128.com/path/">` — absolute URL, trailing slash consistent
+- [ ] `<link rel="alternate" hreflang="en" href="...">` — for every language variant that exists
+- [ ] `<link rel="alternate" hreflang="ar" href="...">` — Arabic variant
+- [ ] `<link rel="alternate" hreflang="fa" href="...">` — Farsi variant
+- [ ] `<link rel="alternate" hreflang="ur" href="...">` — Urdu variant
+- [ ] `<link rel="alternate" hreflang="x-default" href="...">` — always points to English URL
+- [ ] hreflang set on ALL language variants simultaneously (not just the English page)
+
+### 3. Open Graph
+- [ ] `og:type` — `website` for homepage/landing, `article` for article pages
+- [ ] `og:url` — canonical absolute URL
+- [ ] `og:site_name` — `Misbah Inc.`
+- [ ] `og:title` — same as `<title>` (can be slightly longer, ≤95 chars)
+- [ ] `og:description` — same as meta description
+- [ ] `og:image` — absolute URL, minimum 1200×630 px
+- [ ] `og:image:width` + `og:image:height` — explicit dimensions
+- [ ] `og:locale` — `en_US` / `ar_AR` / `fa_IR` / `ur_PK`
+- [ ] Article pages only: `article:published_time`, `article:author`, `article:section`, `article:tag`
+
+### 4. Twitter Card
+- [ ] `twitter:card` — `summary_large_image`
+- [ ] `twitter:title`
+- [ ] `twitter:description`
+- [ ] `twitter:image` — same as og:image
+
+### 5. JSON-LD Structured Data
+- [ ] Homepage → `WebSite` + `Organization` (full definition)
+- [ ] Article pages → `Article` + `BreadcrumbList` + `Organization` (reference only)
+- [ ] Other pages → `WebPage` + `BreadcrumbList`
+- [ ] All `@id` values use absolute URLs with fragment (`#website`, `#organization`, `#article`)
+- [ ] `Organization @id` (`https://misbah128.com/#organization`) — define fully on homepage, reference elsewhere
+
+### 6. Images
+- [ ] Every `<img>` has a descriptive `alt` attribute
+- [ ] Hero/featured images have `loading="lazy"` and `decoding="async"` (except above-the-fold)
+- [ ] OG image is 1200×630 px minimum (article cards: 760×920 px is acceptable — crop handled by platforms)
+
+### 7. Page performance basics
+- [ ] Google Fonts loaded via `<link rel="preconnect">` + single stylesheet URL
+- [ ] No render-blocking scripts (all `<script>` at bottom of `<body>`)
+- [ ] Images optimized: ≤200 KB for article cards, ≤150 KB for heroes
+
+### 8. After publishing
+- [ ] Add entry to `CHANGELOG.md` with date and reason
+- [ ] Add/update row in `images/CATALOG.md` if new image added
+- [ ] Remove `noindex` when a placeholder page gets real translated content
+- [ ] Commit and push via GitHub Desktop
+
+---
+
+**OG image reference:**
+- Homepage / general pages: `mosque-madinah-hero.jpg` (1200×675)
+- Article pages: use the article's own featured image
 
 ---
 
