@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://misbah128.com/sitemap.xml

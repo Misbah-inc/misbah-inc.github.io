@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- ── Homepages ───────────────────────────────────────────── -->
+  <url>
+    <loc>https://misbah128.com/</loc>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://misbah128.com/"/>
+    <xhtml:link rel="alternate" hreflang="ar"        href="https://misbah128.com/ar/"/>
+    <xhtml:link rel="alternate" hreflang="fa"        href="https://misbah128.com/fa/"/>
+    <xhtml:link rel="alternate" hreflang="ur"        href="https://misbah128.com/ur/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://misbah128.com/"/>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://misbah128.com/ar/</loc>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://misbah128.com/"/>
+    <xhtml:link rel="alternate" hreflang="ar"        href="https://misbah128.com/ar/"/>
+    <xhtml:link rel="alternate" hreflang="fa"        href="https://misbah128.com/fa/"/>
+    <xhtml:link rel="alternate" hreflang="ur"        href="https://misbah128.com/ur/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://misbah128.com/"/>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://misbah128.com/fa/</loc>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://misbah128.com/"/>
+    <xhtml:link rel="alternate" hreflang="ar"        href="https://misbah128.com/ar/"/>
+    <xhtml:link rel="alternate" hreflang="fa"        href="https://misbah128.com/fa/"/>
+    <xhtml:link rel="alternate" hreflang="ur"        href="https://misbah128.com/ur/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://misbah128.com/"/>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://misbah128.com/ur/</loc>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://misbah128.com/"/>
+    <xhtml:link rel="alternate" hreflang="ar"        href="https://misbah128.com/ar/"/>
+    <xhtml:link rel="alternate" hreflang="fa"        href="https://misbah128.com/fa/"/>
+    <xhtml:link rel="alternate" hreflang="ur"        href="https://misbah128.com/ur/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://misbah128.com/"/>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- ── About ───────────────────────────────────────────────── -->
+  <url>
+    <loc>https://misbah128.com/about/</loc>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://misbah128.com/about/"/>
+    <xhtml:link rel="alternate" hreflang="ar"        href="https://misbah128.com/ar/about/"/>
+    <xhtml:link rel="alternate" hreflang="fa"        href="https://misbah128.com/fa/about/"/>
+    <xhtml:link rel="alternate" hreflang="ur"        href="https://misbah128.com/ur/about/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://misbah128.com/about/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://misbah128.com/ar/about/</loc>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://misbah128.com/about/"/>
+    <xhtml:link rel="alternate" hreflang="ar"        href="https://misbah128.com/ar/about/"/>
+    <xhtml:link rel="alternate" hreflang="fa"        href="https://misbah128.com/fa/about/"/>
+    <xhtml:link rel="alternate" hreflang="ur"        href="https://misbah128.com/ur/about/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://misbah128.com/about/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://misbah128.com/fa/about/</loc>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://misbah128.com/about/"/>
+    <xhtml:link rel="alternate" hreflang="ar"        href="https://misbah128.com/ar/about/"/>
+    <xhtml:link rel="alternate" hreflang="fa"        href="https://misbah128.com/fa/about/"/>
+    <xhtml:link rel="alternate" hreflang="ur"        href="https://misbah128.com/ur/about/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://misbah128.com/about/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://misbah128.com/ur/about/</loc>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://misbah128.com/about/"/>
+    <xhtml:link rel="alternate" hreflang="ar"        href="https://misbah128.com/ar/about/"/>
+    <xhtml:link rel="alternate" hreflang="fa"        href="https://misbah128.com/fa/about/"/>
+    <xhtml:link rel="alternate" hreflang="ur"        href="https://misbah128.com/ur/about/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://misbah128.com/about/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- ── Articles (English only for now) ────────────────────── -->
+  <url>
+    <loc>https://misbah128.com/articles/</loc>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://misbah128.com/articles/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://misbah128.com/articles/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- ── Hijri Calendar ──────────────────────────────────────── -->
+  <url>
+    <loc>https://misbah128.com/hijri-calendar/</loc>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://misbah128.com/hijri-calendar/"/>
+    <xhtml:link rel="alternate" hreflang="ar"        href="https://misbah128.com/ar/hijri-calendar/"/>
+    <xhtml:link rel="alternate" hreflang="fa"        href="https://misbah128.com/fa/hijri-calendar/"/>
+    <xhtml:link rel="alternate" hreflang="ur"        href="https://misbah128.com/ur/hijri-calendar/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://misbah128.com/hijri-calendar/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://misbah128.com/ar/hijri-calendar/</loc>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://misbah128.com/hijri-calendar/"/>
+    <xhtml:link rel="alternate" hreflang="ar"        href="https://misbah128.com/ar/hijri-calendar/"/>
+    <xhtml:link rel="alternate" hreflang="fa"        href="https://misbah128.com/fa/hijri-calendar/"/>
+    <xhtml:link rel="alternate" hreflang="ur"        href="https://misbah128.com/ur/hijri-calendar/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://misbah128.com/hijri-calendar/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://misbah128.com/fa/hijri-calendar/</loc>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://misbah128.com/hijri-calendar/"/>
+    <xhtml:link rel="alternate" hreflang="ar"        href="https://misbah128.com/ar/hijri-calendar/"/>
+    <xhtml:link rel="alternate" hreflang="fa"        href="https://misbah128.com/fa/hijri-calendar/"/>
+    <xhtml:link rel="alternate" hreflang="ur"        href="https://misbah128.com/ur/hijri-calendar/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://misbah128.com/hijri-calendar/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://misbah128.com/ur/hijri-calendar/</loc>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://misbah128.com/hijri-calendar/"/>
+    <xhtml:link rel="alternate" hreflang="ar"        href="https://misbah128.com/ar/hijri-calendar/"/>
+    <xhtml:link rel="alternate" hreflang="fa"        href="https://misbah128.com/fa/hijri-calendar/"/>
+    <xhtml:link rel="alternate" hreflang="ur"        href="https://misbah128.com/ur/hijri-calendar/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://misbah128.com/hijri-calendar/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+</urlset>
