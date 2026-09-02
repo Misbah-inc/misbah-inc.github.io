@@ -28,6 +28,7 @@ var VIS_LABELS={
 
 var CONJ_LABEL={en:'Conjunction:',ar:'الاقتران:',fa:'اقتران:',ur:'اقتران:'};
 var DATE_LOCALE={en:'en-US',ar:'ar',fa:'fa',ur:'ur'};
+var NIGHT_DATE_LABEL={en:'Night Date',ar:'تاريخ الليلة',fa:'تاریخ شب',ur:'رات کی تاریخ'};
 
 function beginsStr(monthName,lang){
   if(lang==='ar') return 'يبدأ '+monthName;
@@ -135,7 +136,6 @@ function showMonthMap(hm,nightOff){
 
   var nmMid=new Date(nmMs);nmMid.setUTCHours(0,0,0,0);
   var nmDayStart=nmMid.getTime();
-  var firstDate=null;
 
   /* nightOff mapping: 0 = utcH-24 (conjunction night), 1 = utcH (first night), 2 = utcH+24 (second night) */
   var results=REGIONS.map(function(r){
@@ -145,15 +145,14 @@ function showMonthMap(hm,nightOff){
     var dayOff=Math.floor(utcHOff/24);
     var sightDate=new Date(nmDayStart+dayOff*86400000);
     var lbl=col===C_VIS?vlabels.vis:col===C_OPT?vlabels.opt:vlabels.not;
-    if(col!==C_NOT&&(!firstDate||sightDate<firstDate)) firstDate=sightDate;
     return{id:r.id,name:rnames[r.id]||r.id,flag:r.flag,col:col,lbl:lbl,age:Math.max(0,age).toFixed(1),sightDate:sightDate,svgId:r.svgId};
   });
 
+  /* Show the date of the selected night (not a prediction — user decides) */
   var elS=document.getElementById('nm-start-date');
-  if(elS&&firstDate){
-    var nextDay=new Date(firstDate.getTime()+86400000);
-    var nH=gToH(nextDay.getUTCFullYear(),nextDay.getUTCMonth()+1,nextDay.getUTCDate());
-    elS.textContent=firstDate.toLocaleDateString(locale,FMT)+' — '+beginsStr(months[nH.m]+' '+nH.y,lang);
+  if(elS){
+    var nightDate=new Date(nmDayStart+nightOff*86400000);
+    elS.textContent=nightDate.toLocaleDateString(locale,FMT);
   }
 
   /* Visibility gradient: try pre-generated Yallop PNG first, fall back to canvas */
@@ -229,7 +228,7 @@ function showMonthMap(hm,nightOff){
 var UI={
   en:{
     heroSub:'1448 AH — Select a month to view crescent visibility predictions worldwide',
-    selMonth:'Selected Month', predStart:'Predicted Month Start',
+    selMonth:'Selected Month', predStart:'Night Date',
     night0:'☽₀ Conjunction Night',night0sub:'Day of new moon',
     night1:'☽₁ First Night',night1sub:'Evening after new moon',
     night2:'☽₂ Second Night',night2sub:'Two evenings after',
@@ -238,7 +237,7 @@ var UI={
   },
   ar:{
     heroSub:'١٤٤٨ هـ — اختر شهراً لعرض توقعات رؤية الهلال حول العالم',
-    selMonth:'الشهر المحدد', predStart:'بداية الشهر المتوقعة',
+    selMonth:'الشهر المحدد', predStart:'تاريخ الليلة',
     night0:'☽₀ ليلة الاقتران',night0sub:'يوم الهلال الجديد',
     night1:'☽₁ الليلة الأولى',night1sub:'مساء ما بعد الهلال',
     night2:'☽₂ الليلة الثانية',night2sub:'مساءان بعد الهلال',
@@ -247,7 +246,7 @@ var UI={
   },
   fa:{
     heroSub:'۱۴۴۸ هـ — ماهی را برای مشاهده پیش‌بینی رؤیت هلال انتخاب کنید',
-    selMonth:'ماه انتخابی', predStart:'شروع پیش‌بینی‌شده ماه',
+    selMonth:'ماه انتخابی', predStart:'تاریخ شب',
     night0:'☽₀ شب اقتران',night0sub:'روز ماه نو',
     night1:'☽₁ شب اول',night1sub:'شب پس از اقتران',
     night2:'☽₂ شب دوم',night2sub:'دو شب پس از اقتران',
@@ -256,7 +255,7 @@ var UI={
   },
   ur:{
     heroSub:'١٤٤٨ ہجری — چاند کی رؤیت کی پیش گوئی کے لیے مہینہ منتخب کریں',
-    selMonth:'منتخب مہینہ', predStart:'شروع ماہ کی پیش گوئی',
+    selMonth:'منتخب مہینہ', predStart:'رات کی تاریخ',
     night0:'☽₀ اقتران کی رات',night0sub:'نئے چاند کا دن',
     night1:'☽₁ پہلی رات',night1sub:'نئے چاند کے بعد کی شام',
     night2:'☽₂ دوسری رات',night2sub:'دو شامیں بعد میں',

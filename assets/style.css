@@ -453,6 +453,91 @@ h1, h2, h3, h4 {
   margin-bottom: 1rem;
 }
 
+/* ── Featured Event Card ─────────────────────────────── */
+.feat-event-card {
+  position: relative;
+  border-radius: var(--radius);
+  overflow: hidden;
+  aspect-ratio: 3 / 1;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 6px 28px rgba(0,0,0,.25);
+}
+.feat-event-card img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+.feat-event-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(4,14,4,.97) 0%,
+    rgba(4,14,4,.88) 22%,
+    rgba(4,14,4,.25) 45%,
+    transparent 65%
+  );
+}
+.feat-event-content {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  padding: .8rem 2rem 1.3rem;
+  display: flex;
+  flex-direction: column;
+  gap: .4rem;
+}
+.feat-event-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(1.4rem, 3vw, 2.4rem);
+  color: #fff;
+  line-height: 1.08;
+  letter-spacing: .03em;
+}
+.feat-event-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.feat-event-date {
+  display: inline-block;
+  background: rgba(201,164,107,.13);
+  border: 1px solid rgba(201,164,107,.4);
+  color: var(--gold);
+  font-size: .67rem;
+  letter-spacing: .07em;
+  padding: .22rem .75rem;
+  border-radius: 20px;
+}
+.feat-event-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: .35rem;
+  background: var(--gold);
+  color: #1a1a0a;
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+  padding: .55rem 1.2rem;
+  border-radius: 6px;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background var(--ease);
+}
+.feat-event-btn:hover { background: #d4b07a; }
+
+@media (max-width: 640px) {
+  .feat-event-card { aspect-ratio: unset; height: 200px; }
+  .feat-event-content { padding: .5rem 1.1rem .9rem; }
+  .feat-event-title { font-size: 1.15rem; }
+  .feat-event-date { display: none; }
+}
+
 .events-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
@@ -527,22 +612,32 @@ h1, h2, h3, h4 {
 .featured-section { background: var(--cream); }
 
 .featured-card {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0;
+  display: flex;
+  align-items: stretch;
   background: var(--white);
   border-radius: 16px;
   overflow: hidden;
   box-shadow: var(--shadow);
   margin-top: 2.5rem;
+  aspect-ratio: 2.4 / 1;
 }
 
 .featured-img {
+  flex: 0 0 50%;
   background: #ede7d9;
   overflow: hidden;
-  aspect-ratio: 1200 / 760;
+  min-height: 320px;
+  position: relative;
 }
-.featured-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.featured-img img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+}
 .featured-img-placeholder {
   display: flex;
   flex-direction: column;
@@ -553,7 +648,7 @@ h1, h2, h3, h4 {
 }
 .featured-img-placeholder svg { width: 64px; height: 64px; fill: rgba(201,164,107,0.3); }
 
-.featured-body { padding: 3rem 2.5rem; display: flex; flex-direction: column; justify-content: center; }
+.featured-body { flex: 1; padding: 2rem 2.5rem; display: flex; flex-direction: column; justify-content: center; overflow: hidden; }
 
 .featured-cat {
   display: inline-block;
@@ -582,23 +677,63 @@ h1, h2, h3, h4 {
 }
 
 /* ── 8. Morning & Evening Mourning ────────────────────────── */
-.mourning-section { background: var(--dark-section); text-align: center; }
+.mourning-section {
+  background: var(--dark-section);
+  background-image: url('/images/morning and evening mourning.png');
+  background-size: cover;
+  background-position: center 30%;
+  position: relative;
+  text-align: center;
+}
+.mourning-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(10,28,12,0.94) 0%,
+    rgba(10,28,12,0.50) 25%,
+    rgba(10,28,12,0.15) 45%,
+    rgba(10,28,12,0.15) 58%,
+    rgba(10,28,12,0.65) 78%,
+    rgba(10,28,12,0.95) 100%
+  );
+}
+.mourning-section .container { position: relative; z-index: 1; }
 
 .mourning-desc {
   max-width: 600px;
   margin: 0 auto 2.5rem;
-  color: rgba(255,255,255,0.7);
+  color: rgba(255,255,255,0.9);
+  background: rgba(10,28,12,0.62);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(201,164,107,0.12);
+  border-radius: 12px;
+  padding: 1.1rem 1.75rem;
   font-size: 0.97rem;
   line-height: 1.75;
 }
 
 .chapters-label {
+  display: block;
   font-size: 0.7rem;
   text-transform: uppercase;
   letter-spacing: 0.2em;
-  color: var(--sage);
+  color: var(--gold);
   font-weight: 700;
-  margin-bottom: 1.25rem;
+  margin-top: 6rem;
+  margin-bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 720px;
+  background: rgba(10,28,12,0.62);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(201,164,107,0.12);
+  border-bottom: none;
+  border-radius: 14px 14px 0 0;
+  padding: 0.7rem 1.5rem 0.5rem;
 }
 
 .chapters-row {
@@ -606,6 +741,16 @@ h1, h2, h3, h4 {
   flex-wrap: wrap;
   justify-content: center;
   gap: 0.75rem;
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+  background: rgba(10,28,12,0.62);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(201,164,107,0.12);
+  border-top: none;
+  border-radius: 0 0 14px 14px;
+  padding: 0.75rem 1.5rem 1rem;
 }
 
 .ch-btn {
@@ -635,36 +780,75 @@ h1, h2, h3, h4 {
 /* ── 9. YouTube Section ───────────────────────────────────── */
 .youtube-section { background: var(--dark-bg); text-align: center; }
 
-.video-wrap {
-  position: relative;
-  padding-bottom: 56.25%;
-  height: 0;
-  overflow: hidden;
-  border-radius: 14px;
-  box-shadow: var(--shadow-dark);
+/* ── Shorts grid ── */
+.shorts-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0.9rem;
   margin-top: 2rem;
-  background: var(--green-dark);
 }
-.video-wrap iframe,
-.video-wrap .video-placeholder {
+.short-card {
+  position: relative;
+  aspect-ratio: 9 / 16;
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--dark-section);
+  cursor: pointer;
+}
+.short-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+.short-card:hover img { transform: scale(1.04); }
+.short-play-btn {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,0.25);
+  transition: background 0.2s;
+}
+.short-card:hover .short-play-btn { background: rgba(0,0,0,0.45); }
+.short-play-btn svg {
+  width: 48px; height: 48px;
+  fill: #fff;
+  filter: drop-shadow(0 2px 8px rgba(0,0,0,0.5));
+}
+.short-title {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  padding: 2.5rem 0.7rem 0.65rem;
+  background: linear-gradient(to top, rgba(0,0,0,0.88) 0%, transparent 100%);
+  color: #fff;
+  font-size: 0.7rem;
+  font-family: sans-serif;
+  font-weight: 500;
+  line-height: 1.35;
+  pointer-events: none;
+}
+.short-card.playing .short-title,
+.short-card.playing .short-play-btn { display: none; }
+.short-card.playing iframe {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
   border: none;
 }
-.video-placeholder {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  color: rgba(255,255,255,0.4);
-  font-size: 0.9rem;
-  background: var(--dark-section);
-  border-radius: 14px;
+.shorts-footer {
+  margin-top: 1.75rem;
+  text-align: center;
 }
-.video-placeholder svg { width: 56px; height: 56px; }
+@media (max-width: 768px) {
+  .shorts-grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 480px) {
+  .shorts-grid { grid-template-columns: repeat(2, 1fr); }
+}
 
 /* ── 10. Donation Widget ──────────────────────────────────── */
 .donation-section { background: var(--cream); text-align: center; }
@@ -1073,9 +1257,9 @@ h1, h2, h3, h4 {
   .lang-sw { justify-content: center; }
 
   /* Featured card stacks */
-  .featured-card { grid-template-columns: 1fr; }
-  .featured-img  { aspect-ratio: 1200 / 760; }
-  .featured-body { padding: 2rem 1.5rem; }
+  .featured-card { flex-direction: column; aspect-ratio: unset; }
+  .featured-img  { flex: none; aspect-ratio: 1200 / 760; width: 100%; min-height: unset; }
+  .featured-body { padding: 2rem 1.5rem; overflow: visible; }
 
   /* Footer */
   .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
@@ -1102,10 +1286,14 @@ h1, h2, h3, h4 {
 [dir="rtl"] .nav-links   { margin-left: 0; margin-right: auto; }
 [dir="rtl"] .divider::before { background: linear-gradient(270deg, transparent, var(--gold)); }
 [dir="rtl"] .divider::after  { background: linear-gradient(90deg,  transparent, var(--gold)); }
-[dir="rtl"] .featured-card   { direction: rtl; }
+[dir="rtl"] .featured-card   { flex-direction: row-reverse; }
 [dir="rtl"] .footer-grid     { direction: rtl; }
 [dir="rtl"] .footer-tagline  { text-align: right; }
-[dir="rtl"] .event-card      { flex-direction: row-reverse; }
+[dir="rtl"] .event-card           { flex-direction: row-reverse; }
+[dir="rtl"] .feat-event-title     { font-family: 'Amiri', serif; text-align: right; font-size: clamp(1.2rem, 2.8vw, 2rem); line-height: 1.4; letter-spacing: 0; }
+[dir="rtl"] .feat-event-bottom    { flex-direction: row-reverse; }
+[dir="rtl"] .feat-event-date      { font-family: 'Amiri', serif; font-size: .85rem; letter-spacing: 0; }
+[dir="rtl"] .feat-event-btn       { font-family: 'Amiri', serif; font-size: .9rem; text-transform: none; letter-spacing: 0; }
 [dir="rtl"] .footer-contact-item { flex-direction: row-reverse; }
 
 /* ── 14. Crescent Moonsighting Widget ────────────────────────── */
@@ -1159,3 +1347,183 @@ h1, h2, h3, h4 {
   .nm-mpick{font-size:.6rem;padding:.4rem .75rem}
   [dir="rtl"] .nm-mpick{font-size:.8rem}
 }
+
+/* ── 15. Theme Toggle Button ──────────────────────────────── */
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.14);
+  cursor: pointer;
+  color: var(--gold-light);
+  flex-shrink: 0;
+  transition: background var(--ease), border-color var(--ease), color var(--ease);
+}
+.theme-toggle:hover {
+  background: rgba(255,255,255,0.17);
+  border-color: rgba(255,255,255,0.28);
+}
+.theme-toggle svg { width: 15px; height: 15px; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.theme-toggle .icon-sun  { display: none; }
+.theme-toggle .icon-moon { display: block; }
+
+/* ── 16. Light Theme ──────────────────────────────────────── */
+[data-theme="light"] {
+  --nav-bg:       #ffffff;
+  --dark-bg:      #faf9f4;
+  --dark-section: #f0ede0;
+  --gold:         #1a5c1c;
+  --gold-bright:  #226824;
+  --gold-light:   #2d6b2e;
+  --sage:         #4a7a50;
+  --shadow:       0 4px 24px rgba(0,0,0,0.07);
+  --shadow-dark:  0 8px 40px rgba(0,0,0,0.14);
+}
+
+/* Toggle icon swap in light mode */
+[data-theme="light"] .theme-toggle {
+  background: rgba(30,61,31,0.07);
+  border-color: rgba(30,61,31,0.18);
+  color: #1e3d1f;
+}
+[data-theme="light"] .theme-toggle:hover {
+  background: rgba(30,61,31,0.14);
+}
+[data-theme="light"] .theme-toggle .icon-sun  { display: block; }
+[data-theme="light"] .theme-toggle .icon-moon { display: none; }
+
+/* Nav */
+[data-theme="light"] .site-header { background: #ffffff; box-shadow: 0 2px 10px rgba(0,0,0,0.07); }
+[data-theme="light"] .nav-logo,
+[data-theme="light"] .nav-logo-text { color: #1e3d1f; }
+[data-theme="light"] .nav-link { background: rgba(30,61,31,0.06); color: #1e3d1f; }
+[data-theme="light"] .nav-link:hover { background: rgba(30,61,31,0.13); color: #1a5c1c; }
+[data-theme="light"] .nav-link.nav-cta { background: #1e3d1f; color: #ffffff; }
+[data-theme="light"] .nav-link.nav-cta:hover { background: #226824; }
+[data-theme="light"] .hamburger span { background: #1e3d1f; }
+[data-theme="light"] .nav-links { background: #ffffff; border-top-color: rgba(30,61,31,0.1); }
+[data-theme="light"] .dropdown-panel { background: #ffffff; border-color: rgba(30,61,31,0.12); }
+[data-theme="light"] .dropdown-item { color: #2d4a2e; }
+[data-theme="light"] .dropdown-item:hover { background: rgba(30,61,31,0.06); color: #1e3d1f; }
+[data-theme="light"] .lang-sw { background: rgba(30,61,31,0.06); }
+[data-theme="light"] .lang-sw a { color: rgba(30,61,31,0.5); }
+[data-theme="light"] .lang-sw a + a { border-left-color: rgba(30,61,31,0.18); }
+[data-theme="light"] .lang-sw a:hover,
+[data-theme="light"] .lang-sw a.active { color: #1e3d1f; }
+
+/* Typography */
+[data-theme="light"] .section-title { color: #1e3d1f; }
+[data-theme="light"] .divider { color: #1e3d1f; }
+[data-theme="light"] .divider::before { background: linear-gradient(90deg, transparent, #1e3d1f); }
+[data-theme="light"] .divider::after  { background: linear-gradient(270deg, transparent, #1e3d1f); }
+
+/* Buttons */
+[data-theme="light"] .btn-gold { background: #1e3d1f; color: #fff; }
+[data-theme="light"] .btn-gold:hover { background: #226824; box-shadow: 0 4px 14px rgba(30,61,31,0.35); }
+[data-theme="light"] .btn-outline { border-color: #1e3d1f; color: #1e3d1f; }
+[data-theme="light"] .btn-outline:hover { background: #1e3d1f; color: #fff; }
+
+/* Calendar section */
+[data-theme="light"] .calendar-section { background: var(--dark-bg); }
+[data-theme="light"] .calendar-month { background: rgba(30,61,31,0.07); border-color: rgba(30,61,31,0.22); }
+[data-theme="light"] .event-card { background: rgba(30,61,31,0.03); border-color: rgba(30,61,31,0.11); }
+[data-theme="light"] .event-card:hover { background: rgba(30,61,31,0.07); border-color: rgba(30,61,31,0.28); }
+[data-theme="light"] .event-title { color: #1a1a1a; }
+[data-theme="light"] .event-greg  { color: rgba(30,61,31,0.5); }
+
+/* Mourning section */
+[data-theme="light"] .mourning-section { background: var(--dark-section); }
+[data-theme="light"] .mourning-desc { color: #444; }
+[data-theme="light"] .ch-btn { border-color: rgba(30,61,31,0.38); color: #1e3d1f; }
+[data-theme="light"] .ch-btn:hover { background: #1e3d1f; border-color: #1e3d1f; color: #fff; box-shadow: 0 4px 16px rgba(30,61,31,0.3); }
+
+/* YouTube section */
+[data-theme="light"] .youtube-section { background: var(--dark-bg); }
+[data-theme="light"] .video-wrap { background: var(--dark-section); }
+[data-theme="light"] .video-placeholder { background: var(--dark-section); color: rgba(30,61,31,0.4); }
+
+/* Prayer section */
+[data-theme="light"] .prayer-section { background: var(--dark-section); color: #1a1a1a; }
+[data-theme="light"] .prayer-bar-label { color: #1e3d1f; }
+[data-theme="light"] .prayer-city,
+[data-theme="light"] .prayer-placeholder { color: rgba(30,61,31,0.4); }
+[data-theme="light"] .prayer-card { background: rgba(30,61,31,0.04); border-color: rgba(30,61,31,0.1); }
+[data-theme="light"] .prayer-card.next-prayer { background: rgba(30,61,31,0.09); border-color: rgba(30,61,31,0.32); }
+[data-theme="light"] .prayer-name { color: #1e3d1f; }
+[data-theme="light"] .prayer-time { color: #1a1a1a; }
+[data-theme="light"] .prayer-card.next-prayer .prayer-time { color: #1e3d1f; }
+[data-theme="light"] .prayer-next-tag { color: #1e3d1f; }
+[data-theme="light"] .prayer-locate-btn { border-color: rgba(30,61,31,0.3); color: #1e3d1f; }
+[data-theme="light"] .prayer-locate-btn:hover { background: rgba(30,61,31,0.06); }
+[data-theme="light"] .prayer-method-select { background: rgba(30,61,31,0.04); border-color: rgba(30,61,31,0.28); color: #1e3d1f; }
+
+/* Donation */
+[data-theme="light"] .amt-btn:hover,
+[data-theme="light"] .amt-btn.active { border-color: #1e3d1f; background: #1e3d1f; color: #fff; }
+[data-theme="light"] .freq-tab.active { background: #1e3d1f; }
+[data-theme="light"] .donate-btn { background: #1e3d1f; }
+[data-theme="light"] .donate-btn:hover { background: #226824; color: #fff; box-shadow: 0 6px 20px rgba(30,61,31,0.3); }
+[data-theme="light"] .tax-badge { background: rgba(30,61,31,0.07); color: #1e3d1f; }
+[data-theme="light"] .donation-note a { color: #1e3d1f; }
+[data-theme="light"] .custom-amount:focus { border-color: #1e3d1f; }
+
+/* Social buttons */
+[data-theme="light"] .social-btn { background: rgba(30,61,31,0.07); border-color: rgba(30,61,31,0.13); }
+[data-theme="light"] .social-btn svg { fill: #1e3d1f; }
+[data-theme="light"] .social-btn:hover { background: #1e3d1f; border-color: #1e3d1f; box-shadow: 0 6px 20px rgba(30,61,31,0.3); }
+[data-theme="light"] .social-btn:hover svg { fill: #fff; }
+[data-theme="light"] .social-menu { background: #fff; border-color: rgba(30,61,31,0.2); box-shadow: 0 8px 32px rgba(0,0,0,0.12); }
+[data-theme="light"] .social-menu a { color: #1e3d1f; }
+[data-theme="light"] .social-menu a:hover { background: rgba(30,61,31,0.05); }
+
+/* Footer */
+[data-theme="light"] .site-footer { background: var(--dark-section); color: rgba(30,61,31,0.75); }
+[data-theme="light"] .footer-tagline { color: rgba(30,61,31,0.55); }
+[data-theme="light"] .footer-col h4 { color: #1e3d1f; }
+[data-theme="light"] .footer-col a { color: rgba(30,61,31,0.62); }
+[data-theme="light"] .footer-col a:hover { color: #1e3d1f; }
+[data-theme="light"] .footer-contact-item { color: rgba(30,61,31,0.58); }
+[data-theme="light"] .footer-contact-item svg { fill: #1e3d1f; }
+[data-theme="light"] .footer-divider { border-top-color: rgba(30,61,31,0.1); }
+[data-theme="light"] .footer-bottom { color: rgba(30,61,31,0.38); }
+[data-theme="light"] .footer-bottom a { color: rgba(30,61,31,0.48); }
+[data-theme="light"] .footer-social .social-btn { background: rgba(30,61,31,0.06); border-color: rgba(30,61,31,0.13); }
+[data-theme="light"] .footer-social .social-btn svg { fill: #1e3d1f; }
+[data-theme="light"] .footer-social .social-btn:hover { background: #1e3d1f; border-color: #1e3d1f; }
+[data-theme="light"] .footer-social .social-btn:hover svg { fill: #fff; }
+
+/* Moonsighting widget */
+[data-theme="light"] .nm-pred-bar { background: rgba(30,61,31,0.04); border-color: rgba(30,61,31,0.09); }
+[data-theme="light"] .nm-pred-label { color: #1e3d1f; }
+[data-theme="light"] .nm-pred-value { color: #1e3d1f; }
+[data-theme="light"] .nm-pred-sub { color: rgba(30,61,31,0.4); }
+[data-theme="light"] .nm-map-legend { background: rgba(30,61,31,0.05); border-top-color: rgba(30,61,31,0.08); }
+[data-theme="light"] .nm-legend-item { color: rgba(30,61,31,0.6); }
+[data-theme="light"] .nm-rc { background: rgba(30,61,31,0.03); border-color: rgba(30,61,31,0.08); }
+[data-theme="light"] .nm-rc:hover { background: rgba(30,61,31,0.07); }
+[data-theme="light"] .nm-rc-name { color: #1a1a1a; }
+[data-theme="light"] .nm-rc-meta,
+[data-theme="light"] .nm-rc-date { color: rgba(30,61,31,0.38); }
+[data-theme="light"] .nm-mpick { background: rgba(30,61,31,0.04); border-color: rgba(30,61,31,0.1); color: rgba(30,61,31,0.55); }
+[data-theme="light"] .nm-mpick:hover:not(.nm-mpick--active) { background: rgba(30,61,31,0.09); color: #1e3d1f; }
+[data-theme="light"] .nm-mpick.nm-mpick--active { background: #1e3d1f; color: #fff; border-color: #1e3d1f; }
+[data-theme="light"] .nm-formula { border-top-color: rgba(30,61,31,0.1); }
+[data-theme="light"] .nm-formula-heading { color: #1e3d1f; }
+[data-theme="light"] .nm-formula-body { color: rgba(30,61,31,0.78); }
+[data-theme="light"] .nm-formula-body h4 { color: #1e3d1f; border-bottom-color: rgba(30,61,31,0.08); }
+[data-theme="light"] .nm-formula-body em { color: #1e3d1f; }
+[data-theme="light"] .nm-formula-body strong { color: #1a1a1a; }
+[data-theme="light"] .nm-eq { color: #1e3d1f; background: rgba(30,61,31,0.04); border-left-color: #1e3d1f; }
+[dir="rtl"][data-theme="light"] .nm-eq { border-right-color: #1e3d1f; border-left-color: transparent; }
+[data-theme="light"] .nm-q-val { color: #1e3d1f; }
+[data-theme="light"] .nm-q-row { border-bottom-color: rgba(30,61,31,0.06); }
+[data-theme="light"] .nm-disclaimer { background: rgba(30,61,31,0.02); border-color: rgba(30,61,31,0.08); color: rgba(30,61,31,0.52); }
+[data-theme="light"] .nm-disclaimer strong { color: rgba(30,61,31,0.7); }
+
+/* RTL light fixes */
+[dir="rtl"][data-theme="light"] .divider::before { background: linear-gradient(270deg, transparent, #1e3d1f); }
+[dir="rtl"][data-theme="light"] .divider::after  { background: linear-gradient(90deg,  transparent, #1e3d1f); }

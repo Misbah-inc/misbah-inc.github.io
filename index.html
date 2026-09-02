@@ -52,7 +52,7 @@
         "contactPoint": {
           "@type": "ContactPoint",
           "telephone": "+1-888-471-7174",
-          "email": "info@misbah128.com",
+          "email": "info@misbah-inc.com",
           "contactType": "customer service"
         },
         "address": {"@type": "PostalAddress", "addressCountry": "US"},
@@ -65,7 +65,7 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="assets/style.css">
   <style>
@@ -164,7 +164,7 @@
 
       <a href="/hijri-calendar/" class="nav-link">Hijri Calendar</a>
       <a href="/moonsighting/"   class="nav-link">Moonsighting</a>
-      <a href="/donate" class="nav-link nav-cta">Donate</a>
+      <a href="https://www.misbah-inc.com/donate" target="_blank" rel="noopener" class="nav-link nav-cta">Donate</a>
       <a href="/about"  class="nav-link">About Us</a>
 
       <!-- Language switcher -->
@@ -174,6 +174,11 @@
         <a href="/fa/" hreflang="fa">FA</a>
         <a href="/ur/" hreflang="ur">UR</a>
       </div>
+      <!-- Theme toggle -->
+      <button class="theme-toggle" aria-label="Switch to light mode">
+        <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <svg class="icon-sun"  viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+      </button>
     </div>
 
   </nav>
@@ -307,6 +312,21 @@
       <h2 class="section-title" id="cal-heading">Rabi al-Awwal</h2>
       <div class="divider" aria-hidden="true"><span class="divider-gem">◆</span></div>
       <span class="calendar-month">Hijri 1448 · Rabi al-Awwal</span>
+    </div>
+
+    <!-- ── Featured Event Card ── -->
+    <div class="feat-event-card">
+      <img src="/images/17_rabi_awwal.png"
+           alt="Birth of the Holy Prophet Muhammad and Imam al-Sadiq, 17 Rabi al-Awwal 1448"
+           width="2172" height="724" loading="eager">
+      <div class="feat-event-overlay"></div>
+      <div class="feat-event-content">
+        <div class="feat-event-title">Birth of the Holy Prophet Muhammad &amp;<br>Imam al-Sadiq (p)</div>
+        <div class="feat-event-bottom">
+          <span class="feat-event-date">Aug 30, 2026 &nbsp;·&nbsp; 17 Rabi al-Awwal 1448</span>
+          <a href="/articles/rabi_al_awwal/" class="feat-event-btn">Read article →</a>
+        </div>
+      </div>
     </div>
 
     <div class="events-grid">
@@ -648,20 +668,57 @@
     <h2 class="section-title text-center" id="yt-heading">Watch</h2>
     <div class="divider" aria-hidden="true"><span class="divider-gem">◆</span></div>
 
-    <div class="video-wrap">
-      <!--
-        Replace VIDEO_ID below with your YouTube video ID.
-        Example: https://www.youtube.com/watch?v=VIDEO_ID
-      -->
-      <!-- <iframe src="https://www.youtube.com/embed/VIDEO_ID" allowfullscreen title="Latest Misbah video"></iframe> -->
-      <div class="video-placeholder">
-        <svg viewBox="0 0 24 24" fill="rgba(201,164,107,0.4)" aria-hidden="true">
-          <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
-        </svg>
-        <span>YouTube video will appear here</span>
-        <a href="https://www.youtube.com/@MisbahInc" target="_blank" rel="noopener" class="btn btn-outline">Visit our Channel</a>
+    <div class="shorts-grid" id="shorts-grid">
+      <div class="short-card" data-id="Fy1KnlanhOE">
+        <img src="https://img.youtube.com/vi/Fy1KnlanhOE/0.jpg" alt="Misbah Short" loading="lazy">
+        <div class="short-play-btn" aria-label="Play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+        <div class="short-title"></div>
+      </div>
+      <div class="short-card" data-id="WL3yZm3EPVc">
+        <img src="https://img.youtube.com/vi/WL3yZm3EPVc/0.jpg" alt="Misbah Short" loading="lazy">
+        <div class="short-play-btn" aria-label="Play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+        <div class="short-title"></div>
+      </div>
+      <div class="short-card" data-id="N3qjfiT7XY0">
+        <img src="https://img.youtube.com/vi/N3qjfiT7XY0/0.jpg" alt="Misbah Short" loading="lazy">
+        <div class="short-play-btn" aria-label="Play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+        <div class="short-title"></div>
+      </div>
+      <div class="short-card" data-id="6h2yj-qAlAs">
+        <img src="https://img.youtube.com/vi/6h2yj-qAlAs/hqdefault.jpg" alt="Misbah Video" loading="lazy" style="object-position:top">
+        <div class="short-play-btn" aria-label="Play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+        <div class="short-title"></div>
+      </div>
+      <div class="short-card" data-id="ir7AAcXTUFI">
+        <img src="https://img.youtube.com/vi/ir7AAcXTUFI/0.jpg" alt="Misbah Short" loading="lazy">
+        <div class="short-play-btn" aria-label="Play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+        <div class="short-title"></div>
       </div>
     </div>
+    <div class="shorts-footer">
+      <a href="https://www.youtube.com/@Misbah110" target="_blank" rel="noopener" class="btn btn-outline">Visit our Channel</a>
+    </div>
+    <script>
+      document.querySelectorAll('.short-card').forEach(function(card) {
+        var id = card.dataset.id;
+        var titleEl = card.querySelector('.short-title');
+
+        /* Fetch title from YouTube oEmbed (no API key needed) */
+        if (titleEl && !id.startsWith('SHORT_ID')) {
+          fetch('https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=' + id + '&format=json')
+            .then(function(r) { return r.json(); })
+            .then(function(d) { titleEl.textContent = d.title; })
+            .catch(function() {});
+        }
+
+        /* Click to play inline */
+        card.addEventListener('click', function() {
+          if (card.classList.contains('playing')) return;
+          card.innerHTML = '<iframe src="https://www.youtube.com/embed/' + id + '?autoplay=1&rel=0&playsinline=1" allow="autoplay; encrypted-media" allowfullscreen title="Misbah video"></iframe>';
+          card.classList.add('playing');
+        });
+      });
+    </script>
   </div>
 </section>
 
@@ -711,7 +768,7 @@
       >
 
       <!-- Donate button -->
-      <a href="/donate" id="donate-btn" class="donate-btn" role="button">Donate $50 — One Time</a>
+      <a href="https://www.misbah-inc.com/donate" target="_blank" rel="noopener" id="donate-btn" class="donate-btn" role="button">Donate $50 — One Time</a>
 
       <!-- Notes -->
       <p class="donation-note">
@@ -741,11 +798,13 @@
           A U.S.-based nonprofit uplifting souls through education, community service, and the teachings of the Ahlul Bayt (p).
         </p>
         <div class="footer-social" aria-label="Social media">
-          <a href="#" class="social-btn" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.477 2 12c0 1.9.525 3.677 1.44 5.197L2 22l4.917-1.418A9.96 9.96 0 0 0 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm5.063 14.063c-.212.594-.84 1.088-1.5 1.231-.4.088-.92.158-2.674-.574-2.241-.92-3.683-3.189-3.795-3.338-.107-.146-.9-1.199-.9-2.287 0-1.088.572-1.624.775-1.847.203-.223.44-.278.587-.278l.42.008c.135.006.315-.051.493.376.183.44.622 1.521.677 1.631.054.11.09.238.018.386-.073.147-.11.238-.22.366l-.329.386c-.11.11-.224.228-.097.448.127.22.57.94 1.224 1.523.84.748 1.548.98 1.767 1.09.218.11.347.092.476-.055.129-.147.55-.644.697-.864.146-.22.293-.184.494-.11s1.278.603 1.497.713c.219.11.365.164.42.255.054.092.054.531-.128 1.043z"/></svg></a>
-          <a href="#" class="social-btn" aria-label="Telegram"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8l-1.69 7.96c-.12.57-.46.71-.93.44l-2.56-1.89-1.24 1.19c-.14.14-.25.25-.51.25l.18-2.6 4.68-4.23c.2-.18-.04-.28-.32-.1L7.2 14.19l-2.52-.79c-.55-.17-.56-.55.11-.81l9.84-3.79c.46-.17.86.11.71.8l-.7-.8z"/></svg></a>
-          <a href="#" class="social-btn" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg></a>
-          <a href="#" class="social-btn" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
-          <a href="#" class="social-btn" aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+          <a href="https://chat.whatsapp.com/JnOFh4iSCem4b1Sg45RN5n" class="social-btn" aria-label="WhatsApp" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.477 2 12c0 1.9.525 3.677 1.44 5.197L2 22l4.917-1.418A9.96 9.96 0 0 0 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm5.063 14.063c-.212.594-.84 1.088-1.5 1.231-.4.088-.92.158-2.674-.574-2.241-.92-3.683-3.189-3.795-3.338-.107-.146-.9-1.199-.9-2.287 0-1.088.572-1.624.775-1.847.203-.223.44-.278.587-.278l.42.008c.135.006.315-.051.493.376.183.44.622 1.521.677 1.631.054.11.09.238.018.386-.073.147-.11.238-.22.366l-.329.386c-.11.11-.224.228-.097.448.127.22.57.94 1.224 1.523.84.748 1.548.98 1.767 1.09.218.11.347.092.476-.055.129-.147.55-.644.697-.864.146-.22.293-.184.494-.11s1.278.603 1.497.713c.219.11.365.164.42.255.054.092.054.531-.128 1.043z"/></svg></a>
+          <a href="https://t.me/misbah110" class="social-btn" aria-label="Telegram" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8l-1.69 7.96c-.12.57-.46.71-.93.44l-2.56-1.89-1.24 1.19c-.14.14-.25.25-.51.25l.18-2.6 4.68-4.23c.2-.18-.04-.28-.32-.1L7.2 14.19l-2.52-.79c-.55-.17-.56-.55.11-.81l9.84-3.79c.46-.17.86.11.71.8l-.7-.8z"/></svg></a>
+          <a href="https://www.instagram.com/misbah.110/" class="social-btn" aria-label="Instagram" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg></a>
+          <a href="#" class="social-btn" aria-label="Facebook" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+          <a href="https://x.com/misbahinc110" class="social-btn" aria-label="X (Twitter)" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.748l7.73-8.835L1.254 2.25H8.08l4.259 5.631L18.244 2.25zM17.083 20.25h1.833L7.084 4.126H5.117L17.083 20.25z"/></svg></a>
+          <a href="https://www.youtube.com/@Misbah110" class="social-btn" aria-label="YouTube" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+          <a href="https://www.tiktok.com/@misbahinc110" class="social-btn" aria-label="TikTok" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V9.05a8.16 8.16 0 0 0 4.77 1.52V7.12a4.85 4.85 0 0 1-1-.43z"/></svg></a>
         </div>
       </div>
 
@@ -754,7 +813,7 @@
         <h4>Pages</h4>
         <a href="/articles">Articles</a>
         <a href="https://library.misbah128.com" target="_blank" rel="noopener">Misbah Library</a>
-        <a href="/donate">Donate</a>
+        <a href="https://www.misbah-inc.com/donate" target="_blank" rel="noopener">Donate</a>
         <a href="/connect">Connect</a>
         <a href="/about">About Us</a>
       </div>
@@ -764,15 +823,23 @@
         <h4>Contact</h4>
         <div class="footer-contact-item">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-          <a href="mailto:info@misbah128.com">info@misbah128.com</a>
+          <a href="mailto:info@misbah-inc.com">info@misbah-inc.com</a>
         </div>
         <div class="footer-contact-item">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
-          <span>+1 (888) 471-7174</span>
+          <a href="tel:+18884717174">+1 (888) 471-7174</a>
         </div>
         <div class="footer-contact-item">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
-          <span>Houston · Detroit · San Francisco</span>
+          <address>269 Walker St, #158, Detroit, MI 48207</address>
+        </div>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          <address>3145 Geary Blvd, #487, San Francisco, CA 94118</address>
+        </div>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          <address>11152 Westheimer Rd, #109, Houston, TX 77042</address>
         </div>
       </div>
 
@@ -787,6 +854,7 @@
   </div>
 </footer>
 
+<script src="assets/theme.js"></script>
 <script src="assets/script.js"></script>
 <script src="assets/moonsighting.js"></script>
 <script>

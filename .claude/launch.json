@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "Misbah Website",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["-m", "http.server", "8765", "--directory", "G:\\My Drive\\Misbah Library\\Misbah Website"],
+      "port": 8765
+    }
+  ]
+}
