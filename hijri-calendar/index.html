@@ -569,14 +569,23 @@ function hMonthLen(hy, hm) {
 function weekday(gy, gm, gd) { return new Date(gy, gm-1, gd).getDay(); }
 
 /* ── State ───────────────────────────────────────────── */
-const _today = new Date();
-const _todayH = gToH(_today.getFullYear(), _today.getMonth()+1, _today.getDate());
-let curY = _todayH.y, curM = _todayH.m;
+function getCDTDate(){const s=new Date().toLocaleDateString('en-CA',{timeZone:'America/Chicago'});const[y,m,d]=s.split('-').map(Number);return{y,m,d};}
+let _todayH={y:0,m:0,d:0};
+let _todayGreg={y:0,m:0,d:0};
+let curY=0,curM=0;
 
 /* ── Render ──────────────────────────────────────────── */
+function cg(d){
+  if(_todayH.y>0&&curY===_todayH.y&&curM===_todayH.m){
+    const dt=new Date(_todayGreg.y,_todayGreg.m-1,_todayGreg.d+(d-_todayH.d));
+    return{y:dt.getFullYear(),m:dt.getMonth()+1,d:dt.getDate()};
+  }
+  return hToG(curY,curM,d);
+}
+
 function render() {
-  const g1    = hToG(curY, curM, 1);
-  const gLast = hToG(curY, curM, hMonthLen(curY, curM));
+  const g1    = cg(1);
+  const gLast = cg(hMonthLen(curY, curM));
   const rangeStr = g1.y === gLast.y
     ? `Hijri ${curY} · ${GREG_M[g1.m]} – ${GREG_M[gLast.m]} ${g1.y}`
     : `Hijri ${curY} · ${GREG_M[g1.m]} ${g1.y} – ${GREG_M[gLast.m]} ${gLast.y}`;
@@ -604,7 +613,7 @@ function render() {
 
   /* month days */
   for (let d = 1; d <= daysInMonth; d++) {
-    const g = hToG(curY, curM, d);
+    const g = cg(d);
     const isToday = (curY===_todayH.y && curM===_todayH.m && d===_todayH.d);
     const ev = (EVENTS[curM]||{})[d] || null;
     grid.appendChild(makeCell(d, g, isToday, ev, false));
@@ -632,7 +641,7 @@ function render() {
 
   days.forEach(d => {
     const ev = monthEvts[d];
-    const g  = hToG(curY, curM, d);
+    const g  = cg(d);
     const card = document.createElement('div');
     card.className = 'hcal-event-card';
     card.innerHTML = `
@@ -675,7 +684,8 @@ document.getElementById('cal-next').addEventListener('click', () => {
   curM++; if (curM>12){curM=1;curY++;} render();
 });
 
-render();
+async function initCalendar(){const{y,m,d}=getCDTDate();_todayGreg={y,m,d};const ds=`${String(d).padStart(2,'0')}-${String(m).padStart(2,'0')}-${y}`;let ok=false;try{const r=await fetch(`https://api.aladhan.com/v1/gToH/${ds}`);if(r.ok){const j=await r.json();if(j.code===200){const h=j.data.hijri;_todayH={y:+h.year,m:+h.month.number,d:+h.day};ok=true;}}}catch(e){}if(!ok){_todayH=gToH(y,m,d);}curY=_todayH.y;curM=_todayH.m;render();}
+initCalendar();
 </script>
 </body>
 </html>

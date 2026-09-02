@@ -244,13 +244,15 @@ function hToG(hy,hm,hd){let jd=Math.floor((11*hy+3)/30)+354*hy+30*hm-Math.floor(
 function hMonthLen(hy,hm){if(hm===12&&((11*hy+14)%30)<11)return 30;return hm%2===1?30:29;}
 function weekday(gy,gm,gd){return new Date(gy,gm-1,gd).getDay();}
 
-const _today=new Date();
-const _todayH=gToH(_today.getFullYear(),_today.getMonth()+1,_today.getDate());
-let curY=_todayH.y,curM=_todayH.m;
+function getCDTDate(){const s=new Date().toLocaleDateString('en-CA',{timeZone:'America/Chicago'});const[y,m,d]=s.split('-').map(Number);return{y,m,d};}
+let _todayH={y:0,m:0,d:0};
+let _todayGreg={y:0,m:0,d:0};
+let curY=0,curM=0;
 
+function cg(d){if(_todayH.y>0&&curY===_todayH.y&&curM===_todayH.m){const dt=new Date(_todayGreg.y,_todayGreg.m-1,_todayGreg.d+(d-_todayH.d));return{y:dt.getFullYear(),m:dt.getMonth()+1,d:dt.getDate()};}return hToG(curY,curM,d);}
 function render(){
-  const g1=hToG(curY,curM,1);
-  const gLast=hToG(curY,curM,hMonthLen(curY,curM));
+  const g1=cg(1);
+  const gLast=cg(hMonthLen(curY,curM));
   const rangeStr=`هجری ${curY} · ${GREG_M[g1.m]} – ${GREG_M[gLast.m]} ${g1.y}`;
   document.getElementById('cal-month-en').textContent=MONTHS_FA[curM];
   document.getElementById('cal-month-range').textContent=rangeStr;
@@ -261,7 +263,7 @@ function render(){
   const daysInMonth=hMonthLen(curY,curM);
   const startDow=weekday(g1.y,g1.m,g1.d);
   for(let i=0;i<startDow;i++){const prevM=curM===1?12:curM-1,prevY=curM===1?curY-1:curY;const prevLen=hMonthLen(prevY,prevM);const pd=prevLen-startDow+1+i;const pg=hToG(prevY,prevM,pd);grid.appendChild(makeCell(pd,pg,false,null,true));}
-  for(let d=1;d<=daysInMonth;d++){const g=hToG(curY,curM,d);const isToday=(curY===_todayH.y&&curM===_todayH.m&&d===_todayH.d);const ev=(EVENTS[curM]||{})[d]||null;grid.appendChild(makeCell(d,g,isToday,ev,false));}
+  for(let d=1;d<=daysInMonth;d++){const g=cg(d);const isToday=(curY===_todayH.y&&curM===_todayH.m&&d===_todayH.d);const ev=(EVENTS[curM]||{})[d]||null;grid.appendChild(makeCell(d,g,isToday,ev,false));}
   const total=startDow+daysInMonth;const trail=total%7===0?0:7-(total%7);
   for(let i=1;i<=trail;i++){const nextM=curM===12?1:curM+1,nextY=curM===12?curY+1:curY;const ng=hToG(nextY,nextM,i);grid.appendChild(makeCell(i,ng,false,null,true));}
 
@@ -270,14 +272,15 @@ function render(){
   const monthEvts=EVENTS[curM]||{};
   const days=Object.keys(monthEvts).map(Number).sort((a,b)=>a-b);
   if(!days.length){list.innerHTML='<p class="hcal-no-events">هیچ مناسبتی برای این ماه ثبت نشده است.</p>';return;}
-  days.forEach(d=>{const ev=monthEvts[d];const g=hToG(curY,curM,d);const card=document.createElement('div');card.className='hcal-event-card';card.innerHTML=`<div class="hcal-event-stripe ${ev.type}"></div><div class="hcal-event-inner"><div class="hcal-event-date"><div class="hd">${d}</div><div class="gd">${GREG_M[g.m]} ${g.d}</div></div><div class="hcal-event-sep"></div><div class="hcal-event-text"><div class="hcal-event-title">${ev.t}</div><div class="hcal-event-type-label ${ev.type}">${TYPE_FA[ev.type]}</div></div></div>`;list.appendChild(card);});
+  days.forEach(d=>{const ev=monthEvts[d];const g=cg(d);const card=document.createElement('div');card.className='hcal-event-card';card.innerHTML=`<div class="hcal-event-stripe ${ev.type}"></div><div class="hcal-event-inner"><div class="hcal-event-date"><div class="hd">${d}</div><div class="gd">${GREG_M[g.m]} ${g.d}</div></div><div class="hcal-event-sep"></div><div class="hcal-event-text"><div class="hcal-event-title">${ev.t}</div><div class="hcal-event-type-label ${ev.type}">${TYPE_FA[ev.type]}</div></div></div>`;list.appendChild(card);});
 }
 
 function makeCell(hd,g,isToday,ev,otherMonth){const cell=document.createElement('div');cell.className='hcal-cell'+(isToday?' today':'')+(ev?' has-event':'')+(otherMonth?' other-month':'');cell.innerHTML=`<div class="hcal-hijri">${hd}</div><div class="hcal-greg">${GREG_M[g.m]} ${g.d}</div>`+(ev?`<div class="hcal-dots"><div class="hcal-dot ${ev.type}"></div></div><div class="hcal-event-label ${ev.type}">${ev.t}</div>`:'');return cell;}
 
 document.getElementById('cal-prev').addEventListener('click',()=>{curM--;if(curM<1){curM=12;curY--;}render();});
 document.getElementById('cal-next').addEventListener('click',()=>{curM++;if(curM>12){curM=1;curY++;}render();});
-render();
+async function initCalendar(){const{y,m,d}=getCDTDate();_todayGreg={y,m,d};const ds=`${String(d).padStart(2,'0')}-${String(m).padStart(2,'0')}-${y}`;let ok=false;try{const r=await fetch(`https://api.aladhan.com/v1/gToH/${ds}`);if(r.ok){const j=await r.json();if(j.code===200){const h=j.data.hijri;_todayH={y:+h.year,m:+h.month.number,d:+h.day};ok=true;}}}catch(e){}if(!ok){_todayH=gToH(y,m,d);}curY=_todayH.y;curM=_todayH.m;render();}
+initCalendar();
 </script>
 </body>
 </html>
