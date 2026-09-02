@@ -206,7 +206,7 @@ h1, h2, h3, h4 {
   min-width: 160px;
   box-shadow: var(--shadow-dark);
 }
-.nav-dropdown:hover .dropdown-panel,
+
 .nav-dropdown.open  .dropdown-panel { display: block; }
 
 .dropdown-item {

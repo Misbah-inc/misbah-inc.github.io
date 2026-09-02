@@ -25,14 +25,36 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  /* ── Dropdown Menus (click on mobile, hover on desktop) ── */
+  /* ── Dropdown Menus (click on mobile, hover+delay on desktop) ── */
   document.querySelectorAll('.nav-dropdown').forEach(dd => {
     const trigger = dd.querySelector('.nav-link');
+    const panel   = dd.querySelector('.dropdown-panel');
     const arrow   = dd.querySelector('.dropdown-arrow');
+    let closeTimer;
 
+    const openDd = () => {
+      clearTimeout(closeTimer);
+      dd.classList.add('open');
+      if (arrow) arrow.classList.add('up');
+    };
+    const scheduleDdClose = () => {
+      closeTimer = setTimeout(() => {
+        dd.classList.remove('open');
+        if (arrow) arrow.classList.remove('up');
+      }, 200);
+    };
+
+    // Desktop: hover with delay so diagonal mouse movement works
+    dd.addEventListener('mouseenter', openDd);
+    dd.addEventListener('mouseleave', scheduleDdClose);
+    if (panel) {
+      panel.addEventListener('mouseenter', () => clearTimeout(closeTimer));
+      panel.addEventListener('mouseleave', scheduleDdClose);
+    }
+
+    // Mobile: click to toggle
     if (trigger) {
       trigger.addEventListener('click', (e) => {
-        // Only use click behaviour on mobile (nav-links is open)
         if (window.innerWidth <= 768) {
           e.preventDefault();
           const open = dd.classList.toggle('open');
@@ -122,7 +144,7 @@ document.addEventListener('DOMContentLoaded', () => {
       closeTimer = setTimeout(() => {
         menu.classList.remove('open');
         btn.setAttribute('aria-expanded', false);
-      }, 280);
+      }, 400);
     };
     dd.addEventListener('mouseenter', openMenu);
     dd.addEventListener('mouseleave', scheduleClose);
