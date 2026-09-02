@@ -532,7 +532,7 @@ h1, h2, h3, h4 {
 .feat-event-btn:hover { background: #d4b07a; }
 
 @media (max-width: 640px) {
-  .feat-event-card { aspect-ratio: unset; height: 200px; }
+  .feat-event-card { aspect-ratio: 4 / 3; height: auto; }
   .feat-event-content { padding: .5rem 1.1rem .9rem; }
   .feat-event-title { font-size: 1.15rem; }
   .feat-event-date { display: none; }
@@ -847,7 +847,14 @@ h1, h2, h3, h4 {
   .shorts-grid { grid-template-columns: repeat(3, 1fr); }
 }
 @media (max-width: 480px) {
-  .shorts-grid { grid-template-columns: repeat(2, 1fr); }
+  .shorts-grid { grid-template-columns: 1fr; max-width: 280px; margin-left: auto; margin-right: auto; }
+  .short-card:not(:first-child) { display: none; }
+}
+@media (max-width: 640px) {
+  .mourning-section {
+    background-image: url('/images/mourning-section-mobile.png');
+    background-position: center center;
+  }
 }
 
 /* ── 10. Donation Widget ──────────────────────────────────── */
