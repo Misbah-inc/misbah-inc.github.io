@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>تقویم هجری | مصباح</title>
+  <meta name="description" content="تقویم هجری اسلامی با مناسبت‌های شیعی، تبدیل تاریخ میلادی و جستجوی ماهانه.">
+
+  <link rel="canonical" href="https://misbah128.com/fa/hijri-calendar/">
+  <link rel="alternate" hreflang="en"        href="https://misbah128.com/hijri-calendar/">
+  <link rel="alternate" hreflang="ar"        href="https://misbah128.com/ar/hijri-calendar/">
+  <link rel="alternate" hreflang="fa"        href="https://misbah128.com/fa/hijri-calendar/">
+  <link rel="alternate" hreflang="ur"        href="https://misbah128.com/ur/hijri-calendar/">
+  <link rel="alternate" hreflang="x-default" href="https://misbah128.com/hijri-calendar/">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500;600&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/style.css">
+  <style>
+    body { background: var(--dark-bg); }
+    .hcal-page { background: var(--dark-bg); min-height: 100vh; padding-top: var(--nav-h); color: var(--white); }
+    .hcal-nav-bar { background: linear-gradient(180deg, var(--nav-bg) 0%, #162516 100%); padding: 2.5rem 0 2rem; text-align: center; }
+    .hcal-nav-row { display: flex; align-items: center; justify-content: center; gap: 2rem; }
+    .hcal-arrow { background: rgba(255,255,255,0.06); border: 1px solid rgba(201,164,107,0.35); color: var(--gold); width: 44px; height: 44px; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; font-size: 1.4rem; line-height: 1; font-family: inherit; transition: background 0.2s, border-color 0.2s; flex-shrink: 0; }
+    .hcal-arrow:hover { background: rgba(201,164,107,0.14); border-color: var(--gold); }
+    .hcal-month-info { text-align: center; }
+    .hcal-month-en { font-family: 'Amiri', serif; font-size: clamp(1.6rem, 4vw, 2.6rem); font-weight: 700; color: var(--white); line-height: 1; }
+    .hcal-month-range { font-family: 'Inter', sans-serif; font-size: 0.72rem; color: rgba(255,255,255,0.38); letter-spacing: 0.06em; margin-top: 0.5rem; }
+    .hcal-grid-section { padding: 2rem 0 1rem; }
+    .hcal-weekdays { display: grid; grid-template-columns: repeat(7, 1fr); gap: 3px; margin-bottom: 3px; }
+    .hcal-wd { text-align: center; font-family: 'Amiri', serif; font-size: 0.8rem; color: var(--gold); padding: 0.5rem 0; }
+    .hcal-wd.weekend { color: rgba(201,164,107,0.5); }
+    .hcal-grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 3px; }
+    .hcal-cell { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.05); border-radius: 8px; padding: 0.55rem 0.5rem 0.45rem; min-height: 96px; cursor: default; transition: background 0.18s, border-color 0.18s; position: relative; }
+    .hcal-cell:hover:not(.other-month) { background: rgba(255,255,255,0.07); border-color: rgba(201,164,107,0.18); }
+    .hcal-cell.other-month { opacity: 0.22; pointer-events: none; }
+    .hcal-cell.today { border-color: var(--gold) !important; background: rgba(201,164,107,0.09) !important; }
+    .hcal-cell.has-event { border-color: rgba(255,255,255,0.09); }
+    .hcal-hijri { font-family: 'Amiri', serif; font-size: 1.15rem; font-weight: 700; color: var(--white); line-height: 1; }
+    .hcal-cell.today .hcal-hijri { color: var(--gold); }
+    .hcal-greg { font-family: 'Inter', sans-serif; font-size: 0.62rem; color: rgba(255,255,255,0.3); margin-top: 0.15rem; }
+    .hcal-dots { display: flex; flex-wrap: wrap; gap: 3px; margin-top: 0.35rem; }
+    .hcal-dot { width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; }
+    .hcal-dot.martyrdom   { background: #c0423a; }
+    .hcal-dot.birth       { background: #3fa98a; }
+    .hcal-dot.celebration { background: var(--gold); }
+    .hcal-dot.commemoration { background: #8a77cc; }
+    .hcal-event-label { font-family: 'Amiri', serif; font-size: 0.7rem; line-height: 1.35; margin-top: 0.3rem; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+    .hcal-event-label.martyrdom   { color: #d96060; }
+    .hcal-event-label.birth       { color: #5ac4a8; }
+    .hcal-event-label.celebration { color: var(--gold); }
+    .hcal-event-label.commemoration { color: #a898e0; }
+    .hcal-events-section { padding: 2rem 0 5rem; border-top: 1px solid rgba(255,255,255,0.06); margin-top: 1.5rem; }
+    .hcal-events-top { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.5rem; }
+    .hcal-events-heading { font-family: 'Amiri', serif; font-size: 1rem; color: var(--gold); }
+    .hcal-legend { display: flex; gap: 1.2rem; flex-wrap: wrap; }
+    .hcal-legend-item { display: flex; align-items: center; gap: 0.4rem; font-size: 0.8rem; font-family: 'Amiri', serif; color: rgba(255,255,255,0.4); }
+    .hcal-legend-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+    .hcal-event-list { display: flex; flex-direction: column; gap: 0.6rem; }
+    .hcal-event-card { display: flex; align-items: stretch; gap: 0; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06); border-radius: 10px; overflow: hidden; transition: background 0.2s; }
+    .hcal-event-card:hover { background: rgba(255,255,255,0.055); }
+    .hcal-event-stripe { width: 4px; flex-shrink: 0; }
+    .hcal-event-stripe.martyrdom   { background: #c0423a; }
+    .hcal-event-stripe.birth       { background: #3fa98a; }
+    .hcal-event-stripe.celebration { background: var(--gold); }
+    .hcal-event-stripe.commemoration { background: #8a77cc; }
+    .hcal-event-inner { display: flex; align-items: center; gap: 1rem; padding: 0.8rem 1rem; flex: 1; }
+    .hcal-event-date { text-align: center; min-width: 40px; flex-shrink: 0; }
+    .hcal-event-date .hd { font-family: 'Amiri', serif; font-size: 1.5rem; font-weight: 700; color: var(--white); line-height: 1; }
+    .hcal-event-date .gd { font-family: 'Inter', sans-serif; font-size: 0.6rem; color: rgba(255,255,255,0.35); margin-top: 0.2rem; white-space: nowrap; }
+    .hcal-event-sep { width: 1px; background: rgba(255,255,255,0.08); align-self: stretch; flex-shrink: 0; margin: 0.5rem 0; }
+    .hcal-event-text { flex: 1; padding-right: 0.75rem; }
+    .hcal-event-title { font-family: 'Amiri', serif; font-size: 1rem; font-weight: 700; color: var(--white); line-height: 1.5; }
+    .hcal-event-type-label { font-size: 0.7rem; font-family: 'Amiri', serif; margin-top: 0.2rem; }
+    .hcal-event-type-label.martyrdom   { color: #c0423a; }
+    .hcal-event-type-label.birth       { color: #3fa98a; }
+    .hcal-event-type-label.celebration { color: var(--gold); }
+    .hcal-event-type-label.commemoration { color: #8a77cc; }
+    .hcal-no-events { color: rgba(255,255,255,0.25); font-size: 0.9rem; padding: 1rem 0; font-family: 'Amiri', serif; }
+    @media (max-width: 640px) {
+      .hcal-cell { min-height: 60px; padding: 0.4rem 0.3rem; }
+      .hcal-hijri { font-size: 0.95rem; }
+      .hcal-greg { font-size: 0.55rem; }
+      .hcal-wd { font-size: 0.7rem; padding: 0.35rem 0; }
+      .hcal-event-inner { padding: 0.65rem 0.75rem; gap: 0.75rem; }
+    }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav-inner" role="navigation" aria-label="ناوبری اصلی">
+    <a href="/fa/" class="nav-logo" aria-label="مصباح">
+      <img src="../../assets/logo.png" alt="مصباح" onerror="this.style.display='none'">
+      <span class="nav-logo-text">MISBAH</span>
+    </a>
+    <button class="hamburger" id="hamburger" aria-label="نمایش منو" aria-expanded="false" aria-controls="nav-links">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-links" id="nav-links">
+      <a href="/fa/articles/" class="nav-link">مقالات</a>
+      <a href="https://library.misbah128.com" class="nav-link" target="_blank" rel="noopener">کتابخانه مصباح</a>
+      <div class="nav-dropdown">
+        <button class="nav-link" aria-haspopup="true" aria-expanded="false">
+          ارتباط
+          <svg class="dropdown-arrow" viewBox="0 0 10 6" fill="none" aria-hidden="true">
+            <path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </button>
+        <div class="dropdown-panel" role="menu">
+          <a href="/fa/#subscribe" class="dropdown-item" role="menuitem">عضویت</a>
+          <a href="/fa/#contact"   class="dropdown-item" role="menuitem">تماس با ما</a>
+        </div>
+      </div>
+      <a href="/fa/hijri-calendar/" class="nav-link" style="color:var(--gold)" aria-current="page">تقویم هجری</a>
+      <a href="/fa/moonsighting/"   class="nav-link">رؤیت هلال</a>
+      <a href="https://www.misbah-inc.com/donate" target="_blank" rel="noopener" class="nav-link nav-cta">کمک مالی</a>
+      <a href="/fa/#about" class="nav-link">درباره ما</a>
+      <div class="lang-sw" aria-label="زبان">
+        <a href="/hijri-calendar/"    hreflang="en">EN</a>
+        <a href="/ar/hijri-calendar/" hreflang="ar">AR</a>
+        <a href="/fa/hijri-calendar/" hreflang="fa" class="active">FA</a>
+        <a href="/ur/hijri-calendar/" hreflang="ur">UR</a>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main class="hcal-page">
+  <div class="hcal-nav-bar">
+    <div class="hcal-nav-row">
+      <button class="hcal-arrow" id="cal-next" aria-label="ماه بعد">&#8250;</button>
+      <div class="hcal-month-info">
+        <div class="hcal-month-en" id="cal-month-en"></div>
+        <div class="hcal-month-range" id="cal-month-range"></div>
+      </div>
+      <button class="hcal-arrow" id="cal-prev" aria-label="ماه قبل">&#8249;</button>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="hcal-grid-section">
+      <div class="hcal-weekdays">
+        <div class="hcal-wd weekend">یکشنبه</div>
+        <div class="hcal-wd">دوشنبه</div>
+        <div class="hcal-wd">سه‌شنبه</div>
+        <div class="hcal-wd">چهارشنبه</div>
+        <div class="hcal-wd">پنج‌شنبه</div>
+        <div class="hcal-wd">جمعه</div>
+        <div class="hcal-wd weekend">شنبه</div>
+      </div>
+      <div class="hcal-grid" id="hcal-grid"></div>
+    </div>
+
+    <div class="hcal-events-section">
+      <div class="hcal-events-top">
+        <div class="hcal-events-heading" id="events-heading">مناسبت‌های این ماه</div>
+        <div class="hcal-legend">
+          <div class="hcal-legend-item"><div class="hcal-legend-dot" style="background:#c0423a"></div>شهادت / مصیبت</div>
+          <div class="hcal-legend-item"><div class="hcal-legend-dot" style="background:#3fa98a"></div>تولد / سالگرد</div>
+          <div class="hcal-legend-item"><div class="hcal-legend-dot" style="background:#c9a46b"></div>جشن</div>
+          <div class="hcal-legend-item"><div class="hcal-legend-dot" style="background:#8a77cc"></div>یادبود</div>
+        </div>
+      </div>
+      <div class="hcal-event-list" id="hcal-event-list"></div>
+    </div>
+  </div>
+</main>
+
+<script src="../../assets/script.js"></script>
+<script>
+const MONTHS_FA = ['','محرّم','صفر','ربیع‌الاول','ربیع‌الثانی','جمادی‌الاول','جمادی‌الثانی','رجب','شعبان','رمضان','شوال','ذی‌القعده','ذی‌الحجه'];
+const GREG_M = ['','ژانویه','فوریه','مارس','آوریل','مه','ژوئن','ژوئیه','اوت','سپتامبر','اکتبر','نوامبر','دسامبر'];
+const TYPE_FA = { martyrdom:'شهادت', birth:'تولد', celebration:'جشن', commemoration:'یادبود' };
+
+const EVENTS = {
+  1: {
+    1:  { t:'آغاز سال نو هجری — اول محرم', type:'celebration' },
+    10: { t:'روز عاشورا — شهادت امام حسین (ع) و یاران او در کربلا', type:'martyrdom' },
+  },
+  2: {
+    7:  { t:'شهادت امام علی بن موسی الرضا (ع)', type:'martyrdom' },
+    20: { t:'اربعین — چهلمین روز شهادت امام حسین (ع)', type:'commemoration' },
+    28: { t:'شهادت پیامبر اکرم (ص) و امام حسن مجتبی (ع)', type:'martyrdom' },
+  },
+  3: {
+    8:  { t:'شهادت امام حسن عسکری (ع)', type:'martyrdom' },
+    9:  { t:'آغاز امامت امام مهدی (عج) — غدیر دوم', type:'celebration' },
+    10: { t:'ازدواج حضرت خدیجه (س) با پیامبر اکرم (ص)', type:'celebration' },
+    17: { t:'میلاد پیامبر اکرم (ص) و امام جعفر صادق (ع)', type:'birth' },
+    24: { t:'ورود حضرت فاطمه معصومه (س) به قم', type:'commemoration' },
+    26: { t:'شب مبیت — خوابیدن امام علی (ع) در بستر پیامبر (ص)', type:'commemoration' },
+  },
+  4: { 11: { t:'میلاد امام حسن عسکری (ع)', type:'birth' } },
+  5: {
+    5:  { t:'میلاد حضرت زینب بنت علی (س)', type:'birth' },
+    13: { t:'میلاد امام علی بن ابی‌طالب (ع) در داخل کعبه', type:'birth' },
+  },
+  6: {
+    3:  { t:'شهادت حضرت فاطمه زهرا (س)', type:'martyrdom' },
+    20: { t:'میلاد حضرت فاطمه زهرا (س)', type:'birth' },
+  },
+  7: {
+    1:  { t:'اول رجب — روز مستحب روزه', type:'celebration' },
+    3:  { t:'میلاد امام علی الهادی (ع)', type:'birth' },
+    10: { t:'میلاد امام محمد باقر (ع)', type:'birth' },
+    25: { t:'شهادت امام موسی کاظم (ع)', type:'martyrdom' },
+    27: { t:'شب معراج — سفر آسمانی پیامبر (ص)', type:'celebration' },
+  },
+  8: {
+    3:  { t:'میلاد امام حسین بن علی (ع)', type:'birth' },
+    4:  { t:'میلاد ابوالفضل العباس (ع)', type:'birth' },
+    5:  { t:'میلاد امام علی بن الحسین زین‌العابدین (ع)', type:'birth' },
+    15: { t:'میلاد امام مهدی (عج) — شب نیمه شعبان', type:'birth' },
+  },
+  9: {
+    1:  { t:'آغاز ماه مبارک رمضان', type:'celebration' },
+    19: { t:'شب قدر اول — ضربت خوردن امام علی (ع) توسط ابن‌ملجم', type:'martyrdom' },
+    21: { t:'شهادت امام علی بن ابی‌طالب (ع) امیر المؤمنین', type:'martyrdom' },
+    23: { t:'شب قدر', type:'celebration' },
+    27: { t:'شب قدر — روایت دیگر', type:'celebration' },
+  },
+  10: {
+    1:  { t:'عید فطر مبارک', type:'celebration' },
+    25: { t:'شهادت امام جعفر صادق (ع)', type:'martyrdom' },
+  },
+  11: {
+    1:  { t:'میلاد حضرت فاطمه معصومه (س)', type:'birth' },
+    11: { t:'میلاد امام علی رضا (ع)', type:'birth' },
+  },
+  12: {
+    7:  { t:'شهادت امام محمد باقر (ع)', type:'martyrdom' },
+    9:  { t:'روز عرفه', type:'celebration' },
+    10: { t:'عید اضحی مبارک', type:'celebration' },
+    18: { t:'عید غدیر خم — اعلام ولایت امام علی (ع) توسط پیامبر (ص)', type:'celebration' },
+    24: { t:'روز مباهله', type:'celebration' },
+    25: { t:'دحوالارض', type:'celebration' },
+  },
+};
+
+function gToH(gy,gm,gd){let jd=Math.floor((1461*(gy+4800+Math.floor((gm-14)/12)))/4)+Math.floor((367*(gm-2-12*Math.floor((gm-14)/12)))/12)-Math.floor((3*Math.floor((gy+4900+Math.floor((gm-14)/12))/100))/4)+gd-32075;let l=jd-1948440+10632;let n=Math.floor((l-1)/10631);l=l-10631*n+354;let j=Math.floor((10985-l)/5316)*Math.floor((50*l)/17719)+Math.floor(l/5670)*Math.floor((43*l)/15238);l=l-Math.floor((30-j)/15)*Math.floor((17719*j)/50)-Math.floor(j/16)*Math.floor((15238*j)/43)+29;return{y:30*n+j-30,m:Math.floor((24*l)/709),d:l-Math.floor((709*Math.floor((24*l)/709))/24)};}
+function hToG(hy,hm,hd){let jd=Math.floor((11*hy+3)/30)+354*hy+30*hm-Math.floor((hm-1)/2)+hd+1948440-385;let l=jd+68569;const n=Math.floor((4*l)/146097);l=l-Math.floor((146097*n+3)/4);const i=Math.floor((4000*(l+1))/1461001);l=l-Math.floor((1461*i)/4)+31;const j=Math.floor((80*l)/2447);const gd=l-Math.floor((2447*j)/80);l=Math.floor(j/11);return{y:100*(n-49)+i+l,m:j+2-12*l,d:gd};}
+function hMonthLen(hy,hm){if(hm===12&&((11*hy+14)%30)<11)return 30;return hm%2===1?30:29;}
+function weekday(gy,gm,gd){return new Date(gy,gm-1,gd).getDay();}
+
+const _today=new Date();
+const _todayH=gToH(_today.getFullYear(),_today.getMonth()+1,_today.getDate());
+let curY=_todayH.y,curM=_todayH.m;
+
+function render(){
+  const g1=hToG(curY,curM,1);
+  const gLast=hToG(curY,curM,hMonthLen(curY,curM));
+  const rangeStr=`هجری ${curY} · ${GREG_M[g1.m]} – ${GREG_M[gLast.m]} ${g1.y}`;
+  document.getElementById('cal-month-en').textContent=MONTHS_FA[curM];
+  document.getElementById('cal-month-range').textContent=rangeStr;
+  document.getElementById('events-heading').textContent=`مناسبت‌ها — ${MONTHS_FA[curM]} ${curY}`;
+
+  const grid=document.getElementById('hcal-grid');
+  grid.innerHTML='';
+  const daysInMonth=hMonthLen(curY,curM);
+  const startDow=weekday(g1.y,g1.m,g1.d);
+  for(let i=0;i<startDow;i++){const prevM=curM===1?12:curM-1,prevY=curM===1?curY-1:curY;const prevLen=hMonthLen(prevY,prevM);const pd=prevLen-startDow+1+i;const pg=hToG(prevY,prevM,pd);grid.appendChild(makeCell(pd,pg,false,null,true));}
+  for(let d=1;d<=daysInMonth;d++){const g=hToG(curY,curM,d);const isToday=(curY===_todayH.y&&curM===_todayH.m&&d===_todayH.d);const ev=(EVENTS[curM]||{})[d]||null;grid.appendChild(makeCell(d,g,isToday,ev,false));}
+  const total=startDow+daysInMonth;const trail=total%7===0?0:7-(total%7);
+  for(let i=1;i<=trail;i++){const nextM=curM===12?1:curM+1,nextY=curM===12?curY+1:curY;const ng=hToG(nextY,nextM,i);grid.appendChild(makeCell(i,ng,false,null,true));}
+
+  const list=document.getElementById('hcal-event-list');
+  list.innerHTML='';
+  const monthEvts=EVENTS[curM]||{};
+  const days=Object.keys(monthEvts).map(Number).sort((a,b)=>a-b);
+  if(!days.length){list.innerHTML='<p class="hcal-no-events">هیچ مناسبتی برای این ماه ثبت نشده است.</p>';return;}
+  days.forEach(d=>{const ev=monthEvts[d];const g=hToG(curY,curM,d);const card=document.createElement('div');card.className='hcal-event-card';card.innerHTML=`<div class="hcal-event-stripe ${ev.type}"></div><div class="hcal-event-inner"><div class="hcal-event-date"><div class="hd">${d}</div><div class="gd">${GREG_M[g.m]} ${g.d}</div></div><div class="hcal-event-sep"></div><div class="hcal-event-text"><div class="hcal-event-title">${ev.t}</div><div class="hcal-event-type-label ${ev.type}">${TYPE_FA[ev.type]}</div></div></div>`;list.appendChild(card);});
+}
+
+function makeCell(hd,g,isToday,ev,otherMonth){const cell=document.createElement('div');cell.className='hcal-cell'+(isToday?' today':'')+(ev?' has-event':'')+(otherMonth?' other-month':'');cell.innerHTML=`<div class="hcal-hijri">${hd}</div><div class="hcal-greg">${GREG_M[g.m]} ${g.d}</div>`+(ev?`<div class="hcal-dots"><div class="hcal-dot ${ev.type}"></div></div><div class="hcal-event-label ${ev.type}">${ev.t}</div>`:'');return cell;}
+
+document.getElementById('cal-prev').addEventListener('click',()=>{curM--;if(curM<1){curM=12;curY--;}render();});
+document.getElementById('cal-next').addEventListener('click',()=>{curM++;if(curM>12){curM=1;curY++;}render();});
+render();
+</script>
+</body>
+</html>

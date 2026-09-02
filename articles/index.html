@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Articles | Misbah Inc.</title>
+  <meta name="description" content="Articles, reflections, and Ma'ārif of the Ahlul Bayt (p) — organized through the Islamic year.">
+
+  <link rel="canonical" href="https://misbah128.com/articles/">
+  <link rel="alternate" hreflang="en" href="https://misbah128.com/articles/">
+  <link rel="alternate" hreflang="ar" href="https://misbah128.com/ar/articles/">
+  <link rel="alternate" hreflang="fa" href="https://misbah128.com/fa/articles/">
+  <link rel="alternate" hreflang="ur" href="https://misbah128.com/ur/articles/">
+  <link rel="alternate" hreflang="x-default" href="https://misbah128.com/articles/">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500;600&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../assets/style.css">
+
+  <style>
+    /* ══ Articles Page ══════════════════════════════════════════ */
+
+    /* Hero */
+    .art-hero {
+      background: #0a1c0c;
+      text-align: center;
+      padding: 5.5rem 1.5rem 4.5rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .art-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 65% 55% at 50% 50%, rgba(196,160,70,.15) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .art-hero-eyebrow {
+      font-family: 'Cinzel', serif;
+      font-size: .62rem;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      color: var(--gold, #c4a046);
+      display: block;
+      margin-bottom: 1rem;
+    }
+    .art-hero-ornament {
+      display: block;
+      color: var(--gold, #c4a046);
+      font-family: 'Cinzel', serif;
+      font-size: .8rem;
+      letter-spacing: .3em;
+      margin-bottom: 1.4rem;
+      opacity: .65;
+    }
+    .art-hero-title {
+      font-family: 'Bebas Neue', 'Arial Narrow', sans-serif;
+      font-size: clamp(3.8rem, 9vw, 7rem);
+      line-height: .95;
+      color: #fff;
+      letter-spacing: .03em;
+      margin: 0 0 .4rem;
+    }
+    .art-hero-title .gold-line {
+      color: var(--gold, #c4a046);
+      display: block;
+    }
+    .art-hero-subtitle {
+      font-family: 'Amiri', serif;
+      font-size: 1.35rem;
+      color: rgba(255,255,255,.55);
+      display: block;
+      margin-top: .9rem;
+    }
+    .art-hero-divider {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      justify-content: center;
+      margin: 1.4rem auto 0;
+      max-width: 240px;
+    }
+    .art-hero-divider::before,
+    .art-hero-divider::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(196,160,70,.45), transparent);
+    }
+    .art-hero-divider span {
+      color: rgba(196,160,70,.7);
+      font-size: .55rem;
+      letter-spacing: .3em;
+    }
+
+    /* Grid section */
+    .art-grid-section {
+      background: var(--bg-page, #0e1f0e);
+      padding: 3.5rem 1.25rem 6rem;
+    }
+    .art-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.2rem;
+      max-width: 1300px;
+      margin: 0 auto;
+    }
+    @media (max-width: 1000px) { .art-grid { grid-template-columns: repeat(3, 1fr); } }
+    @media (max-width: 680px)  { .art-grid { grid-template-columns: repeat(2, 1fr); gap: .75rem; } }
+    @media (max-width: 380px)  { .art-grid { grid-template-columns: 1fr; } }
+
+    /* Month card */
+    .month-card {
+      position: relative;
+      border-radius: 14px;
+      overflow: hidden;
+      aspect-ratio: 3 / 4;
+      cursor: pointer;
+      background: #1a2e1a;
+      transition: transform .28s ease, box-shadow .28s ease;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .month-card:hover {
+      transform: translateY(-5px) scale(1.015);
+      box-shadow: 0 20px 50px rgba(0,0,0,.55), 0 0 0 1px rgba(196,160,70,.28);
+    }
+    .month-card:focus-visible {
+      outline: 2px solid #c4a046;
+      outline-offset: 3px;
+    }
+    .month-card-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform .38s ease;
+    }
+    .month-card:hover .month-card-img { transform: scale(1.07); }
+    .month-card-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(0,0,0,.88) 0%, rgba(0,0,0,.15) 55%, rgba(0,0,0,0) 100%);
+      pointer-events: none;
+    }
+    .month-card-num {
+      position: absolute;
+      top: .7rem;
+      left: .7rem;
+      background: rgba(196,160,70,.9);
+      color: #0a1c0c;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: .9rem;
+      width: 1.9rem;
+      height: 1.9rem;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .month-card-body {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: .85rem .85rem .8rem;
+    }
+    .month-card-name {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.5rem;
+      color: #fff;
+      letter-spacing: .04em;
+      line-height: 1.05;
+      text-shadow: 0 1px 10px rgba(0,0,0,.6);
+    }
+    .month-card-ar {
+      font-family: 'Amiri', serif;
+      font-size: .88rem;
+      color: var(--gold, #c4a046);
+      display: block;
+      margin-top: .15rem;
+    }
+    .month-card-cta {
+      display: inline-block;
+      margin-top: .45rem;
+      font-family: 'Cinzel', serif;
+      font-size: .52rem;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.6);
+    }
+
+    /* ── Modal ──────────────────────────────────────────────── */
+    .art-modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,.72);
+      backdrop-filter: blur(7px);
+      -webkit-backdrop-filter: blur(7px);
+      z-index: 2000;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .22s ease;
+    }
+    .art-modal-backdrop.open {
+      opacity: 1;
+      pointer-events: all;
+    }
+    @media (min-width: 640px) {
+      .art-modal-backdrop { align-items: center; }
+    }
+    .art-modal {
+      background: #0e1f0e;
+      border: 1px solid rgba(196,160,70,.18);
+      border-radius: 20px 20px 0 0;
+      width: 100%;
+      max-width: 940px;
+      max-height: 92vh;
+      overflow-y: auto;
+      position: relative;
+      transform: translateY(100%);
+      transition: transform .38s cubic-bezier(.22,.68,0,1.15);
+      scrollbar-width: thin;
+      scrollbar-color: rgba(196,160,70,.3) transparent;
+    }
+    @media (min-width: 640px) {
+      .art-modal {
+        border-radius: 20px;
+        max-height: 88vh;
+        width: calc(100% - 2rem);
+        transform: translateY(24px) scale(.97);
+        opacity: 0;
+        transition: transform .3s ease, opacity .3s ease;
+      }
+    }
+    .art-modal-backdrop.open .art-modal {
+      transform: translateY(0);
+    }
+    @media (min-width: 640px) {
+      .art-modal-backdrop.open .art-modal {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+      }
+    }
+
+    /* Banner */
+    .art-modal-banner {
+      position: relative;
+      height: 210px;
+      overflow: hidden;
+      border-radius: 20px 20px 0 0;
+      flex-shrink: 0;
+    }
+    @media (min-width: 640px) { .art-modal-banner { height: 260px; } }
+    .art-modal-banner-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .art-modal-banner-gradient {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(14,31,14,.97) 0%, rgba(14,31,14,.25) 55%, transparent 100%);
+      pointer-events: none;
+    }
+    .art-modal-banner-text {
+      position: absolute;
+      bottom: 1.2rem;
+      left: 1.4rem;
+      right: 3.5rem;
+    }
+    .art-modal-month-en {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 2.5rem;
+      color: #fff;
+      letter-spacing: .04em;
+      line-height: 1;
+    }
+    .art-modal-month-ar {
+      font-family: 'Amiri', serif;
+      font-size: 1.1rem;
+      color: var(--gold, #c4a046);
+      display: block;
+      margin-top: .15rem;
+    }
+    .art-modal-close {
+      position: absolute;
+      top: .9rem;
+      right: .9rem;
+      background: rgba(0,0,0,.5);
+      border: 1px solid rgba(255,255,255,.2);
+      color: #fff;
+      width: 2.2rem;
+      height: 2.2rem;
+      border-radius: 50%;
+      font-size: 1.15rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 5;
+      transition: background .2s, border-color .2s;
+    }
+    .art-modal-close:hover {
+      background: rgba(196,160,70,.25);
+      border-color: rgba(196,160,70,.5);
+    }
+
+    /* Body */
+    .art-modal-body { padding: 1.4rem 1.4rem 2rem; }
+    .art-modal-label {
+      font-family: 'Cinzel', serif;
+      font-size: .58rem;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: var(--gold, #c4a046);
+      display: block;
+      margin-bottom: 1.1rem;
+    }
+    .art-modal-articles {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+    }
+    @media (max-width: 640px) { .art-modal-articles { grid-template-columns: 1fr; } }
+    @media (max-width: 860px) and (min-width: 641px) { .art-modal-articles { grid-template-columns: repeat(2, 1fr); } }
+
+    /* Article card */
+    .art-item-card {
+      background: rgba(255,255,255,.04);
+      border: 1px solid rgba(255,255,255,.07);
+      border-radius: 10px;
+      overflow: hidden;
+      cursor: pointer;
+      transition: border-color .2s, background .2s, transform .18s;
+      text-decoration: none;
+      display: block;
+      color: inherit;
+    }
+    .art-item-card:hover {
+      background: rgba(196,160,70,.07);
+      border-color: rgba(196,160,70,.3);
+      transform: translateY(-2px);
+    }
+    .art-item-thumb {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      display: block;
+    }
+    .art-item-thumb-ph {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      background: rgba(196,160,70,.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .art-item-thumb-ph span {
+      font-family: 'Amiri', serif;
+      font-size: 2rem;
+      color: rgba(196,160,70,.4);
+    }
+    .art-item-info { padding: .8rem; }
+    .art-item-tag {
+      font-family: 'Cinzel', serif;
+      font-size: .5rem;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+      color: var(--gold, #c4a046);
+      display: block;
+      margin-bottom: .3rem;
+    }
+    .art-item-title {
+      font-family: 'Inter', sans-serif;
+      font-size: .82rem;
+      color: rgba(255,255,255,.88);
+      line-height: 1.45;
+      font-weight: 500;
+    }
+    .art-modal-empty {
+      text-align: center;
+      padding: 2.5rem 1rem;
+      color: rgba(255,255,255,.35);
+      font-family: 'Cinzel', serif;
+      font-size: .68rem;
+      letter-spacing: .1em;
+      line-height: 2;
+    }
+
+    /* Light-theme overrides */
+    :root[data-theme="light"] .art-hero,
+    :root[data-theme="light"] .art-grid-section { background: #f2ede4; }
+    :root[data-theme="light"] .art-hero-title { color: #1a2e1a; }
+    :root[data-theme="light"] .art-hero-subtitle { color: rgba(20,40,20,.55); }
+    :root[data-theme="light"] .art-modal { background: #f2ede4; border-color: rgba(196,160,70,.25); }
+    :root[data-theme="light"] .art-modal-banner-gradient { background: linear-gradient(to top, rgba(242,237,228,.97) 0%, rgba(242,237,228,.25) 55%, transparent 100%); }
+    :root[data-theme="light"] .art-modal-month-en { color: #1a2e1a; }
+    :root[data-theme="light"] .art-item-card { background: rgba(0,0,0,.04); border-color: rgba(0,0,0,.09); }
+    :root[data-theme="light"] .art-item-card:hover { background: rgba(196,160,70,.1); border-color: rgba(196,160,70,.35); }
+    :root[data-theme="light"] .art-item-title { color: #1a2e1a; }
+    :root[data-theme="light"] .art-modal-empty { color: rgba(0,0,0,.35); }
+    :root[data-theme="light"] .art-modal-close { background: rgba(0,0,0,.38); }
+
+    @media (prefers-color-scheme: light) {
+      :root:not([data-theme="dark"]) .art-hero,
+      :root:not([data-theme="dark"]) .art-grid-section { background: #f2ede4; }
+      :root:not([data-theme="dark"]) .art-hero-title { color: #1a2e1a; }
+      :root:not([data-theme="dark"]) .art-hero-subtitle { color: rgba(20,40,20,.55); }
+      :root:not([data-theme="dark"]) .art-modal { background: #f2ede4; border-color: rgba(196,160,70,.25); }
+      :root:not([data-theme="dark"]) .art-modal-banner-gradient { background: linear-gradient(to top, rgba(242,237,228,.97) 0%, rgba(242,237,228,.25) 55%, transparent 100%); }
+      :root:not([data-theme="dark"]) .art-modal-month-en { color: #1a2e1a; }
+      :root:not([data-theme="dark"]) .art-item-card { background: rgba(0,0,0,.04); border-color: rgba(0,0,0,.09); }
+      :root:not([data-theme="dark"]) .art-item-card:hover { background: rgba(196,160,70,.1); border-color: rgba(196,160,70,.35); }
+      :root:not([data-theme="dark"]) .art-item-title { color: #1a2e1a; }
+      :root:not([data-theme="dark"]) .art-modal-empty { color: rgba(0,0,0,.35); }
+      :root:not([data-theme="dark"]) .art-modal-close { background: rgba(0,0,0,.38); }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ══ HEADER ══════════════════════════════════════════════════ -->
+<header class="site-header">
+  <nav class="nav-inner" role="navigation" aria-label="Main navigation">
+
+    <a href="/" class="nav-logo" aria-label="Misbah Inc. home">
+      <img src="../assets/logo.png" alt="Misbah" onerror="this.style.display='none'">
+      <span class="nav-logo-text">MISBAH</span>
+    </a>
+
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
+      <span></span><span></span><span></span>
+    </button>
+
+    <div class="nav-links" id="nav-links">
+      <a href="/articles" class="nav-link" aria-current="page">Articles</a>
+
+      <a href="https://library.misbah128.com" class="nav-link" target="_blank" rel="noopener">
+        Misbah Library
+      </a>
+
+      <div class="nav-dropdown">
+        <button class="nav-link" aria-haspopup="true" aria-expanded="false">
+          Connect
+          <svg class="dropdown-arrow" viewBox="0 0 10 6" fill="none" aria-hidden="true">
+            <path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </button>
+        <div class="dropdown-panel" role="menu">
+          <a href="/connect#subscribe" class="dropdown-item" role="menuitem">Subscribe</a>
+          <a href="/connect#contact"   class="dropdown-item" role="menuitem">Contact Us</a>
+        </div>
+      </div>
+
+      <a href="/hijri-calendar/" class="nav-link">Hijri Calendar</a>
+      <a href="/moonsighting/"   class="nav-link">Moonsighting</a>
+      <a href="https://www.misbah-inc.com/donate" target="_blank" rel="noopener" class="nav-link nav-cta">Donate</a>
+      <a href="/about"  class="nav-link">About Us</a>
+
+      <div class="lang-sw" aria-label="Language">
+        <a href="/articles/"    hreflang="en">EN</a>
+        <a href="/ar/articles/" hreflang="ar">AR</a>
+        <a href="/fa/articles/" hreflang="fa">FA</a>
+        <a href="/ur/articles/" hreflang="ur">UR</a>
+      </div>
+      <button class="theme-toggle" aria-label="Switch to light mode">
+        <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <svg class="icon-sun"  viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+      </button>
+    </div>
+  </nav>
+</header>
+
+
+<main>
+
+<!-- ══ HERO ════════════════════════════════════════════════════ -->
+<section class="art-hero" aria-label="Articles hero">
+  <span class="art-hero-eyebrow">Misbah Inc. &nbsp;·&nbsp; Knowledge &amp; Reflection</span>
+  <span class="art-hero-ornament">✦ &nbsp; ✦ &nbsp; ✦</span>
+  <h1 class="art-hero-title">
+    Ma'ārif of the<br>Ahlul Bayt (p)
+    <span class="gold-line">Through the Year</span>
+  </h1>
+  <span class="art-hero-subtitle">معارف أهل البيت عليهم السلام عبر العام</span>
+  <div class="art-hero-divider"><span>◆ ◆ ◆</span></div>
+</section>
+
+
+<!-- ══ MONTH GRID ═══════════════════════════════════════════════ -->
+<section class="art-grid-section" aria-label="Browse articles by Islamic month">
+  <div class="art-grid" id="monthGrid">
+    <!-- Cards injected by JS -->
+  </div>
+</section>
+
+
+<!-- ══ MODAL ════════════════════════════════════════════════════ -->
+<div class="art-modal-backdrop" id="artModal" role="dialog" aria-modal="true" aria-labelledby="modalMonthLabel">
+  <div class="art-modal" id="artModalCard" role="document">
+
+    <button class="art-modal-close" id="artModalClose" aria-label="Close collection">&times;</button>
+
+    <div class="art-modal-banner">
+      <img class="art-modal-banner-img" id="modalBannerImg" src="" alt="" loading="lazy">
+      <div class="art-modal-banner-gradient"></div>
+      <div class="art-modal-banner-text">
+        <div class="art-modal-month-en" id="modalMonthLabel"></div>
+        <span class="art-modal-month-ar" id="modalMonthAr"></span>
+      </div>
+    </div>
+
+    <div class="art-modal-body">
+      <span class="art-modal-label">Collection &nbsp;·&nbsp; Articles &amp; Reflections</span>
+      <div class="art-modal-articles" id="modalArticlesList"></div>
+    </div>
+
+  </div>
+</div>
+
+</main>
+
+
+<!-- ══ FOOTER ═══════════════════════════════════════════════════ -->
+<footer class="site-footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+
+      <div class="footer-brand">
+        <span class="nav-logo-text">MISBAH</span>
+        <p class="footer-tagline">
+          A U.S.-based nonprofit uplifting souls through education, community service, and the teachings of the Ahlul Bayt (p).
+        </p>
+        <div class="footer-social" aria-label="Social media">
+          <a href="https://chat.whatsapp.com/JnOFh4iSCem4b1Sg45RN5n" class="social-btn" aria-label="WhatsApp" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.477 2 12c0 1.9.525 3.677 1.44 5.197L2 22l4.917-1.418A9.96 9.96 0 0 0 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm5.063 14.063c-.212.594-.84 1.088-1.5 1.231-.4.088-.92.158-2.674-.574-2.241-.92-3.683-3.189-3.795-3.338-.107-.146-.9-1.199-.9-2.287 0-1.088.572-1.624.775-1.847.203-.223.44-.278.587-.278l.42.008c.135.006.315-.051.493.376.183.44.622 1.521.677 1.631.054.11.09.238.018.386-.073.147-.11.238-.22.366l-.329.386c-.11.11-.224.228-.097.448.127.22.57.94 1.224 1.523.84.748 1.548.98 1.767 1.09.218.11.347.092.476-.055.129-.147.55-.644.697-.864.146-.22.293-.184.494-.11s1.278.603 1.497.713c.219.11.365.164.42.255.054.092.054.531-.128 1.043z"/></svg></a>
+          <a href="https://t.me/misbah110" class="social-btn" aria-label="Telegram" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8l-1.69 7.96c-.12.57-.46.71-.93.44l-2.56-1.89-1.24 1.19c-.14.14-.25.25-.51.25l.18-2.6 4.68-4.23c.2-.18-.04-.28-.32-.1L7.2 14.19l-2.52-.79c-.55-.17-.56-.55.11-.81l9.84-3.79c.46-.17.86.11.71.8l-.7-.8z"/></svg></a>
+          <a href="https://www.instagram.com/misbah.110/" class="social-btn" aria-label="Instagram" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg></a>
+          <a href="#" class="social-btn" aria-label="Facebook" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+          <a href="https://x.com/misbahinc110" class="social-btn" aria-label="X (Twitter)" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.748l7.73-8.835L1.254 2.25H8.08l4.259 5.631L18.244 2.25zM17.083 20.25h1.833L7.084 4.126H5.117L17.083 20.25z"/></svg></a>
+          <a href="https://www.youtube.com/@Misbah110" class="social-btn" aria-label="YouTube" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+          <a href="https://www.tiktok.com/@misbahinc110" class="social-btn" aria-label="TikTok" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V9.05a8.16 8.16 0 0 0 4.77 1.52V7.12a4.85 4.85 0 0 1-1-.43z"/></svg></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Pages</h4>
+        <a href="/articles">Articles</a>
+        <a href="https://library.misbah128.com" target="_blank" rel="noopener">Misbah Library</a>
+        <a href="https://www.misbah-inc.com/donate" target="_blank" rel="noopener">Donate</a>
+        <a href="/connect">Connect</a>
+        <a href="/about">About Us</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          <a href="mailto:info@misbah-inc.com">info@misbah-inc.com</a>
+        </div>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+          <a href="tel:+18884717174">+1 (888) 471-7174</a>
+        </div>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          <address>269 Walker St, #158, Detroit, MI 48207</address>
+        </div>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          <address>3145 Geary Blvd, #487, San Francisco, CA 94118</address>
+        </div>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          <address>11152 Westheimer Rd, #109, Houston, TX 77042</address>
+        </div>
+      </div>
+
+    </div>
+
+    <hr class="footer-divider">
+    <div class="footer-bottom">
+      <span>&copy; 2026 Misbah Inc. All rights reserved.</span>
+      <span>501(c)(3) Nonprofit &nbsp;·&nbsp; EIN on file &nbsp;·&nbsp; <a href="https://www.benevity.com" target="_blank" rel="noopener">Listed on Benevity</a></span>
+    </div>
+  </div>
+</footer>
+
+
+<script src="../assets/theme.js"></script>
+<script src="../assets/script.js"></script>
+<script>
+(function () {
+  'use strict';
+
+  /* ── Month data ──────────────────────────────────────────── */
+  var MONTHS = [
+    {
+      num: 1, en: 'Muharram', ar: 'مُحَرَّم',
+      img: '/images/month-muharram.png',
+      articles: [
+        { tag: 'Martyrdom', title: 'The Day of Ashura — Imam Husayn (p) and the Eternal Stand at Karbala', href: '/articles/ashura/' },
+        { tag: 'Mourning', title: 'The Rites of Azadari: Their Origin, Meaning, and Spiritual Power', href: '/articles/' },
+        { tag: 'Hadith', title: 'Selected Traditions on the Sanctity of Muharram and Ashura', href: '/articles/' }
+      ]
+    },
+    {
+      num: 2, en: 'Safar', ar: 'صَفَر',
+      img: '/images/month-safar.png',
+      articles: [
+        { tag: 'Arba\'een', title: 'The Arba\'een Walk — Forty Days After Karbala', href: '/articles/' },
+        { tag: 'History', title: 'The Captives of Karbala: The Journey from Kufa to Damascus', href: '/articles/' },
+        { tag: 'Ziyarat', title: 'Ziyarat Arba\'een: Text, Commentary, and Spiritual Meaning', href: '/articles/' }
+      ]
+    },
+    {
+      num: 3, en: "Rabi' al-Awwal", ar: 'رَبِيعُ الأَوَّل',
+      img: '/images/month-rabi-awwal.png',
+      articles: [
+        { tag: 'Birth Anniversary', title: 'The Birth of the Prophet Muhammad and Imam al-Sadiq (p) — 17 Rabi al-Awwal', href: '/articles/rabi_al_awwal/' },
+        { tag: 'Seerah', title: 'The Character and Mission of the Prophet — A Reflection', href: '/articles/' },
+        { tag: 'Marriage', title: 'The Blessed Union of the Prophet and Lady Khadijah (p)', href: '/articles/' }
+      ]
+    },
+    {
+      num: 4, en: "Rabi' al-Thani", ar: 'رَبِيعُ الآخِر',
+      img: '/images/month-rabi-thani.png',
+      articles: []
+    },
+    {
+      num: 5, en: 'Jumada al-Awwal', ar: 'جُمَادَى الأُولَى',
+      img: '/images/month-jumadi-thani_jamadi_awwal.png',
+      articles: [
+        { tag: 'Martyrdom', title: "The Martyrdom of Lady Fatima al-Zahra (p) — The Burning of Her Door", href: '/articles/' },
+        { tag: 'Reflection', title: "Her Silence Was a Sign: The Spiritual Station of Lady Fatima (p)", href: '/articles/' }
+      ]
+    },
+    {
+      num: 6, en: 'Jumada al-Thani', ar: 'جُمَادَى الآخِرَة',
+      img: '/images/month-jumadi-thani_jamadi_awwal.png',
+      articles: [
+        { tag: 'Martyrdom', title: "The Martyrdom of Lady Fatima al-Zahra (p) — 3 Jumada al-Thani", href: '/articles/' }
+      ]
+    },
+    {
+      num: 7, en: 'Rajab', ar: 'رَجَب',
+      img: '/images/month-rajab.png',
+      articles: [
+        { tag: 'Birth Anniversary', title: "The Birth of Imam Ali (p) — 13 Rajab Inside the Ka'bah", href: '/articles/' },
+        { tag: 'Mi\'raj', title: "The Night Journey and Ascension — A Hijri Milestone", href: '/articles/' },
+        { tag: 'Du\'a', title: "Du'a Rajab: Monthly Supplication for Seeking Nearness to Allah", href: '/articles/' }
+      ]
+    },
+    {
+      num: 8, en: "Sha'ban", ar: 'شَعْبَان',
+      img: '/images/month-shaban.png',
+      articles: [
+        { tag: 'Birth Anniversary', title: "The Birth of Imam Mahdi (a.j.f.) — 15 Sha'ban", href: '/articles/' },
+        { tag: 'Anticipation', title: "The Awaited Imam: Understanding the Occultation and Return", href: '/articles/' },
+        { tag: "Du'a", title: "Du'a Nudbah and Its Connection to the Hidden Imam", href: '/articles/' }
+      ]
+    },
+    {
+      num: 9, en: 'Ramadan', ar: 'رَمَضَان',
+      img: '/images/month-ramadan.png',
+      articles: [
+        { tag: 'Martyrdom', title: "The Martyrdom of Imam Ali (p) — The Nights of Qadr", href: '/articles/' },
+        { tag: 'Fasting', title: "Ramadan Through the Lens of Ahlul Bayt: Hadith and Wisdom", href: '/articles/' },
+        { tag: 'Quran', title: "The Night of Qadr — When Destiny Is Decreed", href: '/articles/' }
+      ]
+    },
+    {
+      num: 10, en: 'Shawwal', ar: 'شَوَّال',
+      img: '/images/month-shawwal.png',
+      articles: [
+        { tag: 'Eid', title: "Eid al-Fitr — Gratitude After Ramadan", href: '/articles/' },
+        { tag: 'Martyrdom', title: "The Martyrdom of Imam al-Sadiq (p) — 25 Shawwal", href: '/articles/' }
+      ]
+    },
+    {
+      num: 11, en: "Dhu al-Qi'dah", ar: 'ذُو القَعْدَة',
+      img: '/images/month-dhul-qada.png',
+      articles: [
+        { tag: 'Ziyarat', title: "The Shrine of Imam Ridha (p) — Spiritual Journey to Mashhad", href: '/articles/' },
+        { tag: 'Birth Anniversary', title: "The Birth of Imam Ridha (p) — 11 Dhu al-Qi'dah", href: '/articles/' }
+      ]
+    },
+    {
+      num: 12, en: 'Dhu al-Hijjah', ar: 'ذُو الحِجَّة',
+      img: '/images/month-dhul-hijjah.png',
+      articles: [
+        { tag: 'Eid al-Ghadir', title: "Ghadir Khumm — The Day the Imam Was Appointed: 18 Dhu al-Hijjah", href: '/articles/' },
+        { tag: 'Hajj', title: "The Spiritual Meaning of Hajj Through the Eyes of Ahlul Bayt", href: '/articles/' },
+        { tag: 'Eid al-Adha', title: "Eid al-Adha and the Legacy of Prophet Ibrahim (p)", href: '/articles/' }
+      ]
+    }
+  ];
+
+  /* ── Render grid ─────────────────────────────────────────── */
+  var grid = document.getElementById('monthGrid');
+  MONTHS.forEach(function (m) {
+    var card = document.createElement('div');
+    card.className = 'month-card';
+    card.setAttribute('tabindex', '0');
+    card.setAttribute('role', 'button');
+    card.setAttribute('aria-label', m.en + ' Collection');
+    card.innerHTML =
+      '<img class="month-card-img" src="' + m.img + '" alt="' + m.en + '" loading="lazy">' +
+      '<div class="month-card-overlay"></div>' +
+      '<div class="month-card-num">' + m.num + '</div>' +
+      '<div class="month-card-body">' +
+        '<div class="month-card-name">' + m.en + '</div>' +
+        '<span class="month-card-ar">' + m.ar + '</span>' +
+        '<span class="month-card-cta">View Collection &rarr;</span>' +
+      '</div>';
+    card.addEventListener('click', function () { openModal(m); });
+    card.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openModal(m); }
+    });
+    grid.appendChild(card);
+  });
+
+  /* ── Modal ───────────────────────────────────────────────── */
+  var backdrop    = document.getElementById('artModal');
+  var modalCard   = document.getElementById('artModalCard');
+  var closeBtn    = document.getElementById('artModalClose');
+  var bannerImg   = document.getElementById('modalBannerImg');
+  var monthLabel  = document.getElementById('modalMonthLabel');
+  var monthAr     = document.getElementById('modalMonthAr');
+  var articleList = document.getElementById('modalArticlesList');
+
+  function openModal(m) {
+    bannerImg.src     = m.img;
+    bannerImg.alt     = m.en;
+    monthLabel.textContent = m.en;
+    monthAr.textContent    = m.ar;
+
+    if (m.articles && m.articles.length) {
+      articleList.innerHTML = m.articles.map(function (a) {
+        return '<a href="' + a.href + '" class="art-item-card">' +
+          '<div class="art-item-thumb-ph"><span>' + m.ar.charAt(0) + '</span></div>' +
+          '<div class="art-item-info">' +
+            '<span class="art-item-tag">' + a.tag + '</span>' +
+            '<div class="art-item-title">' + a.title + '</div>' +
+          '</div>' +
+        '</a>';
+      }).join('');
+    } else {
+      articleList.innerHTML =
+        '<div class="art-modal-empty">Articles coming soon<br>إن شاء الله</div>';
+    }
+
+    backdrop.classList.add('open');
+    document.body.style.overflow = 'hidden';
+    closeBtn.focus();
+  }
+
+  function closeModal() {
+    backdrop.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  closeBtn.addEventListener('click', closeModal);
+  backdrop.addEventListener('click', function (e) {
+    if (e.target === backdrop) closeModal();
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') closeModal();
+  });
+
+})();
+</script>
+
+</body>
+</html>
