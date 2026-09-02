@@ -678,7 +678,7 @@ h1, h2, h3, h4 {
 
 /* ── 8. Morning & Evening Mourning ────────────────────────── */
 .mourning-section {
-  background: var(--dark-section);
+  background-color: var(--dark-section);
   background-image: url('/images/morning and evening mourning.png');
   background-size: cover;
   background-position: center 30%;
@@ -1443,7 +1443,7 @@ h1, h2, h3, h4 {
 [data-theme="light"] .event-greg  { color: rgba(30,61,31,0.5); }
 
 /* Mourning section */
-[data-theme="light"] .mourning-section { background: var(--dark-section); }
+[data-theme="light"] .mourning-section { background-color: var(--dark-section); }
 [data-theme="light"] .mourning-desc { color: #444; }
 [data-theme="light"] .ch-btn { border-color: rgba(30,61,31,0.38); color: #1e3d1f; }
 [data-theme="light"] .ch-btn:hover { background: #1e3d1f; border-color: #1e3d1f; color: #fff; box-shadow: 0 4px 16px rgba(30,61,31,0.3); }
