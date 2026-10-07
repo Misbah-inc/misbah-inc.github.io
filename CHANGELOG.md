@@ -5,6 +5,17 @@ Format: `## [Date] — Summary` followed by bulleted details.
 
 ---
 
+## [2026-10-07] — Eight more articles from the Wix blog (EN/AR/FA/UR) + localized article indexes
+
+- **Imported (32 pages):** Virtues of the Ziarat of Lady Fatimah Ma'soumah · Hadrat Abdul Azim Hasani · The Month of Rabi al-Akhir · Supplications of Salawat · Letter of Imam al-Sadiq to the Shia · The Blessed Title "al-Sadiq" · Blessed Marriage of Lady Khadijah and the Prophet · 30 Names and Titles of the Messenger of God. Each language is built from its own Wix post, text verbatim; embedded YouTube videos are click-to-load.
+- **Articles index** now exists in all four languages (`/ar|fa|ur/articles/`, card grid). The English index keeps its month picker but lists only real articles, adds an "All articles" grid and opens a month via `?month=N`; its cards use small thumbnails instead of the 2 MB originals.
+- **Homepages:** Rabi' al-Awwal and Rabi' al-Thani cards are live; ar/fa/ur nav and "Articles" links point to their own index.
+- **Importer** saved as `tools/wix_import/` (see its README) — fetches slowly, builds pages, runs `check_site.py` (title/description/canonical/hreflang/JSON-LD/alt/og checks on every page).
+- Sitemap now has 56 URLs.
+- Not imported by decision: Morning & Evening Mourning (10 chapters) and the event announcements. Pending: 10 English-only articles.
+
+---
+
 ## [2026-10-06] — New home: article.misbah-inc.com (AWS), misbah128.com retired
 
 - Every `misbah128.com` URL (canonical, hreflang, OG/Twitter, JSON-LD, sitemap, robots) is now `article.misbah-inc.com`; the Library link is `library.misbah-inc.com`. No redirect from the old domain (retired by decision).

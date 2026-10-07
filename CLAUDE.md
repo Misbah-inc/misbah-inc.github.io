@@ -245,6 +245,7 @@ Articles also come as **series** (several parts, one page listing them): `articl
 - Each Wix post has one YouTube video; its ID is in the `i.ytimg.com/vi/<id>/` thumbnail URL on the post page. Embed it click-to-load through `youtube-nocookie.com` (see `.kw-video*` in `style.css`), with `VideoObject` JSON-LD.
 - Pages are generated from each language's Khadijah article (head styles, nav, footer), so a restyle there should be mirrored. The series pages are static HTML like everything else — adding a part means adding its page in all four languages, the sitemap entries, and a link from the series page.
 - Homepage "Through the Year" cards: when an article is published for a Hijri month, turn that month's `year-card--soon` `<div>` into a `year-card--live` `<a>` in all four homepages.
+- Single imported articles live at `/articles/<slug>/` (+ `/ar|fa|ur/…`); each language has its own page built from its own Wix post, and only languages that exist get a page (hreflang lists only those). The importer, its README and `catalog.json` (what has been imported) are in `tools/wix_import/`. Wix rate-limits bursts (HTTP 429) — fetch slowly.
 - `images/months/` = 480×640 thumbnails for those cards; `images/kawthar/` = banners and 1200×630 social crops. Register new images in `images/CATALOG.md`.
 
 ---

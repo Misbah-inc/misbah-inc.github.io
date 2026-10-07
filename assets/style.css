@@ -1703,3 +1703,33 @@ h1, h2, h3, h4 {
 @media (prefers-reduced-motion: reduce) { .kw-part-card, .kw-partnav a, .kw-play { transition: none; } }
 .kw-home-body p a { color: var(--gold-light); text-decoration: underline; text-underline-offset: 3px; }
 .kw-home-body p a:hover { color: var(--gold-bright); }
+
+/* single imported articles */
+.kw-banner--tall img { max-height: 560px; width: auto; max-width: 100%; margin: 0 auto; object-fit: contain; border-radius: 12px; }
+.art-fig { margin: 1.6rem 0; text-align: center; }
+.art-fig img { display: inline-block; max-width: 100%; height: auto; border-radius: 10px; }
+.art-body ul { margin: 0.8rem 0 1.2rem; padding-inline-start: 1.4rem; list-style: disc; }
+.art-body ul li { margin: 0.35rem 0; }
+
+/* ── 19. Article index cards (all languages) ─────────────────── */
+.al-hero { background: var(--dark-bg); text-align: center; padding: 4.5rem 1.5rem 3.2rem; }
+.al-eyebrow { display: block; font-size: 0.75rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); margin-bottom: 1rem; }
+.al-hero h1 { font-size: clamp(1.8rem, 4.5vw, 3rem); color: var(--white); }
+.al-sub { margin-top: 0.7rem; font-family: 'Cinzel', serif; color: var(--gold-light); font-size: 1.15rem; }
+[dir="rtl"] .al-eyebrow { letter-spacing: 0; text-transform: none; font-size: 0.95rem; }
+[dir="rtl"] .al-hero h1, [dir="rtl"] .al-sub { font-family: 'Amiri', serif; }
+.al-section { background: var(--cream); }
+.al-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.4rem; margin-top: 2rem; }
+.al-card { display: flex; flex-direction: column; background: #fff; border-radius: 14px; overflow: hidden; border: 1px solid rgba(26,61,27,0.12); box-shadow: 0 3px 18px rgba(0,0,0,0.07); transition: transform 0.2s ease, box-shadow 0.2s ease; }
+.al-card:hover { transform: translateY(-3px); box-shadow: 0 10px 30px rgba(0,0,0,0.14); }
+.al-card img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; background: #ede7d9; }
+.al-body { padding: 1rem 1.15rem 1.25rem; display: flex; flex-wrap: wrap; align-items: center; gap: 0.35rem 0.7rem; }
+.al-tag { font-size: 0.68rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--gold); }
+.al-month { font-size: 0.72rem; color: #777; }
+[dir="rtl"] .al-tag { letter-spacing: 0; text-transform: none; font-size: 0.82rem; }
+.al-title { flex-basis: 100%; font-size: 1rem; line-height: 1.4; color: #1a1a1a; margin-top: 0.2rem; }
+[dir="rtl"] .al-title { font-family: 'Amiri', serif; font-size: 1.2rem; line-height: 1.6; }
+[data-theme="light"] .al-tag { color: #1a5c1c; }
+@media (max-width: 900px) { .al-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .al-grid { grid-template-columns: 1fr; } }
+@media (prefers-reduced-motion: reduce) { .al-card { transition: none; } }

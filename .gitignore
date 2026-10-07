@@ -16,3 +16,6 @@ tools/__pycache__/
 # Temp
 *.tmp
 *.bak
+
+# Wix importer: downloaded post HTML and scratch images (re-fetchable)
+tools/wix_import/work/
