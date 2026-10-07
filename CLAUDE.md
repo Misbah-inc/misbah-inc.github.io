@@ -250,6 +250,15 @@ Articles also come as **series** (several parts, one page listing them): `articl
 
 ---
 
+## Tags, months and filters
+
+- Every article, series and announcement has **exactly one month, exactly one type, and person/topic tags**. They are defined in `tools/wix_import/taxonomy.py` (master list with EN/AR/FA/UR names; `ITEMS` maps each article slug to its month/type/tags). **A new article is not finished until it has an `ITEMS` entry.**
+- Months are Hijri months 1–12, or `0` = "Any time of year" for timeless pieces. Types: `article`, `series`, `announcement` (Shia calendar announcement).
+- `python3 tools/wix_import/build_taxo.py` regenerates the articles index (with its filter bar), all `/articles/month|type|tag/…` pages, the filter-page sitemap block, and the homepage month cards. Run it (after `build_sitemap.py`) whenever an article is added or retagged.
+- Filter pages with only one entry are `noindex,follow` and kept out of the sitemap (thin content).
+
+---
+
 ## Pending Pages (not yet built)
 
 - `/articles/` — Articles index / listing page

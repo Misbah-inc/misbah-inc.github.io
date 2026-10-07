@@ -64,7 +64,8 @@ def part_page(lang, part):
     if part == 1:
         na = ART[(lang, 2)]
         next_ = f'<a class="next" href="{PFX[lang]}/articles/{SLUG}/part-2/" rel="next"><small>{L["next"]} {"←" if lang != "en" else "→"}</small><strong>{esc(na["title"])}</strong></a>'
-    tags = '<ul class="kw-tags" aria-label="Tags">' + ''.join(f'<li>{esc(t)}</li>' for t in a['tags']) + '</ul>' if a['tags'] else ''
+    import taxonomy as TX
+    tags = '<ul class="kw-tags" aria-label="Tags">' + ''.join(f'<li class="kw-tag-{kd}"><a href="{PFX[lang]}/articles/{c}">{esc(lb)}</a></li>' for kd, _, lb, c in TX.tag_list('al-kawthar', lang)) + '</ul>'
     back_arrow = '<path d="M5 12h14M12 5l7 7-7 7"/>' if lang != 'en' else '<path d="M19 12H5M12 5l-7 7 7 7"/>'
     main = f'''<main>
 

@@ -4,6 +4,7 @@ HERE = _os.path.dirname(_os.path.abspath(__file__)) + '/'
 import json, os, re, sys, html
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import gen_kawthar as G
+import taxonomy as TX
 from gen_kawthar import S, PFX, LANGS, ROOT, SITE, esc, head, template, ORG, breadcrumb_ld
 from PIL import Image, ImageOps
 
@@ -47,22 +48,25 @@ def entries(lang):
 
     # Khadijah (hand-written page, four languages)
     kp = ('' if lang == 'en' else lang + '/') + 'articles/rabi_al_awwal/index.html'
-    out.append(dict(href=f'{PFX[lang]}/articles/rabi_al_awwal/', title=title_of(lang, kp), month=3, date='2026-09-01',
+    out.append(dict(slug='rabi_al_awwal', href=f'{PFX[lang]}/articles/rabi_al_awwal/', title=title_of(lang, kp), month=3, date='2026-09-01',
                     tag={'en': 'Lady Khadijah (p)', 'ar': 'السيدة خديجة عليها السلام', 'fa': 'حضرت خدیجه سلام الله علیها', 'ur': 'حضرت خدیجہ سلام اللہ علیہا'}[lang],
                     img=thumb('images/lady-khadijah-article.jpg', 'rabi_al_awwal'), series=False))
     # Al-Kawthar series
-    out.append(dict(href=f'{PFX[lang]}/articles/al-kawthar/', title=S[lang]['series'], month=None, date='2026-10-05',
+    out.append(dict(slug='al-kawthar', href=f'{PFX[lang]}/articles/al-kawthar/', title=S[lang]['series'], month=None, date='2026-10-05',
                     tag=UI[lang]['series'], img=thumb(f'images/kawthar/part1-{lang}.jpg', f'al-kawthar-{lang}'), series=True))
     for slug, c in CAT.items():
         if lang not in c['langs'] or c.get('series'): continue        # chapters are listed on their series page
         if c.get('kind') == 'series':
-            out.append(dict(href=f'{PFX[lang]}/articles/{slug}/', title=c['titles'][lang], month=None, date=c['published'], tag=UI[lang]['series'],
+            out.append(dict(slug=slug, href=f'{PFX[lang]}/articles/{slug}/', title=c['titles'][lang], month=None, date=c['published'], tag=UI[lang]['series'],
                             img=thumb(f'images/articles/{slug}-1-{lang}.jpg', f'{slug}-1-{lang}'), series=True))
             continue
         tags = c.get('tags_l', {}).get(lang) or []
-        out.append(dict(href=f'{PFX[lang]}/articles/{slug}/', title=c['titles'][lang], month=c['month'], date=c['published'],
+        out.append(dict(slug=slug, href=f'{PFX[lang]}/articles/{slug}/', title=c['titles'][lang], month=c['month'], date=c['published'],
                         tag=tags[0] if tags else UI[lang]['title'],
                         img=thumb(f'images/articles/{slug}-{lang}.jpg', f'{slug}-{lang}'), series=False))
+    for e in out:
+        mo, ty, tg = TX.ITEMS[e['slug']]
+        e.update(month=mo, type=ty, tags=tg)
     out.sort(key=lambda e: e['date'], reverse=True)
     return out
 

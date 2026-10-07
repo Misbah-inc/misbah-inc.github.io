@@ -11,3 +11,5 @@ Run from the repo root. Needs Python 3 + Pillow. Downloaded pages live in `work/
 5. Series (several parts) use `build_kawthar.py` as the model. Update `catalog.json`/CHANGELOG, commit.
 
 The scripts were written for the Al-Kawthar series first; per-series values (video IDs, titles) are hard-coded in `gen_kawthar.py`.
+
+After any import: add the article to `taxonomy.py` (`ITEMS`), then `build_sitemap.py`, `build_taxo.py`, `check_site.py`. `build_index.py` is now a library (card data); `build_taxo.py` writes the pages.

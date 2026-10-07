@@ -474,7 +474,7 @@
  },
  "martyrdom-of-muhsin-ibn-ali": {
   "slug": "martyrdom-of-muhsin-ibn-ali",
-  "month": null,
+  "month": 2,
   "langs": [
    "en"
   ],
@@ -591,7 +591,7 @@
  },
  "elegy-of-imam-hussains-thirst": {
   "slug": "elegy-of-imam-hussains-thirst",
-  "month": null,
+  "month": 1,
   "langs": [
    "en"
   ],
@@ -871,6 +871,291 @@
   "descs": {
    "en": "A reflective series inspired by Ziarat al-Nahiya al-Muqaddasah, exploring Imam Mahdi's (ajtf) mourning for Imam Hussain (p), morning and evening.",
    "ar": "سلسلة تأملية مستوحاة من زيارة الناحية المقدسة، تستكشف حزن الإمام المهدي عجل الله فرجه على الإمام الحسين عليه السلام، صباحاً ومساءً."
+  }
+ },
+ "announcement-muharram-1448": {
+  "slug": "announcement-muharram-1448",
+  "month": 1,
+  "langs": [
+   "en"
+  ],
+  "titles": {
+   "en": "🕯️ MISBAH PRESENTS: MUHARRAM 1448 / 2026"
+  },
+  "tags": [],
+  "tags_l": {
+   "en": []
+  },
+  "published": "2026-06-14",
+  "img": true,
+  "descs": {
+   "en": "A TEN-NIGHT COMMEMORATION OF THE TRAGEDY OF KARBALAMisbah invites you and your family to join us during the sacred days of Muharram 1448 AH as we commemorate the unparalleled sacrifice of Imam Hussain (PBUH), his family, and his loyal companions in Karbala.For ten blessed nights, we will gather in remembrance of the stand against oppression, the preservation of truth, and the timeless message of faith, justice, and devotion embodied by the martyrs of Karbala.🗓 Dates: June 15th – June 25th, 2026"
+  }
+ },
+ "majlis-7th-dhu-al-hijjah": {
+  "slug": "majlis-7th-dhu-al-hijjah",
+  "month": 12,
+  "langs": [
+   "en"
+  ],
+  "titles": {
+   "en": "MAJLIS OF 7TH DHU AL-HIJJAH 🕯️"
+  },
+  "tags": [],
+  "tags_l": {
+   "en": []
+  },
+  "published": "2026-05-23",
+  "img": true,
+  "descs": {
+   "en": "IN COMMEMORATION OF THE MARTYRDOM ANNIVERSARY OF IMAM MUHAMMAD AL-BAQIR (PBUH)Misbah warmly invites the community to join a special Majlis in remembrance of the Martyrdom Anniversary of Imam Muhammad al-Baqir (PBUH).\nJoin us as we honor the life, knowledge, and legacy of the fifth Imam of Ahlulbayt (AS), whose teachings continue to illuminate hearts and guide believers toward truth and righteousness.🗓 Date: Saturday, May 23rd, 2026\n🕕 Time: 6:00 PM CDT\n📍 Hosted by: Misbah\n🔗 Live Stream: Watch"
+  }
+ },
+ "majlis-imam-taqi-al-jawad": {
+  "slug": "majlis-imam-taqi-al-jawad",
+  "month": 11,
+  "langs": [
+   "en"
+  ],
+  "titles": {
+   "en": "MAJLIS IN COMMEMORATION OF THE MARTYRDOM OF IMAM TAQI AL-JAWAD (AS)"
+  },
+  "tags": [],
+  "tags_l": {
+   "en": []
+  },
+  "published": "2026-05-17",
+  "img": true,
+  "descs": {
+   "en": "Misbah invites the community to attend a special Majlis commemorating the Martyrdom Anniversary of Imam Muhammad al-Taqi al-Jawad (AS).Join us as we remember the knowledge, patience, generosity, and sacrifice of the 9th Imam of Ahlulbayt (AS), and gather together in reflection, remembrance, and prayer.🗓 Date: May 17, 2026\n🕖 Time: 7:00 PM CDT\n📍 Hosted by: Misbah\n🔗 Live Stream: Watch Live on YouTubeMay Allah (SWT) grant us the tawfiq to follow the path of the Ahlulbayt (AS) and keep their reme"
+  }
+ },
+ "majlis-imam-sadiq-25-shawwal": {
+  "slug": "majlis-imam-sadiq-25-shawwal",
+  "month": 10,
+  "langs": [
+   "en"
+  ],
+  "titles": {
+   "en": "Majlis Commemorating the Martyrdom Anniversary of Imam Ja’far al-Sadiq (PBUH)(25th of Shawwal)"
+  },
+  "tags": [],
+  "tags_l": {
+   "en": []
+  },
+  "published": "2026-04-12",
+  "img": true,
+  "descs": {
+   "en": "In remembrance of the martyrdom anniversary of Imam Ja’far al-Sadiq (peace be upon him), you are warmly invited to attend a special majlis dedicated to honoring his life, legacy, and teachings.Imam Ja’far al-Sadiq (PBUH) was a beacon of knowledge, piety, and truth. This gathering serves as an opportunity for the community to come together in reflection, remembrance, and spiritual growth as we revisit the values he stood for and continue to uphold his legacy in our lives.🗓 Date: April 12, 2026⏰"
+  }
+ },
+ "majalis-nights-of-qadr": {
+  "slug": "majalis-nights-of-qadr",
+  "month": 9,
+  "langs": [
+   "en"
+  ],
+  "titles": {
+   "en": "Majalis Nights of Qadr – Martyrdom Anniversary of Imam Amir Al-Mu’minin Ali Ibn Abi Talib (P)"
+  },
+  "tags": [],
+  "tags_l": {
+   "en": []
+  },
+  "published": "2026-03-08",
+  "img": true,
+  "descs": {
+   "en": "Majalis Nights of Qadr – Martyrdom Anniversary of Imam Amir Al-Mu’minin Ali Ibn Abi Talib (P)We invite everyone to join us for the Majalis Nights of Qadr in remembrance of the Martyrdom Anniversary of Imam Amir Al-Mu’minin Ali Ibn Abi Talib (P).This special program will take place over three blessed nights: March 8th, 10th, and 12th, 2026, beginning at 7:00 PM CDT each evening. These nights are an opportunity for reflection, remembrance, and spiritual connection as we honor the legacy, sacrifice"
+  }
+ },
+ "majlis-umm-al-banin": {
+  "slug": "majlis-umm-al-banin",
+  "month": 6,
+  "langs": [
+   "en"
+  ],
+  "titles": {
+   "en": "MAJLIS IN HONOR OF SAYYIDA UMM AL-BANIN (PBUH)"
+  },
+  "tags": [],
+  "tags_l": {
+   "en": []
+  },
+  "published": "2025-12-05",
+  "img": true,
+  "descs": {
+   "en": "This gathering is dedicated to honoring the life, sacrifice, and unwavering devotion of Sayyida Umm al-Banin (PBUH), the noble mother of Hazrat Abbas (AS). May Allah bless her soul and grant us the ability to follow her example of faith and loyalty.🗓 Date: December 5th, 2025🕠Time: Program begins at 5:30 PM CDT📍 Hosted by: MisbahLet us come together to seek blessings, reflect, and pray for the reappearance of Imam al-Mahdi (AJTF)."
+  }
+ },
+ "martyrdom-of-fatima-al-zahra-2025": {
+  "slug": "martyrdom-of-fatima-al-zahra-2025",
+  "month": 5,
+  "langs": [
+   "en"
+  ],
+  "titles": {
+   "en": "Martyrdom Anniversary of Sayyida Fatima al-Zahra (PBUH)"
+  },
+  "tags": [],
+  "tags_l": {
+   "en": []
+  },
+  "published": "2025-11-20",
+  "img": true,
+  "descs": {
+   "en": "As we enter the solemn days of Ayyam-e-Fatimiyya, we reflect upon the life, legacy, and profound sacrifices of Sayyida Fatima al-Zahra (PBUH)—the beloved daughter of Prophet Muhammad (PBUH) and a guiding light of faith, strength, and purity.Misbah warmly invites the community to join us in a series of commemorative programs dedicated to honoring her martyrdom anniversary. These gatherings provide an opportunity for spiritual reflection, learning, and connecting with the timeless message of Lady"
+  }
+ },
+ "martyrdom-programs-of-fatima-al-zahra": {
+  "slug": "martyrdom-programs-of-fatima-al-zahra",
+  "month": 5,
+  "langs": [
+   "en"
+  ],
+  "titles": {
+   "en": "Martyrdom Anniversaries Program of Sayyida Fatima Al-Zahra (PBUH)"
+  },
+  "tags": [],
+  "tags_l": {
+   "en": []
+  },
+  "published": "2025-11-01",
+  "img": true,
+  "descs": {
+   "en": "As-Salāmu ʿAlaykum,Misbah warmly invites you and your family to join us in commemorating the Martyrdom Anniversary of the Lady Fatimah al-Zahra (PBUH).\n\nThe Prophet Muhammad (peace be upon him and his family) said:\"إِنَّمَا فاطِمَةُ بَضْعَةٌ مِنِّي، مَنْ آذَاهَا فَقَدْ آذَانِي، وَمَنْ آذَانِي فَقَدْ آذَى اللَّهَ.\"“Indeed, Fatimah is a part of me; whoever hurts her has hurt me, and whoever hurts me has hurt Allah.”(Bihār al-Anwār, ʿAllāmah al-Majlisī, v.43, p.39)\nThis solemn five-day program Majl"
+  }
+ },
+ "martyrdom-programs-prophet-hasan-ridha": {
+  "slug": "martyrdom-programs-prophet-hasan-ridha",
+  "month": 2,
+  "langs": [
+   "en"
+  ],
+  "titles": {
+   "en": "Martyrdom Anniversaries Program – Holy Prophet, Imam Hassan, & Imam Ali Al-Reza (PBUT)"
+  },
+  "tags": [],
+  "tags_l": {
+   "en": []
+  },
+  "published": "2025-08-21",
+  "img": true,
+  "descs": {
+   "en": "Misbah warmly invites you and your family to join us in commemorating the Martyrdom Anniversaries of the Holy Prophet Muhammad (PBUH), Imam Hassan (AS), and Imam Ali Al-Reza (AS).\nThis solemn Majlis is part of Ayyame Muhsiniyah, dedicated to remembering the great sacrifices of our beloved Prophet and Imams, and reflecting upon their teachings that continue to guide us toward truth, justice, and faith.\n📅 Date: Friday, August 22nd, 2025\n🕠 Time: 6:30 PM CDTLet us gather as a community to honor th"
+  }
+ },
+ "arbaeen-2025-announcement": {
+  "slug": "arbaeen-2025-announcement",
+  "month": 2,
+  "langs": [
+   "en"
+  ],
+  "titles": {
+   "en": "🕊️Arbaeen of Sayyid Ashuhada Aba Abdillah Al-Hussain (AS)"
+  },
+  "tags": [],
+  "tags_l": {
+   "en": []
+  },
+  "published": "2025-08-06",
+  "img": true,
+  "descs": {
+   "en": "Misbah Inc. invites you to join us in honoring the sacred Arbaeen of Sayyid Ashuhada, Imam Hussain (AS), a symbol of truth, sacrifice, and unwavering faith. As millions walk in remembrance across the world, we gather in spirit and love for Hussain (AS) to commemorate this profound occasion.\n📅 Date: August 13th, 2025 🕰 Time: 6:30 PM CDT📍 Hosted by: Misbah Inc.💖 Theme: Love of Hussain Unites Us📺 Watch the Program Live:👉 Click here to view on YouTubeLet us come together in remembrance, reflec"
+  }
+ },
+ "martyrdom-ruqayyah-and-imam-hasan": {
+  "slug": "martyrdom-ruqayyah-and-imam-hasan",
+  "month": 2,
+  "langs": [
+   "en"
+  ],
+  "titles": {
+   "en": "Martyrdom Anniversary of Sayyida Ruqayyah (SA) and Imam Hassan Al-Mujtaba (AS)"
+  },
+  "tags": [],
+  "tags_l": {
+   "en": []
+  },
+  "published": "2025-07-29",
+  "img": true,
+  "descs": {
+   "en": "Misbah Inc reminds our community of the upcoming Martyrdom Anniversary of Sayyida Ruqayyah (SA), the beloved daughter of Imam Hussain (AS), and and Imam Hassan Al-Mujtaba (AS) on August 2nd, 2025, starting at 6:30 PM CDT.Let us take a moment on this day to reflect on her profound sacrifice and the tragedy of Karbala. Though young in age, Sayyida Ruqayyah (SA) remains a timeless symbol of innocence, suffering, and unwavering love for her father and the message of Islam. On the other hand, Imam Ha"
+  }
+ },
+ "martyrdom-of-imam-al-sajjad": {
+  "slug": "martyrdom-of-imam-al-sajjad",
+  "month": 1,
+  "langs": [
+   "en"
+  ],
+  "titles": {
+   "en": "Martyrdom Anniversary of Imam Ali Al-Sajjad (AS)."
+  },
+  "tags": [],
+  "tags_l": {
+   "en": []
+  },
+  "published": "2025-07-18",
+  "img": true,
+  "descs": {
+   "en": "Join us at Misbah Inc. for a heartfelt gathering commemorating the Martyrdom Anniversary of Imam Ali Al-Sajjad (AS).\n\n📅 Date: Saturday, July 20th, 2025\n🕡 Time: Starting at 6:30 PM CDTLet us come together in the love of Hussain (AS) to reflect, remember, and renew our spiritual commitment."
+  }
+ },
+ "muharram-1447-food-drive": {
+  "slug": "muharram-1447-food-drive",
+  "month": 1,
+  "langs": [
+   "en"
+  ],
+  "titles": {
+   "en": "Muharram 1447/2025"
+  },
+  "tags": [],
+  "tags_l": {
+   "en": []
+  },
+  "published": "2025-06-24",
+  "img": true,
+  "descs": {
+   "en": "🕊️ From June 26 to July 7, Misbah Inc. will have nightly program along with provided food at the conclusion of Majalis programs held at Islamic centers—ensuring attendees were nourished in both body and spirit as they gathered to remember the sacrifice of Imam Hussain (PBUH).This sacred initiative is a humble expression of love for the Ahlul Bayt (PBUTh), and a reminder that the lessons of Karbala must live on through acts of service and generosity.💛 Help Us Feed with FaithAs we remember the h"
+  }
+ },
+ "ghadir-day-2025-thank-you": {
+  "slug": "ghadir-day-2025-thank-you",
+  "month": 12,
+  "langs": [
+   "en"
+  ],
+  "titles": {
+   "en": "Thank You for Making Ghadir Day 2025 Unforgettable"
+  },
+  "tags": [],
+  "tags_l": {
+   "en": []
+  },
+  "published": "2025-06-23",
+  "img": true,
+  "descs": {
+   "en": "On June 14, 2025, in honor of the blessed occasion of Ghadir Day, Misbah Inc. was able to distribute 3,000 nourishing meals across California, Texas, and Michigan—thanks to your generous support.This was not just a food distribution. It was a celebration of Wilayah, unity, and love for the Ahlul Bayt (PBUH), expressed through the simple yet powerful act of feeding others. With your donations, we brought comfort, dignity, and spiritual joy to believers and those in need.💛 Thank YouYour generosit"
+  }
+ },
+ "arrival-of-safar-announcement": {
+  "slug": "arrival-of-safar-announcement",
+  "month": 2,
+  "langs": [
+   "en"
+  ],
+  "titles": {
+   "en": "Arrival of the Month of Safar Announcement"
+  },
+  "tags": [],
+  "tags_l": {
+   "en": []
+  },
+  "published": "2026-07-23",
+  "img": true,
+  "descs": {
+   "en": "#Shia_Calendar#SafarThe 5th and 7th of Safar mark the the Martyrdom Anniversary of Sayyida Ruqayya (p), daughter of Imam Hussein (p) and the Martyrdom Anniversary of Imam Hassan (p)  and We extend our deepest condolences to Imam al-Mahdi (p) and the believers.اللَّهُمَّ بَارِكْ لِمَوْلَانَا صَاحِبِ الزَّمَان(www.misbah-inc.com)\n\nYouTube Channel \nhttps://www.instagram.com/misbah.110/\nhttps://x.com/misbahinc110\nhttps://www.tiktok.com/@misbahinc110"
   }
  }
 }

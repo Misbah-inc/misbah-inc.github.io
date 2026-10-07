@@ -667,85 +667,95 @@
 
 <section class="section al-section" aria-label="جميع المقالات">
   <div class="container">
+    <form id="al-filters" class="al-filters" role="search">
+      <label>الشهر<select name="month"><option value="">الكل</option><option value="muharram">مُحَرَّم</option><option value="safar">صَفَر</option><option value="rabi-al-awwal">رَبِيعُ الأَوَّل</option><option value="rabi-al-thani">رَبِيعُ الآخِر</option><option value="jumada-al-awwal">جُمَادَى الأُولَى</option><option value="jumada-al-thani">جُمَادَى الآخِرَة</option><option value="rajab">رَجَب</option><option value="shaban">شَعْبَان</option><option value="ramadan">رَمَضَان</option><option value="shawwal">شَوَّال</option><option value="dhu-al-qidah">ذُو القَعْدَة</option><option value="dhu-al-hijjah">ذُو الحِجَّة</option><option value="any-time">على مدار العام</option></select></label>
+      <label>النوع<select name="type"><option value="">الكل</option><option value="article">مقالة</option><option value="series">سلسلة</option><option value="announcement">إعلان مناسبة (التقويم الشيعي)</option></select></label>
+      <label>الوسم<select name="tag"><option value="">الكل</option><optgroup label="الأشخاص"><option value="holy-prophet">النبي الأكرم (ص)</option><option value="lady-fatimah-zahra">السيدة فاطمة الزهراء (ع)</option><option value="imam-hussain">الإمام الحسين (ع)</option><option value="imam-sadiq">الإمام جعفر الصادق (ع)</option><option value="imam-ridha">الإمام الرضا (ع)</option><option value="imam-mahdi">الإمام المهدي (عج)</option><option value="lady-khadijah">السيدة خديجة (ع)</option><option value="lady-masoumah">السيدة فاطمة المعصومة (ع)</option><option value="sayyid-abdul-azim">السيد عبد العظيم الحسني (ع)</option></optgroup><optgroup label="المواضيع"><option value="quran">القرآن الكريم</option><option value="supplications">الأدعية والصلوات</option><option value="ziyarat">الزيارة والمراقد</option><option value="mourning">العزاء والرثاء</option></optgroup></select></label>
+      <label class="al-q">ابحث في المقالات<input type="search" name="q" placeholder="ابحث في المقالات…"></label>
+      <button type="reset" class="btn btn-outline">مسح التصفية</button>
+    </form>
+    <p class="al-count" id="al-count" data-tpl="{n} نتيجة" aria-live="polite"></p>
+    <p class="al-none" id="al-none" hidden>لا توجد نتائج تطابق هذه التصفية.</p>
     <div class="al-grid">
-      <a class="al-card" href="/ar/articles/al-kawthar/">
+      <a class="al-card" href="/ar/articles/al-kawthar/" data-month="any-time" data-type="series" data-tags="lady-fatimah-zahra quran" data-search="سلسلة مباحث الكوثر على مدار العام سلسلة السيدة فاطمة الزهراء (ع) القرآن الكريم">
         <img src="/images/articles/thumb-al-kawthar-ar.jpg" alt="" width="480" height="270" loading="lazy" decoding="async">
         <div class="al-body">
-          <span class="al-tag">سلسلة</span>
+          <span class="al-tag">سلسلة</span><span class="al-month">على مدار العام</span>
           <h3 class="al-title">سلسلة مباحث الكوثر</h3>
         </div>
       </a>
-      <a class="al-card" href="/ar/articles/virtues-of-ziarat-lady-masoumah/">
+      <a class="al-card" href="/ar/articles/virtues-of-ziarat-lady-masoumah/" data-month="rabi-al-thani" data-type="article" data-tags="lady-masoumah imam-ridha ziyarat" data-search="فضائل زيارة السيدة فاطمة المعصومة (ع) رَبِيعُ الآخِر مقالة السيدة فاطمة المعصومة (ع) الإمام الرضا (ع) الزيارة والمراقد">
         <img src="/images/articles/thumb-virtues-of-ziarat-lady-masoumah-ar.jpg" alt="" width="480" height="270" loading="lazy" decoding="async">
         <div class="al-body">
-          <span class="al-tag">السيدة فاطمة المعصومة سلام الله علي</span><span class="al-month">رَبِيعُ الآخِر</span>
+          <span class="al-tag">مقالة</span><span class="al-month">رَبِيعُ الآخِر</span>
           <h3 class="al-title">فضائل زيارة السيدة فاطمة المعصومة (ع)</h3>
         </div>
       </a>
-      <a class="al-card" href="/ar/articles/hadrat-abdul-azim-hasani/">
+      <a class="al-card" href="/ar/articles/hadrat-abdul-azim-hasani/" data-month="rabi-al-thani" data-type="article" data-tags="sayyid-abdul-azim ziyarat" data-search="السيد عبد العظيم الحسني عليه السلام رَبِيعُ الآخِر مقالة السيد عبد العظيم الحسني (ع) الزيارة والمراقد">
         <img src="/images/articles/thumb-hadrat-abdul-azim-hasani-ar.jpg" alt="" width="480" height="270" loading="lazy" decoding="async">
         <div class="al-body">
-          <span class="al-tag">السيد عبد العظيم الحسني عليه السلام</span><span class="al-month">رَبِيعُ الآخِر</span>
+          <span class="al-tag">مقالة</span><span class="al-month">رَبِيعُ الآخِر</span>
           <h3 class="al-title">السيد عبد العظيم الحسني عليه السلام</h3>
         </div>
       </a>
-      <a class="al-card" href="/ar/articles/month-of-rabi-al-akhir/">
+      <a class="al-card" href="/ar/articles/month-of-rabi-al-akhir/" data-month="rabi-al-thani" data-type="article" data-tags="lady-masoumah sayyid-abdul-azim" data-search="شهر ربيع الآخر رَبِيعُ الآخِر مقالة السيدة فاطمة المعصومة (ع) السيد عبد العظيم الحسني (ع)">
         <img src="/images/articles/thumb-month-of-rabi-al-akhir-ar.jpg" alt="" width="480" height="270" loading="lazy" decoding="async">
         <div class="al-body">
-          <span class="al-tag">ربيع الآخر</span><span class="al-month">رَبِيعُ الآخِر</span>
+          <span class="al-tag">مقالة</span><span class="al-month">رَبِيعُ الآخِر</span>
           <h3 class="al-title">شهر ربيع الآخر</h3>
         </div>
       </a>
-      <a class="al-card" href="/ar/articles/supplications-of-salawat/">
+      <a class="al-card" href="/ar/articles/supplications-of-salawat/" data-month="rabi-al-awwal" data-type="article" data-tags="holy-prophet supplications" data-search="أدعية الصلوات رَبِيعُ الأَوَّل مقالة النبي الأكرم (ص) الأدعية والصلوات">
         <img src="/images/articles/thumb-supplications-of-salawat-ar.jpg" alt="" width="480" height="270" loading="lazy" decoding="async">
         <div class="al-body">
-          <span class="al-tag">رسول الله</span><span class="al-month">رَبِيعُ الأَوَّل</span>
+          <span class="al-tag">مقالة</span><span class="al-month">رَبِيعُ الأَوَّل</span>
           <h3 class="al-title">أدعية الصلوات</h3>
         </div>
       </a>
-      <a class="al-card" href="/ar/articles/letter-of-imam-sadiq-to-the-shia/">
+      <a class="al-card" href="/ar/articles/letter-of-imam-sadiq-to-the-shia/" data-month="rabi-al-awwal" data-type="article" data-tags="imam-sadiq" data-search="رسالة الإمام جعفر الصادق عليه‌السلام إلى شيعته رَبِيعُ الأَوَّل مقالة الإمام جعفر الصادق (ع)">
         <img src="/images/articles/thumb-letter-of-imam-sadiq-to-the-shia-ar.jpg" alt="" width="480" height="270" loading="lazy" decoding="async">
         <div class="al-body">
-          <span class="al-tag">الإمام الصادق (عليه السلام)</span><span class="al-month">رَبِيعُ الأَوَّل</span>
+          <span class="al-tag">مقالة</span><span class="al-month">رَبِيعُ الأَوَّل</span>
           <h3 class="al-title">رسالة الإمام جعفر الصادق عليه‌السلام إلى شيعته</h3>
         </div>
       </a>
-      <a class="al-card" href="/ar/articles/title-al-sadiq/">
+      <a class="al-card" href="/ar/articles/title-al-sadiq/" data-month="rabi-al-awwal" data-type="article" data-tags="imam-sadiq" data-search="التعرّف على الإمام الصادق (عليه السلام) — اللقب المبارك «الصادق» (عليه السلام) رَبِيعُ الأَوَّل مقالة الإمام جعفر الصادق (ع)">
         <img src="/images/articles/thumb-title-al-sadiq-ar.jpg" alt="" width="480" height="270" loading="lazy" decoding="async">
         <div class="al-body">
-          <span class="al-tag">الإمام الصادق (عليه السلام)</span><span class="al-month">رَبِيعُ الأَوَّل</span>
+          <span class="al-tag">مقالة</span><span class="al-month">رَبِيعُ الأَوَّل</span>
           <h3 class="al-title">التعرّف على الإمام الصادق (عليه السلام) — اللقب المبارك «الصادق» (عليه السلام)</h3>
         </div>
       </a>
-      <a class="al-card" href="/ar/articles/blessed-marriage-khadijah-and-the-prophet/">
+      <a class="al-card" href="/ar/articles/blessed-marriage-khadijah-and-the-prophet/" data-month="rabi-al-awwal" data-type="article" data-tags="lady-khadijah holy-prophet" data-search="الزواج المبارك للسيدة خديجة (ع) والنبي الأكرم (ص) رَبِيعُ الأَوَّل مقالة السيدة خديجة (ع) النبي الأكرم (ص)">
         <img src="/images/articles/thumb-blessed-marriage-khadijah-and-the-prophet-ar.jpg" alt="" width="480" height="270" loading="lazy" decoding="async">
         <div class="al-body">
-          <span class="al-tag">المقالات</span><span class="al-month">رَبِيعُ الأَوَّل</span>
+          <span class="al-tag">مقالة</span><span class="al-month">رَبِيعُ الأَوَّل</span>
           <h3 class="al-title">الزواج المبارك للسيدة خديجة (ع) والنبي الأكرم (ص)</h3>
         </div>
       </a>
-      <a class="al-card" href="/ar/articles/rabi_al_awwal/">
+      <a class="al-card" href="/ar/articles/rabi_al_awwal/" data-month="rabi-al-awwal" data-type="article" data-tags="lady-khadijah holy-prophet" data-search="فضائل ومكارم السيدة الجليلة أم المؤمنين خديجة بنت خويلد عليها السلام رَبِيعُ الأَوَّل مقالة السيدة خديجة (ع) النبي الأكرم (ص)">
         <img src="/images/articles/thumb-rabi_al_awwal.jpg" alt="" width="480" height="270" loading="lazy" decoding="async">
         <div class="al-body">
-          <span class="al-tag">السيدة خديجة عليها السلام</span><span class="al-month">رَبِيعُ الأَوَّل</span>
+          <span class="al-tag">مقالة</span><span class="al-month">رَبِيعُ الأَوَّل</span>
           <h3 class="al-title">فضائل ومكارم السيدة الجليلة أم المؤمنين خديجة بنت خويلد عليها السلام</h3>
         </div>
       </a>
-      <a class="al-card" href="/ar/articles/names-of-the-messenger-of-god/">
+      <a class="al-card" href="/ar/articles/names-of-the-messenger-of-god/" data-month="any-time" data-type="article" data-tags="holy-prophet quran" data-search="أسماء وألقاب رسول الله صلى الله عليه وآله وسلم في آيات القرآن الكريم على مدار العام مقالة النبي الأكرم (ص) القرآن الكريم">
         <img src="/images/articles/thumb-names-of-the-messenger-of-god-ar.jpg" alt="" width="480" height="270" loading="lazy" decoding="async">
         <div class="al-body">
-          <span class="al-tag">أسماء وألقاب رسول الله</span>
+          <span class="al-tag">مقالة</span><span class="al-month">على مدار العام</span>
           <h3 class="al-title">أسماء وألقاب رسول الله صلى الله عليه وآله وسلم في آيات القرآن الكريم</h3>
         </div>
       </a>
-      <a class="al-card" href="/ar/articles/morning-and-evening-mourning/">
+      <a class="al-card" href="/ar/articles/morning-and-evening-mourning/" data-month="muharram" data-type="series" data-tags="imam-hussain imam-mahdi mourning" data-search="العزاء صباحاً ومساءً مُحَرَّم سلسلة الإمام الحسين (ع) الإمام المهدي (عج) العزاء والرثاء">
         <img src="/images/articles/thumb-morning-and-evening-mourning-1-ar.jpg" alt="" width="480" height="270" loading="lazy" decoding="async">
         <div class="al-body">
-          <span class="al-tag">سلسلة</span>
+          <span class="al-tag">سلسلة</span><span class="al-month">مُحَرَّم</span>
           <h3 class="al-title">العزاء صباحاً ومساءً</h3>
         </div>
       </a>
     </div>
+    <nav class="al-browse" aria-label="تصفّح"><div class="al-browse-row"><h2>حسب الشهر</h2><ul><li><a href="/ar/articles/month/muharram/">مُحَرَّم</a></li><li><a href="/ar/articles/month/rabi-al-awwal/">رَبِيعُ الأَوَّل</a></li><li><a href="/ar/articles/month/rabi-al-thani/">رَبِيعُ الآخِر</a></li><li><a href="/ar/articles/month/any-time/">على مدار العام</a></li></ul></div><div class="al-browse-row"><h2>حسب النوع</h2><ul><li><a href="/ar/articles/type/article/">مقالة</a></li><li><a href="/ar/articles/type/series/">سلسلة</a></li></ul></div><div class="al-browse-row"><h2>حسب الوسم</h2><ul><li><a href="/ar/articles/tag/holy-prophet/">النبي الأكرم (ص)</a></li><li><a href="/ar/articles/tag/lady-fatimah-zahra/">السيدة فاطمة الزهراء (ع)</a></li><li><a href="/ar/articles/tag/imam-hussain/">الإمام الحسين (ع)</a></li><li><a href="/ar/articles/tag/imam-sadiq/">الإمام جعفر الصادق (ع)</a></li><li><a href="/ar/articles/tag/imam-ridha/">الإمام الرضا (ع)</a></li><li><a href="/ar/articles/tag/imam-mahdi/">الإمام المهدي (عج)</a></li><li><a href="/ar/articles/tag/lady-khadijah/">السيدة خديجة (ع)</a></li><li><a href="/ar/articles/tag/lady-masoumah/">السيدة فاطمة المعصومة (ع)</a></li><li><a href="/ar/articles/tag/sayyid-abdul-azim/">السيد عبد العظيم الحسني (ع)</a></li><li><a href="/ar/articles/tag/quran/">القرآن الكريم</a></li><li><a href="/ar/articles/tag/supplications/">الأدعية والصلوات</a></li><li><a href="/ar/articles/tag/ziyarat/">الزيارة والمراقد</a></li><li><a href="/ar/articles/tag/mourning/">العزاء والرثاء</a></li></ul></div></nav>
   </div>
 </section>
 
@@ -810,5 +820,36 @@
 
 <script src="/assets/theme.js"></script>
 <script src="/assets/script.js"></script>
+<script>
+/* Filters: month, type, tag and free-text search. State lives in the query string so a filtered view can be shared. */
+(function () {
+  var f = document.getElementById('al-filters'); if (!f) return;
+  var cards = [].slice.call(document.querySelectorAll('.al-grid .al-card'));
+  var sel = { month: f.querySelector('[name=month]'), type: f.querySelector('[name=type]'), tag: f.querySelector('[name=tag]') };
+  var q = f.querySelector('[name=q]'), out = document.getElementById('al-count'), none = document.getElementById('al-none');
+  function norm(s) { return (s || '').toLowerCase().replace(/[\u064B-\u0652\u0670\u0640]/g, ''); }
+  function apply(push) {
+    var m = sel.month.value, t = sel.type.value, g = sel.tag.value, s = norm(q.value.trim()), n = 0;
+    cards.forEach(function (c) {
+      var ok = (!m || c.dataset.month === m) && (!t || c.dataset.type === t) && (!g || (' ' + c.dataset.tags + ' ').indexOf(' ' + g + ' ') > -1) && (!s || norm(c.dataset.search).indexOf(s) > -1);
+      c.hidden = !ok; if (ok) n++;
+    });
+    out.textContent = out.getAttribute('data-tpl').replace('{n}', n);
+    none.hidden = n > 0;
+    if (push) {
+      var p = new URLSearchParams(); if (m) p.set('month', m); if (t) p.set('type', t); if (g) p.set('tag', g); if (s) p.set('q', q.value.trim());
+      history.replaceState(null, '', location.pathname + (p.toString() ? '?' + p : ''));
+    }
+  }
+  var p0 = new URLSearchParams(location.search);
+  ['month', 'type', 'tag'].forEach(function (k) { if (p0.get(k)) sel[k].value = p0.get(k); });
+  if (p0.get('q')) q.value = p0.get('q');
+  [sel.month, sel.type, sel.tag].forEach(function (x) { x.addEventListener('change', function () { apply(true); }); });
+  q.addEventListener('input', function () { apply(true); });
+  f.querySelector('[type=reset]').addEventListener('click', function () { setTimeout(function () { apply(true); }, 0); });
+  f.addEventListener('submit', function (e) { e.preventDefault(); });
+  apply(false);
+})();
+</script>
 </body>
 </html>

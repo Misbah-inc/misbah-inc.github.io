@@ -647,78 +647,88 @@
 
 <section class="section al-section" aria-label="همه مقالات">
   <div class="container">
+    <form id="al-filters" class="al-filters" role="search">
+      <label>ماه<select name="month"><option value="">همه</option><option value="muharram">محرم</option><option value="safar">صفر</option><option value="rabi-al-awwal">ربیع‌الاول</option><option value="rabi-al-thani">ربیع‌الثانی</option><option value="jumada-al-awwal">جمادی‌الاول</option><option value="jumada-al-thani">جمادی‌الثانی</option><option value="rajab">رجب</option><option value="shaban">شعبان</option><option value="ramadan">رمضان</option><option value="shawwal">شوال</option><option value="dhu-al-qidah">ذی‌القعده</option><option value="dhu-al-hijjah">ذی‌الحجه</option><option value="any-time">همه‌ی سال</option></select></label>
+      <label>نوع<select name="type"><option value="">همه</option><option value="article">مقاله</option><option value="series">سلسله</option><option value="announcement">اعلان مناسبت (تقویم شیعی)</option></select></label>
+      <label>برچسب<select name="tag"><option value="">همه</option><optgroup label="شخصیت‌ها"><option value="holy-prophet">پیامبر اکرم (ص)</option><option value="lady-fatimah-zahra">حضرت فاطمه زهرا (س)</option><option value="imam-sadiq">امام جعفر صادق (ع)</option><option value="imam-ridha">امام رضا (ع)</option><option value="lady-khadijah">حضرت خدیجه (س)</option><option value="lady-masoumah">حضرت فاطمه معصومه (س)</option><option value="sayyid-abdul-azim">حضرت عبدالعظیم حسنی (ع)</option></optgroup><optgroup label="موضوعات"><option value="quran">قرآن کریم</option><option value="supplications">دعاها و صلوات</option><option value="ziyarat">زیارت و بارگاه‌ها</option></optgroup></select></label>
+      <label class="al-q">جستجو در مقالات<input type="search" name="q" placeholder="جستجو در مقالات…"></label>
+      <button type="reset" class="btn btn-outline">پاک کردن فیلترها</button>
+    </form>
+    <p class="al-count" id="al-count" data-tpl="{n} نتیجه" aria-live="polite"></p>
+    <p class="al-none" id="al-none" hidden>موردی با این فیلترها یافت نشد.</p>
     <div class="al-grid">
-      <a class="al-card" href="/fa/articles/al-kawthar/">
+      <a class="al-card" href="/fa/articles/al-kawthar/" data-month="any-time" data-type="series" data-tags="lady-fatimah-zahra quran" data-search="سلسله مباحث کوثر همه‌ی سال سلسله حضرت فاطمه زهرا (س) قرآن کریم">
         <img src="/images/articles/thumb-al-kawthar-fa.jpg" alt="" width="480" height="270" loading="lazy" decoding="async">
         <div class="al-body">
-          <span class="al-tag">سلسله</span>
+          <span class="al-tag">سلسله</span><span class="al-month">همه‌ی سال</span>
           <h3 class="al-title">سلسله مباحث کوثر</h3>
         </div>
       </a>
-      <a class="al-card" href="/fa/articles/virtues-of-ziarat-lady-masoumah/">
+      <a class="al-card" href="/fa/articles/virtues-of-ziarat-lady-masoumah/" data-month="rabi-al-thani" data-type="article" data-tags="lady-masoumah imam-ridha ziyarat" data-search="فضائل زیارت حضرت خانم فاطمه معصومه (س) ربیع‌الثانی مقاله حضرت فاطمه معصومه (س) امام رضا (ع) زیارت و بارگاه‌ها">
         <img src="/images/articles/thumb-virtues-of-ziarat-lady-masoumah-fa.jpg" alt="" width="480" height="270" loading="lazy" decoding="async">
         <div class="al-body">
-          <span class="al-tag">حضرت خانم فاطمه معصومه (س)</span><span class="al-month">ربیع‌الثانی</span>
+          <span class="al-tag">مقاله</span><span class="al-month">ربیع‌الثانی</span>
           <h3 class="al-title">فضائل زیارت حضرت خانم فاطمه معصومه (س)</h3>
         </div>
       </a>
-      <a class="al-card" href="/fa/articles/hadrat-abdul-azim-hasani/">
+      <a class="al-card" href="/fa/articles/hadrat-abdul-azim-hasani/" data-month="rabi-al-thani" data-type="article" data-tags="sayyid-abdul-azim ziyarat" data-search="حضرت عبدالعظیم الحسنی علیه‌السلام ربیع‌الثانی مقاله حضرت عبدالعظیم حسنی (ع) زیارت و بارگاه‌ها">
         <img src="/images/articles/thumb-hadrat-abdul-azim-hasani-fa.jpg" alt="" width="480" height="270" loading="lazy" decoding="async">
         <div class="al-body">
-          <span class="al-tag">حضرت عبدالعظیم الحسنی علیه‌السلام</span><span class="al-month">ربیع‌الثانی</span>
+          <span class="al-tag">مقاله</span><span class="al-month">ربیع‌الثانی</span>
           <h3 class="al-title">حضرت عبدالعظیم الحسنی علیه‌السلام</h3>
         </div>
       </a>
-      <a class="al-card" href="/fa/articles/month-of-rabi-al-akhir/">
+      <a class="al-card" href="/fa/articles/month-of-rabi-al-akhir/" data-month="rabi-al-thani" data-type="article" data-tags="lady-masoumah sayyid-abdul-azim" data-search="ماه ربیع‌الآخر ربیع‌الثانی مقاله حضرت فاطمه معصومه (س) حضرت عبدالعظیم حسنی (ع)">
         <img src="/images/articles/thumb-month-of-rabi-al-akhir-fa.jpg" alt="" width="480" height="270" loading="lazy" decoding="async">
         <div class="al-body">
-          <span class="al-tag">ربیع‌الآخر</span><span class="al-month">ربیع‌الثانی</span>
+          <span class="al-tag">مقاله</span><span class="al-month">ربیع‌الثانی</span>
           <h3 class="al-title">ماه ربیع‌الآخر</h3>
         </div>
       </a>
-      <a class="al-card" href="/fa/articles/supplications-of-salawat/">
+      <a class="al-card" href="/fa/articles/supplications-of-salawat/" data-month="rabi-al-awwal" data-type="article" data-tags="holy-prophet supplications" data-search="ادعیه صلوات ربیع‌الاول مقاله پیامبر اکرم (ص) دعاها و صلوات">
         <img src="/images/articles/thumb-supplications-of-salawat-fa.jpg" alt="" width="480" height="270" loading="lazy" decoding="async">
         <div class="al-body">
-          <span class="al-tag">حضرت رسول (ص)</span><span class="al-month">ربیع‌الاول</span>
+          <span class="al-tag">مقاله</span><span class="al-month">ربیع‌الاول</span>
           <h3 class="al-title">ادعیه صلوات</h3>
         </div>
       </a>
-      <a class="al-card" href="/fa/articles/letter-of-imam-sadiq-to-the-shia/">
+      <a class="al-card" href="/fa/articles/letter-of-imam-sadiq-to-the-shia/" data-month="rabi-al-awwal" data-type="article" data-tags="imam-sadiq" data-search="نامهٔ امام جعفر صادق علیه‌السلام به شیعیان ربیع‌الاول مقاله امام جعفر صادق (ع)">
         <img src="/images/articles/thumb-letter-of-imam-sadiq-to-the-shia-fa.jpg" alt="" width="480" height="270" loading="lazy" decoding="async">
         <div class="al-body">
-          <span class="al-tag">امام صادق (ع)</span><span class="al-month">ربیع‌الاول</span>
+          <span class="al-tag">مقاله</span><span class="al-month">ربیع‌الاول</span>
           <h3 class="al-title">نامهٔ امام جعفر صادق علیه‌السلام به شیعیان</h3>
         </div>
       </a>
-      <a class="al-card" href="/fa/articles/title-al-sadiq/">
+      <a class="al-card" href="/fa/articles/title-al-sadiq/" data-month="rabi-al-awwal" data-type="article" data-tags="imam-sadiq" data-search="معرفت امام صادق (ع) — لقب مبارک «الصادق» ربیع‌الاول مقاله امام جعفر صادق (ع)">
         <img src="/images/articles/thumb-title-al-sadiq-fa.jpg" alt="" width="480" height="270" loading="lazy" decoding="async">
         <div class="al-body">
-          <span class="al-tag">امام صادق (ع)</span><span class="al-month">ربیع‌الاول</span>
+          <span class="al-tag">مقاله</span><span class="al-month">ربیع‌الاول</span>
           <h3 class="al-title">معرفت امام صادق (ع) — لقب مبارک «الصادق»</h3>
         </div>
       </a>
-      <a class="al-card" href="/fa/articles/blessed-marriage-khadijah-and-the-prophet/">
+      <a class="al-card" href="/fa/articles/blessed-marriage-khadijah-and-the-prophet/" data-month="rabi-al-awwal" data-type="article" data-tags="lady-khadijah holy-prophet" data-search="ازدواج مبارک حضرت خدیجه (س) و پیامبر اکرم (ص) ربیع‌الاول مقاله حضرت خدیجه (س) پیامبر اکرم (ص)">
         <img src="/images/articles/thumb-blessed-marriage-khadijah-and-the-prophet-fa.jpg" alt="" width="480" height="270" loading="lazy" decoding="async">
         <div class="al-body">
-          <span class="al-tag">حضرت خدیجه، ام المومنین</span><span class="al-month">ربیع‌الاول</span>
+          <span class="al-tag">مقاله</span><span class="al-month">ربیع‌الاول</span>
           <h3 class="al-title">ازدواج مبارک حضرت خدیجه (س) و پیامبر اکرم (ص)</h3>
         </div>
       </a>
-      <a class="al-card" href="/fa/articles/rabi_al_awwal/">
+      <a class="al-card" href="/fa/articles/rabi_al_awwal/" data-month="rabi-al-awwal" data-type="article" data-tags="lady-khadijah holy-prophet" data-search="فضائل و مکارم بانوی جلیل‌القدر، امّ المؤمنین خدیجه بنت خویلد علیها السلام ربیع‌الاول مقاله حضرت خدیجه (س) پیامبر اکرم (ص)">
         <img src="/images/articles/thumb-rabi_al_awwal.jpg" alt="" width="480" height="270" loading="lazy" decoding="async">
         <div class="al-body">
-          <span class="al-tag">حضرت خدیجه سلام الله علیها</span><span class="al-month">ربیع‌الاول</span>
+          <span class="al-tag">مقاله</span><span class="al-month">ربیع‌الاول</span>
           <h3 class="al-title">فضائل و مکارم بانوی جلیل‌القدر، امّ المؤمنین خدیجه بنت خویلد علیها السلام</h3>
         </div>
       </a>
-      <a class="al-card" href="/fa/articles/names-of-the-messenger-of-god/">
+      <a class="al-card" href="/fa/articles/names-of-the-messenger-of-god/" data-month="any-time" data-type="article" data-tags="holy-prophet quran" data-search="نام‌ها و القاب رسول خداصلى الله عليه وآله وسلم در آیات قرآن کریم همه‌ی سال مقاله پیامبر اکرم (ص) قرآن کریم">
         <img src="/images/articles/thumb-names-of-the-messenger-of-god-fa.jpg" alt="" width="480" height="270" loading="lazy" decoding="async">
         <div class="al-body">
-          <span class="al-tag">نام‌ها و القاب رسول خدا</span>
+          <span class="al-tag">مقاله</span><span class="al-month">همه‌ی سال</span>
           <h3 class="al-title">نام‌ها و القاب رسول خداصلى الله عليه وآله وسلم در آیات قرآن کریم</h3>
         </div>
       </a>
     </div>
+    <nav class="al-browse" aria-label="مرور"><div class="al-browse-row"><h2>بر اساس ماه</h2><ul><li><a href="/fa/articles/month/rabi-al-awwal/">ربیع‌الاول</a></li><li><a href="/fa/articles/month/rabi-al-thani/">ربیع‌الثانی</a></li><li><a href="/fa/articles/month/any-time/">همه‌ی سال</a></li></ul></div><div class="al-browse-row"><h2>بر اساس نوع</h2><ul><li><a href="/fa/articles/type/article/">مقاله</a></li><li><a href="/fa/articles/type/series/">سلسله</a></li></ul></div><div class="al-browse-row"><h2>بر اساس برچسب</h2><ul><li><a href="/fa/articles/tag/holy-prophet/">پیامبر اکرم (ص)</a></li><li><a href="/fa/articles/tag/lady-fatimah-zahra/">حضرت فاطمه زهرا (س)</a></li><li><a href="/fa/articles/tag/imam-sadiq/">امام جعفر صادق (ع)</a></li><li><a href="/fa/articles/tag/imam-ridha/">امام رضا (ع)</a></li><li><a href="/fa/articles/tag/lady-khadijah/">حضرت خدیجه (س)</a></li><li><a href="/fa/articles/tag/lady-masoumah/">حضرت فاطمه معصومه (س)</a></li><li><a href="/fa/articles/tag/sayyid-abdul-azim/">حضرت عبدالعظیم حسنی (ع)</a></li><li><a href="/fa/articles/tag/quran/">قرآن کریم</a></li><li><a href="/fa/articles/tag/supplications/">دعاها و صلوات</a></li><li><a href="/fa/articles/tag/ziyarat/">زیارت و بارگاه‌ها</a></li></ul></div></nav>
   </div>
 </section>
 
@@ -782,5 +792,36 @@
 
 <script src="/assets/theme.js"></script>
 <script src="/assets/script.js"></script>
+<script>
+/* Filters: month, type, tag and free-text search. State lives in the query string so a filtered view can be shared. */
+(function () {
+  var f = document.getElementById('al-filters'); if (!f) return;
+  var cards = [].slice.call(document.querySelectorAll('.al-grid .al-card'));
+  var sel = { month: f.querySelector('[name=month]'), type: f.querySelector('[name=type]'), tag: f.querySelector('[name=tag]') };
+  var q = f.querySelector('[name=q]'), out = document.getElementById('al-count'), none = document.getElementById('al-none');
+  function norm(s) { return (s || '').toLowerCase().replace(/[\u064B-\u0652\u0670\u0640]/g, ''); }
+  function apply(push) {
+    var m = sel.month.value, t = sel.type.value, g = sel.tag.value, s = norm(q.value.trim()), n = 0;
+    cards.forEach(function (c) {
+      var ok = (!m || c.dataset.month === m) && (!t || c.dataset.type === t) && (!g || (' ' + c.dataset.tags + ' ').indexOf(' ' + g + ' ') > -1) && (!s || norm(c.dataset.search).indexOf(s) > -1);
+      c.hidden = !ok; if (ok) n++;
+    });
+    out.textContent = out.getAttribute('data-tpl').replace('{n}', n);
+    none.hidden = n > 0;
+    if (push) {
+      var p = new URLSearchParams(); if (m) p.set('month', m); if (t) p.set('type', t); if (g) p.set('tag', g); if (s) p.set('q', q.value.trim());
+      history.replaceState(null, '', location.pathname + (p.toString() ? '?' + p : ''));
+    }
+  }
+  var p0 = new URLSearchParams(location.search);
+  ['month', 'type', 'tag'].forEach(function (k) { if (p0.get(k)) sel[k].value = p0.get(k); });
+  if (p0.get('q')) q.value = p0.get('q');
+  [sel.month, sel.type, sel.tag].forEach(function (x) { x.addEventListener('change', function () { apply(true); }); });
+  q.addEventListener('input', function () { apply(true); });
+  f.querySelector('[type=reset]').addEventListener('click', function () { setTimeout(function () { apply(true); }, 0); });
+  f.addEventListener('submit', function (e) { e.preventDefault(); });
+  apply(false);
+})();
+</script>
 </body>
 </html>

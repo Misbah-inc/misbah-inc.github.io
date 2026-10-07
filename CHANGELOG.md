@@ -5,6 +5,18 @@ Format: `## [Date] — Summary` followed by bulleted details.
 
 ---
 
+## [2026-10-07] — Tags, filters and the Shia-calendar announcements
+
+- **Master tag list** (`tools/wix_import/taxonomy.py`): every article has exactly one **month** (12 Hijri months, or "Any time of year"), one **type** (Article · Series · **Shia calendar announcement**), and any number of **person** and **topic** tags — each with an English, Arabic, Farsi and Urdu name. Wix's own categories (with their duplicates and "Latest") are no longer shown.
+- **Articles page rebuilt in all four languages:** filter bar (month, type, tag, free-text search; state in the URL so a view can be shared), card grid, and crawlable "Browse by month / type / tag" links. The old English month-card modal is gone; the homepage's "Through the Year" cards remain and link to month pages.
+- **Static filter pages** `/articles/month/<m>/`, `/articles/type/<t>/`, `/articles/tag/<t>/` (89 pages, per language that has entries). Pages with a single entry are `noindex,follow` and left out of the sitemap (26 of them); the rest are in it (sitemap now 158 URLs).
+- Every article page shows its month, type and tags as links (tags also feed `article:tag` and JSON-LD keywords).
+- **15 announcements imported** (English only): Muharram 1448 programme, majalis for Imam al-Baqir / al-Jawad / al-Sadiq / Nights of Qadr / Umm al-Banin / Fatima al-Zahra (x2) / Prophet, Hasan, Ridha / Arbaeen / Ruqayyah / Imam al-Sajjad, the Muharram 1447 food drive, the Ghadir 2025 thank-you, the Safar notice. Flyer images are the cover; the Ghadir photo gallery (about 40 photos) was **not** imported.
+- Months were inferred from each occasion's Hijri date; the following are guesses and should be reviewed: Fatima al-Zahra announcements (Jumada al-Awwal), Muhsin ibn Ali (Safar), the Elegy of Imam Hussain's Thirst (Muharram), the Mourning series (Muharram).
+- ar/fa/ur tag, type, month and interface names were written for this site and are unreviewed.
+
+---
+
 ## [2026-10-07] — Morning & Evening Mourning series (10 chapters)
 
 - **New:** series page `/articles/morning-and-evening-mourning/` and chapters at `…/1/` to `…/10/` (the URLs the homepage already linked to — its ten dead chapter buttons now work). Chapters are English; **chapters 1 and 2 also have Arabic** (`/ar/articles/morning-and-evening-mourning/`, listing just those two) — the Wix blog has no fa/ur versions. Text verbatim; each chapter's "Chapter N" line and subtitle are shown as the lead.

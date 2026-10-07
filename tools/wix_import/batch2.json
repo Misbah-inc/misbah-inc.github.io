@@ -1,10 +1,52 @@
-[{"slug":"virtues-of-the-messenger-of-allah","wix":"the-virtues-of-the-messenger-of-allah-in-the-words-of-amir-al-mu-minin","month":null},
- {"slug":"imam-hasan-al-askari-keeper-of-gods-knowledge","wix":"imam-hasan-al-askari-p-the-keeper-of-god-s-knowledge","month":3},
- {"slug":"the-second-ghadir","wix":"the-9th-of-rabi-al-awwal-the-second-ghadir","month":3},
- {"slug":"rabi-al-awwal","wix":"rabi-al-awwal","month":3},
- {"slug":"martyrdom-of-muhsin-ibn-ali","wix":"the-martyrdom-of-muhsin-ibn-ali-p","month":null},
- {"slug":"husn-al-hassan-in-quran","wix":"husn-al-hassan-in-quran","month":null},
- {"slug":"ayatul-kursi","wix":"ayatul-kursi-1","month":null},
- {"slug":"recognition-of-arbaeen-part-1","wix":"the-recognition-of-arbaeen-part-one","month":2},
- {"slug":"recognition-of-arbaeen-part-2","wix":"the-recognition-of-arabeen-part-two","month":2},
- {"slug":"elegy-of-imam-hussains-thirst","wix":"the-elegy-of-imam-hussain-s-thirst-shaykh-abd-al-zahra-al-ka-bi-recites-ibn-arandas-al-hilli-s-poem","month":null}]
+[
+ {
+  "slug": "virtues-of-the-messenger-of-allah",
+  "wix": "the-virtues-of-the-messenger-of-allah-in-the-words-of-amir-al-mu-minin",
+  "month": null
+ },
+ {
+  "slug": "imam-hasan-al-askari-keeper-of-gods-knowledge",
+  "wix": "imam-hasan-al-askari-p-the-keeper-of-god-s-knowledge",
+  "month": 3
+ },
+ {
+  "slug": "the-second-ghadir",
+  "wix": "the-9th-of-rabi-al-awwal-the-second-ghadir",
+  "month": 3
+ },
+ {
+  "slug": "rabi-al-awwal",
+  "wix": "rabi-al-awwal",
+  "month": 3
+ },
+ {
+  "slug": "martyrdom-of-muhsin-ibn-ali",
+  "wix": "the-martyrdom-of-muhsin-ibn-ali-p",
+  "month": 2
+ },
+ {
+  "slug": "husn-al-hassan-in-quran",
+  "wix": "husn-al-hassan-in-quran",
+  "month": null
+ },
+ {
+  "slug": "ayatul-kursi",
+  "wix": "ayatul-kursi-1",
+  "month": null
+ },
+ {
+  "slug": "recognition-of-arbaeen-part-1",
+  "wix": "the-recognition-of-arbaeen-part-one",
+  "month": 2
+ },
+ {
+  "slug": "recognition-of-arbaeen-part-2",
+  "wix": "the-recognition-of-arabeen-part-two",
+  "month": 2
+ },
+ {
+  "slug": "elegy-of-imam-hussains-thirst",
+  "wix": "the-elegy-of-imam-hussain-s-thirst-shaykh-abd-al-zahra-al-ka-bi-recites-ibn-arandas-al-hilli-s-poem",
+  "month": 1
+ }
+]

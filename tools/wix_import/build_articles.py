@@ -3,6 +3,7 @@ import re, json, html, os, sys, subprocess, urllib.parse
 from html.parser import HTMLParser
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import gen_kawthar as G
+import taxonomy as TX
 from gen_kawthar import S, PFX, LANGS, ROOT, SITE, esc, num, is_arabic_quote, head, crumbs, breadcrumb_ld, ORG, template, VIDEO_JS, hreflangs
 
 SP = G.SP
@@ -209,6 +210,8 @@ def page(slug, lang, a, langs_avail, TP, month_key=None, meta_title=None, series
     mins = max(1, round(words / 180))
     title_tag = f"{a['title'][:80]} | {L['brand']}"
     if len(title_tag) > 70: title_tag = f"{clip(a['title'], 56)} | {L['brand']}"
+    ctags = TX.tag_list(slug.split('?')[0], lang) if slug in TX.ITEMS else None
+    if ctags: a = dict(a, tags=[c[2] for c in ctags])
     desc = clip(a['desc'] or next((b['x'] for b in a['body'] if b['t'] == 'p' and len(b['x']) > 60), a['title']), 160)
     img = a.get('img')  # dict or None
     og_img = f'/images/articles/og-{fs}-{lang}.jpg' if img else '/images/articles/og-fallback.jpg'
@@ -272,7 +275,11 @@ def page(slug, lang, a, langs_avail, TP, month_key=None, meta_title=None, series
         sw = f'''<div class="art-lang-sw-inline" aria-label="{L['read_in_aria']}">
       <span class="lsw-label">{L['read_in']}</span>{links}
     </div>'''
-    tags = '<ul class="kw-tags">' + ''.join(f'<li>{esc(t)}</li>' for t in a['tags']) + '</ul>' if a['tags'] else ''
+    if ctags:
+        tags = '<ul class="kw-tags" aria-label="Tags">' + ''.join(
+            f'<li class="kw-tag-{k}"><a href="{PFX[lang]}/articles/{c}">{esc(label)}</a></li>' for k, _, label, c in ctags) + '</ul>'
+    else:
+        tags = '<ul class="kw-tags">' + ''.join(f'<li>{esc(t)}</li>' for t in a['tags']) + '</ul>' if a['tags'] else ''
     back = '<path d="M5 12h14M12 5l7 7-7 7"/>' if lang != 'en' else '<path d="M19 12H5M12 5l-7 7 7 7"/>'
     main = f'''<main>
 
@@ -289,7 +296,7 @@ def page(slug, lang, a, langs_avail, TP, month_key=None, meta_title=None, series
     </a>
 
     <div class="art-meta">
-      <span class="art-tag">{L['tag'] if series else L['article']}</span>
+      <span class="art-tag">{TX.TYPES[TX.ITEMS[slug][1]][lang] if slug in TX.ITEMS else L['article']}</span>
       <span class="art-reading">{L['min'].format(n=num(mins, lang))}</span>
     </div>
 
