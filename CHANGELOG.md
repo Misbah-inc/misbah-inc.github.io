@@ -5,6 +5,12 @@ Format: `## [Date] — Summary` followed by bulleted details.
 
 ---
 
+## [2026-10-07] — Four posts re-typed as Shia calendar announcements
+
+- "The Month of Rabi al-Akhir", "Hadrat Abdul Azim Hasani" (4 Rabi al-Thani birth anniversary), "Rabi al-Awwal" (month introduction) and "The Second Ghadir" (9 Rabi al-Awwal) were typed Article; they are calendar occasion posts, so they are now **Shia calendar announcement**. The announcement type page lists 19 entries (in English).
+
+---
+
 ## [2026-10-07] — Tags, filters and the Shia-calendar announcements
 
 - **Master tag list** (`tools/wix_import/taxonomy.py`): every article has exactly one **month** (12 Hijri months, or "Any time of year"), one **type** (Article · Series · **Shia calendar announcement**), and any number of **person** and **topic** tags — each with an English, Arabic, Farsi and Urdu name. Wix's own categories (with their duplicates and "Latest") are no longer shown.

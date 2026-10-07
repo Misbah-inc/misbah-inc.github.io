@@ -58,8 +58,8 @@ ITEMS = {
  'al-kawthar': (0, 'series', ['lady-fatimah-zahra', 'quran']),
  'morning-and-evening-mourning': (1, 'series', ['imam-hussain', 'imam-mahdi', 'mourning']),            # (guess) Muharram: the series is built on Ziarat al-Nahiya
  'virtues-of-ziarat-lady-masoumah': (4, 'article', ['lady-masoumah', 'imam-ridha', 'ziyarat']),
- 'hadrat-abdul-azim-hasani': (4, 'article', ['sayyid-abdul-azim', 'ziyarat']),
- 'month-of-rabi-al-akhir': (4, 'article', ['lady-masoumah', 'sayyid-abdul-azim']),
+ 'hadrat-abdul-azim-hasani': (4, 'announcement', ['sayyid-abdul-azim', 'ziyarat']),
+ 'month-of-rabi-al-akhir': (4, 'announcement', ['lady-masoumah', 'sayyid-abdul-azim']),
  'supplications-of-salawat': (3, 'article', ['holy-prophet', 'supplications']),
  'letter-of-imam-sadiq-to-the-shia': (3, 'article', ['imam-sadiq']),
  'title-al-sadiq': (3, 'article', ['imam-sadiq']),
@@ -67,8 +67,8 @@ ITEMS = {
  'names-of-the-messenger-of-god': (0, 'article', ['holy-prophet', 'quran']),
  'virtues-of-the-messenger-of-allah': (0, 'article', ['holy-prophet', 'imam-ali']),
  'imam-hasan-al-askari-keeper-of-gods-knowledge': (3, 'article', ['imam-askari', 'wilayah']),
- 'the-second-ghadir': (3, 'article', ['imam-mahdi', 'wilayah', 'ghadir']),
- 'rabi-al-awwal': (3, 'article', ['holy-prophet']),
+ 'the-second-ghadir': (3, 'announcement', ['imam-mahdi', 'wilayah', 'ghadir']),
+ 'rabi-al-awwal': (3, 'announcement', ['holy-prophet']),
  'martyrdom-of-muhsin-ibn-ali': (2, 'article', ['muhsin-ibn-ali', 'lady-fatimah-zahra']),                # (guess) Ayyam-e-Muhsiniyah falls in Safar
  'husn-al-hassan-in-quran': (0, 'article', ['imam-hasan', 'quran']),
  'ayatul-kursi': (0, 'article', ['quran']),

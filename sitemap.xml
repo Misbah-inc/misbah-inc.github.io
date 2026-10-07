@@ -229,6 +229,7 @@
 
 
 
+
   <!-- ── Imported articles + indexes ────────────────────────────── -->
   <url>
     <loc>https://article.misbah-inc.com/articles/</loc>
@@ -1459,8 +1460,41 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://article.misbah-inc.com/ar/articles/type/announcement/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://article.misbah-inc.com/articles/type/announcement/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://article.misbah-inc.com/ar/articles/type/announcement/"/>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://article.misbah-inc.com/fa/articles/type/announcement/"/>
+    <xhtml:link rel="alternate" hreflang="ur" href="https://article.misbah-inc.com/ur/articles/type/announcement/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://article.misbah-inc.com/articles/type/announcement/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://article.misbah-inc.com/articles/type/announcement/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://article.misbah-inc.com/articles/type/announcement/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://article.misbah-inc.com/ar/articles/type/announcement/"/>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://article.misbah-inc.com/fa/articles/type/announcement/"/>
+    <xhtml:link rel="alternate" hreflang="ur" href="https://article.misbah-inc.com/ur/articles/type/announcement/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://article.misbah-inc.com/articles/type/announcement/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://article.misbah-inc.com/fa/articles/type/announcement/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://article.misbah-inc.com/articles/type/announcement/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://article.misbah-inc.com/ar/articles/type/announcement/"/>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://article.misbah-inc.com/fa/articles/type/announcement/"/>
+    <xhtml:link rel="alternate" hreflang="ur" href="https://article.misbah-inc.com/ur/articles/type/announcement/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://article.misbah-inc.com/articles/type/announcement/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://article.misbah-inc.com/ur/articles/type/announcement/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://article.misbah-inc.com/articles/type/announcement/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://article.misbah-inc.com/ar/articles/type/announcement/"/>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://article.misbah-inc.com/fa/articles/type/announcement/"/>
+    <xhtml:link rel="alternate" hreflang="ur" href="https://article.misbah-inc.com/ur/articles/type/announcement/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://article.misbah-inc.com/articles/type/announcement/"/>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
