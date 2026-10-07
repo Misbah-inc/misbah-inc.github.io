@@ -10,16 +10,16 @@ from gen_kawthar import S, PFX, LANGS, ROOT, SITE, esc, head, template, ORG
 
 U = {
  'en': dict(month='Month', type='Type', tag='Tag', all='All', search='Search articles…', clear='Clear filters', count='{n} results', none='Nothing matches these filters.',
-            browse='Browse', by_month='By month', by_type='By type', by_tag='By tag', people='People', topics='Topics', home_all='All articles',
+            browse='Browse', by_month='By month', by_type='By type', by_tag='By tag', people='Noble figures', topics='Topics', home_all='All articles',
             page_desc='Articles and announcements from Misbah Inc. about {name}.', h1_suffix='', crumb_arts='Articles'),
  'ar': dict(month='الشهر', type='النوع', tag='الوسم', all='الكل', search='ابحث في المقالات…', clear='مسح التصفية', count='{n} نتيجة', none='لا توجد نتائج تطابق هذه التصفية.',
-            browse='تصفّح', by_month='حسب الشهر', by_type='حسب النوع', by_tag='حسب الوسم', people='الأشخاص', topics='المواضيع', home_all='جميع المقالات',
+            browse='تصفّح', by_month='حسب الشهر', by_type='حسب النوع', by_tag='حسب الوسم', people='الشخصيات الجليلة', topics='المواضيع', home_all='جميع المقالات',
             page_desc='مقالات وإعلانات من مؤسسة مصباح عن {name}.', h1_suffix='', crumb_arts='المقالات'),
  'fa': dict(month='ماه', type='نوع', tag='برچسب', all='همه', search='جستجو در مقالات…', clear='پاک کردن فیلترها', count='{n} نتیجه', none='موردی با این فیلترها یافت نشد.',
-            browse='مرور', by_month='بر اساس ماه', by_type='بر اساس نوع', by_tag='بر اساس برچسب', people='شخصیت‌ها', topics='موضوعات', home_all='همه مقالات',
+            browse='مرور', by_month='بر اساس ماه', by_type='بر اساس نوع', by_tag='بر اساس برچسب', people='چهره‌های والا', topics='موضوعات', home_all='همه مقالات',
             page_desc='مقالات و اعلان‌های مصباح انک. درباره‌ی {name}.', h1_suffix='', crumb_arts='مقالات'),
  'ur': dict(month='مہینہ', type='قسم', tag='ٹیگ', all='سب', search='مضامین تلاش کریں…', clear='فلٹر ہٹائیں', count='{n} نتائج', none='ان فلٹرز سے کوئی نتیجہ نہیں ملا۔',
-            browse='براؤز کریں', by_month='مہینے کے مطابق', by_type='قسم کے مطابق', by_tag='ٹیگ کے مطابق', people='شخصیات', topics='موضوعات', home_all='تمام مضامین',
+            browse='براؤز کریں', by_month='مہینے کے مطابق', by_type='قسم کے مطابق', by_tag='ٹیگ کے مطابق', people='برگزیدہ شخصیات', topics='موضوعات', home_all='تمام مضامین',
             page_desc='مصباح انک. کی طرف سے {name} کے بارے میں مضامین اور اعلانات۔', h1_suffix='', crumb_arts='مضامین'),
 }
 

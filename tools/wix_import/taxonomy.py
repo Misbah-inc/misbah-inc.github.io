@@ -22,7 +22,7 @@ TYPES = {
 def _t(group, en, ar, fa, ur): return dict(group=group, en=en, ar=ar, fa=fa, ur=ur)
 
 TAGS = {
- # people
+ # noble figures (the 'person' group)
  'holy-prophet': _t('person', 'The Holy Prophet (p)', 'النبي الأكرم (ص)', 'پیامبر اکرم (ص)', 'نبی اکرم (ص)'),
  'imam-ali': _t('person', 'Imam Ali (p)', 'الإمام علي (ع)', 'امام علی (ع)', 'امام علی (ع)'),
  'lady-fatimah-zahra': _t('person', 'Lady Fatimah al-Zahra (p)', 'السيدة فاطمة الزهراء (ع)', 'حضرت فاطمه زهرا (س)', 'حضرت فاطمہ زہرا (س)'),

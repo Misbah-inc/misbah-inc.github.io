@@ -946,6 +946,7 @@
     <priority>0.7</priority>
   </url>
 
+
   <!-- ── Filter pages (month / type / tag), only those with 2+ entries ── -->
   <url>
     <loc>https://article.misbah-inc.com/ar/articles/month/any-time/</loc>
