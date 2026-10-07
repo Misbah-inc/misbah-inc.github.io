@@ -161,6 +161,24 @@ def make_image(a, slug, lang):
     return dict(w=big.size[0], h=big.size[1], orig=(w, h))
 
 
+def localize_img(url, slug, n):
+    """Copy an image used inside an article off Wix's CDN: images/articles/<slug>/<n>.jpg (<=1200 w). Returns (path, w, h) or None."""
+    from PIL import Image
+    base = url.split('/v1/')[0]
+    tmp = SP + f'body_{slug}_{n}.bin'
+    if not os.path.exists(tmp):
+        subprocess.run(['curl', '-sL', '-A', 'Mozilla/5.0', '-o', tmp, base], timeout=120)
+    try:
+        im = Image.open(tmp).convert('RGB')
+    except Exception:
+        return None
+    w, h = im.size
+    if w > 1200: im = im.resize((1200, round(1200 * h / w)), Image.LANCZOS)
+    d = ROOT + f'images/articles/{slug}/'; os.makedirs(d, exist_ok=True)
+    im.save(f'{d}{n}.jpg', 'JPEG', quality=80, progressive=True, optimize=True)
+    return f'/images/articles/{slug}/{n}.jpg', im.size[0], im.size[1]
+
+
 def aurl(lang, slug):
     return f'{SITE}{PFX[lang]}/articles/{slug}/'
 
@@ -174,7 +192,7 @@ def page(slug, lang, a, langs_avail, TP, month_key=None, meta_title=None):
     if len(title_tag) > 70: title_tag = f"{clip(a['title'], 56)} | {L['brand']}"
     desc = clip(a['desc'] or next((b['x'] for b in a['body'] if b['t'] == 'p' and len(b['x']) > 60), a['title']), 160)
     img = a.get('img')  # dict or None
-    og_img = f'/images/articles/og-{slug}-{lang}.jpg' if img else '/images/mosque-madinah-hero.jpg'
+    og_img = f'/images/articles/og-{slug}-{lang}.jpg' if img else '/images/articles/og-fallback.jpg'
 
     def alt_urls(lg): return aurl(lg, slug)
     hl = ''.join(f'  <link rel="alternate"  hreflang="{l}" href="{alt_urls(l)}">\n' for l in langs_avail)
@@ -200,11 +218,15 @@ def page(slug, lang, a, langs_avail, TP, month_key=None, meta_title=None):
     h = h.replace(f'content="{SITE}{PFX[lang]}/articles/{G.SLUG}/"', f'content="{cur}"')
     # body
     parts = []
+    nimg = 0
     for it in body_html(a):
         if isinstance(it, tuple):
             if it[0] == 'VIDEO': parts.append(video_block(lang, it[1], a['title']))
             else:
-                parts.append(f'<figure class="art-fig"><img src="{html.escape(it[1]["x"], quote=True)}" alt="{html.escape(it[1].get("alt",""), quote=True)}" loading="lazy" decoding="async"></figure>')
+                nimg += 1
+                loc = localize_img(it[1]['x'], slug, f'{lang}-{nimg}')
+                if loc:
+                    parts.append(f'<figure class="art-fig"><img src="{loc[0]}" alt="{html.escape(it[1].get("alt","") or a["title"], quote=True)}" width="{loc[1]}" height="{loc[2]}" loading="lazy" decoding="async"></figure>')
         else: parts.append(it)
     body = '\n        '.join(parts)
     banner = ''

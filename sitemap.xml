@@ -225,6 +225,8 @@
     <priority>0.8</priority>
   </url>
 
+
+
   <!-- ── Imported articles + indexes ────────────────────────────── -->
   <url>
     <loc>https://article.misbah-inc.com/articles/</loc>
@@ -233,7 +235,7 @@
     <xhtml:link rel="alternate" hreflang="fa" href="https://article.misbah-inc.com/fa/articles/"/>
     <xhtml:link rel="alternate" hreflang="ur" href="https://article.misbah-inc.com/ur/articles/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://article.misbah-inc.com/articles/"/>
-    <lastmod>2026-10-07</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -244,7 +246,7 @@
     <xhtml:link rel="alternate" hreflang="fa" href="https://article.misbah-inc.com/fa/articles/"/>
     <xhtml:link rel="alternate" hreflang="ur" href="https://article.misbah-inc.com/ur/articles/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://article.misbah-inc.com/articles/"/>
-    <lastmod>2026-10-07</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -255,7 +257,7 @@
     <xhtml:link rel="alternate" hreflang="fa" href="https://article.misbah-inc.com/fa/articles/"/>
     <xhtml:link rel="alternate" hreflang="ur" href="https://article.misbah-inc.com/ur/articles/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://article.misbah-inc.com/articles/"/>
-    <lastmod>2026-10-07</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -266,7 +268,7 @@
     <xhtml:link rel="alternate" hreflang="fa" href="https://article.misbah-inc.com/fa/articles/"/>
     <xhtml:link rel="alternate" hreflang="ur" href="https://article.misbah-inc.com/ur/articles/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://article.misbah-inc.com/articles/"/>
-    <lastmod>2026-10-07</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -447,6 +449,14 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://article.misbah-inc.com/articles/virtues-of-the-messenger-of-allah/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://article.misbah-inc.com/articles/virtues-of-the-messenger-of-allah/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://article.misbah-inc.com/articles/virtues-of-the-messenger-of-allah/"/>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://article.misbah-inc.com/articles/letter-of-imam-sadiq-to-the-shia/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://article.misbah-inc.com/articles/letter-of-imam-sadiq-to-the-shia/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://article.misbah-inc.com/ar/articles/letter-of-imam-sadiq-to-the-shia/"/>
@@ -579,6 +589,46 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://article.misbah-inc.com/articles/imam-hasan-al-askari-keeper-of-gods-knowledge/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://article.misbah-inc.com/articles/imam-hasan-al-askari-keeper-of-gods-knowledge/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://article.misbah-inc.com/articles/imam-hasan-al-askari-keeper-of-gods-knowledge/"/>
+    <lastmod>2026-08-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://article.misbah-inc.com/articles/the-second-ghadir/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://article.misbah-inc.com/articles/the-second-ghadir/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://article.misbah-inc.com/articles/the-second-ghadir/"/>
+    <lastmod>2026-08-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://article.misbah-inc.com/articles/rabi-al-awwal/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://article.misbah-inc.com/articles/rabi-al-awwal/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://article.misbah-inc.com/articles/rabi-al-awwal/"/>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://article.misbah-inc.com/articles/martyrdom-of-muhsin-ibn-ali/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://article.misbah-inc.com/articles/martyrdom-of-muhsin-ibn-ali/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://article.misbah-inc.com/articles/martyrdom-of-muhsin-ibn-ali/"/>
+    <lastmod>2026-08-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://article.misbah-inc.com/articles/husn-al-hassan-in-quran/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://article.misbah-inc.com/articles/husn-al-hassan-in-quran/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://article.misbah-inc.com/articles/husn-al-hassan-in-quran/"/>
+    <lastmod>2026-08-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://article.misbah-inc.com/articles/names-of-the-messenger-of-god/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://article.misbah-inc.com/articles/names-of-the-messenger-of-god/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://article.misbah-inc.com/ar/articles/names-of-the-messenger-of-god/"/>
@@ -619,6 +669,38 @@
     <xhtml:link rel="alternate" hreflang="ur" href="https://article.misbah-inc.com/ur/articles/names-of-the-messenger-of-god/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://article.misbah-inc.com/articles/names-of-the-messenger-of-god/"/>
     <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://article.misbah-inc.com/articles/recognition-of-arbaeen-part-1/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://article.misbah-inc.com/articles/recognition-of-arbaeen-part-1/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://article.misbah-inc.com/articles/recognition-of-arbaeen-part-1/"/>
+    <lastmod>2026-07-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://article.misbah-inc.com/articles/recognition-of-arbaeen-part-2/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://article.misbah-inc.com/articles/recognition-of-arbaeen-part-2/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://article.misbah-inc.com/articles/recognition-of-arbaeen-part-2/"/>
+    <lastmod>2026-07-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://article.misbah-inc.com/articles/elegy-of-imam-hussains-thirst/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://article.misbah-inc.com/articles/elegy-of-imam-hussains-thirst/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://article.misbah-inc.com/articles/elegy-of-imam-hussains-thirst/"/>
+    <lastmod>2026-07-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://article.misbah-inc.com/articles/ayatul-kursi/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://article.misbah-inc.com/articles/ayatul-kursi/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://article.misbah-inc.com/articles/ayatul-kursi/"/>
+    <lastmod>2026-02-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

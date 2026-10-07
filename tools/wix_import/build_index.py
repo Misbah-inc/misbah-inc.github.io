@@ -39,6 +39,7 @@ def entries(lang):
 
     def thumb(src, name):
         dst = f'{d}thumb-{name}.jpg'
+        if not os.path.exists(ROOT + src): return '/images/articles/thumb-fallback.jpg'   # no cover on Wix: branded placeholder
         if not os.path.exists(dst):
             im = ImageOps.fit(Image.open(ROOT + src).convert('RGB'), (480, 270), method=Image.LANCZOS, centering=(0.5, 0.4))
             im.save(dst, 'JPEG', quality=78, progressive=True, optimize=True)

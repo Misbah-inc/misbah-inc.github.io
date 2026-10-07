@@ -5,6 +5,15 @@ Format: `## [Date] — Summary` followed by bulleted details.
 
 ---
 
+## [2026-10-07] — Ten English-only articles from the Wix blog
+
+- **Imported (10 pages, English only — the Wix blog has no ar/fa/ur versions of these):** Virtues of the Messenger of Allah · Imam Hasan al-Askari: Keeper of God's Knowledge · The Second Ghadir · Rabi al-Awwal · Martyrdom of Muhsin ibn Ali · Husn al-Hassan in the Qur'an · Ayatul Kursi · The Recognition of Arbaeen (Parts 1 and 2) · The Elegy of Imam Hussain's Thirst. hreflang lists only English (+ x-default); no placeholder pages were made for the missing languages.
+- Article-body images are copied off Wix's CDN into `images/articles/<slug>/`. Ayatul Kursi has no cover on Wix, so it uses a branded placeholder (`images/articles/*fallback.jpg`).
+- Safar's card on the English homepage is live (the two Arbaeen parts). `tools/wix_import/build_sitemap.py` regenerates the sitemap block (66 URLs).
+- Wix source typo kept verbatim: Arbaeen Part Two is titled "The Recognition of Arabeen".
+
+---
+
 ## [2026-10-07] — Eight more articles from the Wix blog (EN/AR/FA/UR) + localized article indexes
 
 - **Imported (32 pages):** Virtues of the Ziarat of Lady Fatimah Ma'soumah · Hadrat Abdul Azim Hasani · The Month of Rabi al-Akhir · Supplications of Salawat · Letter of Imam al-Sadiq to the Shia · The Blessed Title "al-Sadiq" · Blessed Marriage of Lady Khadijah and the Prophet · 30 Names and Titles of the Messenger of God. Each language is built from its own Wix post, text verbatim; embedded YouTube videos are click-to-load.
