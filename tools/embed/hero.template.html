@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Welcome to Misbah</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:ital,wght@0,600;1,400&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  /* Misbah hero — standalone, for a Wix "Embed HTML" element. Same colours as article.misbah-inc.com. */
+  :root { --bg:#162516; --gold:#c9a46b; --gold-light:#e8d5a3; --white:#fff; }
+  *, *::before, *::after { box-sizing:border-box; margin:0; padding:0; }
+  html, body { height:100%; }
+  body { background:var(--bg); color:var(--white); font-family:'Inter','Segoe UI',sans-serif; overflow:hidden; }
+  .hero { position:relative; min-height:100vh; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:1.2rem 1rem; }
+  .hero::before { content:''; position:absolute; inset:0; pointer-events:none;
+    background-image:url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M40 4 L76 40 L40 76 L4 40 Z' fill='none' stroke='%23c9a46b' stroke-width='0.5' stroke-opacity='0.12'/%3E%3C/svg%3E"); }
+  .inner { position:relative; z-index:1; width:100%; max-width:900px; }
+  .logo-top { display:block; width:clamp(190px,40%,380px); height:auto; margin:0 auto .2rem; mix-blend-mode:screen; opacity:.92; }
+  .eyebrow { font-family:'Cinzel',serif; font-style:italic; font-size:clamp(.7rem,2.2vw,.95rem); letter-spacing:.06em; color:var(--gold); opacity:.92; margin-bottom:.5rem; }
+  /* one line, always: the size follows the width of the frame */
+  h1 { font-family:'Cinzel',Georgia,serif; font-weight:600; text-transform:uppercase; letter-spacing:.07em; line-height:1.1; white-space:nowrap;
+    font-size:clamp(1.25rem,6.4vw,4.6rem); margin-bottom:.6rem; }
+  h1 span { color:var(--gold); }
+  .pair { display:flex; justify-content:center; align-items:center; gap:1.2rem; margin:.3rem 0 0; }
+  .pair img { width:clamp(90px,19%,170px); height:auto; mix-blend-mode:screen; opacity:.88; }
+  .divider { display:flex; align-items:center; justify-content:center; gap:.8rem; margin:1rem auto; max-width:480px; color:var(--gold); }
+  .divider::before, .divider::after { content:''; flex:1; height:1px; background:linear-gradient(90deg,transparent,var(--gold)); }
+  .divider::after { background:linear-gradient(270deg,transparent,var(--gold)); }
+  .divider i { font-style:normal; font-size:.8rem; }
+  .social { display:flex; flex-wrap:wrap; justify-content:center; gap:.7rem; }
+  .btn { display:flex; align-items:center; justify-content:center; width:44px; height:44px; border-radius:50%; cursor:pointer;
+    background:rgba(255,255,255,.09); border:1px solid rgba(255,255,255,.12); transition:all .25s ease; color:inherit; }
+  .btn:hover, .btn:focus-visible { background:var(--gold); border-color:var(--gold); transform:translateY(-3px); box-shadow:0 6px 20px rgba(201,164,107,.4); outline:none; }
+  .btn svg { width:20px; height:20px; fill:var(--white); }
+  .dd { position:relative; }
+  .menu { position:absolute; bottom:calc(100% + 10px); left:50%; transform:translateX(-50%); display:none; flex-direction:column; min-width:130px;
+    background:#1e3d1f; border:1px solid rgba(201,164,107,.3); border-radius:10px; padding:.4rem 0; z-index:20; box-shadow:0 8px 32px rgba(0,0,0,.5); }
+  .menu.open { display:flex; }
+  .menu a { padding:.5rem 1rem; color:var(--gold-light); font-size:.84rem; text-decoration:none; white-space:nowrap; }
+  .menu a:hover { background:rgba(255,255,255,.08); }
+  .scroll { margin-top:1rem; color:rgba(255,255,255,.35); font-size:.7rem; letter-spacing:.15em; text-transform:uppercase; animation:bounce 2s infinite; }
+  .scroll svg { display:block; margin:.3rem auto 0; width:16px; height:16px; fill:none; stroke:currentColor; stroke-width:2; }
+  @keyframes bounce { 0%,100% { transform:translateY(0); } 50% { transform:translateY(6px); } }
+  @media (max-height:520px) { .scroll { display:none; } }
+  @media (prefers-reduced-motion:reduce) { .scroll { animation:none; } .btn { transition:none; } }
+</style>
+</head>
+<body>
+<section class="hero" aria-label="Welcome">
+  <div class="inner">
+    <img class="logo-top" src="@@TOP@@" alt="اللهم بارك لمولانا صاحب الزمان" width="@@TOPW@@" height="@@TOPH@@">
+    <p class="eyebrow">My days are spent in the service of Ali</p>
+    <h1>Welcome to <span>Misbah</span></h1>
+    <div class="pair" aria-hidden="true">
+      <img src="@@AJ@@" alt="" width="@@AJW@@" height="@@AJH@@">
+      <img src="@@BI@@" alt="" width="@@BIW@@" height="@@BIH@@">
+    </div>
+    <div class="divider" aria-hidden="true"><i>◆</i></div>
+    <nav class="social" aria-label="Social media">
+      <div class="dd">
+        <button class="btn" type="button" aria-label="WhatsApp channels" aria-expanded="false" aria-controls="wa">@@WA@@</button>
+        <div class="menu" id="wa" role="menu">
+          <a href="https://chat.whatsapp.com/JnOFh4iSCem4b1Sg45RN5n" target="_blank" rel="noopener" role="menuitem">English</a>
+          <a href="https://chat.whatsapp.com/KQPKiHUDehJGOcf29I103Y" target="_blank" rel="noopener" role="menuitem">Arabic</a>
+          <a href="https://chat.whatsapp.com/F8A1JzfPU9lAg1oIDeyvDP" target="_blank" rel="noopener" role="menuitem">Farsi</a>
+          <a href="https://chat.whatsapp.com/BlDfLsmhWQiG6SVoa5LAz5" target="_blank" rel="noopener" role="menuitem">Urdu</a>
+        </div>
+      </div>
+      <div class="dd">
+        <button class="btn" type="button" aria-label="Telegram channels" aria-expanded="false" aria-controls="tg">@@TG@@</button>
+        <div class="menu" id="tg" role="menu">
+          <a href="https://t.me/misbah110" target="_blank" rel="noopener" role="menuitem">Farsi</a>
+          <a href="https://t.me/misbah110_en" target="_blank" rel="noopener" role="menuitem">English</a>
+          <a href="https://t.me/misbah110_ar" target="_blank" rel="noopener" role="menuitem">Arabic</a>
+          <a href="https://t.me/misbah110_ur" target="_blank" rel="noopener" role="menuitem">Urdu</a>
+        </div>
+      </div>
+      <a class="btn" href="https://www.instagram.com/misbah.110/" target="_blank" rel="noopener" aria-label="Instagram">@@IG@@</a>
+      <a class="btn" href="#" target="_blank" rel="noopener" aria-label="Facebook">@@FB@@</a>
+      <a class="btn" href="https://x.com/misbahinc110" target="_blank" rel="noopener" aria-label="X (Twitter)">@@X@@</a>
+      <a class="btn" href="https://www.youtube.com/@Misbah110" target="_blank" rel="noopener" aria-label="YouTube">@@YT@@</a>
+      <a class="btn" href="https://www.tiktok.com/@misbahinc110" target="_blank" rel="noopener" aria-label="TikTok">@@TT@@</a>
+    </nav>
+    <div class="scroll" aria-hidden="true">Scroll<svg viewBox="0 0 16 16"><path d="M8 3v10M4 9l4 4 4-4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+  </div>
+</section>
+<script>
+  document.querySelectorAll('.dd').forEach(function (d) {
+    var b = d.querySelector('.btn'), m = d.querySelector('.menu');
+    b.addEventListener('click', function (e) {
+      e.stopPropagation();
+      document.querySelectorAll('.menu.open').forEach(function (x) { if (x !== m) x.classList.remove('open'); });
+      var o = m.classList.toggle('open'); b.setAttribute('aria-expanded', o);
+    });
+  });
+  document.addEventListener('click', function () { document.querySelectorAll('.menu.open').forEach(function (m) { m.classList.remove('open'); }); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') document.querySelectorAll('.menu.open').forEach(function (m) { m.classList.remove('open'); }); });
+</script>
+</body>
+</html>
