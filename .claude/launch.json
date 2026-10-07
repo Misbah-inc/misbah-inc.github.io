@@ -3,8 +3,12 @@
   "configurations": [
     {
       "name": "Misbah Website",
-      "runtimeExecutable": "python",
-      "runtimeArgs": ["-m", "http.server", "8765", "--directory", "G:\\My Drive\\Misbah Library\\Misbah Website"],
+      "runtimeExecutable": "python3",
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "8765"
+      ],
       "port": 8765
     }
   ]

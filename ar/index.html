@@ -121,9 +121,6 @@
         </div>
       </div>
 
-      <a href="/hijri-calendar/" class="nav-link">التقويم الهجري</a>
-      <a href="/moonsighting/"   class="nav-link">رؤية الهلال</a>
-      <a href="https://www.misbah-inc.com/donate" target="_blank" rel="noopener" class="nav-link nav-cta">تبرع</a>
       <a href="/about"  class="nav-link">من نحن</a>
 
       <!-- Language switcher -->
@@ -230,125 +227,6 @@
 
 
 <!-- ═══════════════════════════════════════
-     PRAYER TIMES
-════════════════════════════════════════ -->
-<section class="prayer-section" id="prayer-times" aria-label="مواقيت الصلاة">
-  <div class="container">
-    <div class="prayer-bar">
-      <span class="prayer-bar-label">مواقيت الصلاة</span>
-      <button class="prayer-locate-btn" id="prayer-locate-btn" aria-label="تحديد موقعي لمواقيت الصلاة">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
-        <span id="prayer-locate-label">موقعي</span>
-      </button>
-      <select class="prayer-method-select" id="prayer-method-select" aria-label="طريقة الحساب">
-        <option value="0"  selected>شيعة اثني عشرية (جعفري)</option>
-        <option value="7">جامعة طهران</option>
-        <option value="2">إيسنا (أمريكا الشمالية)</option>
-        <option value="3">رابطة العالم الإسلامي</option>
-        <option value="4">أم القرى (مكة المكرمة)</option>
-        <option value="1">كراتشي (HH)</option>
-      </select>
-      <span class="prayer-city" id="prayer-city"></span>
-      <div class="prayer-grid" id="prayer-grid" aria-live="polite">
-        <span class="prayer-placeholder">فعّل الموقع لرؤية مواقيت الصلاة</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- ═══════════════════════════════════════
-     SHIA CALENDAR
-════════════════════════════════════════ -->
-<section class="section calendar-section" aria-labelledby="cal-heading">
-  <div class="container">
-    <div class="calendar-header">
-      <span class="section-label">التقويم الشيعي</span>
-      <h2 class="section-title" id="cal-heading">ربيع الأول</h2>
-      <div class="divider" aria-hidden="true"><span class="divider-gem">◆</span></div>
-      <span class="calendar-month">هجري ١٤٤٨ · ربيع الأول</span>
-    </div>
-
-    <!-- ── Featured Event Card ── -->
-    <div class="feat-event-card">
-      <picture>
-        <source media="(max-width: 640px)" srcset="../images/17_rabi_awwal_mobile.jpg">
-        <img src="../images/17_rabi_awwal.png"
-             alt="مولد النبي الأكرم محمد والإمام الصادق، ١٧ ربيع الأوّل ١٤٤٨"
-             width="2172" height="724" loading="eager">
-      </picture>
-      <div class="feat-event-overlay"></div>
-      <div class="feat-event-content">
-        <div class="feat-event-title">مولد النبي الأكرم محمد<br>والإمام الصادق (ع)</div>
-        <div class="feat-event-bottom">
-          <span class="feat-event-date">٣٠ أغسطس ٢٠٢٦ &nbsp;·&nbsp; ١٧ ربيع الأوّل ١٤٤٨</span>
-          <a href="../articles/rabi_al_awwal/" class="feat-event-btn">اقرأ المقال ←</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="events-grid">
-
-      <article class="event-card">
-        <div class="event-day">8<span class="event-greg">أغسطس ٢١</span></div>
-        <div class="event-body">
-          <p class="event-type">استشهاد</p>
-          <p class="event-title">استشهاد الإمام الحسن العسكري عليه السلام — بداية إمامة الإمام المهدي عجل الله فرجه</p>
-          <a href="/articles?tag=imam-hasan-al-askari" class="event-link">اقرأ المقال ←</a>
-        </div>
-      </article>
-
-      <article class="event-card">
-        <div class="event-day">9<span class="event-greg">أغسطس ٢٢</span></div>
-        <div class="event-body">
-          <p class="event-type">احتفال</p>
-          <p class="event-title">الغدير الثاني — بداية إمامة الإمام المهدي عجل الله فرجه</p>
-          <a href="/articles?tag=imam-mahdi" class="event-link">اقرأ المقال ←</a>
-        </div>
-      </article>
-
-      <article class="event-card">
-        <div class="event-day">10<span class="event-greg">أغسطس ٢٣</span></div>
-        <div class="event-body">
-          <p class="event-type">احتفال</p>
-          <p class="event-title">الزواج المبارك للنبي الأكرم صلى الله عليه وآله وسلم والسيدة خديجة عليها السلام</p>
-          <a href="/articles?tag=lady-khadijah" class="event-link">اقرأ المقال ←</a>
-        </div>
-      </article>
-
-      <article class="event-card">
-        <div class="event-day">17<span class="event-greg">أغسطس ٣٠</span></div>
-        <div class="event-body">
-          <p class="event-type">ذكرى الولادة</p>
-          <p class="event-title">ولادة النبي الأكرم محمد صلى الله عليه وآله وسلم والإمام الصادق عليه السلام</p>
-          <a href="/articles?tag=holy-prophet" class="event-link">اقرأ المقال ←</a>
-        </div>
-      </article>
-
-      <article class="event-card">
-        <div class="event-day">24<span class="event-greg">سبتمبر ٦</span></div>
-        <div class="event-body">
-          <p class="event-type">وصول</p>
-          <p class="event-title">وصول السيدة فاطمة المعصومة عليها السلام إلى مدينة قم</p>
-          <a href="/articles" class="event-link">اقرأ المقال ←</a>
-        </div>
-      </article>
-
-      <article class="event-card">
-        <div class="event-day">26<span class="event-greg">سبتمبر ٨</span></div>
-        <div class="event-body">
-          <p class="event-type">هجرة</p>
-          <p class="event-title">ليلة المبيت — بداية هجرة النبي الأكرم من مكة المكرمة إلى المدينة المنورة</p>
-          <a href="/articles?tag=holy-prophet" class="event-link">اقرأ المقال ←</a>
-        </div>
-      </article>
-
-    </div><!-- /events-grid -->
-  </div>
-</section>
-
-
-<!-- ═══════════════════════════════════════
      FEATURED ARTICLE
 ════════════════════════════════════════ -->
 <section class="section featured-section" aria-labelledby="feat-heading">
@@ -373,6 +251,154 @@
   </div>
 </section>
 
+
+<!-- ═══════════════════════════════════════
+     THROUGH THE YEAR — articles by Hijri month
+     Only month 3 has a published article. When another goes live, turn its
+     <div class="year-card--soon"> into <a class="year-card--live" href="…"> in all four homepages.
+════════════════════════════════════════ -->
+<section class="section year-section" id="through-the-year" aria-labelledby="year-heading">
+  <div class="container text-center">
+    <span class="section-label">تصفّح حسب الشهر الهجري</span>
+    <h2 class="section-title" id="year-heading">عبر العام</h2>
+    <div class="divider" aria-hidden="true"><span class="divider-gem">◆</span></div>
+    <p class="year-lead">اثنا عشر شهراً واثنتا عشرة مجموعة — تأملات في مناسبات أهل البيت عليهم السلام على ترتيب السنة الهجرية.</p>
+
+    <div class="year-grid" id="year-grid" role="list" aria-label="المقالات حسب الشهر الهجري" data-now-label="هذا الشهر">
+      <div class="year-card year-card--soon" data-month="1">
+        <img src="/images/months/01.jpg" alt="" loading="lazy" decoding="async" width="480" height="640">
+        <span class="year-num">01</span>
+        <div class="year-body">
+          <span class="year-name">مُحَرَّم</span>
+          <span class="year-alt" lang="en">Muharram</span>
+          <span class="year-status">قريباً</span>
+        </div>
+      </div>
+      <div class="year-card year-card--soon" data-month="2">
+        <img src="/images/months/02.jpg" alt="" loading="lazy" decoding="async" width="480" height="640">
+        <span class="year-num">02</span>
+        <div class="year-body">
+          <span class="year-name">صَفَر</span>
+          <span class="year-alt" lang="en">Safar</span>
+          <span class="year-status">قريباً</span>
+        </div>
+      </div>
+      <a class="year-card year-card--live" data-month="3" href="/ar/articles/rabi_al_awwal/">
+        <img src="/images/months/03.jpg" alt="" loading="lazy" decoding="async" width="480" height="640">
+        <span class="year-num">03</span>
+        <div class="year-body">
+          <span class="year-name">رَبِيعُ الأَوَّل</span>
+          <span class="year-alt" lang="en">Rabi' al-Awwal</span>
+          <span class="year-status">اقرأ المقال</span>
+        </div>
+      </a>
+      <div class="year-card year-card--soon" data-month="4">
+        <img src="/images/months/04.jpg" alt="" loading="lazy" decoding="async" width="480" height="640">
+        <span class="year-num">04</span>
+        <div class="year-body">
+          <span class="year-name">رَبِيعُ الآخِر</span>
+          <span class="year-alt" lang="en">Rabi' al-Thani</span>
+          <span class="year-status">قريباً</span>
+        </div>
+      </div>
+      <div class="year-card year-card--soon" data-month="5">
+        <img src="/images/months/05.jpg" alt="" loading="lazy" decoding="async" width="480" height="640">
+        <span class="year-num">05</span>
+        <div class="year-body">
+          <span class="year-name">جُمَادَى الأُولَى</span>
+          <span class="year-alt" lang="en">Jumada al-Awwal</span>
+          <span class="year-status">قريباً</span>
+        </div>
+      </div>
+      <div class="year-card year-card--soon" data-month="6">
+        <img src="/images/months/06.jpg" alt="" loading="lazy" decoding="async" width="480" height="640">
+        <span class="year-num">06</span>
+        <div class="year-body">
+          <span class="year-name">جُمَادَى الآخِرَة</span>
+          <span class="year-alt" lang="en">Jumada al-Thani</span>
+          <span class="year-status">قريباً</span>
+        </div>
+      </div>
+      <div class="year-card year-card--soon" data-month="7">
+        <img src="/images/months/07.jpg" alt="" loading="lazy" decoding="async" width="480" height="640">
+        <span class="year-num">07</span>
+        <div class="year-body">
+          <span class="year-name">رَجَب</span>
+          <span class="year-alt" lang="en">Rajab</span>
+          <span class="year-status">قريباً</span>
+        </div>
+      </div>
+      <div class="year-card year-card--soon" data-month="8">
+        <img src="/images/months/08.jpg" alt="" loading="lazy" decoding="async" width="480" height="640">
+        <span class="year-num">08</span>
+        <div class="year-body">
+          <span class="year-name">شَعْبَان</span>
+          <span class="year-alt" lang="en">Sha'ban</span>
+          <span class="year-status">قريباً</span>
+        </div>
+      </div>
+      <div class="year-card year-card--soon" data-month="9">
+        <img src="/images/months/09.jpg" alt="" loading="lazy" decoding="async" width="480" height="640">
+        <span class="year-num">09</span>
+        <div class="year-body">
+          <span class="year-name">رَمَضَان</span>
+          <span class="year-alt" lang="en">Ramadan</span>
+          <span class="year-status">قريباً</span>
+        </div>
+      </div>
+      <div class="year-card year-card--soon" data-month="10">
+        <img src="/images/months/10.jpg" alt="" loading="lazy" decoding="async" width="480" height="640">
+        <span class="year-num">10</span>
+        <div class="year-body">
+          <span class="year-name">شَوَّال</span>
+          <span class="year-alt" lang="en">Shawwal</span>
+          <span class="year-status">قريباً</span>
+        </div>
+      </div>
+      <div class="year-card year-card--soon" data-month="11">
+        <img src="/images/months/11.jpg" alt="" loading="lazy" decoding="async" width="480" height="640">
+        <span class="year-num">11</span>
+        <div class="year-body">
+          <span class="year-name">ذُو القَعْدَة</span>
+          <span class="year-alt" lang="en">Dhu al-Qi'dah</span>
+          <span class="year-status">قريباً</span>
+        </div>
+      </div>
+      <div class="year-card year-card--soon" data-month="12">
+        <img src="/images/months/12.jpg" alt="" loading="lazy" decoding="async" width="480" height="640">
+        <span class="year-num">12</span>
+        <div class="year-body">
+          <span class="year-name">ذُو الحِجَّة</span>
+          <span class="year-alt" lang="en">Dhu al-Hijjah</span>
+          <span class="year-status">قريباً</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="year-more"><a href="/articles/" class="btn btn-outline">عرض جميع المقالات</a></div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     NEW SERIES — Al-Kawthar (articles/al-kawthar/)
+════════════════════════════════════════ -->
+<section class="section kw-home" id="kawthar-series" aria-labelledby="kw-heading">
+  <div class="container text-center">
+    <span class="section-label">سلسلة جديدة</span>
+    <h2 class="section-title" id="kw-heading">سلسلة مباحث الكوثر</h2>
+    <div class="divider" aria-hidden="true"><span class="divider-gem">◆</span></div>
+
+    <article class="kw-home-card">
+      <a href="/ar/articles/al-kawthar/" tabindex="-1" aria-hidden="true"><img src="/images/kawthar/part1-ar.jpg" alt="" width="1400" height="483" loading="lazy" decoding="async"></a>
+      <div class="kw-home-body">
+        <span class="kw-series-chip" style="align-self:flex-start">سلسلة</span>
+        <p>إن المصطلح الوحيد الذي استعمل صراحة في القرآن الكريم اسما للسيدة الصديقة فاطمة الزهراء عليها السلام هو «الكوثر». أما اسم «الزهراء» واسم «فاطمة» فلم يذكرا مباشرة في القرآن الكريم.</p>
+        <p><a href="/ar/articles/al-kawthar/part-1/">القسم الأول</a> &nbsp;·&nbsp; <a href="/ar/articles/al-kawthar/part-2/">القسم الثاني</a></p>
+        <a href="/ar/articles/al-kawthar/" class="btn btn-gold">عرض السلسلة</a>
+      </div>
+    </article>
+  </div>
+</section>
 
 <!-- ═══════════════════════════════════════
      MORNING & EVENING MOURNING
@@ -426,59 +452,6 @@
 </section>
 
 
-<!-- ═══════════════════════════════════════
-     DONATION WIDGET
-════════════════════════════════════════ -->
-<section class="section donation-section" aria-labelledby="donate-heading">
-  <div class="container">
-    <span class="section-label text-center">ادعم مهمتنا</span>
-    <h2 class="section-title dark text-center" id="donate-heading">كرمكم يُحدث فارقاً</h2>
-    <div class="divider" aria-hidden="true"><span class="divider-gem">◆</span></div>
-
-    <p class="donation-intro">
-      تبرعكم لمصباح إنك. هو عمل مقدس من الرحمة، يُساهم في تقديم وجبات غذائية مغذية، وترجمة الكتب، ونشر تعاليم أهل البيت عليهم السلام.
-    </p>
-
-    <div class="donation-card" role="form" aria-labelledby="donate-heading">
-
-      <div class="freq-tabs" role="tablist" aria-label="تكرار التبرع">
-        <button class="freq-tab active" role="tab" aria-selected="true">مرة واحدة</button>
-        <button class="freq-tab"        role="tab" aria-selected="false">شهري</button>
-        <button class="freq-tab"        role="tab" aria-selected="false">سنوي</button>
-      </div>
-
-      <div class="amount-grid" role="group" aria-label="اختر المبلغ">
-        <button class="amt-btn" data-amount="10"   aria-label="10 دولار">$10</button>
-        <button class="amt-btn" data-amount="20"   aria-label="20 دولار">$20</button>
-        <button class="amt-btn" data-amount="30"   aria-label="30 دولار">$30</button>
-        <button class="amt-btn" data-amount="50"   aria-label="50 دولار">$50</button>
-        <button class="amt-btn" data-amount="100"  aria-label="100 دولار">$100</button>
-        <button class="amt-btn" data-amount="200"  aria-label="200 دولار">$200</button>
-        <button class="amt-btn" data-amount="500"  aria-label="500 دولار">$500</button>
-        <button class="amt-btn" data-amount="1000" aria-label="1000 دولار">$1,000</button>
-      </div>
-
-      <input
-        type="number"
-        id="custom-amount"
-        class="custom-amount"
-        placeholder="مبلغ آخر ($)"
-        min="1"
-        aria-label="أدخل مبلغاً مخصصاً"
-      >
-
-      <a href="https://www.misbah-inc.com/donate" target="_blank" rel="noopener" id="donate-btn" class="donate-btn" role="button">تبرع بـ٥٠ دولار — مرة واحدة</a>
-
-      <p class="donation-note">
-        تبرع عبر <a href="https://www.paypal.com" target="_blank" rel="noopener">باي بال</a> أو
-        زيل على <strong>misbahinc128@gmail.com</strong> · ١٠٠٪ تذهب مباشرة إلى القضية
-        <br>
-        <span class="tax-badge">معفى من الضريبة ٥٠١(ج)(٣) · رقم EIN متاح</span>
-      </p>
-    </div>
-  </div>
-</section>
-
 </main>
 
 
@@ -509,7 +482,6 @@
         <h4>الصفحات</h4>
         <a href="/articles">المقالات</a>
         <a href="https://library.misbah128.com" target="_blank" rel="noopener">مكتبة مصباح</a>
-        <a href="https://www.misbah-inc.com/donate" target="_blank" rel="noopener">تبرع</a>
         <a href="/connect">تواصل</a>
         <a href="/about">من نحن</a>
       </div>
@@ -544,5 +516,21 @@
 
 <script src="../assets/theme.js"></script>
 <script src="../assets/script.js"></script>
+<script>
+/* Tag the card for the current Hijri month. Umm al-Qura is the calendar the browser has; it can differ from a Shia
+   announcement by a day, which does not matter at month granularity. Silent no-op if Intl lacks the calendar. */
+(function () {
+  try {
+    var m = parseInt(new Intl.DateTimeFormat('en-u-ca-islamic-umalqura-nu-latn', { month: 'numeric' }).format(new Date()), 10);
+    var grid = document.getElementById('year-grid');
+    var card = grid && grid.querySelector('[data-month="' + m + '"]');
+    if (!card) return;
+    var tag = document.createElement('span');
+    tag.className = 'year-now';
+    tag.textContent = grid.getAttribute('data-now-label');
+    card.appendChild(tag);
+  } catch (e) {}
+})();
+</script>
 </body>
 </html>

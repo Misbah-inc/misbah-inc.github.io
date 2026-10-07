@@ -96,45 +96,139 @@
   </url>
 
   <!-- ── Hijri Calendar ──────────────────────────────────────── -->
-  <url>
-    <loc>https://misbah128.com/hijri-calendar/</loc>
-    <xhtml:link rel="alternate" hreflang="en"        href="https://misbah128.com/hijri-calendar/"/>
-    <xhtml:link rel="alternate" hreflang="ar"        href="https://misbah128.com/ar/hijri-calendar/"/>
-    <xhtml:link rel="alternate" hreflang="fa"        href="https://misbah128.com/fa/hijri-calendar/"/>
-    <xhtml:link rel="alternate" hreflang="ur"        href="https://misbah128.com/ur/hijri-calendar/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://misbah128.com/hijri-calendar/"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://misbah128.com/ar/hijri-calendar/</loc>
-    <xhtml:link rel="alternate" hreflang="en"        href="https://misbah128.com/hijri-calendar/"/>
-    <xhtml:link rel="alternate" hreflang="ar"        href="https://misbah128.com/ar/hijri-calendar/"/>
-    <xhtml:link rel="alternate" hreflang="fa"        href="https://misbah128.com/fa/hijri-calendar/"/>
-    <xhtml:link rel="alternate" hreflang="ur"        href="https://misbah128.com/ur/hijri-calendar/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://misbah128.com/hijri-calendar/"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://misbah128.com/fa/hijri-calendar/</loc>
-    <xhtml:link rel="alternate" hreflang="en"        href="https://misbah128.com/hijri-calendar/"/>
-    <xhtml:link rel="alternate" hreflang="ar"        href="https://misbah128.com/ar/hijri-calendar/"/>
-    <xhtml:link rel="alternate" hreflang="fa"        href="https://misbah128.com/fa/hijri-calendar/"/>
-    <xhtml:link rel="alternate" hreflang="ur"        href="https://misbah128.com/ur/hijri-calendar/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://misbah128.com/hijri-calendar/"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://misbah128.com/ur/hijri-calendar/</loc>
-    <xhtml:link rel="alternate" hreflang="en"        href="https://misbah128.com/hijri-calendar/"/>
-    <xhtml:link rel="alternate" hreflang="ar"        href="https://misbah128.com/ar/hijri-calendar/"/>
-    <xhtml:link rel="alternate" hreflang="fa"        href="https://misbah128.com/fa/hijri-calendar/"/>
-    <xhtml:link rel="alternate" hreflang="ur"        href="https://misbah128.com/ur/hijri-calendar/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://misbah128.com/hijri-calendar/"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
 
+
+  <!-- ── Al-Kawthar series ──────────────────────────────────────── -->
+  <url>
+    <loc>https://misbah128.com/articles/al-kawthar/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://misbah128.com/articles/al-kawthar/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://misbah128.com/ar/articles/al-kawthar/"/>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://misbah128.com/fa/articles/al-kawthar/"/>
+    <xhtml:link rel="alternate" hreflang="ur" href="https://misbah128.com/ur/articles/al-kawthar/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://misbah128.com/articles/al-kawthar/"/>
+    <lastmod>2026-10-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://misbah128.com/ar/articles/al-kawthar/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://misbah128.com/articles/al-kawthar/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://misbah128.com/ar/articles/al-kawthar/"/>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://misbah128.com/fa/articles/al-kawthar/"/>
+    <xhtml:link rel="alternate" hreflang="ur" href="https://misbah128.com/ur/articles/al-kawthar/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://misbah128.com/articles/al-kawthar/"/>
+    <lastmod>2026-10-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://misbah128.com/fa/articles/al-kawthar/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://misbah128.com/articles/al-kawthar/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://misbah128.com/ar/articles/al-kawthar/"/>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://misbah128.com/fa/articles/al-kawthar/"/>
+    <xhtml:link rel="alternate" hreflang="ur" href="https://misbah128.com/ur/articles/al-kawthar/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://misbah128.com/articles/al-kawthar/"/>
+    <lastmod>2026-10-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://misbah128.com/ur/articles/al-kawthar/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://misbah128.com/articles/al-kawthar/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://misbah128.com/ar/articles/al-kawthar/"/>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://misbah128.com/fa/articles/al-kawthar/"/>
+    <xhtml:link rel="alternate" hreflang="ur" href="https://misbah128.com/ur/articles/al-kawthar/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://misbah128.com/articles/al-kawthar/"/>
+    <lastmod>2026-10-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://misbah128.com/articles/al-kawthar/part-1/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://misbah128.com/articles/al-kawthar/part-1/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://misbah128.com/ar/articles/al-kawthar/part-1/"/>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://misbah128.com/fa/articles/al-kawthar/part-1/"/>
+    <xhtml:link rel="alternate" hreflang="ur" href="https://misbah128.com/ur/articles/al-kawthar/part-1/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://misbah128.com/articles/al-kawthar/part-1/"/>
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://misbah128.com/ar/articles/al-kawthar/part-1/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://misbah128.com/articles/al-kawthar/part-1/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://misbah128.com/ar/articles/al-kawthar/part-1/"/>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://misbah128.com/fa/articles/al-kawthar/part-1/"/>
+    <xhtml:link rel="alternate" hreflang="ur" href="https://misbah128.com/ur/articles/al-kawthar/part-1/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://misbah128.com/articles/al-kawthar/part-1/"/>
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://misbah128.com/fa/articles/al-kawthar/part-1/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://misbah128.com/articles/al-kawthar/part-1/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://misbah128.com/ar/articles/al-kawthar/part-1/"/>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://misbah128.com/fa/articles/al-kawthar/part-1/"/>
+    <xhtml:link rel="alternate" hreflang="ur" href="https://misbah128.com/ur/articles/al-kawthar/part-1/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://misbah128.com/articles/al-kawthar/part-1/"/>
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://misbah128.com/ur/articles/al-kawthar/part-1/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://misbah128.com/articles/al-kawthar/part-1/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://misbah128.com/ar/articles/al-kawthar/part-1/"/>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://misbah128.com/fa/articles/al-kawthar/part-1/"/>
+    <xhtml:link rel="alternate" hreflang="ur" href="https://misbah128.com/ur/articles/al-kawthar/part-1/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://misbah128.com/articles/al-kawthar/part-1/"/>
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://misbah128.com/articles/al-kawthar/part-2/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://misbah128.com/articles/al-kawthar/part-2/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://misbah128.com/ar/articles/al-kawthar/part-2/"/>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://misbah128.com/fa/articles/al-kawthar/part-2/"/>
+    <xhtml:link rel="alternate" hreflang="ur" href="https://misbah128.com/ur/articles/al-kawthar/part-2/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://misbah128.com/articles/al-kawthar/part-2/"/>
+    <lastmod>2026-10-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://misbah128.com/ar/articles/al-kawthar/part-2/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://misbah128.com/articles/al-kawthar/part-2/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://misbah128.com/ar/articles/al-kawthar/part-2/"/>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://misbah128.com/fa/articles/al-kawthar/part-2/"/>
+    <xhtml:link rel="alternate" hreflang="ur" href="https://misbah128.com/ur/articles/al-kawthar/part-2/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://misbah128.com/articles/al-kawthar/part-2/"/>
+    <lastmod>2026-10-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://misbah128.com/fa/articles/al-kawthar/part-2/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://misbah128.com/articles/al-kawthar/part-2/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://misbah128.com/ar/articles/al-kawthar/part-2/"/>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://misbah128.com/fa/articles/al-kawthar/part-2/"/>
+    <xhtml:link rel="alternate" hreflang="ur" href="https://misbah128.com/ur/articles/al-kawthar/part-2/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://misbah128.com/articles/al-kawthar/part-2/"/>
+    <lastmod>2026-10-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://misbah128.com/ur/articles/al-kawthar/part-2/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://misbah128.com/articles/al-kawthar/part-2/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://misbah128.com/ar/articles/al-kawthar/part-2/"/>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://misbah128.com/fa/articles/al-kawthar/part-2/"/>
+    <xhtml:link rel="alternate" hreflang="ur" href="https://misbah128.com/ur/articles/al-kawthar/part-2/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://misbah128.com/articles/al-kawthar/part-2/"/>
+    <lastmod>2026-10-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>

@@ -4,11 +4,25 @@ Claude Code instructions for working with this repository.
 
 ---
 
+## Standing rule: SEO in every language
+
+**Every change to this website must be SEO-friendly, in all four languages (English, Arabic, Farsi, Urdu).** This is not a final polish step. It applies to every new page, edit, section, link, image and removal.
+
+- A change that touches a page's English version must also keep the `/ar/`, `/fa/` and `/ur/` versions correct: `lang`/`dir`, title, description, canonical, hreflang (all variants, `x-default` = English), Open Graph, Twitter Card, JSON-LD and `alt` text, each written in that page's language.
+- Work through the **SEO Checklist** below for every page you create or change, and update `sitemap.xml` (with its hreflang links) in the same change.
+- When a page is removed or moved, remove it from the sitemap and fix every link and hreflang that pointed at it.
+- Where a translation does not exist yet, keep the placeholder `noindex` rather than publishing an empty or machine-filled page.
+- Do not state something is finished if the SEO items for any language are unverified. Say which ones are.
+
+---
+
 ## Project Overview
 
 **misbah128.com** — static HTML/CSS/JS website for Misbah Inc., a U.S.-based Shia Islamic nonprofit.
 
-- Hosted: **GitHub Pages** (branch: `main`, root folder)
+- **Direction (Oct 2026): articles-only site**, moving to its own subdomain on AWS (S3 + CloudFront, as the Library does). Hijri calendar, moonsighting, prayer times and donate were removed; those live in the app.
+- Working copy: `~/Developer/misbah-website` (git). The Drive copy is an archive. Remote: `Misbah-inc/misbah-inc.github.io`.
+- Hosted (until the move): **GitHub Pages** (branch: `main`, root folder)
 - CDN/DNS: **Cloudflare** (proxied, SSL Full)
 - Custom domain: **misbah128.com** (CNAME file at repo root)
 - No build step, no framework — pure static files
@@ -32,8 +46,6 @@ Claude Code instructions for working with this repository.
 │   ├── CATALOG.md         ← Image registry (add a row for every new image)
 │   ├── lady-khadijah-article.jpg   ← 760×920, 280 KB — Lady Khadijah article card
 │   └── mosque-madinah-hero.jpg     ← 1200×675, 109 KB — Hero/Madinah article (unused)
-├── hijri-calendar/
-│   └── index.html         ← Hijri calendar page (EN)
 ├── articles/
 │   └── rabi_al_awwal/
 │       └── index.html     ← Article: Virtues of Lady Khadijah (EN)
@@ -57,8 +69,8 @@ Claude Code instructions for working with this repository.
 | Page                    | English URL                                    | Arabic                              | Farsi                              | Urdu                              |
 |-------------------------|------------------------------------------------|-------------------------------------|------------------------------------|-----------------------------------|
 | Homepage                | `/`                                            | `/ar/`                              | `/fa/`                             | `/ur/`                            |
-| Hijri Calendar          | `/hijri-calendar/`                             | (not yet)                           | (not yet)                          | (not yet)                         |
 | Lady Khadijah article   | `/articles/rabi_al_awwal/`                     | `/ar/articles/rabi_al_awwal/`       | `/fa/articles/rabi_al_awwal/`      | `/ur/articles/rabi_al_awwal/`     |
+| Al-Kawthar series       | `/articles/al-kawthar/` (+ `part-1/`, `part-2/`) | `/ar/articles/al-kawthar/…`         | `/fa/articles/al-kawthar/…`        | `/ur/articles/al-kawthar/…`       |
 | Articles index          | `/articles/`                                   | (not yet)                           | (not yet)                          | (not yet)                         |
 
 **Convention:** articles are grouped by Hijri month — `/articles/<hijri_month_key>/`.
@@ -186,23 +198,7 @@ Run through this checklist whenever creating or updating any page.
 
 ---
 
-## Prayer Times (`index.html`)
 
-- API: `https://api.aladhan.com/v1/timings` — method `0` = Shia Ithna-Ashari (Jafari) by default
-- Reverse geocoding: `https://api.bigdatacloud.net/data/reverse-geocode-client`
-- Caches last GPS coords in `localStorage` (`misbah_lat`, `misbah_lon`)
-- Method dropdown: user can switch formula; choices in `index.html` `#prayer-method-select`
-
----
-
-## Hijri Calendar (`hijri-calendar/index.html`)
-
-- Pure JS Hijri–Gregorian conversion (tabular Julian Day Number algorithm) — no library
-- Events object hard-coded by Hijri month (1–12)
-- To add events: edit the `EVENTS` object in the `<script>` section
-- Homepage calendar section uses `tools/update_calendar.py` (requires `hijri-converter` pip package)
-
----
 
 ## Images Policy
 
@@ -245,14 +241,25 @@ git push origin main
 | `tools/extract_book.py` | Extract text from Hadith PDFs |
 | `tools/build_index.py`  | Build TOC index card for a book |
 | `tools/normalize_arabic.py` | Normalize Arabic for search |
-| `tools/update_calendar.py` | Update homepage calendar for current Hijri month |
+| `tools/update_calendar.py` | *(obsolete — the homepage calendar was removed)* |
+
+---
+
+## Series and the Wix import
+
+Articles also come as **series** (several parts, one page listing them): `articles/<series>/` is the landing page, `articles/<series>/part-N/` the parts, mirrored under `/ar|fa|ur/`. Al-Kawthar (2 parts, 4 languages) is the first.
+
+- **Source of truth for older posts is the Wix blog** at misbah-inc.com. `https://www.misbah-inc.com/blog-feed.xml` lists every post (titles, descriptions, per-language URLs `/ar|fa|ur/post/…`); the post page's `<article>` holds the full text. Copy the text **verbatim** — never reword, restyle or "tidy" it. Each language is built from its own post; never translate to fill a gap.
+- Each Wix post has one YouTube video; its ID is in the `i.ytimg.com/vi/<id>/` thumbnail URL on the post page. Embed it click-to-load through `youtube-nocookie.com` (see `.kw-video*` in `style.css`), with `VideoObject` JSON-LD.
+- Pages are generated from each language's Khadijah article (head styles, nav, footer), so a restyle there should be mirrored. The series pages are static HTML like everything else — adding a part means adding its page in all four languages, the sitemap entries, and a link from the series page.
+- Homepage "Through the Year" cards: when an article is published for a Hijri month, turn that month's `year-card--soon` `<div>` into a `year-card--live` `<a>` in all four homepages.
+- `images/months/` = 480×640 thumbnails for those cards; `images/kawthar/` = banners and 1200×630 social crops. Register new images in `images/CATALOG.md`.
 
 ---
 
 ## Pending Pages (not yet built)
 
 - `/articles/` — Articles index / listing page
-- `/donate/` — Donation page
 - `/connect/` — Subscribe + contact form
 - `/about/` — About Misbah Inc.
 - Multilingual homepages: full translated content for `/ar/`, `/fa/`, `/ur/`

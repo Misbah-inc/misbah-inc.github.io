@@ -7,6 +7,9 @@ it easy to find which image belongs where as the library grows.
 |------|-----------|------|-----------------------|---------|
 | `lady-khadijah-article.jpg` | 1200 × 760 | 280 KB | AI-generated illustration: Lady Khadijah al-Kubra with Arabic calligraphy "خَدِيجَةُ الْكُبْرَى، أُمُّ الْمُؤْمِنِين". Warm gold/cream tones, heavenly setting. | `index.html` → Featured Article card (right column image) |
 | `mosque-madinah-hero.jpg` | 1200 × 675 | 109 KB | Aerial/architectural view of Masjid al-Nabawi, Madinah. Green dome visible. Warm daylight tones. | **Not yet placed** — intended for hero section background or a Madinah-related article |
+| `months/01.jpg` … `12.jpg` | 480 × 640 | 22–61 KB | Home "Through the Year" thumbnails, cropped from `month-*.png` | `index.html` and `ar|fa|ur/index.html` |
+| `kawthar/part{1,2}-{en,ar,fa,ur}.jpg` | 1400 × 483 / 467 | 138–211 KB | Banners from the Wix Al-Kawthar posts (titles are baked into each language's image) | `articles/al-kawthar/…`, home series card |
+| `kawthar/og-part{1,2}-{lang}.jpg` | 1200 × 630 | 135–193 KB | Social-share crops of the banners | OG/Twitter tags on the Al-Kawthar pages |
 
 ---
 
