@@ -18,14 +18,14 @@ Claude Code instructions for working with this repository.
 
 ## Project Overview
 
-**misbah128.com** — static HTML/CSS/JS website for Misbah Inc., a U.S.-based Shia Islamic nonprofit.
+**https://article.misbah-inc.com** — static HTML/CSS/JS articles site for Misbah Inc., a U.S.-based Shia Islamic nonprofit. (Formerly misbah128.com, which is **retired — no redirect**.)
 
-- **Direction (Oct 2026): articles-only site**, moving to its own subdomain on AWS (S3 + CloudFront, as the Library does). Hijri calendar, moonsighting, prayer times and donate were removed; those live in the app.
+- **Articles only (Oct 2026).** Hijri calendar, moonsighting, prayer times and donate were removed; those live in the app.
 - Working copy: `~/Developer/misbah-website` (git). The Drive copy is an archive. Remote: `Misbah-inc/misbah-inc.github.io`.
-- Hosted (until the move): **GitHub Pages** (branch: `main`, root folder)
-- CDN/DNS: **Cloudflare** (proxied, SSL Full)
-- Custom domain: **misbah128.com** (CNAME file at repo root)
-- No build step, no framework — pure static files
+- **Hosting: S3 + CloudFront on AWS** (same pattern as `library.misbah-inc.com`; see `Library/_translation-kit/DEPLOY.md`). DNS stays at **Wix** — one CNAME. `git push` only records history; `tools/deploy_s3.py` publishes.
+- The main company site is Wix (`misbah-inc.com`) and is not touched by this repo.
+- No build step, no framework — pure static files.
+- Every canonical, hreflang, OG, JSON-LD and sitemap URL uses `https://article.misbah-inc.com/…`; the Library link is `https://library.misbah-inc.com`.
 
 ---
 
@@ -212,25 +212,17 @@ Run through this checklist whenever creating or updating any page.
 
 ## Deployment
 
-### GitHub Pages
-- Repo: `github.com/misbah-inc/misbah-website` (or similar — confirm with user)
-- Branch: `main`, deploy from root `/`
-- Custom domain set via `CNAME` file + GitHub repo Settings → Pages → Custom domain
-- HTTPS enforced via GitHub Pages setting
+Status: **AWS not yet set up** (bucket, certificate, CloudFront). Steps, in order: private S3 bucket → least-privilege deploy policy → ACM certificate (us-east-1) for `article.misbah-inc.com` validated by a Wix CNAME → CloudFront distribution with Origin Access Control, the `rewrite-index` function (directory URLs → `index.html`) and 403/404 → `/404.html` → verify on the `*.cloudfront.net` address → one Wix CNAME `article` → `<distribution>.cloudfront.net`.
 
-### Cloudflare
-- DNS: CNAME `misbah128.com` → `<github-username>.github.io` (proxied)
-- SSL mode: **Full** (not Flexible, not Full Strict)
-- Page rules / caching: static assets cached at edge
-- After pointing DNS to GitHub Pages, enable "Enforce HTTPS" in GitHub Pages settings
-
-### Deployment workflow
 ```bash
-git add .
-git commit -m "describe change"
-git push origin main
-# GitHub Pages deploys automatically in ~1 minute
+python3 tools/deploy_s3.py --bucket <bucket> --dist <DISTRIBUTION_ID> --dry-run
+python3 tools/deploy_s3.py --bucket <bucket> --dist <DISTRIBUTION_ID>
+git add -A && git commit && git push      # history only; does not publish
 ```
+
+- Run the deploy from the local clone, never from Google Drive. AWS credentials live in `~/.aws/credentials` on each machine, never in the repo or on Drive, and never in chat.
+- The script refuses to run unless `index.html`, `sitemap.xml`, `assets/style.css` and `articles/al-kawthar/` exist, because it uses `--delete`.
+- GitHub Pages is no longer the host. Rollback = remove the Wix CNAME.
 
 ---
 
