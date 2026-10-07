@@ -212,7 +212,7 @@ Run through this checklist whenever creating or updating any page.
 
 ## Deployment
 
-Status: **AWS not yet set up** (bucket, certificate, CloudFront). Steps, in order: private S3 bucket → least-privilege deploy policy → ACM certificate (us-east-1) for `article.misbah-inc.com` validated by a Wix CNAME → CloudFront distribution with Origin Access Control, the `rewrite-index` function (directory URLs → `index.html`) and 403/404 → `/404.html` → verify on the `*.cloudfront.net` address → one Wix CNAME `article` → `<distribution>.cloudfront.net`.
+Status: **AWS set up (7 Oct 2026)** — bucket `article-misbah-inc`, CloudFront distribution `E2N0F3SGBTA0UD` (`d1ispgyfziwqwx.cloudfront.net`, Free flat-rate plan, OAC, `rewrite-index` viewer-request function shared with the Library — never edit it, 403/404 → `/404.html`), ACM certificate for `article.misbah-inc.com` (us-east-1). Deploy with the AWS CLI profile of IAM user `library-deploy` (2nd access key, kept in `~/.aws`). The first steps below are the history of how it was built. Steps, in order: private S3 bucket → least-privilege deploy policy → ACM certificate (us-east-1) for `article.misbah-inc.com` validated by a Wix CNAME → CloudFront distribution with Origin Access Control, the `rewrite-index` function (directory URLs → `index.html`) and 403/404 → `/404.html` → verify on the `*.cloudfront.net` address → one Wix CNAME `article` → `<distribution>.cloudfront.net`.
 
 ```bash
 python3 tools/deploy_s3.py --bucket <bucket> --dist <DISTRIBUTION_ID> --dry-run

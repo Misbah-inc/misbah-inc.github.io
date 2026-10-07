@@ -22,7 +22,8 @@ EXCLUDE = [".git/*", ".github/*", ".gitignore", ".gitattributes", ".claude/*", "
            "*.md", "*.py", "*.sh", "*.PNG", ".DS_Store", "Thumbs.db", "desktop.ini"]
 PAGE_CACHE = "public,max-age=600"
 IMAGE_CACHE = "public,max-age=86400"
-IMAGE_EXT = ["png", "jpg", "jpeg", "gif", "svg", "ico", "webp", "woff2", "woff"]
+IMAGE_TYPES = {"png": "image/png", "jpg": "image/jpeg", "jpeg": "image/jpeg", "gif": "image/gif", "svg": "image/svg+xml",
+               "ico": "image/x-icon", "webp": "image/webp", "woff2": "font/woff2", "woff": "font/woff"}
 
 
 def run(cmd, dry):
@@ -52,15 +53,16 @@ def main():
     if run(sync, False):
         sys.exit("sync failed")
 
-    print("\n== longer cache for images and fonts")
-    cp = ["aws", "s3", "cp", dst, dst, "--recursive", "--exclude", "*"]
-    for ext in IMAGE_EXT:
-        cp += ["--include", f"*.{ext}"]
-    cp += ["--cache-control", IMAGE_CACHE, "--metadata-directive", "REPLACE", "--only-show-errors"]
+    print("\n== longer cache for images and fonts (content type is set explicitly: --metadata-directive REPLACE would otherwise reset it)")
+    for ext, ctype in IMAGE_TYPES.items():
+        cp = ["aws", "s3", "cp", dst, dst, "--recursive", "--exclude", "*", "--include", f"*.{ext}",
+              "--cache-control", IMAGE_CACHE, "--content-type", ctype, "--metadata-directive", "REPLACE", "--only-show-errors"]
+        if a.dry_run:
+            continue
+        if run(cp, False):
+            sys.exit(f"cache-header pass failed for .{ext}")
     if a.dry_run:
         print("   (skipped in --dry-run)")
-    elif run(cp, False):
-        sys.exit("cache-header pass failed")
 
     if a.dist and not a.dry_run:
         print("\n== invalidate CloudFront")

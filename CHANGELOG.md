@@ -5,6 +5,14 @@ Format: `## [Date] — Summary` followed by bulleted details.
 
 ---
 
+## [2026-10-07] — First deploy to AWS
+
+- Bucket `article-misbah-inc` + CloudFront `E2N0F3SGBTA0UD` created; 461 files uploaded with `tools/deploy_s3.py`; tested on the CloudFront address (pages, 404 returns a real 404, sitemap, gzip, correct image types).
+- `deploy_s3.py` fix: the cache-header pass reset image content types to `binary/octet-stream`; it now sets `--content-type` per extension.
+- Still to do: the Wix CNAME `article` → `d1ispgyfziwqwx.cloudfront.net` to make `article.misbah-inc.com` live.
+
+---
+
 ## [2026-10-07] — Four posts re-typed as Shia calendar announcements
 
 - "The Month of Rabi al-Akhir", "Hadrat Abdul Azim Hasani" (4 Rabi al-Thani birth anniversary), "Rabi al-Awwal" (month introduction) and "The Second Ghadir" (9 Rabi al-Awwal) were typed Article; they are calendar occasion posts, so they are now **Shia calendar announcement**. The announcement type page lists 19 entries (in English).
