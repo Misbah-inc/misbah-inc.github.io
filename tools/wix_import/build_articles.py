@@ -70,6 +70,9 @@ def load_post(path):
     k = 0
     while k < len(blocks) and blocks[k]['t'].startswith('h'): k += 1
     heads = blocks[:k]
+    # series chapters open with a short "Chapter One" line and a blockquote subtitle
+    if k == 0 and len(blocks) > 1 and blocks[1]['t'] == 'blockquote' and len(blocks[0]['x']) < 40:
+        heads = [blocks[0], blocks[1]]; k = 2
     ttl = html.unescape(ld['headline']).strip() if ld else ''
     if heads and heads[0]['t'] in ('h1', 'h2') and (ttl[:20] in heads[0]['x'] or heads[0]['x'][:20] in ttl):
         heads = heads[1:]          # the in-body title repeats the page title
@@ -93,6 +96,8 @@ def body_html(a):
             out.append('<div class="art-divider">' + esc(t) + '</div>')
         elif tag.startswith('h'):
             out.append(f'<h3 class="art-section-title">{esc(t)}</h3>')
+        elif tag == 'blockquote':
+            out.append('<blockquote class="kw-bq">' + esc(t).replace('\n', '<br>') + '</blockquote>')
         elif is_arabic_quote(t):
             out.append(f'<div class="quran-verse"><span class="quran-ar" lang="ar" dir="rtl">{esc(t)}</span></div>')
         else:
@@ -121,6 +126,7 @@ def lead_html(a):
     out = []
     for b in a['heads']:
         t = b['x']
+        if b['t'] == 'blockquote': out.append(f'<p class="kw-subtitle">{esc(t)}</p>'); continue
         if re.search(r'بسم', t): out.append(f'<p class="kw-bismillah" lang="ar" dir="rtl">{esc(t)}</p>')
         elif is_arabic_quote(t): out.append(f'<div class="quran-verse"><span class="quran-ar" lang="ar" dir="rtl">{esc(t)}</span></div>')
         else: out.append(f'<p class="kw-subhead">{esc(t)}</p>')
@@ -145,6 +151,7 @@ def make_image(a, slug, lang):
     from PIL import Image
     if not a['og']: return None
     d = ROOT + 'images/articles/'; os.makedirs(d, exist_ok=True)
+    slug = slug.replace('/', '-')
     tmp = SP + f'img_{slug}_{lang}.bin'
     if not os.path.exists(tmp):
         subprocess.run(['curl', '-sL', '-A', 'Mozilla/5.0', '-o', tmp, a['og']], timeout=120)
@@ -183,16 +190,28 @@ def aurl(lang, slug):
     return f'{SITE}{PFX[lang]}/articles/{slug}/'
 
 
-def page(slug, lang, a, langs_avail, TP, month_key=None, meta_title=None):
+def partnav(series, lang, L):
+    if not series: return ''
+    out = ''
+    arrow_prev, arrow_next = ('→', '←') if lang != 'en' else ('←', '→')
+    if series.get('prev'):
+        out += f'<a class="prev" href="{series["prev"][0]}" rel="prev"><small>{arrow_prev} {L["prev"]}</small><strong>{esc(series["prev"][1])}</strong></a>'
+    if series.get('next'):
+        out += f'<a class="next" href="{series["next"][0]}" rel="next"><small>{L["next"]} {arrow_next}</small><strong>{esc(series["next"][1])}</strong></a>'
+    return f'<nav class="kw-partnav">{out}</nav>'
+
+
+def page(slug, lang, a, langs_avail, TP, month_key=None, meta_title=None, series=None):
     L = S[lang]; tp = TP[lang]
     cur = aurl(lang, slug)
+    fs = slug.replace('/', '-')
     words = len(' '.join(b['x'] for b in a['body'] if 'x' in b and isinstance(b['x'], str)).split())
     mins = max(1, round(words / 180))
     title_tag = f"{a['title'][:80]} | {L['brand']}"
     if len(title_tag) > 70: title_tag = f"{clip(a['title'], 56)} | {L['brand']}"
     desc = clip(a['desc'] or next((b['x'] for b in a['body'] if b['t'] == 'p' and len(b['x']) > 60), a['title']), 160)
     img = a.get('img')  # dict or None
-    og_img = f'/images/articles/og-{slug}-{lang}.jpg' if img else '/images/articles/og-fallback.jpg'
+    og_img = f'/images/articles/og-{fs}-{lang}.jpg' if img else '/images/articles/og-fallback.jpg'
 
     def alt_urls(lg): return aurl(lg, slug)
     hl = ''.join(f'  <link rel="alternate"  hreflang="{l}" href="{alt_urls(l)}">\n' for l in langs_avail)
@@ -202,7 +221,10 @@ def page(slug, lang, a, langs_avail, TP, month_key=None, meta_title=None):
          "image": SITE + og_img, "url": cur, "inLanguage": lang, "datePublished": a['published'], "dateModified": a['modified'] or a['published'],
          "author": {"@id": SITE + "/#organization"}, "publisher": {"@id": SITE + "/#organization"},
          "mainEntityOfPage": {"@type": "WebPage", "@id": cur}, "keywords": a['tags']},
-        breadcrumb_ld(lang, [(a['title'], None)]), ORG]}
+        breadcrumb_ld(lang, ([(series['name'], series['href'])] if series else []) + [(a['title'], None)]), ORG]}
+    if series:
+        ld['@graph'][0]['isPartOf'] = {"@type": "CreativeWorkSeries", "name": series['name'], "url": SITE + series['href']}
+        ld['@graph'][0]['position'] = series['n']
     vids = ([a['hero_video']] if a.get('hero_video') else []) + [b['x'] for b in a['body'] if b['t'] == 'video']
     if vids:
         ld['@graph'][0]['video'] = {"@type": "VideoObject", "name": a['title'], "description": desc,
@@ -236,7 +258,7 @@ def page(slug, lang, a, langs_avail, TP, month_key=None, meta_title=None):
         small = f' style="max-width:{img["w"]}px"' if img['w'] < 1000 else ''
         banner = f'''<div class="kw-banner-wrap">
   <div class="{cls}"{small}>
-    <img src="/images/articles/{slug}-{lang}.jpg" alt="{html.escape(a['title'], quote=True)}" width="{img['w']}" height="{img['h']}" fetchpriority="high">
+    <img src="/images/articles/{fs}-{lang}.jpg" alt="{html.escape(a['title'], quote=True)}" width="{img['w']}" height="{img['h']}" fetchpriority="high">
   </div>
 </div>
 '''
@@ -254,20 +276,20 @@ def page(slug, lang, a, langs_avail, TP, month_key=None, meta_title=None):
     back = '<path d="M5 12h14M12 5l7 7-7 7"/>' if lang != 'en' else '<path d="M19 12H5M12 5l-7 7 7 7"/>'
     main = f'''<main>
 
-{banner}{crumbs(lang, [(a['title'], None)])}
+{banner}{crumbs(lang, ([(series['name'], series['href'])] if series else []) + [(a['title'], None)])}
 
 <div class="art-page">
   <div class="art-container">
 
-    <a href="{PFX[lang]}/articles/" class="art-back">
+    <a href="{series['href'] if series else PFX[lang] + '/articles/'}" class="art-back">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
         {back}
       </svg>
-      {L['all']}
+      {esc(series['name']) if series else L['all']}
     </a>
 
     <div class="art-meta">
-      <span class="art-tag">{L['article']}</span>
+      <span class="art-tag">{L['tag'] if series else L['article']}</span>
       <span class="art-reading">{L['min'].format(n=num(mins, lang))}</span>
     </div>
 
@@ -292,6 +314,8 @@ def page(slug, lang, a, langs_avail, TP, month_key=None, meta_title=None):
     <div class="art-divider">❖ &nbsp; ❖ &nbsp; ❖</div>
 
     {tags}
+
+    {partnav(series, lang, L)}
 
   </div>
 </div>

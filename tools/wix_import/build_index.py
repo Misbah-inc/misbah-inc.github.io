@@ -54,7 +54,11 @@ def entries(lang):
     out.append(dict(href=f'{PFX[lang]}/articles/al-kawthar/', title=S[lang]['series'], month=None, date='2026-10-05',
                     tag=UI[lang]['series'], img=thumb(f'images/kawthar/part1-{lang}.jpg', f'al-kawthar-{lang}'), series=True))
     for slug, c in CAT.items():
-        if lang not in c['langs']: continue
+        if lang not in c['langs'] or c.get('series'): continue        # chapters are listed on their series page
+        if c.get('kind') == 'series':
+            out.append(dict(href=f'{PFX[lang]}/articles/{slug}/', title=c['titles'][lang], month=None, date=c['published'], tag=UI[lang]['series'],
+                            img=thumb(f'images/articles/{slug}-1-{lang}.jpg', f'{slug}-1-{lang}'), series=True))
+            continue
         tags = c.get('tags_l', {}).get(lang) or []
         out.append(dict(href=f'{PFX[lang]}/articles/{slug}/', title=c['titles'][lang], month=c['month'], date=c['published'],
                         tag=tags[0] if tags else UI[lang]['title'],

@@ -5,6 +5,16 @@ Format: `## [Date] — Summary` followed by bulleted details.
 
 ---
 
+## [2026-10-07] — Morning & Evening Mourning series (10 chapters)
+
+- **New:** series page `/articles/morning-and-evening-mourning/` and chapters at `…/1/` to `…/10/` (the URLs the homepage already linked to — its ten dead chapter buttons now work). Chapters are English; **chapters 1 and 2 also have Arabic** (`/ar/articles/morning-and-evening-mourning/`, listing just those two) — the Wix blog has no fa/ur versions. Text verbatim; each chapter's "Chapter N" line and subtitle are shown as the lead.
+- Arabic chapter titles are the Wix series title plus the chapter label from the post ("العزاء صباحًا ومساءً — الفصل الأول"), because both Arabic posts are titled only with the series name and would otherwise have identical titles.
+- Series cards for the articles indexes (en, ar); the ar/fa/ur homepages' chapter buttons go to the Arabic page where one exists and the English page otherwise.
+- Importer: `tools/wix_import/build_mourning.py`. Sitemap now 80 URLs.
+- Known, pre-existing: the nav's "Connect" menu links to `/connect` (Subscribe / Contact), which has no page, on every page.
+
+---
+
 ## [2026-10-07] — Ten English-only articles from the Wix blog
 
 - **Imported (10 pages, English only — the Wix blog has no ar/fa/ur versions of these):** Virtues of the Messenger of Allah · Imam Hasan al-Askari: Keeper of God's Knowledge · The Second Ghadir · Rabi al-Awwal · Martyrdom of Muhsin ibn Ali · Husn al-Hassan in the Qur'an · Ayatul Kursi · The Recognition of Arbaeen (Parts 1 and 2) · The Elegy of Imam Hussain's Thirst. hreflang lists only English (+ x-default); no placeholder pages were made for the missing languages.
