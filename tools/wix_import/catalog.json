@@ -1531,5 +1531,377 @@
   "descs": {
    "en": "A two-part series on the recognition (ma'rifah) of Arbaeen, the visit to Imam Hussain (p): the reward of the pilgrim's steps, and the blessing of intellect on the path of Imam Hussain (p)."
   }
+ },
+ "muharram-safar-booklets/1": {
+  "slug": "muharram-safar-booklets/1",
+  "series": "muharram-safar-booklets",
+  "month": 1,
+  "langs": [
+   "en"
+  ],
+  "titles": {
+   "en": "The Night of Loyalty"
+  },
+  "tags": [
+   "Booklet"
+  ],
+  "tags_l": {
+   "en": [
+    "Booklet"
+   ]
+  },
+  "published": "2025-06-26",
+  "img": true,
+  "descs": {
+   "en": "The Night of Loyalty: The Companions of Hussain – The Seventy-Two Souls. \"Indeed, God has purchased from the believers their lives and their properties [in…"
+  }
+ },
+ "muharram-safar-booklets": {
+  "slug": "muharram-safar-booklets",
+  "kind": "series",
+  "month": 1,
+  "langs": [
+   "en"
+  ],
+  "titles": {
+   "en": "Muharram & Safar Booklets"
+  },
+  "tags": [],
+  "tags_l": {},
+  "published": "2025-07-22",
+  "img": true,
+  "descs": {
+   "en": "Illustrated booklets for Muharram and Safar: the nights of Ashura, the family of Imam Hussain (p), mourning and Arbaeen, from Misbah Inc."
+  }
+ },
+ "muharram-safar-booklets/2": {
+  "slug": "muharram-safar-booklets/2",
+  "series": "muharram-safar-booklets",
+  "month": 1,
+  "langs": [
+   "en"
+  ],
+  "titles": {
+   "en": "The Night of Repentance"
+  },
+  "tags": [
+   "Booklet"
+  ],
+  "tags_l": {
+   "en": [
+    "Booklet"
+   ]
+  },
+  "published": "2025-06-26",
+  "img": true,
+  "descs": {
+   "en": "The Night of Repentance: Ḥurr ibn Yazīd al-Riyāḥī. \"Then God turned to them so that they might repent. Indeed, God is the Accepting of"
+  }
+ },
+ "muharram-safar-booklets/3": {
+  "slug": "muharram-safar-booklets/3",
+  "series": "muharram-safar-booklets",
+  "month": 1,
+  "langs": [
+   "en"
+  ],
+  "titles": {
+   "en": "The Night of Reunion"
+  },
+  "tags": [
+   "Booklet"
+  ],
+  "tags_l": {
+   "en": [
+    "Booklet"
+   ]
+  },
+  "published": "2025-06-26",
+  "img": true,
+  "descs": {
+   "en": "The Night of Reunion: Lady Ruqayyah (PBUH). “And those who maintain the ties which God has commanded to be joined, and fear their Lord, and dread an evil…"
+  }
+ },
+ "muharram-safar-booklets/4": {
+  "slug": "muharram-safar-booklets/4",
+  "series": "muharram-safar-booklets",
+  "month": 1,
+  "langs": [
+   "en"
+  ],
+  "titles": {
+   "en": "The Night of the Witness"
+  },
+  "tags": [
+   "Booklet"
+  ],
+  "tags_l": {
+   "en": [
+    "Booklet"
+   ]
+  },
+  "published": "2025-06-29",
+  "img": true,
+  "descs": {
+   "en": "The Night of the Witness: Imam Ali ibn al-Husayn, Imam al-Sajjad (PBUH). The one who watched, moment by moment, the most witnessed day in history. \"There is no…"
+  }
+ },
+ "muharram-safar-booklets/5": {
+  "slug": "muharram-safar-booklets/5",
+  "series": "muharram-safar-booklets",
+  "month": 1,
+  "langs": [
+   "en"
+  ],
+  "titles": {
+   "en": "The Night of Patience"
+  },
+  "tags": [
+   "Booklet"
+  ],
+  "tags_l": {
+   "en": [
+    "Booklet"
+   ]
+  },
+  "published": "2025-06-30",
+  "img": true,
+  "descs": {
+   "en": "The Night of Patience: The Noble, Wise Lady of Arabia, Lady Zaynab (PBUH). “So endure patiently with a beautiful patience.”"
+  }
+ },
+ "muharram-safar-booklets/6": {
+  "slug": "muharram-safar-booklets/6",
+  "series": "muharram-safar-booklets",
+  "month": 1,
+  "langs": [
+   "en"
+  ],
+  "titles": {
+   "en": "The Night of Longing"
+  },
+  "tags": [
+   "Booklet"
+  ],
+  "tags_l": {
+   "en": [
+    "Booklet"
+   ]
+  },
+  "published": "2025-07-01",
+  "img": true,
+  "descs": {
+   "en": "The Night of Longing: Hazrat Qasim and Abdullah Sons of Imam Hassan (PBUH). a yearning that originated from a will entrusted on that final night... An armband…"
+  }
+ },
+ "muharram-safar-booklets/7": {
+  "slug": "muharram-safar-booklets/7",
+  "series": "muharram-safar-booklets",
+  "month": 1,
+  "langs": [
+   "en"
+  ],
+  "titles": {
+   "en": "The Night of Labbayk"
+  },
+  "tags": [
+   "Booklet"
+  ],
+  "tags_l": {
+   "en": [
+    "Booklet"
+   ]
+  },
+  "published": "2025-07-02",
+  "img": true,
+  "descs": {
+   "en": "The Night of Labbayk: Hazrat Ali Asghar (PBUH). “And when the buried infant is asked, for what sin was she killed?”"
+  }
+ },
+ "muharram-safar-booklets/8": {
+  "slug": "muharram-safar-booklets/8",
+  "series": "muharram-safar-booklets",
+  "month": 1,
+  "langs": [
+   "en"
+  ],
+  "titles": {
+   "en": "The Night of Perfection"
+  },
+  "tags": [
+   "Booklet"
+  ],
+  "tags_l": {
+   "en": [
+    "Booklet"
+   ]
+  },
+  "published": "2025-07-04",
+  "img": true,
+  "descs": {
+   "en": "The Night of Perfection: Hazrat Ali Akbar (PBUH). “And [this is] a proclamation from God and His Messenger to all people on the day of the Greater"
+  }
+ },
+ "ghadir-booklets/1": {
+  "slug": "ghadir-booklets/1",
+  "series": "ghadir-booklets",
+  "month": 12,
+  "langs": [
+   "en"
+  ],
+  "titles": {
+   "en": "The Sun"
+  },
+  "tags": [
+   "Booklet"
+  ],
+  "tags_l": {
+   "en": [
+    "Booklet"
+   ]
+  },
+  "published": "2025-05-02",
+  "img": true,
+  "descs": {
+   "en": "The Sun. On a day in Medina when the air was hot and the streets were filled with dust. At first, it was only soft whispers. But soon, those whispers turned…"
+  }
+ },
+ "ghadir-booklets/2": {
+  "slug": "ghadir-booklets/2",
+  "series": "ghadir-booklets",
+  "month": 12,
+  "langs": [
+   "en"
+  ],
+  "titles": {
+   "en": "The Successor"
+  },
+  "tags": [
+   "Booklet"
+  ],
+  "tags_l": {
+   "en": [
+    "Booklet"
+   ]
+  },
+  "published": "2025-05-21",
+  "img": true,
+  "descs": {
+   "en": "The Successor. Imam Ali (PBUH) said: When the holy verse “And warn your nearest relatives” was revealed, the Messenger of God (PBUH&HF) called me to his side…"
+  }
+ },
+ "ghadir-booklets/3": {
+  "slug": "ghadir-booklets/3",
+  "series": "ghadir-booklets",
+  "month": 12,
+  "langs": [
+   "en"
+  ],
+  "titles": {
+   "en": "Wali"
+  },
+  "tags": [
+   "Booklet"
+  ],
+  "tags_l": {
+   "en": [
+    "Booklet"
+   ]
+  },
+  "published": "2025-05-26",
+  "img": true,
+  "descs": {
+   "en": "Wali. It was the time of farewell… the Farewell Pilgrimage"
+  }
+ },
+ "ghadir-booklets/4": {
+  "slug": "ghadir-booklets/4",
+  "series": "ghadir-booklets",
+  "month": 12,
+  "langs": [
+   "en"
+  ],
+  "titles": {
+   "en": "The Conqueror"
+  },
+  "tags": [
+   "Booklet"
+  ],
+  "tags_l": {
+   "en": [
+    "Booklet"
+   ]
+  },
+  "published": "2025-06-10",
+  "img": true,
+  "descs": {
+   "en": "The Conqueror. In the fifth year after Hijrah, the Quraysh gathered together and went to other Arab tribes, seeking their help and inciting them to wage war…"
+  }
+ },
+ "ghadir-booklets/5": {
+  "slug": "ghadir-booklets/5",
+  "series": "ghadir-booklets",
+  "month": 12,
+  "langs": [
+   "en"
+  ],
+  "titles": {
+   "en": "The Uncle"
+  },
+  "tags": [
+   "Booklet"
+  ],
+  "tags_l": {
+   "en": [
+    "Booklet"
+   ]
+  },
+  "published": "2025-06-12",
+  "img": true,
+  "descs": {
+   "en": "The Uncle. One day, Asbagh ibn Nubātah says: I entered the Mosque of Kufa and came into the presence of Amīr al-Mu’minīn (peace be upon him). A large crowd had…"
+  }
+ },
+ "ghadir-booklets": {
+  "slug": "ghadir-booklets",
+  "kind": "series",
+  "month": 12,
+  "langs": [
+   "en"
+  ],
+  "titles": {
+   "en": "Ghadir Booklets"
+  },
+  "tags": [],
+  "tags_l": {},
+  "published": "2025-06-12",
+  "img": true,
+  "descs": {
+   "en": "Illustrated Ghadir booklets: stories of the Prophet (p) and Imam Ali (p), from the first call at Dhul-Ashira to the day of Ghadir Khumm, from Misbah Inc."
+  }
+ },
+ "muharram-safar-booklets/9": {
+  "slug": "muharram-safar-booklets/9",
+  "series": "muharram-safar-booklets",
+  "month": 1,
+  "langs": [
+   "en"
+  ],
+  "titles": {
+   "en": "Heartfelt Writings for Star of the Hearts, Lady Ruqayyah (PBUH)"
+  },
+  "tags": [
+   "Booklet"
+  ],
+  "tags_l": {
+   "en": [
+    "Booklet"
+   ]
+  },
+  "published": "2025-07-22",
+  "img": true,
+  "descs": {
+   "en": "Heartfelt Writings for Star of the Hearts, Lady Ruqayyah (PBUH): Star of the Hearts, Lady Ruqayyah (PBUH). I seek nearness to God through crying for You,"
+  }
  }
 }

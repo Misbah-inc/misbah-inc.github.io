@@ -5,6 +5,15 @@ Format: `## [Date] — Summary` followed by bulleted details.
 
 ---
 
+## [2026-10-08] — Booklets from misbah-inc.com/book as article series (first batch, not yet deployed)
+
+- Two series from the PDF booklets, English only: **`/articles/muharram-safar-booklets/`** (1–9: the Nights of Loyalty, Repentance, Reunion, the Witness, Patience, Longing, Labbayk, Perfection + Heartfelt Writings for Lady Ruqayyah) and **`/articles/ghadir-booklets/`** (1–5: The Sun, The Successor, Wali, The Conqueror, The Uncle). Each page: the booklet's cover as banner, its English text (unchanged, from the PDF's text layer), its illustrations in order, Arabic lines as **cropped images** (the PDF's Arabic text layer is scrambled), and a link to the original PDF on misbah-inc.com.
+- Generator: `tools/wix_import/build_booklets.py` + `booklet_extract.py`; `booklet_review.py` writes `work/arabic-review.html` (all 23 Arabic crops, for human review). The PDFs are kept out of the repo.
+- **Not built yet** (19 of the 35 PDFs): the long Arabic-heavy books (Ziyārat Nāḥiyah excerpts, Reality of Weeping, Ziarat of Imam al-Sajjad, Shared Traits, Sermon of Imam Hasan, School of Umm al-Banin 108 pp, Treasures 599 pp, Sermon of Mufākharah, Ziyārat Ghadīriyya, Spring of Love, Ziyārat of Umm al-Banin/Fatima/Ali Akbar/Khadija, Ramadan Workbook 91 MB) need clean Arabic text; plus 3 image-only Ramadan PDFs (no text layer). Held back for scrambled text: The Final Lament of Reyḥānat al-Ḥusayn, Walking Path of Hussain. The site links "The Cosmic Blueprint" to the Night of Qadr file (a Wix mislink), so that booklet is missing.
+- `check_site.py`: 103 pages, 0 issues.
+
+---
+
 ## [2026-10-08] — "The Recognition of Arbaeen" is now one series
 
 - The two stand-alone articles `recognition-of-arbaeen-part-1` / `-2` are merged into a series: **`/articles/recognition-of-arbaeen/`** with chapters **`/1/`** and **`/2/`** (English only; same Wix posts and text, covers and in-article images moved to the new names). Filed under Safar, type **Series**, tags Imam al-Hussain + Arbaeen.

@@ -94,6 +94,15 @@ ITEMS = {
 # every Mourning chapter inherits the series' tags
 for _n in range(1, 11): ITEMS[f'morning-and-evening-mourning/{_n}'] = ITEMS['morning-and-evening-mourning']
 for _n in (1, 2): ITEMS[f'recognition-of-arbaeen/{_n}'] = ITEMS['recognition-of-arbaeen']
+# Booklets (PDF -> article series, build_booklets.py): series-level month/tags, with per-booklet tags/month where they differ
+ITEMS['muharram-safar-booklets'] = (1, 'series', ['imam-hussain', 'mourning'])
+ITEMS['ghadir-booklets'] = (12, 'series', ['imam-ali', 'ghadir'])
+for _n in range(1, 31):
+    ITEMS[f'muharram-safar-booklets/{_n}'] = ITEMS['muharram-safar-booklets']
+    ITEMS[f'ghadir-booklets/{_n}'] = ITEMS['ghadir-booklets']
+for _n, _tags in {3: ['lady-ruqayyah', 'imam-hussain', 'mourning'], 4: ['imam-sajjad', 'imam-hussain', 'mourning'], 6: ['imam-hasan', 'imam-hussain', 'mourning'],
+                  9: ['lady-ruqayyah', 'imam-hussain', 'mourning']}.items():
+    ITEMS[f'muharram-safar-booklets/{_n}'] = (1, 'series', _tags)
 # Sermon of Muttaqin (Imam Ali's sermon, posted weekly since June 2026); the series is filed under Rabi' al-Awwal (month 3)
 ITEMS['khutbat-al-muttaqin'] = (3, 'series', ['imam-ali'])
 for _n in range(1, 15): ITEMS[f'khutbat-al-muttaqin/{_n}'] = ITEMS['khutbat-al-muttaqin']

@@ -14,6 +14,7 @@ it easy to find which image belongs where as the library grows.
 | `articles/og-<slug>-<lang>.jpg` | 1200 × 630 | ~100–200 KB | Social-share crop of the cover | OG/Twitter tags |
 | `articles/thumb-<slug>-<lang>.jpg` | 480 × 270 | ~15–30 KB | Card thumbnail for the articles indexes | `articles/index.html`, `/ar|fa|ur/articles/` |
 | `articles/khutbat-al-muttaqin-{1..14}-en.jpg`, `og-…`, `thumb-…`, `khutbat-al-muttaqin-cover-en.jpg` | 1200 × 630 / 480 × 270 | ~50–90 KB | Sermon of Muttaqin covers: series cover and parts 1–13 are the supplied posters (parts: 720 × 1280 portrait banner; og/thumb = letterboxed on a blurred copy); part 14 is a generated card (Pillow) | `articles/khutbat-al-muttaqin/…`, homepage "Latest series" card, articles index |
+| `articles/{muharram-safar,ghadir}-booklets-<n>-en.jpg`, `og-…`, `thumb-…`, `articles/<series>/<n>/*.jpg` | banner 720 w / OG 1200 × 630 / thumb 480 × 270 / body ≤ 960 w | 15–120 KB each | Booklet covers and the illustrations and Arabic-line crops extracted from the PDF booklets (build_booklets.py) | `articles/muharram-safar-booklets/…`, `articles/ghadir-booklets/…` |
 
 ---
 
