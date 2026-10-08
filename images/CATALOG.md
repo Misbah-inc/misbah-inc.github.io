@@ -13,6 +13,7 @@ it easy to find which image belongs where as the library grows.
 | `articles/<slug>-<lang>.jpg` | ≤ 1400 w | 50–400 KB | Cover image of each imported Wix article (per language; falls back to the English cover) | `articles/<slug>/` pages |
 | `articles/og-<slug>-<lang>.jpg` | 1200 × 630 | ~100–200 KB | Social-share crop of the cover | OG/Twitter tags |
 | `articles/thumb-<slug>-<lang>.jpg` | 480 × 270 | ~15–30 KB | Card thumbnail for the articles indexes | `articles/index.html`, `/ar|fa|ur/articles/` |
+| `articles/khutbat-al-muttaqin-{1..14}-en.jpg`, `og-…`, `thumb-…`, `khutbat-al-muttaqin-cover-en.jpg` | 1200 × 630 / 480 × 270 | ~50–90 KB | Generated covers (Pillow, Georgia on dark green, Misbah badge) for the Sermon of Muttaqin parts and series | `articles/khutbat-al-muttaqin/…`, homepage "Latest series" card, articles index |
 
 ---
 

@@ -32,6 +32,13 @@ def title_of(l, rel):
     return html.unescape(re.search(r'<h1[^>]*>(.*?)</h1>', t, re.S).group(1).replace('<br>', ' ').strip())
 
 
+def cover_thumb(slug, lang, thumb):
+    """A series card uses its own cover (<slug>-cover-<lang>.jpg) when it has one, else chapter 1's."""
+    if os.path.exists(ROOT + f'images/articles/{slug}-cover-{lang}.jpg'):
+        return thumb(f'images/articles/{slug}-cover-{lang}.jpg', f'{slug}-cover-{lang}')
+    return thumb(f'images/articles/{slug}-1-{lang}.jpg', f'{slug}-1-{lang}')
+
+
 def entries(lang):
     """one entry per article/series in this language, newest first."""
     out = []
@@ -58,7 +65,7 @@ def entries(lang):
         if lang not in c['langs'] or c.get('series'): continue        # chapters are listed on their series page
         if c.get('kind') == 'series':
             out.append(dict(slug=slug, href=f'{PFX[lang]}/articles/{slug}/', title=c['titles'][lang], month=None, date=c['published'], tag=UI[lang]['series'],
-                            img=thumb(f'images/articles/{slug}-1-{lang}.jpg', f'{slug}-1-{lang}'), series=True))
+                            img=cover_thumb(slug, lang, thumb), series=True))
             continue
         tags = c.get('tags_l', {}).get(lang) or []
         out.append(dict(slug=slug, href=f'{PFX[lang]}/articles/{slug}/', title=c['titles'][lang], month=c['month'], date=c['published'],

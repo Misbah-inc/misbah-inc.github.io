@@ -94,6 +94,9 @@ ITEMS = {
 }
 # every Mourning chapter inherits the series' tags
 for _n in range(1, 11): ITEMS[f'morning-and-evening-mourning/{_n}'] = ITEMS['morning-and-evening-mourning']
+# Sermon of Muttaqin (Imam Ali's sermon, posted weekly since June 2026); the series is filed under Rabi' al-Awwal (month 3)
+ITEMS['khutbat-al-muttaqin'] = (3, 'series', ['imam-ali'])
+for _n in range(1, 15): ITEMS[f'khutbat-al-muttaqin/{_n}'] = ITEMS['khutbat-al-muttaqin']
 
 
 def meta(slug):
