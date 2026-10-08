@@ -5,6 +5,12 @@ Format: `## [Date] — Summary` followed by bulleted details.
 
 ---
 
+## [2026-10-07] — Sermon of Muttaqin: supplied posters
+
+- Series cover = the supplied landscape poster; parts 1–13 = their own portrait posters (banner 720×1280 on the part page; OG 1200×630 and card thumbs show the poster centred on a blurred copy of itself). Part 14 still uses the generated card until its poster arrives. `build_muttaqin.py --posters <dir>` rebuilds them (file `2.*` = part 1 … `14.*` = part 13).
+
+---
+
 ## [2026-10-07] — New series: Sermon of Muttaqin (Khutbat al-Muttaqin), parts 1–14
 
 - **`/articles/khutbat-al-muttaqin/`** (series page) + **`/1/` … `/14/`**, English only. Each part opens with its YouTube video (click-to-load via youtube-nocookie, `VideoObject` JSON-LD), then the text. Filed under **Rabi' al-Awwal**, type **Series**, tag **Imam Ali (p)**.

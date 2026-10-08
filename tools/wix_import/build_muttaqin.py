@@ -91,9 +91,39 @@ def cover(label, title, foot, path_stems):
         out.save(D + stem, 'JPEG', quality=84, progressive=True, optimize=True)
 
 
+POSTER_PARTS = set(range(1, 14))   # parts whose cover is a supplied portrait poster (made once by posters_from); 14 still uses the generated card
+BANNER = (720, 1280)               # portrait banner shown on the part page (.kw-banner--tall caps it at 560px tall)
+
+
+def posters_from(src_dir, first_file=2):
+    """One-off: <src_dir>/<first_file+k-1>.* is the poster of part k. Writes banner, OG (1200x630, poster letterboxed on a blurred copy of itself) and card thumb."""
+    import glob
+    from PIL import ImageFilter, ImageEnhance
+    for n in sorted(POSTER_PARTS):
+        f = [g for g in glob.glob(f'{src_dir}/{first_file + n - 1}.*')][0]
+        im = Image.open(f).convert('RGB')
+        s = f'{SER}-{n}-{LANG}'
+        q = 82
+        ban = im.resize(BANNER, Image.LANCZOS)
+        while True:
+            ban.save(D + f'{s}.jpg', 'JPEG', quality=q, progressive=True, optimize=True)
+            if os.path.getsize(D + f'{s}.jpg') <= 200_000 or q <= 60: break
+            q -= 4
+        for stem, (W, H) in ((f'og-{s}.jpg', (1200, 630)), (f'thumb-{s}.jpg', (480, 270))):
+            bg = im.resize((W, round(W * im.height / im.width)), Image.LANCZOS)
+            y = (bg.height - H) // 2
+            bg = bg.crop((0, y, W, y + H)).filter(ImageFilter.GaussianBlur(H / 22))
+            bg = ImageEnhance.Brightness(bg).enhance(0.45)
+            fg = im.resize((round(H * im.width / im.height), H), Image.LANCZOS)
+            bg.paste(fg, ((W - fg.width) // 2, 0))
+            bg.save(D + stem, 'JPEG', quality=82, progressive=True, optimize=True)
+        print('poster', n, os.path.getsize(D + f'{s}.jpg') // 1024, 'KB banner')
+
+
 def make_covers():
     os.makedirs(D, exist_ok=True)
     for n, (vid, pub, short, yt) in MC.PARTS.items():
+        if n in POSTER_PARTS: continue
         s = f'{SER}-{n}-{LANG}'
         cover(f'Part {n}', yt[0].upper() + yt[1:], 'Imam Ali (p)  ·  Khutbat al-Muttaqin',
               [(f'{s}.jpg', None), (f'og-{s}.jpg', None), (f'thumb-{s}.jpg', (480, 270))])
@@ -129,7 +159,7 @@ def load(n):
     title = f'{NAME}, Part {n} — {yt[0].upper() + yt[1:]}'
     return dict(title=title, desc=DESC[n], published=pub, modified=pub, heads=[], hero_video=vid, body=[{'t': 'p', 'x': t} for _, t in blocks],   # real text: page() counts words from it for the reading time
                 
-                tags=['Imam Ali (p)'], og='x', img=dict(w=1200, h=630, orig=(1200, 630)), blocks=blocks, refs=refs, short=short, yt=yt)
+                tags=['Imam Ali (p)'], og='x', img=dict(w=BANNER[0], h=BANNER[1], orig=BANNER) if n in POSTER_PARTS else dict(w=1200, h=630, orig=(1200, 630)), blocks=blocks, refs=refs, short=short, yt=yt)
 
 
 def retitle(path, n):
@@ -267,5 +297,7 @@ def home():
 
 
 if __name__ == '__main__':
+    if len(sys.argv) > 2 and sys.argv[1] == '--posters':
+        posters_from(sys.argv[2])
     main()
     home()
