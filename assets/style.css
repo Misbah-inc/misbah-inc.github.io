@@ -1715,6 +1715,20 @@ h1, h2, h3, h4 {
   .kw-partnav .next, .kw-partnav .prev { grid-column: 1; text-align: start; }
   .kw-play { width: 60px; height: 60px; }
 }
+/* Poster grid (series whose parts each have a portrait poster, e.g. Sermon of Muttaqin): the whole poster is the card's picture */
+.kw-poster-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin: 2rem 0; }
+.kw-poster-card { display: flex; flex-direction: column; background: #fff; border: 1px solid rgba(26,61,27,0.14); border-radius: 16px; overflow: hidden; box-shadow: 0 4px 22px rgba(0,0,0,0.08); transition: transform 0.2s ease, box-shadow 0.2s ease; text-decoration: none; color: inherit; }
+.kw-poster-card:hover, .kw-poster-card:focus-visible { transform: translateY(-3px); box-shadow: 0 10px 34px rgba(0,0,0,0.14); }
+.kw-poster-card img { display: block; width: 100%; height: auto; aspect-ratio: 9 / 16; object-fit: cover; background: #14281a; }
+.kw-poster-card .kw-poster-body { padding: 1rem 1.1rem 1.2rem; display: flex; flex-direction: column; gap: .5rem; }
+.kw-poster-card h2 { font-size: 1.05rem; line-height: 1.35; margin: 0; color: #1a3d1b; }
+.kw-poster-card p { font-size: .88rem; margin: 0; color: #555; }
+@media (max-width: 900px) { .kw-poster-grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; } }
+@media (max-width: 480px) { .kw-poster-card p { display: none; } .kw-poster-card .kw-poster-body { padding: .8rem; } .kw-poster-card h2 { font-size: .95rem; } }
+[data-theme="dark"] .kw-poster-card { background: #1c2b1d; border-color: rgba(201,164,107,0.25); }
+[data-theme="dark"] .kw-poster-card p { color: #c9c3b0; }
+[data-theme="dark"] .kw-poster-card h2 { color: #f1e6c8; }
+@media (prefers-reduced-motion: reduce) { .kw-poster-card { transition: none; } }
 @media (prefers-reduced-motion: reduce) { .kw-part-card, .kw-partnav a, .kw-play { transition: none; } }
 .kw-home-body p a { color: var(--gold-light); text-decoration: underline; text-underline-offset: 3px; }
 .kw-home-body p a:hover { color: var(--gold-bright); }

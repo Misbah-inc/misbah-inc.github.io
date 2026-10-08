@@ -109,6 +109,7 @@ def posters_from(src_dir, first_file=2):
             ban.save(D + f'{s}.jpg', 'JPEG', quality=q, progressive=True, optimize=True)
             if os.path.getsize(D + f'{s}.jpg') <= 200_000 or q <= 60: break
             q -= 4
+        im.resize((360, 640), Image.LANCZOS).save(D + f'thumb-p-{s}.jpg', 'JPEG', quality=80, progressive=True, optimize=True)   # portrait card on the series page
         for stem, (W, H) in ((f'og-{s}.jpg', (1200, 630)), (f'thumb-{s}.jpg', (480, 270))):
             bg = im.resize((W, round(W * im.height / im.width)), Image.LANCZOS)
             y = (bg.height - H) // 2
@@ -209,14 +210,15 @@ def series_page(arts):
     h = h.replace(f'content="{SITE}{PFX[LANG]}/articles/{G.SLUG}/"', f'content="{cur}"')
     cards = ''
     for n, a in sorted(arts.items()):
+        poster = os.path.exists(D + f'thumb-p-{SER}-{n}-{LANG}.jpg')
+        img = (f'/images/articles/thumb-p-{SER}-{n}-{LANG}.jpg" width="360" height="640') if poster else (f'/images/articles/thumb-{SER}-{n}-{LANG}.jpg" width="480" height="270')
         cards += f'''
-    <a class="kw-part-card" href="{sref(n)}">
-      <img src="/images/articles/thumb-{SER}-{n}-{LANG}.jpg" alt="" width="480" height="270" loading="lazy" decoding="async">
-      <div class="kw-part-body">
+    <a class="kw-poster-card" href="{sref(n)}">
+      <img src="{img}" alt="{html.escape(a['title'], quote=True)}" loading="lazy" decoding="async"{'' if poster else ' style="aspect-ratio:9/16;object-fit:contain"'}>
+      <div class="kw-poster-body">
         <span class="kw-series-chip">Part {n}</span>
         <h2>{esc(a['yt'][0].upper() + a['yt'][1:])}</h2>
         <p>{esc(a['desc'])}</p>
-        <span class="btn btn-gold">{L['read']}</span>
       </div>
     </a>'''
     main = f'''<main>
@@ -243,7 +245,7 @@ def series_page(arts):
     <p class="art-intro">{esc(intro)}</p>
 
     <h2 class="art-section-title">{L['parts']}</h2>
-    <div class="kw-parts">{cards}
+    <div class="kw-poster-grid">{cards}
     </div>
 
   </div>
