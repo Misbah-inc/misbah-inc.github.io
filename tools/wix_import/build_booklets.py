@@ -21,12 +21,15 @@ PDF_URL = 'https://www.misbah-inc.com/_files/ugd/%s.pdf'
 SERIES = {
  'muharram-safar-booklets': dict(name='Muharram & Safar Booklets', month=1,
      desc='Illustrated booklets for Muharram and Safar: the nights of Ashura, the family of Imam Hussain (p), mourning and Arbaeen, from Misbah Inc.'),
+ 'ramadan-booklets': dict(name='Ramadan Booklets', month=9,
+     desc='Ramadan booklets from Misbah Inc.: ziyarat and reflections for the month of Ramadan.'),
  'ghadir-booklets': dict(name='Ghadir Booklets', month=12,
      desc='Illustrated Ghadir booklets: stories of the Prophet (p) and Imam Ali (p), from the first call at Dhul-Ashira to the day of Ghadir Khumm, from Misbah Inc.'),
 }
 # (series, n, title, Wix file id).  Titles are the ones on misbah-inc.com/book-*; order = the Wix page.
-# Only booklets whose text layer extracts cleanly are here. Held back: 'The Final Lament of Reyhanat al-Husayn' (83ed330b: the same header line repeats on every slide and some Arabic is scrambled inside the English text)
-# and 'Walking Path of Hussain' (18ce5baa: Arabic mixed into the English text layer), plus the long Arabic-heavy books (see the CHANGELOG).
+# Arabic lines are always kept as cropped images (the PDF text layer scrambles Arabic); clean Arabic text can replace them later.
+# Not built (needs a decision): Treasures of the Family of Muhammad (599 pp), School of Umm al-Banin full book (108 pp, 4f5c0040), Ramadan Workbook (91 MB),
+# three image-only Ramadan PDFs (no text layer), Ziyarat of Lady Fatima (2-page Arabic-only, 965e8e1c).
 BOOKS = [
  ('muharram-safar-booklets', 1, 'The Night of Loyalty', '9d042c_cacda01c10514a52a205ca1ccae961f6'),
  ('muharram-safar-booklets', 2, 'The Night of Repentance', '9d042c_d46a7ace923e49b2993d765679839004'),
@@ -37,11 +40,25 @@ BOOKS = [
  ('muharram-safar-booklets', 7, 'The Night of Labbayk', '9d042c_bc31c6da921c4326ba2cc6e15a758063'),
  ('muharram-safar-booklets', 8, 'The Night of Perfection', '9d042c_e49aee20898443f982d3a02a22674a9e'),
  ('muharram-safar-booklets', 9, 'Heartfelt Writings for Star of the Hearts, Lady Ruqayyah (PBUH)', '9d042c_093d1e7c2ffd4a8185dbf1e74325cbad'),
-  ('ghadir-booklets', 1, 'The Sun', '9d042c_c0a00132abc54e20bf509f9b0a1137f8'),
+ ('muharram-safar-booklets', 10, 'Ziyārat Nāḥiyah al-Muqaddasah', '9d042c_39e39f9832d84559b1f6bce6f2d32072'),
+ ('muharram-safar-booklets', 11, 'The Reality of Weeping for Hussain (PBUH)', '9d042c_34411530e46b4f1fbe1a124a37b35e1d'),
+ ('muharram-safar-booklets', 12, 'Ziarat and the Virtues of Imam Ali ibn al-Hussain (PBUH) in the Hadith of the Tablet', '9d042c_d85d954a724a4dcb99b4f555a86f0493'),
+ ('muharram-safar-booklets', 13, 'Shared Traits of Hazrat Ali Akbar and Lady Ruqayyah (PBUT)', '9d042c_017c1a1d668842378f51a89ccdecb704'),
+ ('muharram-safar-booklets', 14, 'Sermon of Imam al-Hasan (PBUH) on the Peace Treaty', '9d042c_3b27a2e9256546a4952ff8309fb6c0c2'),
+ ('muharram-safar-booklets', 15, 'Ziarat Lady Ummul Banin (p)', '9d042c_9ffb931fcd9346d789b80865c4539cd6'),
+ ('muharram-safar-booklets', 16, 'The School of the Lady of Baqi, Bibi Umm al-Banin (SA) — Summary', '9d042c_5375ec4a1d4b4340ba0fc3fe37ac3d18'),
+ ('muharram-safar-booklets', 17, 'The Final Lament of Reyḥānat al-Ḥusayn, Ruqayyah al-Murtaqa (PBUH)', '9d042c_83ed330b2de14140b89fb8712cedc1a7'),
+ ('muharram-safar-booklets', 18, 'Walking Path of Hussain (AS)', '9d042c_18ce5baa8d6148eb80cbf3383d7e3918'),
+ ('ghadir-booklets', 1, 'The Sun', '9d042c_c0a00132abc54e20bf509f9b0a1137f8'),
  ('ghadir-booklets', 2, 'The Successor', '9d042c_13894ad4e6754993ab72be1cd655b492'),
  ('ghadir-booklets', 3, 'Wali', '9d042c_4d8c3f7b0b734cbba5fba313a63ddac7'),
  ('ghadir-booklets', 4, 'The Conqueror', '9d042c_45922db9944447bfa2b949a8ac8a691e'),
  ('ghadir-booklets', 5, 'The Uncle', '9d042c_556691d48b6248e98957945e99fa2450'),
+ ('ghadir-booklets', 6, 'Sermon of Mufakhirah', '9d042c_1378569b6a234701b7fa41700f891459'),
+ ('ghadir-booklets', 7, 'Excerpt from Ziyārat of Ghadīriyya by Imam al-Hādi (PBUH)', '9d042c_43bc622ce8534e5db3fe6b2d95095dae'),
+ ('ghadir-booklets', 8, 'Ziyārat of Hazrat Ali Akbar (pbuh)', '9d042c_ea80a569d4894eacb08224b65782c288'),
+ ('ghadir-booklets', 9, 'Spring of Love', '9d042c_42c53d9d54d249e0bd67265afe1453db'),
+ ('ramadan-booklets', 1, 'Ziyārat of Hazrat Khadija (pbuh)', '9d042c_87972fd4152248ff9eb39d1665daa3be'),
 ]
 BANNER_W = 720
 
@@ -84,8 +101,10 @@ def build_one(pdfdir, ser, n, title, fid):
     r = BX.extract(f'{pdfdir}/{fid}.pdf')
     slug = f'{ser}/{n}'; fs = f'{ser}-{n}'
     items, k = [], 0
+    p1 = r['pages'][0]
+    p1_is_cover = sum(len(t[1]) for t in p1 if t[0] == 'P') < 150 and not any(t[0] == 'AR' for t in p1)   # a title page, not a 2-page ziyarat that starts at once
     for pi, page_items in enumerate(r['pages']):
-        if pi == 0: continue                                  # page 1 = the cover (title + subtitle)
+        if pi == 0 and p1_is_cover: continue                  # page 1 = the cover (title + subtitle)
         for it in page_items:
             if it[0] == 'P': items.append(('P', it[1]))
             else:
@@ -94,7 +113,7 @@ def build_one(pdfdir, ser, n, title, fid):
                 os.makedirs(os.path.dirname(ROOT + rel[1:]), exist_ok=True)
                 open(ROOT + rel[1:], 'wb').write(it[1])
                 items.append((it[0], rel, it[2], it[3]))
-    cover_txt = [it[1] for it in r['pages'][0] if it[0] == 'P']
+    cover_txt = [it[1] for it in r['pages'][0] if it[0] == 'P'] if p1_is_cover else []
     # the cover's lines after the title are the subtitle ("The Companions of Hussain – The Seventy-Two Souls"); covers without a text title have none
     norm = lambda t: re.sub(r'[^a-z]', '', t.lower())
     sub = ' '.join(cover_txt[1:]).strip() if cover_txt and norm(cover_txt[0])[:8] == norm(title)[:8] and len(cover_txt) > 1 else ''

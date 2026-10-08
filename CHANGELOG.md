@@ -5,6 +5,14 @@ Format: `## [Date] — Summary` followed by bulleted details.
 
 ---
 
+## [2026-10-08] — Booklets, second batch: the Arabic-heavy ones, Arabic kept as images
+
+- Added to the two series and a third: **Muharram & Safar 10–18** (Ziyārat Nāḥiyah excerpts, The Reality of Weeping for Hussain, Ziarat of Imam Ali ibn al-Hussain / Hadith of the Tablet, Shared Traits of Ali Akbar and Ruqayyah, Sermon of Imam al-Hasan on the Peace Treaty, Ziarat Lady Umm al-Banin, School of Umm al-Banin summary, The Final Lament of Reyḥānat al-Ḥusayn, Walking Path of Hussain), **Ghadir 6–9** (Sermon of Mufākharah, Excerpt from Ziyārat Ghadīriyya, Ziyārat of Ali Akbar, Spring of Love) and **Ramadan Booklets 1** (Ziyārat of Khadija). 29 booklets are now live in total; about 380 Arabic lines are pictures cropped from the PDF pages.
+- Extractor now works line by line (a block can mix Arabic and English), joins runs that share a baseline, attaches stray quotes/brackets, and drops text-layer debris (lone footnote numbers and transliterations whose letters were lost, e.g. "ā humma b ā rik li"). The picture beside such a line already carries the text.
+- **Still not built:** Treasures of the Family of Muhammad (599 pages), the full School of Umm al-Banin book (108 pages), the Ramadan Workbook (91 MB), three image-only Ramadan PDFs (no text layer), Ziyarat Lady Fatima (2 pages, Arabic only).
+
+---
+
 ## [2026-10-08] — Booklets from misbah-inc.com/book as article series (first batch, not yet deployed)
 
 - Two series from the PDF booklets, English only: **`/articles/muharram-safar-booklets/`** (1–9: the Nights of Loyalty, Repentance, Reunion, the Witness, Patience, Longing, Labbayk, Perfection + Heartfelt Writings for Lady Ruqayyah) and **`/articles/ghadir-booklets/`** (1–5: The Sun, The Successor, Wali, The Conqueror, The Uncle). Each page: the booklet's cover as banner, its English text (unchanged, from the PDF's text layer), its illustrations in order, Arabic lines as **cropped images** (the PDF's Arabic text layer is scrambled), and a link to the original PDF on misbah-inc.com.

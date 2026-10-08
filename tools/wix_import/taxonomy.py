@@ -97,12 +97,20 @@ for _n in (1, 2): ITEMS[f'recognition-of-arbaeen/{_n}'] = ITEMS['recognition-of-
 # Booklets (PDF -> article series, build_booklets.py): series-level month/tags, with per-booklet tags/month where they differ
 ITEMS['muharram-safar-booklets'] = (1, 'series', ['imam-hussain', 'mourning'])
 ITEMS['ghadir-booklets'] = (12, 'series', ['imam-ali', 'ghadir'])
-for _n in range(1, 31):
+ITEMS['ramadan-booklets'] = (9, 'series', ['ziyarat'])
+for _n in range(1, 41):
     ITEMS[f'muharram-safar-booklets/{_n}'] = ITEMS['muharram-safar-booklets']
     ITEMS[f'ghadir-booklets/{_n}'] = ITEMS['ghadir-booklets']
-for _n, _tags in {3: ['lady-ruqayyah', 'imam-hussain', 'mourning'], 4: ['imam-sajjad', 'imam-hussain', 'mourning'], 6: ['imam-hasan', 'imam-hussain', 'mourning'],
-                  9: ['lady-ruqayyah', 'imam-hussain', 'mourning']}.items():
-    ITEMS[f'muharram-safar-booklets/{_n}'] = (1, 'series', _tags)
+    ITEMS[f'ramadan-booklets/{_n}'] = ITEMS['ramadan-booklets']
+_MH = ['imam-hussain', 'mourning']
+for _n, (_m, _tags) in {3: (1, ['lady-ruqayyah'] + _MH), 4: (1, ['imam-sajjad'] + _MH), 6: (1, ['imam-hasan'] + _MH), 9: (1, ['lady-ruqayyah'] + _MH),
+                        10: (1, ['imam-mahdi', 'ziyarat'] + _MH), 11: (1, _MH), 12: (1, ['imam-sajjad', 'ziyarat', 'imam-hussain']), 13: (1, ['lady-ruqayyah'] + _MH),
+                        14: (1, ['imam-hasan']), 15: (2, ['lady-umm-al-banin', 'ziyarat']), 16: (2, ['lady-umm-al-banin']), 17: (1, ['lady-ruqayyah'] + _MH),
+                        18: (2, ['imam-hussain', 'arbaeen'])}.items():
+    ITEMS[f'muharram-safar-booklets/{_n}'] = (_m, 'series', _tags)
+for _n, _tags in {6: ['lady-fatimah-zahra', 'ghadir'], 7: ['imam-ali', 'ghadir', 'ziyarat'], 8: ['ziyarat'], 9: ['imam-ali', 'ghadir']}.items():
+    ITEMS[f'ghadir-booklets/{_n}'] = (12, 'series', _tags)
+ITEMS['ramadan-booklets/1'] = (9, 'series', ['lady-khadijah', 'ziyarat'])
 # Sermon of Muttaqin (Imam Ali's sermon, posted weekly since June 2026); the series is filed under Rabi' al-Awwal (month 3)
 ITEMS['khutbat-al-muttaqin'] = (3, 'series', ['imam-ali'])
 for _n in range(1, 15): ITEMS[f'khutbat-al-muttaqin/{_n}'] = ITEMS['khutbat-al-muttaqin']

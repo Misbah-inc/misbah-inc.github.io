@@ -242,6 +242,9 @@
 
 
 
+
+
+
   <!-- ── Imported articles + indexes ────────────────────────────── -->
   <url>
     <loc>https://article.misbah-inc.com/articles/</loc>
@@ -1006,6 +1009,22 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://article.misbah-inc.com/articles/ramadan-booklets/1/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://article.misbah-inc.com/articles/ramadan-booklets/1/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://article.misbah-inc.com/articles/ramadan-booklets/1/"/>
+    <lastmod>2026-02-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://article.misbah-inc.com/articles/ramadan-booklets/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://article.misbah-inc.com/articles/ramadan-booklets/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://article.misbah-inc.com/articles/ramadan-booklets/"/>
+    <lastmod>2026-02-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://article.misbah-inc.com/articles/ayatul-kursi/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://article.misbah-inc.com/articles/ayatul-kursi/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://article.misbah-inc.com/articles/ayatul-kursi/"/>
@@ -1014,10 +1033,50 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://article.misbah-inc.com/articles/ghadir-booklets/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://article.misbah-inc.com/articles/ghadir-booklets/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://article.misbah-inc.com/articles/ghadir-booklets/"/>
+    <lastmod>2026-01-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://article.misbah-inc.com/articles/ghadir-booklets/8/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://article.misbah-inc.com/articles/ghadir-booklets/8/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://article.misbah-inc.com/articles/ghadir-booklets/8/"/>
+    <lastmod>2026-01-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://article.misbah-inc.com/articles/ghadir-booklets/9/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://article.misbah-inc.com/articles/ghadir-booklets/9/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://article.misbah-inc.com/articles/ghadir-booklets/9/"/>
+    <lastmod>2026-01-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://article.misbah-inc.com/articles/majlis-umm-al-banin/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://article.misbah-inc.com/articles/majlis-umm-al-banin/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://article.misbah-inc.com/articles/majlis-umm-al-banin/"/>
     <lastmod>2025-12-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://article.misbah-inc.com/articles/muharram-safar-booklets/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://article.misbah-inc.com/articles/muharram-safar-booklets/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://article.misbah-inc.com/articles/muharram-safar-booklets/"/>
+    <lastmod>2025-12-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://article.misbah-inc.com/articles/muharram-safar-booklets/15/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://article.misbah-inc.com/articles/muharram-safar-booklets/15/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://article.misbah-inc.com/articles/muharram-safar-booklets/15/"/>
+    <lastmod>2025-12-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1038,6 +1097,14 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://article.misbah-inc.com/articles/muharram-safar-booklets/16/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://article.misbah-inc.com/articles/muharram-safar-booklets/16/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://article.misbah-inc.com/articles/muharram-safar-booklets/16/"/>
+    <lastmod>2025-08-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://article.misbah-inc.com/articles/martyrdom-programs-prophet-hasan-ridha/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://article.misbah-inc.com/articles/martyrdom-programs-prophet-hasan-ridha/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://article.misbah-inc.com/articles/martyrdom-programs-prophet-hasan-ridha/"/>
@@ -1054,6 +1121,14 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://article.misbah-inc.com/articles/muharram-safar-booklets/18/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://article.misbah-inc.com/articles/muharram-safar-booklets/18/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://article.misbah-inc.com/articles/muharram-safar-booklets/18/"/>
+    <lastmod>2025-08-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://article.misbah-inc.com/articles/martyrdom-ruqayyah-and-imam-hasan/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://article.misbah-inc.com/articles/martyrdom-ruqayyah-and-imam-hasan/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://article.misbah-inc.com/articles/martyrdom-ruqayyah-and-imam-hasan/"/>
@@ -1062,10 +1137,10 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://article.misbah-inc.com/articles/muharram-safar-booklets/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://article.misbah-inc.com/articles/muharram-safar-booklets/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://article.misbah-inc.com/articles/muharram-safar-booklets/"/>
-    <lastmod>2025-07-22</lastmod>
+    <loc>https://article.misbah-inc.com/articles/muharram-safar-booklets/14/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://article.misbah-inc.com/articles/muharram-safar-booklets/14/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://article.misbah-inc.com/articles/muharram-safar-booklets/14/"/>
+    <lastmod>2025-07-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1078,10 +1153,34 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://article.misbah-inc.com/articles/muharram-safar-booklets/13/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://article.misbah-inc.com/articles/muharram-safar-booklets/13/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://article.misbah-inc.com/articles/muharram-safar-booklets/13/"/>
+    <lastmod>2025-07-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://article.misbah-inc.com/articles/muharram-safar-booklets/17/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://article.misbah-inc.com/articles/muharram-safar-booklets/17/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://article.misbah-inc.com/articles/muharram-safar-booklets/17/"/>
+    <lastmod>2025-07-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://article.misbah-inc.com/articles/martyrdom-of-imam-al-sajjad/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://article.misbah-inc.com/articles/martyrdom-of-imam-al-sajjad/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://article.misbah-inc.com/articles/martyrdom-of-imam-al-sajjad/"/>
     <lastmod>2025-07-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://article.misbah-inc.com/articles/muharram-safar-booklets/12/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://article.misbah-inc.com/articles/muharram-safar-booklets/12/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://article.misbah-inc.com/articles/muharram-safar-booklets/12/"/>
+    <lastmod>2025-07-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1158,6 +1257,14 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://article.misbah-inc.com/articles/muharram-safar-booklets/11/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://article.misbah-inc.com/articles/muharram-safar-booklets/11/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://article.misbah-inc.com/articles/muharram-safar-booklets/11/"/>
+    <lastmod>2025-06-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://article.misbah-inc.com/articles/ghadir-day-2025-thank-you/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://article.misbah-inc.com/articles/ghadir-day-2025-thank-you/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://article.misbah-inc.com/articles/ghadir-day-2025-thank-you/"/>
@@ -1166,17 +1273,17 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://article.misbah-inc.com/articles/ghadir-booklets/5/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://article.misbah-inc.com/articles/ghadir-booklets/5/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://article.misbah-inc.com/articles/ghadir-booklets/5/"/>
-    <lastmod>2025-06-12</lastmod>
+    <loc>https://article.misbah-inc.com/articles/muharram-safar-booklets/10/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://article.misbah-inc.com/articles/muharram-safar-booklets/10/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://article.misbah-inc.com/articles/muharram-safar-booklets/10/"/>
+    <lastmod>2025-06-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://article.misbah-inc.com/articles/ghadir-booklets/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://article.misbah-inc.com/articles/ghadir-booklets/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://article.misbah-inc.com/articles/ghadir-booklets/"/>
+    <loc>https://article.misbah-inc.com/articles/ghadir-booklets/5/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://article.misbah-inc.com/articles/ghadir-booklets/5/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://article.misbah-inc.com/articles/ghadir-booklets/5/"/>
     <lastmod>2025-06-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -1190,10 +1297,26 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://article.misbah-inc.com/articles/ghadir-booklets/7/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://article.misbah-inc.com/articles/ghadir-booklets/7/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://article.misbah-inc.com/articles/ghadir-booklets/7/"/>
+    <lastmod>2025-06-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://article.misbah-inc.com/articles/ghadir-booklets/3/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://article.misbah-inc.com/articles/ghadir-booklets/3/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://article.misbah-inc.com/articles/ghadir-booklets/3/"/>
     <lastmod>2025-05-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://article.misbah-inc.com/articles/ghadir-booklets/6/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://article.misbah-inc.com/articles/ghadir-booklets/6/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://article.misbah-inc.com/articles/ghadir-booklets/6/"/>
+    <lastmod>2025-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1353,6 +1476,13 @@
     <xhtml:link rel="alternate" hreflang="fa" href="https://article.misbah-inc.com/fa/articles/month/rabi-al-thani/"/>
     <xhtml:link rel="alternate" hreflang="ur" href="https://article.misbah-inc.com/ur/articles/month/rabi-al-thani/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://article.misbah-inc.com/articles/month/rabi-al-thani/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://article.misbah-inc.com/articles/month/ramadan/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://article.misbah-inc.com/articles/month/ramadan/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://article.misbah-inc.com/articles/month/ramadan/"/>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>

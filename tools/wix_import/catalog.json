@@ -1568,7 +1568,7 @@
   },
   "tags": [],
   "tags_l": {},
-  "published": "2025-07-22",
+  "published": "2025-12-01",
   "img": true,
   "descs": {
    "en": "Illustrated booklets for Muharram and Safar: the nights of Ashura, the family of Imam Hussain (p), mourning and Arbaeen, from Misbah Inc."
@@ -1595,7 +1595,7 @@
   "published": "2025-06-26",
   "img": true,
   "descs": {
-   "en": "The Night of Repentance: Ḥurr ibn Yazīd al-Riyāḥī. \"Then God turned to them so that they might repent. Indeed, God is the Accepting of"
+   "en": "The Night of Repentance: Ḥurr ibn Yazīd al-Riyāḥī. \"Then God turned to them so that they might repent. Indeed, God is the Accepting of Repentance, the…"
   }
  },
  "muharram-safar-booklets/3": {
@@ -1739,7 +1739,7 @@
   "published": "2025-07-04",
   "img": true,
   "descs": {
-   "en": "The Night of Perfection: Hazrat Ali Akbar (PBUH). “And [this is] a proclamation from God and His Messenger to all people on the day of the Greater"
+   "en": "The Night of Perfection: Hazrat Ali Akbar (PBUH). “And [this is] a proclamation from God and His Messenger to all people on the day of the Greater Pilgrimage…"
   }
  },
  "ghadir-booklets/1": {
@@ -1811,7 +1811,7 @@
   "published": "2025-05-26",
   "img": true,
   "descs": {
-   "en": "Wali. It was the time of farewell… the Farewell Pilgrimage"
+   "en": "Wali. It was the time of farewell… the Farewell Pilgrimage (Ḥijjat al-Widāʿ). The autumn of the life of the Holy Prophet (PBUH&HF)"
   }
  },
  "ghadir-booklets/4": {
@@ -1874,7 +1874,7 @@
   },
   "tags": [],
   "tags_l": {},
-  "published": "2025-06-12",
+  "published": "2026-01-29",
   "img": true,
   "descs": {
    "en": "Illustrated Ghadir booklets: stories of the Prophet (p) and Imam Ali (p), from the first call at Dhul-Ashira to the day of Ghadir Khumm, from Misbah Inc."
@@ -1902,6 +1902,360 @@
   "img": true,
   "descs": {
    "en": "Heartfelt Writings for Star of the Hearts, Lady Ruqayyah (PBUH): Star of the Hearts, Lady Ruqayyah (PBUH). I seek nearness to God through crying for You,"
+  }
+ },
+ "muharram-safar-booklets/10": {
+  "slug": "muharram-safar-booklets/10",
+  "series": "muharram-safar-booklets",
+  "month": 1,
+  "langs": [
+   "en"
+  ],
+  "titles": {
+   "en": "Ziyārat Nāḥiyah al-Muqaddasah"
+  },
+  "tags": [
+   "Booklet"
+  ],
+  "tags_l": {
+   "en": [
+    "Booklet"
+   ]
+  },
+  "published": "2025-06-22",
+  "img": true,
+  "descs": {
+   "en": "Ziyārat Nāḥiyah al-Muqaddasah. Ali al-Akbar (p) resembled many… He was the most resembling of all people to the Prophet (p) in appearance, in character, and in…"
+  }
+ },
+ "muharram-safar-booklets/11": {
+  "slug": "muharram-safar-booklets/11",
+  "series": "muharram-safar-booklets",
+  "month": 1,
+  "langs": [
+   "en"
+  ],
+  "titles": {
+   "en": "The Reality of Weeping for Hussain (PBUH)"
+  },
+  "tags": [
+   "Booklet"
+  ],
+  "tags_l": {
+   "en": [
+    "Booklet"
+   ]
+  },
+  "published": "2025-06-24",
+  "img": true,
+  "descs": {
+   "en": "The Reality of Weeping for Hussain (PBUH). Connection of All Creation to Hazrat Tharullah PBUH ▪Weeping for Hussain; The Sign of a Humbled Heart"
+  }
+ },
+ "muharram-safar-booklets/12": {
+  "slug": "muharram-safar-booklets/12",
+  "series": "muharram-safar-booklets",
+  "month": 1,
+  "langs": [
+   "en"
+  ],
+  "titles": {
+   "en": "Ziarat and the Virtues of Imam Ali ibn al-Hussain (PBUH) in the Hadith of the Tablet"
+  },
+  "tags": [
+   "Booklet"
+  ],
+  "tags_l": {
+   "en": [
+    "Booklet"
+   ]
+  },
+  "published": "2025-07-17",
+  "img": true,
+  "descs": {
+   "en": "Ziarat and the Virtues of Imam Ali ibn al-Hussain (PBUH) in the Hadith of the Tablet. Peace be upon you, O adornment of the worshippers. Peace be upon you, O…"
+  }
+ },
+ "muharram-safar-booklets/13": {
+  "slug": "muharram-safar-booklets/13",
+  "series": "muharram-safar-booklets",
+  "month": 1,
+  "langs": [
+   "en"
+  ],
+  "titles": {
+   "en": "Shared Traits of Hazrat Ali Akbar and Lady Ruqayyah (PBUT)"
+  },
+  "tags": [
+   "Booklet"
+  ],
+  "tags_l": {
+   "en": [
+    "Booklet"
+   ]
+  },
+  "published": "2025-07-20",
+  "img": true,
+  "descs": {
+   "en": "Shared Traits of Hazrat Ali Akbar and Lady Ruqayyah (PBUT): Akbar and Lady Ruqayyah (PBUT). The historical narrations indicate a deep bond between Hazrat Ali…"
+  }
+ },
+ "muharram-safar-booklets/14": {
+  "slug": "muharram-safar-booklets/14",
+  "series": "muharram-safar-booklets",
+  "month": 1,
+  "langs": [
+   "en"
+  ],
+  "titles": {
+   "en": "Sermon of Imam al-Hasan (PBUH) on the Peace Treaty"
+  },
+  "tags": [
+   "Booklet"
+  ],
+  "tags_l": {
+   "en": [
+    "Booklet"
+   ]
+  },
+  "published": "2025-07-29",
+  "img": true,
+  "descs": {
+   "en": "Sermon of Imam al-Hasan (PBUH) on the Peace Treaty: (peace be upon him) on the Peace Treaty. This narration is reported in al-Amālī of Shaykh al-Tusi and is…"
+  }
+ },
+ "muharram-safar-booklets/15": {
+  "slug": "muharram-safar-booklets/15",
+  "series": "muharram-safar-booklets",
+  "month": 1,
+  "langs": [
+   "en"
+  ],
+  "titles": {
+   "en": "Ziarat Lady Ummul Banin (p)"
+  },
+  "tags": [
+   "Booklet"
+  ],
+  "tags_l": {
+   "en": [
+    "Booklet"
+   ]
+  },
+  "published": "2025-12-01",
+  "img": true,
+  "descs": {
+   "en": "Ziarat Lady Ummul Banin (p). I bear witness that there is no god but God alone, with no partner, and I bear witness that Muhammad is His servant and Messenger…"
+  }
+ },
+ "muharram-safar-booklets/16": {
+  "slug": "muharram-safar-booklets/16",
+  "series": "muharram-safar-booklets",
+  "month": 1,
+  "langs": [
+   "en"
+  ],
+  "titles": {
+   "en": "The School of the Lady of Baqi, Bibi Umm al-Banin (SA) — Summary"
+  },
+  "tags": [
+   "Booklet"
+  ],
+  "tags_l": {
+   "en": [
+    "Booklet"
+   ]
+  },
+  "published": "2025-08-24",
+  "img": true,
+  "descs": {
+   "en": "The School of the Lady of Baqi, Bibi Umm al-Banin (SA) — Summary. Had they (jinn and mankind) remained steadfast in their religion (Islam), We would certainly…"
+  }
+ },
+ "muharram-safar-booklets/17": {
+  "slug": "muharram-safar-booklets/17",
+  "series": "muharram-safar-booklets",
+  "month": 1,
+  "langs": [
+   "en"
+  ],
+  "titles": {
+   "en": "The Final Lament of Reyḥānat al-Ḥusayn, Ruqayyah al-Murtaqa (PBUH)"
+  },
+  "tags": [
+   "Booklet"
+  ],
+  "tags_l": {
+   "en": [
+    "Booklet"
+   ]
+  },
+  "published": "2025-07-20",
+  "img": true,
+  "descs": {
+   "en": "The Final Lament of Reyḥānat al-Ḥusayn, Ruqayyah al-Murtaqa (PBUH): Ruqayyah al-Murtaqa (PBUH). Lady Ruqayyah al-Murtaqa (p), upon seeing the blessed head of…"
+  }
+ },
+ "muharram-safar-booklets/18": {
+  "slug": "muharram-safar-booklets/18",
+  "series": "muharram-safar-booklets",
+  "month": 1,
+  "langs": [
+   "en"
+  ],
+  "titles": {
+   "en": "Walking Path of Hussain (AS)"
+  },
+  "tags": [
+   "Booklet"
+  ],
+  "tags_l": {
+   "en": [
+    "Booklet"
+   ]
+  },
+  "published": "2025-08-05",
+  "img": true,
+  "descs": {
+   "en": "Walking Path of Hussain (AS). Salutations from the one whose heart is wounded due to the tribulations You have suffered, and whose tears flow in Your…"
+  }
+ },
+ "ghadir-booklets/6": {
+  "slug": "ghadir-booklets/6",
+  "series": "ghadir-booklets",
+  "month": 12,
+  "langs": [
+   "en"
+  ],
+  "titles": {
+   "en": "Sermon of Mufakhirah"
+  },
+  "tags": [
+   "Booklet"
+  ],
+  "tags_l": {
+   "en": [
+    "Booklet"
+   ]
+  },
+  "published": "2025-05-24",
+  "img": true,
+  "descs": {
+   "en": "Sermon of Mufakhirah. The sermon of Mufakherah from Hazrat Fatimah al-Zahra (PBUH) is one of the precious Hadiths that has been narrated from the blessed words…"
+  }
+ },
+ "ghadir-booklets/7": {
+  "slug": "ghadir-booklets/7",
+  "series": "ghadir-booklets",
+  "month": 12,
+  "langs": [
+   "en"
+  ],
+  "titles": {
+   "en": "Excerpt from Ziyārat of Ghadīriyya by Imam al-Hādi (PBUH)"
+  },
+  "tags": [
+   "Booklet"
+  ],
+  "tags_l": {
+   "en": [
+    "Booklet"
+   ]
+  },
+  "published": "2025-06-02",
+  "img": true,
+  "descs": {
+   "en": "Excerpt from Ziyārat of Ghadīriyya by Imam al-Hādi (PBUH). O my Master, you are the proof against the servants"
+  }
+ },
+ "ghadir-booklets/8": {
+  "slug": "ghadir-booklets/8",
+  "series": "ghadir-booklets",
+  "month": 12,
+  "langs": [
+   "en"
+  ],
+  "titles": {
+   "en": "Ziyārat of Hazrat Ali Akbar (pbuh)"
+  },
+  "tags": [
+   "Booklet"
+  ],
+  "tags_l": {
+   "en": [
+    "Booklet"
+   ]
+  },
+  "published": "2026-01-29",
+  "img": true,
+  "descs": {
+   "en": "Ziyārat of Hazrat Ali Akbar (pbuh). Ziyārat of Hazrat Ali Akbar (pbuh) From the book Kāmil al-Ziyārāt (p. 239), by Shaykh Ibn Qulawayh; Narrated from Abu Hamza…"
+  }
+ },
+ "ghadir-booklets/9": {
+  "slug": "ghadir-booklets/9",
+  "series": "ghadir-booklets",
+  "month": 12,
+  "langs": [
+   "en"
+  ],
+  "titles": {
+   "en": "Spring of Love"
+  },
+  "tags": [
+   "Booklet"
+  ],
+  "tags_l": {
+   "en": [
+    "Booklet"
+   ]
+  },
+  "published": "2026-01-29",
+  "img": true,
+  "descs": {
+   "en": "Spring of Love. Introduction................................... 1 Ziyārat of Hazrat Wali al-ʿAṣr, Imam al- Zamān, may Allah hasten His reappearance, in the…"
+  }
+ },
+ "ramadan-booklets/1": {
+  "slug": "ramadan-booklets/1",
+  "series": "ramadan-booklets",
+  "month": 9,
+  "langs": [
+   "en"
+  ],
+  "titles": {
+   "en": "Ziyārat of Hazrat Khadija (pbuh)"
+  },
+  "tags": [
+   "Booklet"
+  ],
+  "tags_l": {
+   "en": [
+    "Booklet"
+   ]
+  },
+  "published": "2026-02-23",
+  "img": true,
+  "descs": {
+   "en": "Ziyārat of Hazrat Khadija (pbuh). Peace be upon you, O wife of the messenger of Allah, the master of all messengers"
+  }
+ },
+ "ramadan-booklets": {
+  "slug": "ramadan-booklets",
+  "kind": "series",
+  "month": 9,
+  "langs": [
+   "en"
+  ],
+  "titles": {
+   "en": "Ramadan Booklets"
+  },
+  "tags": [],
+  "tags_l": {},
+  "published": "2026-02-23",
+  "img": true,
+  "descs": {
+   "en": "Ramadan booklets from Misbah Inc.: ziyarat and reflections for the month of Ramadan."
   }
  }
 }

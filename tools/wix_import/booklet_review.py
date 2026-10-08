@@ -2,12 +2,17 @@
 import re, glob, html, base64, os
 ROOT = os.path.abspath(os.path.dirname(os.path.abspath(__file__)) + '/../..') + '/'
 os.chdir(ROOT)
-SER = {'muharram-safar-booklets': 'Muharram & Safar Booklets', 'ghadir-booklets': 'Ghadir Booklets'}
+SER = {'muharram-safar-booklets': 'Muharram & Safar Booklets', 'ghadir-booklets': 'Ghadir Booklets', 'ramadan-booklets': 'Ramadan Booklets'}
+# already reviewed and published in the first batch (muharram 1-9, ghadir 1-5): skipped unless --all
+REVIEWED = {('muharram-safar-booklets', str(n)) for n in range(1, 10)} | {('ghadir-booklets', str(n)) for n in range(1, 6)}
+import sys
+ALL = '--all' in sys.argv
 files = sorted(glob.glob('articles/*-booklets/[0-9]*/index.html'), key=lambda x: (x.split('/')[1], int(x.split('/')[2])))
 txt = lambda x: html.unescape(re.sub(r'<[^>]+>', '', x)).strip()
 sections, n_img = [], 0
 for f in files:
     ser, num = f.split('/')[1], f.split('/')[2]
+    if not ALL and (ser, num) in REVIEWED: continue
     t = open(f, encoding='utf-8').read()
     title = html.unescape(re.search(r'<h1[^>]*>(.*?)</h1>', t, re.S).group(1))
     b = re.search(r'<div class="art-body">(.*?)</section>', t, re.S).group(1)
