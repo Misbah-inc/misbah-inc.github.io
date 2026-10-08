@@ -23,3 +23,11 @@ it easy to find which image belongs where as the library grows.
 - JPEG for photos, PNG only if transparency is needed
 - Target: ≤ 150 KB for article cards, ≤ 200 KB for hero/full-width images
 - Recommended dimensions: 1200 × 760 px for article cards (matches the 600 × 380 card box at 2×), 1200 × 675 px for 16:9 hero banners
+
+## images/topics/ (homepage Topics cards, 640×360, made from existing images)
+| File | Source | Used in |
+|---|---|---|
+| al-kawthar.jpg | kawthar/part1-en.jpg (letterboxed) | homepage Topics |
+| lady-khadijah.jpg | lady-khadijah-article.jpg (crop) | homepage Topics |
+| imam-hussain.jpg | articles/morning-and-evening-mourning-1-en.jpg | homepage Topics |
+| holy-prophet.jpg | articles/virtues-of-the-messenger-of-allah-en.jpg | homepage Topics (fa/ur fallback) |

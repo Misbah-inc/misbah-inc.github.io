@@ -1,0 +1,161 @@
+"""Homepage 'Topics' section (right after the hero) and the 'Calendar' nav dropdown.
+
+Topics replace the old 'Through the Year' month grid; the months now live in the top menu.
+Each language shows only topics that have a page in that language — never a link to a 404.
+Run after build_taxo.py (it needs to know which month/tag pages exist). Safe to re-run.
+"""
+import os, re, sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import taxonomy as TX
+import build_taxo as BT
+from gen_kawthar import PFX, LANGS, ROOT
+
+# (key, kind, target) — target is a tag slug, or a series path under /articles/. Order = priority;
+# the first three that exist in a language are shown (fa/ur have no Imam Hussain pages yet → Holy Prophet).
+TOPICS = [
+    ('al-kawthar',     'path', 'al-kawthar/'),
+    ('lady-khadijah',  'tag',  'lady-khadijah'),
+    ('imam-hussain',   'tag',  'imam-hussain'),
+    ('holy-prophet',   'tag',  'holy-prophet'),
+]
+TEXT = {
+ 'en': dict(label='Explore by topic', title='Topics', lead='Selected collections — a figure, a series or a subject, gathered in one place.', cta='Read the collection',
+            cal='Calendar', soon='coming soon',
+            t={'al-kawthar': ('Series', 'The Series of Al-Kawthar', 'The knowledge of Kawthar in the Qur’an — Lady Fatimah al-Zahra (p).'),
+               'lady-khadijah': ('Noble figure', 'Lady Khadijah (p)', 'Mother of the Believers, first woman to believe, and supporter of the Prophet’s mission.'),
+               'imam-hussain': ('Noble figure', 'Imam al-Hussain (p) & Mourning', 'Karbala, Arbaeen and the mourning of the Ahl al-Bayt, including Morning & Evening Mourning.'),
+               'holy-prophet': ('Noble figure', 'The Holy Prophet (p)', 'His virtues, names and titles, and the occasions of his life.')}),
+ 'ar': dict(label='تصفّح حسب الموضوع', title='المواضيع', lead='مجموعات مختارة — شخصية أو سلسلة أو موضوع، في مكان واحد.', cta='اقرأ المجموعة',
+            cal='التقويم', soon='قريباً',
+            t={'al-kawthar': ('سلسلة', 'سلسلة الكوثر', 'معارف الكوثر في القرآن — السيدة فاطمة الزهراء (ع).'),
+               'lady-khadijah': ('شخصية جليلة', 'السيدة خديجة (ع)', 'أم المؤمنين وأول امرأة آمنت وسندٌ لرسالة النبي (ص).'),
+               'imam-hussain': ('شخصية جليلة', 'الإمام الحسين (ع) والعزاء', 'كربلاء والأربعين وعزاء أهل البيت (ع)، ومنه «العزاء صباحًا ومساءً».'),
+               'holy-prophet': ('شخصية جليلة', 'النبي الأكرم (ص)', 'فضائله وأسماؤه وألقابه ومناسبات حياته.')}),
+ 'fa': dict(label='مرور بر اساس موضوع', title='موضوعات', lead='مجموعه‌های برگزیده — یک چهره، یک سلسله یا یک موضوع، در یک جا.', cta='خواندن مجموعه',
+            cal='تقویم', soon='به‌زودی',
+            t={'al-kawthar': ('سلسله', 'سلسله‌ی کوثر', 'معارف کوثر در قرآن — حضرت فاطمه زهرا (س).'),
+               'lady-khadijah': ('چهره‌ی والا', 'حضرت خدیجه (س)', 'ام‌المؤمنین، نخستین بانوی مؤمن و پشتیبان رسالت پیامبر (ص).'),
+               'imam-hussain': ('چهره‌ی والا', 'امام حسین (ع) و عزاداری', 'کربلا، اربعین و عزاداری اهل بیت (ع).'),
+               'holy-prophet': ('چهره‌ی والا', 'پیامبر اکرم (ص)', 'فضایل، نام‌ها و القاب و مناسبت‌های زندگی ایشان.')}),
+ 'ur': dict(label='موضوع کے مطابق', title='موضوعات', lead='منتخب مجموعے — ایک شخصیت، ایک سلسلہ یا ایک موضوع، ایک ہی جگہ۔', cta='مجموعہ پڑھیں',
+            cal='کیلنڈر', soon='جلد آرہا ہے',
+            t={'al-kawthar': ('سلسلہ', 'سلسلۂ کوثر', 'قرآن میں کوثر کی معرفت — حضرت فاطمہ زہرا (س)۔'),
+               'lady-khadijah': ('برگزیدہ شخصیت', 'حضرت خدیجہ (س)', 'ام المومنین، پہلی ایمان لانے والی خاتون اور رسالتِ نبوی کی حامی۔'),
+               'imam-hussain': ('برگزیدہ شخصیت', 'امام حسین (ع) اور عزاداری', 'کربلا، اربعین اور اہل بیت (ع) کی عزاداری۔'),
+               'holy-prophet': ('برگزیدہ شخصیت', 'نبی اکرم (ص)', 'ان کے فضائل، نام اور القاب، اور حیاتِ طیبہ کے مواقع۔')}),
+}
+
+
+def topic_href(lang, kind, target, ex):
+    if kind == 'path':
+        return f'{PFX[lang]}/articles/{target}' if os.path.isdir(ROOT + PFX[lang].lstrip('/') + ('/' if PFX[lang] else '') + 'articles/' + target) else None
+    return f'{PFX[lang]}/articles/tag/{target}/' if ex.get(('tag', target, lang), 0) > 0 else None
+
+
+def topics_section(lang, ex):
+    T = TEXT[lang]
+    cards = []
+    for key, kind, target in TOPICS:
+        href = topic_href(lang, kind, target, ex)
+        if not href: continue
+        chip, name, desc = T['t'][key]
+        cards.append(f'''      <a class="topic-card" href="{href}">
+        <img src="/images/topics/{key}.jpg" alt="" width="640" height="360" loading="lazy" decoding="async">
+        <span class="topic-body">
+          <span class="topic-chip">{chip}</span>
+          <span class="topic-name">{name}</span>
+          <span class="topic-desc">{desc}</span>
+          <span class="topic-cta">{T['cta']}</span>
+        </span>
+      </a>''')
+        if len(cards) == 3: break
+    return f'''<!-- ═══════════════════════════════════════
+     TOPICS — selected collections (generated by tools/wix_import/build_home_topics.py)
+════════════════════════════════════════ -->
+<section class="section topics-section" id="topics" aria-labelledby="topics-heading">
+  <div class="container text-center">
+    <span class="section-label">{T['label']}</span>
+    <h2 class="section-title" id="topics-heading">{T['title']}</h2>
+    <div class="divider" aria-hidden="true"><span class="divider-gem">◆</span></div>
+    <p class="topics-lead">{T['lead']}</p>
+    <div class="topic-grid">
+{chr(10).join(cards)}
+    </div>
+  </div>
+</section>
+
+'''
+
+
+def home(lang, ex):
+    f = ROOT + ('index.html' if lang == 'en' else f'{lang}/index.html')
+    s = open(f, encoding='utf-8').read()
+    # drop the old month grid (its comment block through its closing </section>) and any earlier topics section
+    s = re.sub(r'<!-- ═+\n     THROUGH THE YEAR.*?</section>\n\n*', '', s, flags=re.S)
+    s = re.sub(r'<!-- ═+\n     TOPICS —.*?</section>\n\n*', '', s, flags=re.S)
+    new = topics_section(lang, ex)
+    # the featured section's own comment block is optional (fa/ur homepages have none)
+    m = re.search(r'(?:<!-- ═+\n     FEATURED ARTICLE[^\n]*\n═+ -->\n)?<section class="section featured-section"', s) or re.search(r'<!-- ═+\n     FEATURED ARTICLE', s)
+    assert m, f'{f}: no featured section'
+    s = s[:m.start()] + new + s[m.start():]
+    open(f, 'w', encoding='utf-8').write(s)
+
+
+def calendar_block(lang, ex):
+    T = TEXT[lang]
+    items = []
+    for n in range(1, 13):
+        slug, name = TX.MONTH_SLUG[n - 1], TX.MONTHS[lang][n - 1]
+        if ex.get(('month', slug, lang), 0) > 0:
+            items.append(f'          <a href="{PFX[lang]}/articles/month/{slug}/" class="dropdown-item" role="menuitem">{name}</a>')
+        else:
+            items.append(f'          <span class="dropdown-item is-soon" role="menuitem" aria-disabled="true">{name}<small>{T["soon"]}</small></span>')
+    return f'''<!-- cal-nav -->
+      <div class="nav-dropdown">
+        <button class="nav-link" aria-haspopup="true" aria-expanded="false">
+          {T['cal']}
+          <svg class="dropdown-arrow" viewBox="0 0 10 6" fill="none" aria-hidden="true">
+            <path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </button>
+        <div class="dropdown-panel dropdown-panel--months" role="menu">
+{chr(10).join(items)}
+        </div>
+      </div>
+      <!-- /cal-nav -->
+      '''
+
+
+def nav_all(ex):
+    n = 0
+    for dp, dn, fn in os.walk(ROOT):
+        dn[:] = [d for d in dn if d not in ('.git', 'tools', 'node_modules', 'work')]
+        for name in fn:
+            if not name.endswith('.html'): continue
+            f = os.path.join(dp, name)
+            s = open(f, encoding='utf-8').read()
+            if 'id="nav-links"' not in s: continue
+            rel = os.path.relpath(f, ROOT)
+            lang = rel.split('/')[0] if rel.split('/')[0] in LANGS else 'en'
+            block = calendar_block(lang, ex)
+            if '<!-- cal-nav -->' in s:
+                s2 = re.sub(r'<!-- cal-nav -->.*?<!-- /cal-nav -->\n      ', lambda _: block, s, flags=re.S)
+            else:
+                # before the Connect dropdown (the one nav-dropdown on every page)
+                m = re.search(r'<div class="nav-dropdown">', s)
+                assert m, f'{f}: no nav-dropdown'
+                ls = s.rfind('\n', 0, m.start()) + 1
+                s2 = s[:ls] + '      ' + block + s[m.start():]
+            if s2 != s:
+                open(f, 'w', encoding='utf-8').write(s2); n += 1
+    return n
+
+
+def main():
+    ex = BT.pages_exist()
+    for l in LANGS: home(l, ex)
+    print('homepages 4; nav updated on', nav_all(ex), 'pages')
+
+
+if __name__ == '__main__':
+    main()

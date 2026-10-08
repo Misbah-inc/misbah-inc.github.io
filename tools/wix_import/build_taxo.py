@@ -1,4 +1,4 @@
-"""Articles index with filters + static month / type / tag pages, in every language that has entries. Also: sitemap block + homepage month cards."""
+"""Articles index with filters + static month / type / tag pages, in every language that has entries. Also: sitemap block. (Homepage topics + Calendar nav: build_home_topics.py.)"""
 import os as _os
 HERE = _os.path.dirname(_os.path.abspath(__file__)) + '/'
 import json, os, re, sys, html
@@ -275,7 +275,7 @@ def main():
         total += 1; thin += filter_page(k, key, l, by_lang)
     print('index pages 4; filter pages', total, '(noindex, 1 entry:', thin, ')')
     print('sitemap urls', sitemap())
-    home_cards()
+    # homepage topics + Calendar nav menu are built by build_home_topics.py (run it after this script)
 
 
 if __name__ == '__main__':

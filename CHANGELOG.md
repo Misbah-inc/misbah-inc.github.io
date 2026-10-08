@@ -5,6 +5,15 @@ Format: `## [Date] — Summary` followed by bulleted details.
 
 ---
 
+## [2026-10-07] — Homepage topics section; Calendar moves to the menu
+
+- **New "Topics" section** right after the hero on all four homepages: three cards (Al-Kawthar series · Lady Khadijah · Imam al-Hussain & Mourning) linking to the series page or the existing `/articles/tag/…` pages. Each language shows only topics that have a page in it; fa/ur have no Imam Hussain pages yet, so they show the Holy Prophet card instead. Card images: `images/topics/`.
+- **"Through the Year" month grid removed** from the homepages (with its "this month" script). The months are now a **Calendar** dropdown in the top menu on every page (192 pages), linking to `/articles/month/<month>/`; months with no page in that language are muted "coming soon", never a dead link.
+- Generator: `tools/wix_import/build_home_topics.py` (run after `build_taxo.py`; re-run whenever month/tag pages appear). `build_taxo.py` no longer rewrites homepage month cards.
+- SEO: no URLs removed (month pages unchanged); sitemap unaffected. Topic card images have empty `alt` (decorative, the card text names the topic). Homepage meta/JSON-LD in ar/fa/ur not touched; `check_site.py` passes (71 pages).
+
+---
+
 ## [2026-10-07] — First deploy to AWS
 
 - Bucket `article-misbah-inc` + CloudFront `E2N0F3SGBTA0UD` created; 461 files uploaded with `tools/deploy_s3.py`; tested on the CloudFront address (pages, 404 returns a real 404, sitemap, gzip, correct image types).
