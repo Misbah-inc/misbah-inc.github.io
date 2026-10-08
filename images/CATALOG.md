@@ -32,3 +32,4 @@ it easy to find which image belongs where as the library grows.
 | lady-khadijah.jpg | lady-khadijah-article.jpg (crop) | homepage Topics |
 | imam-hussain.jpg | articles/morning-and-evening-mourning-1-en.jpg | homepage Topics |
 | holy-prophet.jpg | articles/virtues-of-the-messenger-of-allah-en.jpg | homepage Topics (fa/ur fallback) |
+| khutbat-al-muttaqin.jpg | articles/khutbat-al-muttaqin-cover-en.jpg (centre crop) | homepage Topics (EN only) |

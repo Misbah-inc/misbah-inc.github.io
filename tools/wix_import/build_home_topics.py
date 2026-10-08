@@ -13,6 +13,7 @@ from gen_kawthar import PFX, LANGS, ROOT
 # (key, kind, target) — target is a tag slug, or a series path under /articles/. Order = priority;
 # the first three that exist in a language are shown (fa/ur have no Imam Hussain pages yet → Holy Prophet).
 TOPICS = [
+    ('khutbat-al-muttaqin', 'path', 'khutbat-al-muttaqin/'),   # English only for now: topic_href skips it where the folder is missing
     ('al-kawthar',     'path', 'al-kawthar/'),
     ('lady-khadijah',  'tag',  'lady-khadijah'),
     ('imam-hussain',   'tag',  'imam-hussain'),
@@ -21,7 +22,8 @@ TOPICS = [
 TEXT = {
  'en': dict(label='Explore by topic', title='Topics', lead='Selected collections — a figure, a series or a subject, gathered in one place.', cta='Read the collection',
             cal='Calendar', soon='coming soon',
-            t={'al-kawthar': ('Series', 'The Series of Al-Kawthar', 'The knowledge of Kawthar in the Qur’an — Lady Fatimah al-Zahra (p).'),
+            t={'khutbat-al-muttaqin': ('Series', 'Sermon of Muttaqin', 'Imam Ali’s (p) sermon on the God-conscious, one characteristic at a time — each part with its video.'),
+               'al-kawthar': ('Series', 'The Series of Al-Kawthar', 'The knowledge of Kawthar in the Qur’an — Lady Fatimah al-Zahra (p).'),
                'lady-khadijah': ('Noble figure', 'Lady Khadijah (p)', 'Mother of the Believers, first woman to believe, and supporter of the Prophet’s mission.'),
                'imam-hussain': ('Noble figure', 'Imam al-Hussain (p) & Mourning', 'Karbala, Arbaeen and the mourning of the Ahl al-Bayt, including Morning & Evening Mourning.'),
                'holy-prophet': ('Noble figure', 'The Holy Prophet (p)', 'His virtues, names and titles, and the occasions of his life.')}),
@@ -58,6 +60,7 @@ def topics_section(lang, ex):
     for key, kind, target in TOPICS:
         href = topic_href(lang, kind, target, ex)
         if not href: continue
+        if key not in T['t']: continue
         chip, name, desc = T['t'][key]
         cards.append(f'''      <a class="topic-card" href="{href}">
         <img src="/images/topics/{key}.jpg" alt="" width="640" height="360" loading="lazy" decoding="async">
@@ -95,7 +98,7 @@ def home(lang, ex):
     s = re.sub(r'<!-- ═+\n     TOPICS —.*?</section>\n\n*', '', s, flags=re.S)
     new = topics_section(lang, ex)
     # the featured section's own comment block is optional (fa/ur homepages have none)
-    m = re.search(r'(?:<!-- ═+\n     FEATURED ARTICLE[^\n]*\n═+ -->\n)?<section class="section featured-section"', s) or re.search(r'<!-- ═+\n     FEATURED ARTICLE', s)
+    m = re.search(r'(?:<!-- ═+\n     FEATURED ARTICLE[^\n]*\n═+ -->\n|<!-- FEATURED ARTICLE -->\n)?<section class="section featured-section"', s) or re.search(r'<!-- ═+\n     FEATURED ARTICLE', s)
     assert m, f'{f}: no featured section'
     s = s[:m.start()] + new + s[m.start():]
     open(f, 'w', encoding='utf-8').write(s)
