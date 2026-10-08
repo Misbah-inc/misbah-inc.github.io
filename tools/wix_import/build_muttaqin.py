@@ -98,6 +98,7 @@ def make_covers():
         cover(f'Part {n}', yt[0].upper() + yt[1:], 'Imam Ali (p)  ·  Khutbat al-Muttaqin',
               [(f'{s}.jpg', None), (f'og-{s}.jpg', None), (f'thumb-{s}.jpg', (480, 270))])
     s = f'{SER}-cover-{LANG}'
+    if os.path.exists(D + f'{s}.jpg'): return    # the series cover is the supplied poster (title is part of the picture); don't overwrite it
     cover('The Series', 'The Sermon of the God-Conscious', 'Imam Ali (p)  ·  Khutbat al-Muttaqin',
           [(f'{s}.jpg', None), (f'og-{s}.jpg', None), (f'thumb-{s}.jpg', (480, 270))])
 
