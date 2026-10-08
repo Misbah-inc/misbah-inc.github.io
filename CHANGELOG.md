@@ -5,6 +5,24 @@ Format: `## [Date] — Summary` followed by bulleted details.
 
 ---
 
+## [2026-10-07] — New series: Sermon of Muttaqin (Khutbat al-Muttaqin), parts 1–14
+
+- **`/articles/khutbat-al-muttaqin/`** (series page) + **`/1/` … `/14/`**, English only. Each part opens with its YouTube video (click-to-load via youtube-nocookie, `VideoObject` JSON-LD), then the text. Filed under **Rabi' al-Awwal**, type **Series**, tag **Imam Ali (p)**.
+- **Source:** the channel's own video descriptions (text kept word for word; hashtags, emoji bullets and separators removed; Arabic lines of the sermon set as Arabic). Parts 12 and 13 carried the same passage twice (a rough draft and a clean version); only the clean copy is shown — the dropped lines are listed in `tools/wix_import/muttaqin_content.py`.
+- **Languages:** no Arabic, Farsi or Urdu version of this series exists yet, so no `/ar|fa|ur/` pages were created (hreflang lists `en` + `x-default` only; the series is absent from the other-language indexes and homepages).
+- **Homepage (EN):** new "Latest series" card above Topics, with a button per part. Articles index, `month/rabi-al-awwal`, `tag/imam-ali`, `type/series` and the sitemap were regenerated.
+- **Covers** are generated (Pillow): `images/articles/khutbat-al-muttaqin-{1..14}-en.jpg`, `og-…`, `thumb-…`, plus `khutbat-al-muttaqin-cover-en.jpg` for the series. `build_index.py` now prefers `<slug>-cover-<lang>.jpg` for a series card.
+- Generator: `tools/wix_import/build_muttaqin.py` (re-runnable; add a part by extending `PARTS` in `muttaqin_content.py`, adding `muttaqin_src/<id>.txt` and a `DESC` line, then run `build_sitemap.py`, `build_taxo.py`, `check_site.py`). `check_site.py`: 86 pages, 0 issues.
+
+---
+
+## [2026-10-07] — Mobile fixes: series cards and the Mourning section
+
+- Series part/chapter cards (`.kw-part-card`, `.kw-home-card`): on phones the image ran down behind the title and text; it now sits above the text at its natural shape (whole banner visible). Affects Al-Kawthar and Morning & Evening Mourning in all languages.
+- Homepage Morning & Evening Mourning section on phones: even dark overlay and near-opaque panels so the label, title, description and chapter buttons are readable over the picture (also in the light theme).
+
+---
+
 ## [2026-10-07] — Homepage topics section; Calendar moves to the menu
 
 - **New "Topics" section** right after the hero on all four homepages: three cards (Al-Kawthar series · Lady Khadijah · Imam al-Hussain & Mourning) linking to the series page or the existing `/articles/tag/…` pages. Each language shows only topics that have a page in it; fa/ur have no Imam Hussain pages yet, so they show the Holy Prophet card instead. Card images: `images/topics/`.
