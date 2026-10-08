@@ -72,8 +72,7 @@ ITEMS = {
  'martyrdom-of-muhsin-ibn-ali': (2, 'article', ['muhsin-ibn-ali', 'lady-fatimah-zahra']),                # (guess) Ayyam-e-Muhsiniyah falls in Safar
  'husn-al-hassan-in-quran': (0, 'article', ['imam-hasan', 'quran']),
  'ayatul-kursi': (0, 'article', ['quran']),
- 'recognition-of-arbaeen-part-1': (2, 'article', ['imam-hussain', 'arbaeen']),
- 'recognition-of-arbaeen-part-2': (2, 'article', ['imam-hussain', 'arbaeen']),
+ 'recognition-of-arbaeen': (2, 'series', ['imam-hussain', 'arbaeen']),     # two chapters, /articles/recognition-of-arbaeen/1/ and /2/
  'elegy-of-imam-hussains-thirst': (1, 'article', ['imam-hussain', 'mourning']),                           # (guess) posted just before Muharram
  # Shia calendar announcements
  'announcement-muharram-1448': (1, 'announcement', ['imam-hussain', 'mourning']),
@@ -94,6 +93,7 @@ ITEMS = {
 }
 # every Mourning chapter inherits the series' tags
 for _n in range(1, 11): ITEMS[f'morning-and-evening-mourning/{_n}'] = ITEMS['morning-and-evening-mourning']
+for _n in (1, 2): ITEMS[f'recognition-of-arbaeen/{_n}'] = ITEMS['recognition-of-arbaeen']
 # Sermon of Muttaqin (Imam Ali's sermon, posted weekly since June 2026); the series is filed under Rabi' al-Awwal (month 3)
 ITEMS['khutbat-al-muttaqin'] = (3, 'series', ['imam-ali'])
 for _n in range(1, 15): ITEMS[f'khutbat-al-muttaqin/{_n}'] = ITEMS['khutbat-al-muttaqin']

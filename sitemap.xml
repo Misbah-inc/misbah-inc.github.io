@@ -233,6 +233,8 @@
 
 
 
+
+
   <!-- ── Imported articles + indexes ────────────────────────────── -->
   <url>
     <loc>https://article.misbah-inc.com/articles/</loc>
@@ -869,25 +871,33 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://article.misbah-inc.com/articles/recognition-of-arbaeen-part-1/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://article.misbah-inc.com/articles/recognition-of-arbaeen-part-1/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://article.misbah-inc.com/articles/recognition-of-arbaeen-part-1/"/>
-    <lastmod>2026-07-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://article.misbah-inc.com/articles/recognition-of-arbaeen-part-2/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://article.misbah-inc.com/articles/recognition-of-arbaeen-part-2/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://article.misbah-inc.com/articles/recognition-of-arbaeen-part-2/"/>
-    <lastmod>2026-07-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://article.misbah-inc.com/articles/elegy-of-imam-hussains-thirst/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://article.misbah-inc.com/articles/elegy-of-imam-hussains-thirst/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://article.misbah-inc.com/articles/elegy-of-imam-hussains-thirst/"/>
+    <lastmod>2026-07-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://article.misbah-inc.com/articles/recognition-of-arbaeen/1/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://article.misbah-inc.com/articles/recognition-of-arbaeen/1/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://article.misbah-inc.com/articles/recognition-of-arbaeen/1/"/>
+    <lastmod>2026-07-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://article.misbah-inc.com/articles/recognition-of-arbaeen/2/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://article.misbah-inc.com/articles/recognition-of-arbaeen/2/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://article.misbah-inc.com/articles/recognition-of-arbaeen/2/"/>
+    <lastmod>2026-07-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://article.misbah-inc.com/articles/recognition-of-arbaeen/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://article.misbah-inc.com/articles/recognition-of-arbaeen/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://article.misbah-inc.com/articles/recognition-of-arbaeen/"/>
     <lastmod>2026-07-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>

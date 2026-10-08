@@ -5,6 +5,14 @@ Format: `## [Date] — Summary` followed by bulleted details.
 
 ---
 
+## [2026-10-08] — "The Recognition of Arbaeen" is now one series
+
+- The two stand-alone articles `recognition-of-arbaeen-part-1` / `-2` are merged into a series: **`/articles/recognition-of-arbaeen/`** with chapters **`/1/`** and **`/2/`** (English only; same Wix posts and text, covers and in-article images moved to the new names). Filed under Safar, type **Series**, tags Imam al-Hussain + Arbaeen.
+- **Old URLs removed** (`/articles/recognition-of-arbaeen-part-1/`, `-part-2/`): dropped from the sitemap, indexes and tag/month pages, and deleted from the bucket by the deploy. They were never on a public domain.
+- Generator: `tools/wix_import/build_arbaeen.py` (reuses `build_mourning.series_page`); `batch2.json` no longer lists the two old slugs. Part 2's Wix title is spelled "Arabeen" and is kept as published. `check_site.py`: 87 pages, 0 issues.
+
+---
+
 ## [2026-10-07] — Sermon of Muttaqin: supplied posters
 
 - Series cover = the supplied landscape poster; parts 1–13 = their own portrait posters (banner 720×1280 on the part page; OG 1200×630 and card thumbs show the poster centred on a blurred copy of itself). Part 14 still uses the generated card until its poster arrives. `build_muttaqin.py --posters <dir>` rebuilds them (file `2.*` = part 1 … `14.*` = part 13).
