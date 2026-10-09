@@ -5,6 +5,14 @@ Format: `## [Date] — Summary` followed by bulleted details.
 
 ---
 
+## [2026-10-10] — Homepage: Featured section moved up, with the three Lady Khadijah series
+
+- The **Featured** section now sits straight after the hero on all four homepages (it was fourth). Order: hero → Featured → Latest series (English) → Topics → Al-Kawthar → Morning & Evening Mourning → YouTube.
+- Under the featured article: "More on Lady Khadijah (p)" with three cards — **Biography**, **Poems**, **Ziyarat explanation** — using each language's own series titles and descriptions and linking to that language's series page (cards in `/ar/`, `/fa/`, `/ur/` point at the translated series). Pictures: three different crops of the Lady Khadijah illustration (`images/home/feat-khadijah-*.jpg`).
+- Generator: `tools/wix_import/build_home_featured.py` (idempotent); `build_home_topics.py` now places Topics before the Al-Kawthar section instead of before Featured.
+
+---
+
 ## [2026-10-10] — iOS-style liquid glass top bar
 
 - **Refraction:** script.js draws a displacement map for the bar's exact size (rounded-rect distance field, strongest at the rim) and uses it as a backdrop filter, so text and pictures passing under the bar bend near its edge like a lens. Redrawn on resize; mobile pill included. Chromium-based browsers only — Safari and Firefox do not allow SVG backdrop filters, so they keep the thin frost, saturation boost, bright rim and highlight below.

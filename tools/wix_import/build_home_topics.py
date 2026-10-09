@@ -112,9 +112,9 @@ def home(lang, ex):
     s = re.sub(r'<!-- ═+\n     THROUGH THE YEAR.*?</section>\n\n*', '', s, flags=re.S)
     s = re.sub(r'<!-- ═+\n     TOPICS —.*?</section>\n\n*', '', s, flags=re.S)
     new = topics_section(lang, ex)
-    # the featured section's own comment block is optional (fa/ur homepages have none)
-    m = re.search(r'(?:<!-- ═+\n     FEATURED ARTICLE[^\n]*\n═+ -->\n|<!-- FEATURED ARTICLE -->\n)?<section class="section featured-section"', s) or re.search(r'<!-- ═+\n     FEATURED ARTICLE', s)
-    assert m, f'{f}: no featured section'
+    # Topics sit right before the Al-Kawthar series (the Featured section now comes straight after the hero: see build_home_featured.py)
+    m = re.search(r'(?:<!-- ═+\n[^\n]*\n═+ -->\n)?<section class="section kw-home" id="kawthar-series"', s) or re.search(r'<section class="section mourning-section"', s)
+    assert m, f'{f}: no anchor section for the topics'
     s = s[:m.start()] + new + s[m.start():]
     open(f, 'w', encoding='utf-8').write(s)
 
