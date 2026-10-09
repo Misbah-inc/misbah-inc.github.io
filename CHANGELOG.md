@@ -5,6 +5,14 @@ Format: `## [Date] — Summary` followed by bulleted details.
 
 ---
 
+## [2026-10-09] — Liquid-glass theme, site-wide; inner pages follow the light/dark choice
+
+- **Liquid glass** (end of `assets/style.css`, filters in `assets/script.js`): the top bar is a floating frosted pill; menu pills, slider buttons, gold buttons, cards (articles, series parts, poster cards, topics, featured), quote and source panels, tags and chips are glass with a bright top edge, soft inner glow and springy hover. On Chromium-class browsers a faint wavy refraction is added (SVG displacement, set up by `script.js`); other browsers keep the frosted blur. The "Latest series" card sits on the poster scene as a glass pane. Respects `prefers-reduced-motion` and `prefers-reduced-transparency`.
+- **Light/dark now apply to article-style pages too** (article, series, booklet, index, tag/month/type, ar/fa/ur): they used to stay cream whatever the theme. Dark is the default (like the homepage); explicit light keeps the cream look. Light theme also fixed: the hero is cream with dark text and calligraphy (it stayed dark green with unreadable text), and there is no white box behind the nav pills.
+- Tag pills: the glass edge is on the pill itself, not on the link inside it (it had drawn a box within each pill).
+
+---
+
 ## [2026-10-09] — Homepage "Latest on YouTube" now follows the channel's newest Shorts
 
 - New `tools/update_youtube.py` reads the channel's public feed, recognises Shorts (canonical URL under `/shorts/`), and rewrites the five video cards on all four homepages: each language gets the newest Shorts whose title is in that language, topped up with the newest other Shorts, then normal videos. Titles are written into the HTML (no runtime lookup needed). A browser cannot do this itself — YouTube's feed blocks cross-origin requests — so it must be run before each deploy (or on a schedule). Standard library only.

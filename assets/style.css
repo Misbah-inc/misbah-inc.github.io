@@ -1734,9 +1734,6 @@ h1, h2, h3, h4 {
 .kw-poster-card p { font-size: .88rem; margin: 0; color: #555; }
 @media (max-width: 900px) { .kw-poster-grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; } }
 @media (max-width: 480px) { .kw-poster-card p { display: none; } .kw-poster-card .kw-poster-body { padding: .8rem; } .kw-poster-card h2 { font-size: .95rem; } }
-[data-theme="dark"] .kw-poster-card { background: #1c2b1d; border-color: rgba(201,164,107,0.25); }
-[data-theme="dark"] .kw-poster-card p { color: #c9c3b0; }
-[data-theme="dark"] .kw-poster-card h2 { color: #f1e6c8; }
 @media (prefers-reduced-motion: reduce) { .kw-poster-card { transition: none; } }
 @media (prefers-reduced-motion: reduce) { .kw-part-card, .kw-partnav a, .kw-play { transition: none; } }
 .kw-home-body p a { color: var(--gold-light); text-decoration: underline; text-underline-offset: 3px; }
@@ -1883,3 +1880,193 @@ h1, h2, h3, h4 {
 .dropdown-item.is-soon:hover { background: none; color: rgba(255,255,255,0.35); }
 @media (max-width: 768px) { .nav-dropdown.open .dropdown-panel--months { display: grid; } }
 [data-theme="light"] .dropdown-item.is-soon, [data-theme="light"] .dropdown-item.is-soon:hover { color: rgba(30,61,31,0.4); background: none; }
+
+/* ══ Liquid-glass theme (site-wide). ══
+   (Kept at the end of style.css; delete from here down to remove the theme.)
+   Layers: translucent tint + backdrop blur/saturate (everywhere), a bright top edge and soft inner glow (inset shadows),
+   rounded "droplet" shapes, springy hover. On Chromium-based browsers a faint wavy refraction (SVG displacement) is added via .glass-lens.
+   Anything that doesn't understand backdrop-filter just keeps the plain colour behind it. */
+:root {
+  --glass-tint: rgba(255,255,255,0.10);
+  --glass-tint-strong: rgba(255,255,255,0.18);
+  --glass-edge: rgba(255,255,255,0.34);
+  --glass-edge-soft: rgba(255,255,255,0.14);
+  --glass-shadow: 0 10px 34px rgba(0,0,0,0.28);
+  --glass-blur: blur(18px) saturate(1.7);
+  --glass-spring: cubic-bezier(.3,1.5,.5,1);
+}
+/* ── the bar: a floating droplet instead of a full-width strip ───────────── */
+.site-header {
+  inset-block-start: 10px; inset-inline: clamp(8px, 2vw, 28px);
+  border-radius: 30px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.14), rgba(255,255,255,0.03)), rgba(21,43,21,0.70);
+  -webkit-backdrop-filter: var(--glass-blur); backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-edge-soft);
+  box-shadow: inset 0 1px 0 var(--glass-edge), inset 0 -1px 0 rgba(255,255,255,0.06), inset 0 0 24px rgba(255,255,255,0.05), var(--glass-shadow);
+}
+.nav-link {
+  background: linear-gradient(180deg, rgba(255,255,255,0.20), rgba(255,255,255,0.06));
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.35), 0 2px 8px rgba(0,0,0,0.18);
+  border: 1px solid rgba(255,255,255,0.14);
+  transition: background .3s ease, color .3s ease, transform .35s var(--glass-spring), box-shadow .3s ease;
+}
+.nav-link:hover { background: linear-gradient(180deg, rgba(255,255,255,0.32), rgba(255,255,255,0.12)); transform: translateY(-1px) scale(1.04); box-shadow: inset 0 1px 0 rgba(255,255,255,0.5), 0 6px 16px rgba(0,0,0,0.25); }
+.nav-link:active { transform: scale(0.97); }
+.nav-link.nav-cta { background: linear-gradient(180deg, #f0d79a, var(--gold)); box-shadow: inset 0 1px 0 rgba(255,255,255,0.7), 0 4px 14px rgba(201,164,107,0.35); }
+.dropdown-panel { background: rgba(21,43,21,0.72); -webkit-backdrop-filter: var(--glass-blur); backdrop-filter: var(--glass-blur); border: 1px solid var(--glass-edge-soft); border-radius: 20px; box-shadow: inset 0 1px 0 var(--glass-edge), var(--glass-shadow); }
+[data-theme="light"] .site-header { background: linear-gradient(180deg, rgba(255,255,255,0.75), rgba(255,255,255,0.45)); border-color: rgba(255,255,255,0.8); box-shadow: inset 0 1px 0 #fff, 0 8px 30px rgba(30,61,31,0.16); }
+[data-theme="light"] .nav-link { background: linear-gradient(180deg, rgba(255,255,255,0.8), rgba(255,255,255,0.35)); border-color: rgba(30,61,31,0.12); box-shadow: inset 0 1px 0 #fff, 0 2px 8px rgba(30,61,31,0.1); }
+
+
+.lang-sw a { color: rgba(255,255,255,0.78); }
+/* ── slider buttons: little glass lenses ─────────────────────────────────── */
+.tc-btn {
+  background: radial-gradient(120% 120% at 30% 12%, rgba(255,255,255,0.42), rgba(255,255,255,0.06) 58%), rgba(255,255,255,0.10);
+  -webkit-backdrop-filter: blur(14px) saturate(1.8); backdrop-filter: blur(14px) saturate(1.8);
+  border: 1px solid var(--glass-edge); color: #fff;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.6), inset 0 -6px 12px rgba(0,0,0,0.12), 0 8px 22px rgba(0,0,0,0.35);
+}
+.tc-btn:hover:not(:disabled) { background: radial-gradient(120% 120% at 30% 12%, rgba(255,240,200,0.7), rgba(201,164,107,0.35) 60%), rgba(201,164,107,0.25); color: #fff; box-shadow: inset 0 1px 0 rgba(255,255,255,0.8), 0 0 0 6px rgba(201,164,107,0.16), 0 10px 26px rgba(0,0,0,0.4); }
+.tc-btn.pulse:not(:disabled)::after { border-color: rgba(255,255,255,0.7); }
+[data-theme="light"] .tc-btn { color: #1e3d1f; background: radial-gradient(120% 120% at 30% 12%, rgba(255,255,255,0.95), rgba(255,255,255,0.4) 60%), rgba(255,255,255,0.5); border-color: rgba(30,61,31,0.2); }
+.tc-dots button { background: rgba(255,255,255,0.12); border-color: rgba(255,255,255,0.5); }
+.tc-dots button.on { background: linear-gradient(180deg, #f6e3b2, var(--gold)); border-color: transparent; }
+
+/* ── Latest series: the card becomes a pane of glass over the scene ───────── */
+#muttaqin-series { background-image: linear-gradient(rgba(10,24,12,0.50), rgba(10,24,12,0.16) 50%, rgba(10,24,12,0.05)), url('/images/home/muttaqin-section.jpg'); }
+#muttaqin-series .kw-home-card {
+  border-radius: 30px; border: 1px solid var(--glass-edge);
+  background: linear-gradient(135deg, rgba(255,255,255,0.20), rgba(255,255,255,0.05) 55%, rgba(255,255,255,0.12)), rgba(14,28,14,0.30);
+  -webkit-backdrop-filter: blur(24px) saturate(1.6); backdrop-filter: blur(24px) saturate(1.6);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.55), inset 0 0 40px rgba(255,255,255,0.05), 0 24px 60px rgba(0,0,0,0.35);
+}
+#muttaqin-series .kw-home-card > a { display: flex; align-items: center; justify-content: center; padding: 14px; }
+#muttaqin-series .kw-home-card > a img { height: auto; background: transparent !important; border-radius: 20px; box-shadow: 0 14px 40px rgba(0,0,0,0.4), 0 0 0 1px rgba(255,255,255,0.35); }
+#muttaqin-series .kw-home-body p { color: rgba(255,255,255,0.92); text-shadow: 0 1px 8px rgba(0,0,0,0.35); }
+#muttaqin-series .chapters-label, #muttaqin-series .chapters-row { background: rgba(255,255,255,0.08); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); border: 1px solid var(--glass-edge-soft); box-shadow: inset 0 1px 0 rgba(255,255,255,0.25); }
+#muttaqin-series .chapters-label { color: #fff; }
+#muttaqin-series .ch-btn { background: radial-gradient(120% 120% at 30% 12%, rgba(255,255,255,0.35), rgba(255,255,255,0.04) 60%); border: 1px solid rgba(255,255,255,0.4); color: #fff; box-shadow: inset 0 1px 0 rgba(255,255,255,0.55), 0 4px 12px rgba(0,0,0,0.25); transition: transform .35s var(--glass-spring), background .3s ease; }
+#muttaqin-series .ch-btn:hover { transform: translateY(-3px) scale(1.1); background: radial-gradient(120% 120% at 30% 12%, rgba(255,240,200,0.8), rgba(201,164,107,0.5) 60%); color: #1a1a1a; }
+#muttaqin-series .btn-gold { background: linear-gradient(180deg, #f6e3b2, var(--gold) 70%); color: #20230f; border: 1px solid rgba(255,255,255,0.55); box-shadow: inset 0 1px 0 rgba(255,255,255,0.85), 0 10px 26px rgba(201,164,107,0.35); transition: transform .35s var(--glass-spring), box-shadow .3s ease; }
+#muttaqin-series .btn-gold:hover { transform: translateY(-2px) scale(1.04); box-shadow: inset 0 1px 0 #fff, 0 14px 34px rgba(201,164,107,0.5); }
+@media (max-width: 700px) { #muttaqin-series { background-image: linear-gradient(rgba(10,24,12,0.55), rgba(10,24,12,0.25)), url('/images/home/muttaqin-section-mobile.jpg'); }  }
+
+/* ── wavy refraction, Chromium-class engines only (class set by the inline script in index.html) ───────── */
+.glass-lens .tc-btn, .glass-lens #muttaqin-series .ch-btn { -webkit-backdrop-filter: url(#glass-lens) blur(6px) saturate(1.8); backdrop-filter: url(#glass-lens) blur(6px) saturate(1.8); }
+.glass-lens .site-header { -webkit-backdrop-filter: url(#glass-lens-soft) blur(14px) saturate(1.7); backdrop-filter: url(#glass-lens-soft) blur(14px) saturate(1.7); }
+.glass-lens #muttaqin-series .kw-home-card { -webkit-backdrop-filter: url(#glass-lens-soft) blur(18px) saturate(1.6); backdrop-filter: url(#glass-lens-soft) blur(18px) saturate(1.6); }
+@media (prefers-reduced-motion: reduce) { .nav-link, .tc-btn, #muttaqin-series .ch-btn, #muttaqin-series .btn-gold { transition: none !important; } }
+@media (prefers-reduced-transparency: reduce) { .site-header, .dropdown-panel, .tc-btn, #muttaqin-series .kw-home-card { -webkit-backdrop-filter: none; backdrop-filter: none; background: #1a2e1b; } }
+
+/* ══ Glass on the other pages (articles, series, indexes, booklets) ══════════
+   The cream article pages get soft colour washes so the glass has something to pick up; cards become frosted panes.
+   Selectors start with "body" so they win over each page's inline <style>. */
+body .art-page, body .al-section {
+  background:
+    radial-gradient(55% 32% at 12% 6%, rgba(201,164,107,0.26), transparent 70%),
+    radial-gradient(45% 36% at 92% 24%, rgba(26,61,27,0.14), transparent 70%),
+    radial-gradient(60% 40% at 30% 70%, rgba(201,164,107,0.16), transparent 70%),
+    radial-gradient(50% 36% at 85% 96%, rgba(26,61,27,0.12), transparent 70%),
+    var(--art-cream, #f9f5ee);
+}
+body .al-card, body .kw-part-card, body .kw-poster-card, body .featured-card {
+  background: linear-gradient(150deg, rgba(255,255,255,0.82), rgba(255,255,255,0.50));
+  -webkit-backdrop-filter: blur(16px) saturate(1.5); backdrop-filter: blur(16px) saturate(1.5);
+  border: 1px solid rgba(255,255,255,0.9); border-radius: 22px;
+  box-shadow: inset 0 1px 0 #fff, inset 0 0 0 1px rgba(201,164,107,0.14), 0 14px 34px rgba(30,61,31,0.12), 0 2px 6px rgba(30,61,31,0.06);
+  transition: transform .45s var(--glass-spring), box-shadow .3s ease;
+}
+body .al-card:hover, body .kw-part-card:hover, body .kw-poster-card:hover, body .featured-card:hover {
+  transform: translateY(-6px) scale(1.012);
+  box-shadow: inset 0 1px 0 #fff, inset 0 0 0 1px rgba(201,164,107,0.3), 0 22px 46px rgba(30,61,31,0.18), 0 0 0 5px rgba(201,164,107,0.12);
+}
+body .al-card img, body .kw-part-card img, body .kw-poster-card img { border-radius: 0; }
+body .quran-verse { background: linear-gradient(145deg, rgba(255,255,255,0.7), rgba(201,164,107,0.10)); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.85); border-radius: 22px; box-shadow: inset 0 1px 0 #fff, 0 10px 28px rgba(30,61,31,0.08); }
+body .art-sources { background: linear-gradient(150deg, rgba(255,255,255,0.78), rgba(255,255,255,0.45)); -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px); border: 1px solid rgba(255,255,255,0.9); border-radius: 20px; box-shadow: inset 0 1px 0 #fff, 0 10px 28px rgba(30,61,31,0.08); overflow: hidden; }
+body .kw-partnav a { background: linear-gradient(150deg, rgba(255,255,255,0.85), rgba(255,255,255,0.5)); border: 1px solid rgba(255,255,255,0.9); border-radius: 20px; box-shadow: inset 0 1px 0 #fff, 0 8px 24px rgba(30,61,31,0.1); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); transition: transform .4s var(--glass-spring), box-shadow .3s ease; }
+body .kw-partnav a:hover { transform: translateY(-3px) scale(1.015); box-shadow: inset 0 1px 0 #fff, 0 16px 34px rgba(30,61,31,0.16); }
+body .art-lang-sw-inline a, body .kw-series-chip { background: linear-gradient(180deg, rgba(255,255,255,0.9), rgba(255,255,255,0.5)); border: 1px solid rgba(201,164,107,0.35); box-shadow: inset 0 1px 0 #fff, 0 2px 8px rgba(30,61,31,0.08); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); transition: transform .35s var(--glass-spring), background .25s ease; }
+body .kw-series-chip { color: #7a5b22; font-weight: 600; }
+body .art-tag { background: linear-gradient(180deg, #2f6131, #1a3d1b); color: #fff; border: 1px solid rgba(255,255,255,0.28); box-shadow: inset 0 1px 0 rgba(255,255,255,0.4), 0 3px 10px rgba(26,61,27,0.25); }
+body .art-lang-sw-inline a:hover { transform: translateY(-2px) scale(1.05); }
+body .art-lang-sw-inline a.active { background: linear-gradient(180deg, #2c5a2e, #1a3d1b); color: #fff; }
+body .art-back { transition: transform .35s var(--glass-spring); } body .art-back:hover { transform: translateX(-3px); } [dir="rtl"] body .art-back:hover, body[dir="rtl"] .art-back:hover { transform: translateX(3px); }
+/* every gold button on every page: a polished glass drop */
+body .btn-gold { background: linear-gradient(180deg, #f6e3b2, var(--gold) 72%); color: #20230f; border: 1px solid rgba(255,255,255,0.55); box-shadow: inset 0 1px 0 rgba(255,255,255,0.85), 0 8px 22px rgba(201,164,107,0.32); transition: transform .35s var(--glass-spring), box-shadow .3s ease; }
+body .btn-gold:hover { transform: translateY(-2px) scale(1.04); box-shadow: inset 0 1px 0 #fff, 0 14px 32px rgba(201,164,107,0.48); }
+/* homepage cards on the dark sections */
+body .topic-card { background: linear-gradient(150deg, rgba(255,255,255,0.10), rgba(255,255,255,0.03)), rgba(26,45,26,0.7); -webkit-backdrop-filter: blur(14px) saturate(1.4); backdrop-filter: blur(14px) saturate(1.4); border-radius: 22px; border-color: rgba(255,255,255,0.18); box-shadow: inset 0 1px 0 rgba(255,255,255,0.3), 0 12px 30px rgba(0,0,0,0.3); }
+body .topic-card:hover { transform: translateY(-6px) scale(1.012); }
+[data-theme="light"] body .topic-card, body[data-theme="light"] .topic-card { background: linear-gradient(150deg, rgba(255,255,255,0.9), rgba(255,255,255,0.55)); }
+.kw-poster-card h2, .kw-poster-card p { color: inherit; }
+@media (prefers-reduced-motion: reduce) { body .al-card, body .kw-part-card, body .kw-poster-card, body .featured-card, body .kw-partnav a, body .btn-gold, body .art-back, body .art-lang-sw-inline a { transition: none !important; transform: none !important; } }
+@media (prefers-reduced-transparency: reduce) { body .al-card, body .kw-part-card, body .kw-poster-card, body .featured-card, body .quran-verse, body .art-sources, body .kw-partnav a, body .topic-card { -webkit-backdrop-filter: none; backdrop-filter: none; } }
+
+/* ── Glass, light theme: the hero turns cream (it stayed dark green with dark text), and no white box behind the nav pills ── */
+[data-theme="light"] { --hero-bg: linear-gradient(165deg, #f9f3e2 0%, #f0e5c6 55%, #e8deba 100%); }
+[data-theme="light"] .hero { background: radial-gradient(55% 45% at 50% 28%, rgba(201,164,107,0.38), transparent 72%), radial-gradient(40% 40% at 88% 85%, rgba(26,92,28,0.12), transparent 70%), var(--hero-bg); }
+[data-theme="light"] .hero-title { color: #17341a; text-shadow: 0 2px 0 rgba(255,255,255,0.6); }
+[data-theme="light"] .hero-title .accent { color: #1a5c1c; }
+[data-theme="light"] .hero-sub { color: rgba(30,61,31,0.7); }
+[data-theme="light"] .hero-eyebrow { color: #7a5b22; }
+/* the calligraphy images are white on black and are shown with "screen"; on cream they are inverted and multiplied instead */
+[data-theme="light"] .hero-logo-top, [data-theme="light"] .hero-logo-pair, [data-theme="light"] .hero-logo-dark { filter: invert(1) brightness(0.42); mix-blend-mode: multiply; opacity: 0.92; }
+@media (min-width: 769px) { [data-theme="light"] .nav-links { background: transparent; border: 0; box-shadow: none; } }
+[data-theme="light"] .lang-sw { background: linear-gradient(180deg, rgba(255,255,255,0.75), rgba(255,255,255,0.35)); box-shadow: inset 0 1px 0 #fff; }
+[data-theme="light"] .lang-sw a { color: rgba(30,61,31,0.6); }
+[data-theme="light"] .nav-link { color: #1e3d1f; }
+[data-theme="light"] .nav-link.nav-cta { color: #fff; background: linear-gradient(180deg, #2f6131, #1e3d1f); }
+
+/* tag pills: the <li> is the pill, its link must stay a plain, transparent child */
+body .kw-tags li { border: 1px solid rgba(255,255,255,0.6); box-shadow: inset 0 1px 0 rgba(255,255,255,0.65), 0 2px 8px rgba(30,61,31,0.08); transition: transform .35s var(--glass-spring), box-shadow .3s ease; }
+body .kw-tags li:hover { transform: translateY(-2px) scale(1.05); box-shadow: inset 0 1px 0 rgba(255,255,255,0.8), 0 8px 18px rgba(30,61,31,0.16); }
+body .kw-tags li a { background: none; border: 0; box-shadow: none; -webkit-backdrop-filter: none; backdrop-filter: none; border-radius: 0; transform: none; padding: 0; }
+
+/* ══ Dark theme for article-style pages ══════════════════════════════════════
+   Article, series, booklet, index and filter pages used to stay cream whatever the theme. They now follow it:
+   dark (also the default when nothing is saved) or light (explicit data-theme="light" keeps the cream look above). */
+html:not([data-theme="light"]) body .art-page, html:not([data-theme="light"]) body .al-section {
+  background:
+    radial-gradient(55% 32% at 12% 6%, rgba(201,164,107,0.16), transparent 70%),
+    radial-gradient(45% 36% at 92% 24%, rgba(60,130,70,0.14), transparent 70%),
+    radial-gradient(60% 40% at 30% 70%, rgba(201,164,107,0.09), transparent 70%),
+    radial-gradient(50% 36% at 85% 96%, rgba(60,130,70,0.10), transparent 70%),
+    #0f1a10;
+}
+html:not([data-theme="light"]) body .kw-banner-wrap { background: #0f1a10; }
+html:not([data-theme="light"]) body .art-title, html:not([data-theme="light"]) body .art-part-title, html:not([data-theme="light"]) body .art-section-title, html:not([data-theme="light"]) body .art-back, html:not([data-theme="light"]) body .art-toc a, html:not([data-theme="light"]) body .art-sources-btn, html:not([data-theme="light"]) body .quran-ar, html:not([data-theme="light"]) body .hadith-ar, html:not([data-theme="light"]) body .kw-subtitle, html:not([data-theme="light"]) body .art-title-block h1 { color: #f3e8c8; }
+html:not([data-theme="light"]) body .art-back:hover, html:not([data-theme="light"]) body .art-toc a:hover { color: var(--gold); }
+html:not([data-theme="light"]) body .art-body p, html:not([data-theme="light"]) body .art-body li, html:not([data-theme="light"]) body .art-body td, html:not([data-theme="light"]) body .art-intro, html:not([data-theme="light"]) body .kw-sources-list li { color: #ddd8c6; }
+html:not([data-theme="light"]) body .art-month, html:not([data-theme="light"]) body .art-reading, html:not([data-theme="light"]) body .art-title-arabic, html:not([data-theme="light"]) body .quran-tr, html:not([data-theme="light"]) body .hadith-tr, html:not([data-theme="light"]) body .kw-subhead, html:not([data-theme="light"]) body .art-sources-body li, html:not([data-theme="light"]) body .art-toc .toc-sub a, html:not([data-theme="light"]) body .art-lang-sw-inline .lsw-label, html:not([data-theme="light"]) body .al-browse h2 { color: #b4ae9a; }
+html:not([data-theme="light"]) body .art-meta, html:not([data-theme="light"]) body .art-title-block, html:not([data-theme="light"]) body .art-sources, html:not([data-theme="light"]) body .al-browse { border-color: rgba(255,255,255,0.12); }
+html:not([data-theme="light"]) body .art-section-title { border-bottom-color: rgba(201,164,107,0.3); }
+html:not([data-theme="light"]) body .art-intro, html:not([data-theme="light"]) body .art-toc, html:not([data-theme="light"]) body .art-sources-body, html:not([data-theme="light"]) body .art-lang-sw-inline, html:not([data-theme="light"]) body .hadith-block { background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.14); }
+html:not([data-theme="light"]) body .art-intro { border-left-color: var(--gold); }
+html:not([data-theme="light"]) body .art-body a { color: #e0c58a; }
+/* glass panes, dark version */
+html:not([data-theme="light"]) body .al-card, html:not([data-theme="light"]) body .kw-part-card, html:not([data-theme="light"]) body .kw-poster-card, html:not([data-theme="light"]) body .featured-card, html:not([data-theme="light"]) body .kw-partnav a, html:not([data-theme="light"]) body .art-sources {
+  background: linear-gradient(150deg, rgba(255,255,255,0.12), rgba(255,255,255,0.04)), rgba(22,38,24,0.62);
+  border-color: rgba(255,255,255,0.20);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.32), inset 0 0 0 1px rgba(201,164,107,0.08), 0 14px 34px rgba(0,0,0,0.38);
+}
+html:not([data-theme="light"]) body .al-card:hover, html:not([data-theme="light"]) body .kw-part-card:hover, html:not([data-theme="light"]) body .kw-poster-card:hover, html:not([data-theme="light"]) body .featured-card:hover { box-shadow: inset 0 1px 0 rgba(255,255,255,0.45), 0 22px 46px rgba(0,0,0,0.5), 0 0 0 5px rgba(201,164,107,0.14); }
+html:not([data-theme="light"]) body .quran-verse { background: linear-gradient(145deg, rgba(255,255,255,0.10), rgba(201,164,107,0.07)); border-color: rgba(255,255,255,0.2); box-shadow: inset 0 1px 0 rgba(255,255,255,0.3), 0 10px 28px rgba(0,0,0,0.3); }
+html:not([data-theme="light"]) body .al-title, html:not([data-theme="light"]) body .kw-part-body h2, html:not([data-theme="light"]) body .kw-poster-card h2, html:not([data-theme="light"]) body .kw-partnav strong, html:not([data-theme="light"]) body .featured-title { color: #f3e8c8; }
+html:not([data-theme="light"]) body .al-month, html:not([data-theme="light"]) body .kw-part-body p, html:not([data-theme="light"]) body .kw-poster-card p, html:not([data-theme="light"]) body .featured-excerpt { color: #b9b3a0; }
+html:not([data-theme="light"]) body .al-tag, html:not([data-theme="light"]) body .kw-partnav small, html:not([data-theme="light"]) body .featured-cat { color: #d9b878; }
+html:not([data-theme="light"]) body .al-card img { background: #1b2a1c; }
+html:not([data-theme="light"]) body .art-lang-sw-inline a, html:not([data-theme="light"]) body .kw-series-chip { background: linear-gradient(180deg, rgba(255,255,255,0.16), rgba(255,255,255,0.05)); border-color: rgba(255,255,255,0.22); color: #e9e0c4; box-shadow: inset 0 1px 0 rgba(255,255,255,0.3); }
+html:not([data-theme="light"]) body .kw-series-chip { color: #e0c58a; }
+html:not([data-theme="light"]) body .art-lang-sw-inline a.active { background: linear-gradient(180deg, #3a7a3d, #24552a); color: #fff; }
+html:not([data-theme="light"]) body .kw-tags li, html:not([data-theme="light"]) body .al-browse li a { background: rgba(255,255,255,0.08); color: #e9e0c4; border-color: rgba(255,255,255,0.2); }
+html:not([data-theme="light"]) body .kw-tags li:hover, html:not([data-theme="light"]) body .al-browse li a:hover { background: rgba(255,255,255,0.16); }
+html:not([data-theme="light"]) body .kw-tags .kw-tag-month { background: linear-gradient(180deg, #3a7a3d, #24552a); color: #fff; }
+html:not([data-theme="light"]) body .kw-tags .kw-tag-type { background: rgba(201,164,107,0.28); color: #f3e8c8; }
+html:not([data-theme="light"]) body .al-filters label { color: #b4ae9a; }
+html:not([data-theme="light"]) body .al-filters select, html:not([data-theme="light"]) body .al-filters input { background: rgba(255,255,255,0.08); color: #f3e8c8; border-color: rgba(255,255,255,0.22); color-scheme: dark; }
+html:not([data-theme="light"]) body .al-filters input::placeholder { color: #9d9783; }
+html:not([data-theme="light"]) body .al-results, html:not([data-theme="light"]) body .al-count { color: #b4ae9a; }
+html:not([data-theme="light"]) body .art-sources-btn { border-color: rgba(201,164,107,0.35); }
+html:not([data-theme="light"]) body .art-fig img, html:not([data-theme="light"]) body .art-body img { box-shadow: 0 10px 30px rgba(0,0,0,0.45); }
+html:not([data-theme="light"]) body .kw-bismillah, html:not([data-theme="light"]) body .kw-lead-headings .kw-bismillah { color: #e0c58a; }
+html:not([data-theme="light"]) body .kw-lead-headings p, html:not([data-theme="light"]) body .art-hero-eyebrow { color: #cfc8b2; }

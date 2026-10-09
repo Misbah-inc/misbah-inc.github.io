@@ -185,4 +185,15 @@ document.addEventListener('DOMContentLoaded', () => {
     build(); update();
   });
 
+  /* ── Liquid glass: refraction filters (Chromium-class engines; other browsers keep the plain frosted look) ── */
+  try {
+    if (window.CSS && CSS.supports && CSS.supports('backdrop-filter', 'url(#glass-lens) blur(2px)')) {
+      var svg = '<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">' +
+        '<filter id="glass-lens" x="0" y="0" width="100%" height="100%" color-interpolation-filters="sRGB"><feTurbulence type="fractalNoise" baseFrequency="0.018 0.03" numOctaves="2" seed="4" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="16" xChannelSelector="R" yChannelSelector="G"/></filter>' +
+        '<filter id="glass-lens-soft" x="0" y="0" width="100%" height="100%" color-interpolation-filters="sRGB"><feTurbulence type="fractalNoise" baseFrequency="0.006 0.012" numOctaves="2" seed="9" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="26" xChannelSelector="R" yChannelSelector="G"/></filter></svg>';
+      document.body.insertAdjacentHTML('afterbegin', svg);
+      document.documentElement.classList.add('glass-lens');
+    }
+  } catch (e) {}
+
 });
