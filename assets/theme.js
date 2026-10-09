@@ -14,6 +14,12 @@
   var saved = '';
   try { saved = localStorage.getItem(KEY) || ''; } catch (e) {}
   if (saved === 'light' || saved === 'dark') apply(saved);
+  else {                                   // no saved choice: the page's own default (light) stays; just keep the button label right
+    var cur = root.getAttribute('data-theme') || 'light', labels = function () {
+      document.querySelectorAll('.theme-toggle').forEach(function (b) { b.setAttribute('aria-label', cur === 'light' ? 'Switch to dark mode' : 'Switch to light mode'); });
+    };
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', labels); else labels();
+  }
 
   // Toggle on click
   document.addEventListener('click', function (e) {

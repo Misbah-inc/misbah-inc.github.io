@@ -2130,3 +2130,12 @@ html:not([data-theme="light"]) body .tg-ref { color: #b4ae9a; }
   [dir="rtl"] .featured-img { flex: none; width: 100%; aspect-ratio: 1200 / 760; min-height: unset; }
   .featured-img img { object-fit: cover; }
 }
+
+/* Light theme: sections that sit on a photo keep light-on-dark text (the light palette had turned their headings dark green on a dark picture) */
+[data-theme="light"] .mourning-section .section-label, #muttaqin-series .section-label { color: #e8d5a3; }
+[data-theme="light"] .mourning-section .section-title { color: #fff; text-shadow: 0 2px 12px rgba(0,0,0,0.7); }
+[data-theme="light"] .mourning-section .mourning-desc { color: rgba(255,255,255,0.92); }
+[data-theme="light"] .mourning-section .chapters-label { color: #fff; }
+[data-theme="light"] .mourning-section .ch-btn { border-color: #e8d5a3; color: #e8d5a3; }
+[data-theme="light"] .mourning-section .ch-btn:hover { background: #e8d5a3; color: #1a1a1a; }
+[data-theme="light"] .mourning-section .divider-gem, [data-theme="light"] #muttaqin-series .divider-gem { color: #e8d5a3; }

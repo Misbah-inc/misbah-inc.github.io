@@ -35,6 +35,11 @@ def theme_toggle():
 
 def fix(path):
     s = open(path, encoding='utf-8').read()
+    # default theme = light: the attribute is the default, assets/theme.js replaces it with the visitor's saved choice
+    ht = re.search(r'<html [^>]*>', s)
+    if ht and 'data-theme' not in ht.group(0):
+        s = s.replace(ht.group(0), ht.group(0)[:-1] + ' data-theme="light">', 1)
+        open(path, 'w', encoding='utf-8').write(s)
     m = re.search(r'<header class="site-header">.*?</header>', s, re.S)
     if not m: return False
     rel = os.path.relpath(path, ROOT).replace(os.sep, '/')

@@ -5,6 +5,13 @@ Format: `## [Date] — Summary` followed by bulleted details.
 
 ---
 
+## [2026-10-10] — Light is the default theme; broken social icons in ar / fa / ur
+
+- **Default theme = light.** Every page now ships `<html … data-theme="light">` (set by `fix_header.py`, so it survives rebuilds); a visitor's saved choice (`misbah-theme` in localStorage) still wins, and the theme button's label is set correctly when nothing is saved. Sections that sit on a photo (Morning & Evening Mourning, Latest series) keep light text in the light theme — their headings had turned dark green on a dark picture.
+- **Social icons:** the Facebook icon (and three more in the same row) had its SVG path data cut off at the start in `ar/`, `fa/` and `ur/` (`d="6.627-5.373…"` instead of `d="M24 12.073c0-6.627…"`), so the circle was empty. Repaired from the English page on the three homepages and the Urdu About page (12 + 12 paths); no other malformed paths remain on the site.
+
+---
+
 ## [2026-10-10] — Featured card in ar / fa / ur on phones
 
 - On phones and small tablets (≤ 768 px) the Featured article card was broken in Arabic, Farsi and Urdu: a tall empty box above a squeezed picture. The generic phone rule that stacks the card was overridden by the later `[dir="rtl"] .featured-card { flex-direction: row-reverse }`. The phone layout now also wins for RTL pages, and the picture is cropped to fill its box on phones.
