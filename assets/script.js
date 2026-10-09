@@ -251,24 +251,35 @@ document.addEventListener('DOMContentLoaded', () => {
     buildFilter();
     var rz; window.addEventListener('resize', function () { clearTimeout(rz); rz = setTimeout(buildFilter, 150); });
 
-    /* 2. scrolled state + elastic body + highlight angle */
-    var lastY = window.scrollY, sx = 1, sy = 1, tx = 1, ty = 1, raf = 0;
+    /* 2. scroll response: the bar itself stays perfectly still; what is seen THROUGH it bends more while the page moves and settles when it stops */
+    var restScale = 0, curBezel = 26, lastY = window.scrollY, vel = 0, level = 0, raf = 0, lastApplied = -1;
+    function apply() {
+      // level 0 (still) .. 1 (fast scroll): refraction strength + a little extra frost
+      if (feDisp) {
+        var sc = Math.round((curBezel * 1.3 + curBezel * 1.7 * level) * 2) / 2;             // at rest the rim still bends a little
+        if (sc !== lastApplied) { feDisp.setAttribute('scale', String(sc)); lastApplied = sc; }
+      }
+      bar.style.setProperty('--lg-extra', level.toFixed(3));
+    }
     function frame() {
-      sx += (tx - sx) * 0.18; sy += (ty - sy) * 0.18;
-      bar.style.setProperty('--lg-sx', sx.toFixed(4)); bar.style.setProperty('--lg-sy', sy.toFixed(4));
-      tx += (1 - tx) * 0.12; ty += (1 - ty) * 0.12;                      // relax back to rest
-      if (Math.abs(sx - 1) > 0.0005 || Math.abs(sy - 1) > 0.0005 || Math.abs(tx - 1) > 0.0005) raf = requestAnimationFrame(frame); else { raf = 0; bar.style.removeProperty('--lg-sx'); bar.style.removeProperty('--lg-sy'); }
+      var target = Math.min(Math.abs(vel) / 45, 1);
+      level += (target - level) * (target > level ? 0.28 : 0.10);                           // quick to bend, slow to settle (liquid)
+      vel *= 0.82;                                                                          // scroll speed dies away when no new scroll events arrive
+      apply();
+      if (level > 0.01 || Math.abs(vel) > 0.5) raf = requestAnimationFrame(frame); else { level = 0; vel = 0; apply(); raf = 0; }
     }
     window.addEventListener('scroll', function () {
       var y = window.scrollY, v = y - lastY; lastY = y;
       bar.classList.toggle('is-scrolled', y > 8);
-      bar.style.setProperty('--lg-shine', ((y / 5) % 100).toFixed(1) + '%');           // the highlight drifts as the page moves
+      bar.style.setProperty('--lg-shine', ((y / 5) % 100).toFixed(1) + '%');               // the highlight drifts as the page moves
       if (reduce) return;
-      var k = Math.min(Math.abs(v) / 60, 1);                                              // fast scroll -> stretch wider, squash lower
-      tx = 1 + 0.012 * k; ty = 1 - 0.05 * k;
+      vel = vel * 0.5 + v * 0.5 + (Math.abs(v) > Math.abs(vel) ? v * 0.5 : 0);
       if (!raf) raf = requestAnimationFrame(frame);
     }, { passive: true });
     bar.classList.toggle('is-scrolled', window.scrollY > 8);
+    var baseBuild = buildFilter;
+    buildFilter = function () { baseBuild(); if (feDisp) { var m = parseFloat(feDisp.getAttribute('scale')) || 0; curBezel = m ? m / 1.7 : curBezel; lastApplied = -1; apply(); } };
+    buildFilter();
 
     /* 3. pointer-following specular highlight */
     if (!reduce) bar.addEventListener('pointermove', function (e) {
