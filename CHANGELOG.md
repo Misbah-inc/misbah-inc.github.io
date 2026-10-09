@@ -5,6 +5,13 @@ Format: `## [Date] — Summary` followed by bulleted details.
 
 ---
 
+## [2026-10-09] — Homepage "Latest on YouTube" now follows the channel's newest Shorts
+
+- New `tools/update_youtube.py` reads the channel's public feed, recognises Shorts (canonical URL under `/shorts/`), and rewrites the five video cards on all four homepages: each language gets the newest Shorts whose title is in that language, topped up with the newest other Shorts, then normal videos. Titles are written into the HTML (no runtime lookup needed). A browser cannot do this itself — YouTube's feed blocks cross-origin requests — so it must be run before each deploy (or on a schedule). Standard library only.
+- Run: `python3 tools/update_youtube.py` (add `--dry-run` to only list the picks), then `python3 tools/deploy_s3.py …`.
+
+---
+
 ## [2026-10-09] — Topics slider: arrows moved off the cards, plus motion
 
 - The previous/next buttons now sit in their own side gutters (about 18 px clear of the cards); on phones they move under the slider, one at each end with the page dots between.
