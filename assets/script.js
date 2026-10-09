@@ -139,4 +139,38 @@ document.addEventListener('DOMContentLoaded', () => {
     a.classList.toggle('active', isActive);
   });
 
+  /* ── Topics slider ───────────────────────────────────── */
+  document.querySelectorAll('[data-carousel]').forEach(function (c) {
+    var track = c.querySelector('.topic-track'), prev = c.querySelector('.tc-prev'), next = c.querySelector('.tc-next'), dots = c.querySelector('.tc-dots');
+    var cards = track.children, rtl = getComputedStyle(track).direction === 'rtl';
+    function gap() { return parseFloat(getComputedStyle(track).columnGap) || 24; }
+    function step() { return cards[0].offsetWidth + gap(); }
+    function visible() { return Math.max(1, Math.round((track.clientWidth + gap()) / step())); }
+    function pos() { return Math.abs(track.scrollLeft); }
+    function max() { return track.scrollWidth - track.clientWidth; }
+    function pages() { return Math.max(1, Math.ceil(cards.length / visible())); }
+    function build() {
+      dots.innerHTML = '';
+      for (var i = 0; i < pages(); i++) (function (i) {
+        var b = document.createElement('button'); b.type = 'button'; b.tabIndex = -1;
+        b.addEventListener('click', function () { track.scrollTo({ left: (rtl ? -1 : 1) * Math.min(i * visible() * step(), max()), behavior: 'smooth' }); });
+        dots.appendChild(b);
+      })(i);
+    }
+    function update() {
+      var over = max() > 4;
+      c.classList.toggle('has-overflow', over);
+      if (!over) return;
+      prev.disabled = pos() <= 4; next.disabled = pos() >= max() - 4;
+      var n = dots.children.length, k = max() ? Math.round(pos() / max() * (n - 1)) : 0;
+      for (var i = 0; i < n; i++) dots.children[i].classList.toggle('on', i === k);
+    }
+    function go(dir) { track.scrollBy({ left: (rtl ? -1 : 1) * dir * visible() * step(), behavior: 'smooth' }); }
+    prev.addEventListener('click', function () { go(-1); });
+    next.addEventListener('click', function () { go(1); });
+    track.addEventListener('scroll', function () { window.requestAnimationFrame(update); }, { passive: true });
+    window.addEventListener('resize', function () { build(); update(); });
+    build(); update();
+  });
+
 });

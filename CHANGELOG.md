@@ -5,6 +5,15 @@ Format: `## [Date] — Summary` followed by bulleted details.
 
 ---
 
+## [2026-10-09] — Homepage Topics became a slider; "Latest series" has a picture background
+
+- **Topics** now lists every main topic in a scroll-snap slider, 4 cards at a time on desktop (3 on tablets, 2 on small tablets, one with a peek of the next on phones), with previous/next buttons and page dots; the buttons and dots only appear when something is off-screen, so a language with few topics shows a plain row. Works right-to-left (buttons and scrolling mirror), keyboard-focusable, no library. English shows 10: Sermon of Muttaqin, Al-Kawthar, The Recognition of Arbaeen, Morning & Evening Mourning, the three Booklets series, Lady Khadijah, Imam al-Hussain, the Holy Prophet. ar/fa/ur keep the topics that have pages in their language. Code: `build_home_topics.py` (markup), `style.css` (`.topic-carousel`), `script.js` (slider).
+- **"Latest series" (Sermon of Muttaqin) section** uses a wide scene cut from the series poster instead of the plain green (`images/home/muttaqin-section.jpg` + a mobile crop), with a dark layer for legibility.
+- Topic-card images fixed to a true 16:9 (the `height` attribute had stretched them).
+- New card images in `images/topics/` (registered in `images/CATALOG.md`).
+
+---
+
 ## [2026-10-08] — Booklets, second batch: the Arabic-heavy ones, Arabic kept as images
 
 - Added to the two series and a third: **Muharram & Safar 10–18** (Ziyārat Nāḥiyah excerpts, The Reality of Weeping for Hussain, Ziarat of Imam Ali ibn al-Hussain / Hadith of the Tablet, Shared Traits of Ali Akbar and Ruqayyah, Sermon of Imam al-Hasan on the Peace Treaty, Ziarat Lady Umm al-Banin, School of Umm al-Banin summary, The Final Lament of Reyḥānat al-Ḥusayn, Walking Path of Hussain), **Ghadir 6–9** (Sermon of Mufākharah, Excerpt from Ziyārat Ghadīriyya, Ziyārat of Ali Akbar, Spring of Love) and **Ramadan Booklets 1** (Ziyārat of Khadija). 29 booklets are now live in total; about 380 Arabic lines are pictures cropped from the PDF pages.

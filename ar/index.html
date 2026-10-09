@@ -259,7 +259,9 @@
     <h2 class="section-title" id="topics-heading">المواضيع</h2>
     <div class="divider" aria-hidden="true"><span class="divider-gem">◆</span></div>
     <p class="topics-lead">مجموعات مختارة — شخصية أو سلسلة أو موضوع، في مكان واحد.</p>
-    <div class="topic-grid">
+    <div class="topic-carousel" data-carousel>
+      <button type="button" class="tc-btn tc-prev" aria-label="المواضيع السابقة"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+      <div class="topic-track" tabindex="0" role="region" aria-roledescription="carousel" aria-label="المواضيع">
       <a class="topic-card" href="/ar/articles/al-kawthar/">
         <img src="/images/topics/al-kawthar.jpg" alt="" width="640" height="360" loading="lazy" decoding="async">
         <span class="topic-body">
@@ -287,6 +289,18 @@
           <span class="topic-cta">اقرأ المجموعة</span>
         </span>
       </a>
+      <a class="topic-card" href="/ar/articles/tag/holy-prophet/">
+        <img src="/images/topics/holy-prophet.jpg" alt="" width="640" height="360" loading="lazy" decoding="async">
+        <span class="topic-body">
+          <span class="topic-chip">شخصية جليلة</span>
+          <span class="topic-name">النبي الأكرم (ص)</span>
+          <span class="topic-desc">فضائله وأسماؤه وألقابه ومناسبات حياته.</span>
+          <span class="topic-cta">اقرأ المجموعة</span>
+        </span>
+      </a>
+      </div>
+      <button type="button" class="tc-btn tc-next" aria-label="المواضيع التالية"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+      <div class="tc-dots" aria-hidden="true"></div>
     </div>
   </div>
 </section>

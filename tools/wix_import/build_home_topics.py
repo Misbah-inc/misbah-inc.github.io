@@ -11,35 +11,46 @@ import build_taxo as BT
 from gen_kawthar import PFX, LANGS, ROOT
 
 # (key, kind, target) — target is a tag slug, or a series path under /articles/. Order = priority;
-# the first three that exist in a language are shown (fa/ur have no Imam Hussain pages yet → Holy Prophet).
+# every one that exists in a language is shown, in a slider (4 at a time); a language with few cards gets no arrows.
 TOPICS = [
-    ('khutbat-al-muttaqin', 'path', 'khutbat-al-muttaqin/'),   # English only for now: topic_href skips it where the folder is missing
-    ('al-kawthar',     'path', 'al-kawthar/'),
-    ('lady-khadijah',  'tag',  'lady-khadijah'),
-    ('imam-hussain',   'tag',  'imam-hussain'),
-    ('holy-prophet',   'tag',  'holy-prophet'),
+    ('khutbat-al-muttaqin',          'path', 'khutbat-al-muttaqin/'),   # series and booklets are English only for now: topic_href skips them where the folder is missing
+    ('al-kawthar',                   'path', 'al-kawthar/'),
+    ('recognition-of-arbaeen',       'path', 'recognition-of-arbaeen/'),
+    ('morning-and-evening-mourning', 'path', 'morning-and-evening-mourning/'),
+    ('muharram-safar-booklets',      'path', 'muharram-safar-booklets/'),
+    ('ghadir-booklets',              'path', 'ghadir-booklets/'),
+    ('ramadan-booklets',             'path', 'ramadan-booklets/'),
+    ('lady-khadijah',                'tag',  'lady-khadijah'),
+    ('imam-hussain',                 'tag',  'imam-hussain'),
+    ('holy-prophet',                 'tag',  'holy-prophet'),
 ]
 TEXT = {
  'en': dict(label='Explore by topic', title='Topics', lead='Selected collections — a figure, a series or a subject, gathered in one place.', cta='Read the collection',
             cal='Calendar', soon='coming soon',
-            t={'khutbat-al-muttaqin': ('Series', 'Sermon of Muttaqin', 'Imam Ali’s (p) sermon on the God-conscious, one characteristic at a time — each part with its video.'),
+            prev='Previous topics', next='Next topics', region='Topics',
+            t={'recognition-of-arbaeen': ('Series', 'The Recognition of Arbaeen', 'The visit to Imam Hussain (p): the reward of the pilgrim’s steps and the blessing of intellect.'),
+               'morning-and-evening-mourning': ('Series', 'Morning & Evening Mourning', 'Inspired by Ziarat al-Nahiya: Imam Mahdi’s (ajtf) mourning for Imam Hussain (p), chapter by chapter.'),
+               'muharram-safar-booklets': ('Booklets', 'Muharram & Safar Booklets', 'The nights of Ashura, ziyarat and mourning — illustrated booklets for Muharram and Safar.'),
+               'ghadir-booklets': ('Booklets', 'Ghadir Booklets', 'Stories of the Prophet (p) and Imam Ali (p), from the first call to Ghadir Khumm.'),
+               'ramadan-booklets': ('Booklets', 'Ramadan Booklets', 'Ziyarat and reflections for the month of Ramadan.'),
+               'khutbat-al-muttaqin': ('Series', 'Sermon of Muttaqin', 'Imam Ali’s (p) sermon on the God-conscious, one characteristic at a time — each part with its video.'),
                'al-kawthar': ('Series', 'The Series of Al-Kawthar', 'The knowledge of Kawthar in the Qur’an — Lady Fatimah al-Zahra (p).'),
                'lady-khadijah': ('Noble figure', 'Lady Khadijah (p)', 'Mother of the Believers, first woman to believe, and supporter of the Prophet’s mission.'),
                'imam-hussain': ('Noble figure', 'Imam al-Hussain (p) & Mourning', 'Karbala, Arbaeen and the mourning of the Ahl al-Bayt, including Morning & Evening Mourning.'),
                'holy-prophet': ('Noble figure', 'The Holy Prophet (p)', 'His virtues, names and titles, and the occasions of his life.')}),
- 'ar': dict(label='تصفّح حسب الموضوع', title='المواضيع', lead='مجموعات مختارة — شخصية أو سلسلة أو موضوع، في مكان واحد.', cta='اقرأ المجموعة',
+ 'ar': dict(label='تصفّح حسب الموضوع', title='المواضيع', lead='مجموعات مختارة — شخصية أو سلسلة أو موضوع، في مكان واحد.', cta='اقرأ المجموعة', prev='المواضيع السابقة', next='المواضيع التالية', region='المواضيع',
             cal='التقويم', soon='قريباً',
             t={'al-kawthar': ('سلسلة', 'سلسلة الكوثر', 'معارف الكوثر في القرآن — السيدة فاطمة الزهراء (ع).'),
                'lady-khadijah': ('شخصية جليلة', 'السيدة خديجة (ع)', 'أم المؤمنين وأول امرأة آمنت وسندٌ لرسالة النبي (ص).'),
                'imam-hussain': ('شخصية جليلة', 'الإمام الحسين (ع) والعزاء', 'كربلاء والأربعين وعزاء أهل البيت (ع)، ومنه «العزاء صباحًا ومساءً».'),
                'holy-prophet': ('شخصية جليلة', 'النبي الأكرم (ص)', 'فضائله وأسماؤه وألقابه ومناسبات حياته.')}),
- 'fa': dict(label='مرور بر اساس موضوع', title='موضوعات', lead='مجموعه‌های برگزیده — یک چهره، یک سلسله یا یک موضوع، در یک جا.', cta='خواندن مجموعه',
+ 'fa': dict(label='مرور بر اساس موضوع', title='موضوعات', lead='مجموعه‌های برگزیده — یک چهره، یک سلسله یا یک موضوع، در یک جا.', cta='خواندن مجموعه', prev='موضوعات قبلی', next='موضوعات بعدی', region='موضوعات',
             cal='تقویم', soon='به‌زودی',
             t={'al-kawthar': ('سلسله', 'سلسله‌ی کوثر', 'معارف کوثر در قرآن — حضرت فاطمه زهرا (س).'),
                'lady-khadijah': ('چهره‌ی والا', 'حضرت خدیجه (س)', 'ام‌المؤمنین، نخستین بانوی مؤمن و پشتیبان رسالت پیامبر (ص).'),
                'imam-hussain': ('چهره‌ی والا', 'امام حسین (ع) و عزاداری', 'کربلا، اربعین و عزاداری اهل بیت (ع).'),
                'holy-prophet': ('چهره‌ی والا', 'پیامبر اکرم (ص)', 'فضایل، نام‌ها و القاب و مناسبت‌های زندگی ایشان.')}),
- 'ur': dict(label='موضوع کے مطابق', title='موضوعات', lead='منتخب مجموعے — ایک شخصیت، ایک سلسلہ یا ایک موضوع، ایک ہی جگہ۔', cta='مجموعہ پڑھیں',
+ 'ur': dict(label='موضوع کے مطابق', title='موضوعات', lead='منتخب مجموعے — ایک شخصیت، ایک سلسلہ یا ایک موضوع، ایک ہی جگہ۔', cta='مجموعہ پڑھیں', prev='پچھلے موضوعات', next='اگلے موضوعات', region='موضوعات',
             cal='کیلنڈر', soon='جلد آرہا ہے',
             t={'al-kawthar': ('سلسلہ', 'سلسلۂ کوثر', 'قرآن میں کوثر کی معرفت — حضرت فاطمہ زہرا (س)۔'),
                'lady-khadijah': ('برگزیدہ شخصیت', 'حضرت خدیجہ (س)', 'ام المومنین، پہلی ایمان لانے والی خاتون اور رسالتِ نبوی کی حامی۔'),
@@ -71,7 +82,6 @@ def topics_section(lang, ex):
           <span class="topic-cta">{T['cta']}</span>
         </span>
       </a>''')
-        if len(cards) == 3: break
     return f'''<!-- ═══════════════════════════════════════
      TOPICS — selected collections (generated by tools/wix_import/build_home_topics.py)
 ════════════════════════════════════════ -->
@@ -81,8 +91,13 @@ def topics_section(lang, ex):
     <h2 class="section-title" id="topics-heading">{T['title']}</h2>
     <div class="divider" aria-hidden="true"><span class="divider-gem">◆</span></div>
     <p class="topics-lead">{T['lead']}</p>
-    <div class="topic-grid">
+    <div class="topic-carousel" data-carousel>
+      <button type="button" class="tc-btn tc-prev" aria-label="{T['prev']}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+      <div class="topic-track" tabindex="0" role="region" aria-roledescription="carousel" aria-label="{T['region']}">
 {chr(10).join(cards)}
+      </div>
+      <button type="button" class="tc-btn tc-next" aria-label="{T['next']}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+      <div class="tc-dots" aria-hidden="true"></div>
     </div>
   </div>
 </section>
