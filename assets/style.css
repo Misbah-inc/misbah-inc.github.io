@@ -2074,3 +2074,51 @@ html:not([data-theme="light"]) body .kw-lead-headings p, html:not([data-theme="l
 /* Telegram-sourced series (Lady Khadijah): reference lines under a passage */
 .tg-ref { font-size: 0.88rem; line-height: 1.6; color: #6b6558; margin: -0.3rem 0 0.9rem; padding-inline-start: 0.85rem; border-inline-start: 3px solid rgba(201,164,107,0.55); }
 html:not([data-theme="light"]) body .tg-ref { color: #b4ae9a; }
+
+/* ══ Mobile glass menu (≤ 768px) ═══════════════════════════════════════════
+   The bar stays a floating pill; the menu drops down as its own rounded pane of frosted glass (not a flat block stuck to the bar),
+   with glass buttons, a glass language switcher and the theme button in the last row. */
+@media (max-width: 768px) {
+  .site-header { inset-block-start: 8px; inset-inline: 8px; border-radius: 28px; }
+  .nav-inner { padding-inline: 14px; }
+  .hamburger { width: 44px; height: 44px; border-radius: 50%; align-items: center; justify-content: center; gap: 5px;
+    background: radial-gradient(120% 120% at 30% 12%, rgba(255,255,255,0.40), rgba(255,255,255,0.06) 60%), rgba(255,255,255,0.08);
+    border: 1px solid var(--glass-edge); box-shadow: inset 0 1px 0 rgba(255,255,255,0.55), 0 6px 16px rgba(0,0,0,0.25);
+    -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); transition: transform .3s var(--glass-spring), background .3s ease; }
+  .hamburger:active { transform: scale(0.92); }
+  .hamburger span { width: 20px; height: 2px; background: #fff; }
+  .nav-links {
+    position: fixed; top: calc(var(--nav-h) + 22px); inset-inline: 8px; margin: 0;
+    display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 8px; align-content: start;
+    max-height: 0; padding: 0 14px; overflow: hidden auto; overscroll-behavior: contain;
+    opacity: 0; transform: translateY(-12px) scale(0.97); transform-origin: top center; pointer-events: none; visibility: hidden;
+    border: 1px solid var(--glass-edge-soft); border-radius: 28px;
+    background: linear-gradient(180deg, rgba(255,255,255,0.16), rgba(255,255,255,0.04)), rgba(16,32,16,0.90);
+    -webkit-backdrop-filter: blur(30px) saturate(1.7); backdrop-filter: blur(30px) saturate(1.7);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.40), inset 0 0 40px rgba(255,255,255,0.04), 0 28px 70px rgba(0,0,0,0.45);
+    transition: max-height .45s cubic-bezier(.2,.8,.2,1), padding .3s ease, opacity .25s ease, transform .45s var(--glass-spring), visibility 0s linear .45s;
+  }
+  .nav-links.open { max-height: calc(100vh - var(--nav-h) - 44px); max-height: calc(100dvh - var(--nav-h) - 44px); padding: 14px; opacity: 1; transform: none; pointer-events: auto; visibility: visible;
+    transition: max-height .45s cubic-bezier(.2,.8,.2,1), padding .3s ease, opacity .25s ease, transform .45s var(--glass-spring), visibility 0s; }
+  .nav-links > * { grid-column: 1 / -1; }
+  .nav-links .nav-link { width: 100%; min-height: 48px; padding: 0.7rem 1.1rem; font-size: 0.95rem; justify-content: space-between; }
+  .nav-links .nav-dropdown { width: 100%; }
+  .nav-links .dropdown-panel { position: static; width: 100%; margin-top: 6px; box-shadow: none; background: rgba(255,255,255,0.06); border: 1px solid var(--glass-edge-soft); border-radius: 20px; }
+  .nav-links .dropdown-item { color: #fff; border-radius: 14px; }
+  .nav-links .lang-sw { grid-column: 1; justify-self: stretch; display: flex; justify-content: space-around; padding: 0.35rem 0.5rem; border-radius: 22px; margin-top: 4px;
+    background: linear-gradient(180deg, rgba(255,255,255,0.14), rgba(255,255,255,0.04)); border: 1px solid var(--glass-edge-soft); box-shadow: inset 0 1px 0 rgba(255,255,255,0.3); }
+  .nav-links .lang-sw a { padding: 0.45rem 0.7rem; font-size: 0.9rem; color: rgba(255,255,255,0.75); }
+  .nav-links .lang-sw a.active { color: var(--gold-light); font-weight: 700; }
+  .nav-links .theme-toggle { grid-column: 2; margin-top: 4px; width: 46px; height: 46px; }
+  [data-theme="light"] .hamburger { background: radial-gradient(120% 120% at 30% 12%, rgba(255,255,255,0.95), rgba(255,255,255,0.4) 60%), rgba(255,255,255,0.5); border-color: rgba(30,61,31,0.2); }
+  [data-theme="light"] .hamburger span { background: #1e3d1f; }
+  [data-theme="light"] .nav-links { background: linear-gradient(180deg, rgba(255,255,255,0.94), rgba(255,255,255,0.78)); border-color: rgba(255,255,255,0.9);
+    box-shadow: inset 0 1px 0 #fff, 0 26px 60px rgba(30,61,31,0.22); }
+  [data-theme="light"] .nav-links .dropdown-panel { background: rgba(255,255,255,0.55); border-color: rgba(30,61,31,0.12); }
+  [data-theme="light"] .nav-links .dropdown-item { color: #1e3d1f; }
+  [data-theme="light"] .nav-links .lang-sw { background: linear-gradient(180deg, rgba(255,255,255,0.9), rgba(255,255,255,0.5)); border-color: rgba(30,61,31,0.12); }
+  [data-theme="light"] .nav-links .lang-sw a { color: rgba(30,61,31,0.6); }
+  [data-theme="light"] .nav-links .lang-sw a.active { color: #1e3d1f; }
+}
+@media (prefers-reduced-motion: reduce) { .nav-links, .hamburger { transition: none !important; } }
+@media (prefers-reduced-transparency: reduce) { .nav-links { -webkit-backdrop-filter: none; backdrop-filter: none; background: #14281a; } [data-theme="light"] .nav-links { background: #fff; } }

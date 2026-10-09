@@ -280,3 +280,7 @@ def main():
 
 if __name__ == '__main__':
     main()
+
+# every build ends by making the headers right (language links to the same page, theme button): see fix_header.py
+import fix_header as _fh
+_fh.main()

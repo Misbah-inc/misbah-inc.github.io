@@ -129,15 +129,12 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  /* ── Active language highlight ────────────────────────── */
-  const langLinks = document.querySelectorAll('.lang-sw a');
-  const pathLang  = location.pathname.split('/')[1]; // '' | 'ar' | 'fa' | 'ur'
-  langLinks.forEach(a => {
-    const href = a.getAttribute('href');
-    const isActive = (pathLang === '' && href === '/') ||
-                     (pathLang !== '' && href === '/' + pathLang + '/');
-    a.classList.toggle('active', isActive);
+  /* ── Active language highlight (by hreflang: the links point at the same page in each language) ── */
+  const pathLang = ['ar', 'fa', 'ur'].indexOf(location.pathname.split('/')[1]) >= 0 ? location.pathname.split('/')[1] : 'en';
+  document.querySelectorAll('.lang-sw a').forEach(a => {
+    a.classList.toggle('active', a.getAttribute('hreflang') === pathLang);
   });
+
 
   /* ── Topics slider ───────────────────────────────────── */
   document.querySelectorAll('[data-carousel]').forEach(function (c) {

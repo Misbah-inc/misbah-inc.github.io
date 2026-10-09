@@ -29,4 +29,14 @@ for slug,c in cat.items():
         if bm and re.search(r'Updated:|Checking Your',bm.group(1)): iss.append('wix leftover')
         if not bm and c.get('kind')!='series': iss.append('no body')
         if iss: bad+=1; print('XX',f,iss)
-print(n,'pages checked,',bad,'with issues')
+# header: language links must stay inside their language and every page needs the theme button
+import glob as _g
+hb=0
+for hf in _g.glob('**/*.html', recursive=True):
+    if hf.startswith(('tools/','assets/','node_modules/')) or '/work/' in hf: continue
+    s=open(hf,encoding='utf-8').read(); m=re.search(r'<header class="site-header">.*?</header>',s,re.S)
+    if not m: continue
+    links=dict((l,h) for h,l in re.findall(r'<a href="([^"]+)" hreflang="(\w+)"(?: class="active")?>[A-Z]{2}</a>',m.group(0)))
+    okl=all((links.get(l,'').startswith('/'+l+'/') if l!='en' else not re.match(r'/(ar|fa|ur)/',links.get('en','/'))) for l in ('en','ar','fa','ur')) and 'rabi_al_awwal' not in ''.join(links.values()) or 'rabi_al_awwal' in hf
+    if not okl or 'theme-toggle' not in m.group(0): hb+=1; print('XX header',hf)
+print(n,'pages checked,',bad,'with issues;',hb,'headers wrong')

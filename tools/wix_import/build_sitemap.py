@@ -25,3 +25,7 @@ for slug, c in sorted(cat.items(), key=lambda kv: kv[1]['published'], reverse=Tr
 s = s.replace('</urlset>', add.rstrip('\n') + '\n</urlset>')
 open(ROOT + 'sitemap.xml', 'w', encoding='utf-8').write(s)
 import xml.dom.minidom as m; m.parse(ROOT + 'sitemap.xml'); print('sitemap urls', s.count('<url>'))
+
+# every build ends by making the headers right (language links to the same page, theme button): see fix_header.py
+import fix_header as _fh
+_fh.main()

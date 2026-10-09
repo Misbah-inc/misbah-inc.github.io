@@ -5,6 +5,14 @@ Format: `## [Date] — Summary` followed by bulleted details.
 
 ---
 
+## [2026-10-10] — Header fixes on every page: language links, theme button, mobile glass menu
+
+- **Language switcher was wrong on 302 of 315 pages**: the generators copy the Lady Khadijah article's header into every page they write, so EN / AR / FA / UR all linked to `/…/articles/rabi_al_awwal/`. New `tools/wix_import/fix_header.py` rewrites the switcher on every page: each language links to the same page in that language (the page's own hreflang alternate, else the same path if it exists, else that language's articles index or home for English-only content), the current language is marked active. It also adds the **theme (light/dark) button**, which was missing from 158 pages. It runs at the end of `build_sitemap.py` and `build_taxo.py`; `check_site.py` now fails if a header regresses (headers wrong: 0). `script.js` now marks the active language by `hreflang` (it used to un-mark it on every page but the homepages).
+- **Audit of ar / fa / ur:** every page has the right `lang`/`dir`, a canonical equal to its own URL, reciprocal hreflang and the right `og:locale` (one Arabic page had a different locale: fixed). English 158 pages, Arabic 57, Farsi 50, Urdu 50 — the difference is English-only articles, which now send AR/FA/UR to that language's articles index.
+- **Mobile menu (≤ 768px):** the open menu was a flat white block under the bar. It is now a floating rounded pane of frosted glass under the pill (blur, bright edge, springy open/close), with glass buttons, a glass language switcher and the theme button in the last row; works in light/dark and right-to-left. The hamburger is a glass button.
+
+---
+
 ## [2026-10-10] — Three Lady Khadijah series from the Telegram channels, in four languages
 
 - **`/articles/lady-khadijah-poems/`** (8 poems), **`/articles/lady-khadijah-biography/`** (4 weekly chapters) and **`/articles/lady-khadijah-ziyarat/`** (4 Friday parts of the ziyarat commentary), each with parts `/1/`…, mirrored under `/ar/`, `/fa/`, `/ur/` — 3 series pages + 16 part pages per language, 76 pages. Part N is the same part in every language; every page links to its three siblings (language switcher + hreflang `en`, `ar`, `fa`, `ur`, `x-default`).
