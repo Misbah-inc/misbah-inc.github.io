@@ -5,6 +5,13 @@ Format: `## [Date] — Summary` followed by bulleted details.
 
 ---
 
+## [2026-10-09] — Topics slider: arrows moved off the cards, plus motion
+
+- The previous/next buttons now sit in their own side gutters (about 18 px clear of the cards); on phones they move under the slider, one at each end with the page dots between.
+- Motion: buttons grow and glow on hover, press down on click, and the arrow nudges toward its direction; the active dot stretches into a pill; cards scrolled out of view dim and shrink slightly and settle as they slide in; the "next" button gets a soft pulsing ring until the first use. All of it is off under `prefers-reduced-motion`.
+
+---
+
 ## [2026-10-09] — Homepage Topics became a slider; "Latest series" has a picture background
 
 - **Topics** now lists every main topic in a scroll-snap slider, 4 cards at a time on desktop (3 on tablets, 2 on small tablets, one with a peek of the next on phones), with previous/next buttons and page dots; the buttons and dots only appear when something is off-screen, so a language with few topics shows a plain row. Works right-to-left (buttons and scrolling mirror), keyboard-focusable, no library. English shows 10: Sermon of Muttaqin, Al-Kawthar, The Recognition of Arbaeen, Morning & Evening Mourning, the three Booklets series, Lady Khadijah, Imam al-Hussain, the Holy Prophet. ar/fa/ur keep the topics that have pages in their language. Code: `build_home_topics.py` (markup), `style.css` (`.topic-carousel`), `script.js` (slider).

@@ -170,6 +170,18 @@ document.addEventListener('DOMContentLoaded', () => {
     next.addEventListener('click', function () { go(1); });
     track.addEventListener('scroll', function () { window.requestAnimationFrame(update); }, { passive: true });
     window.addEventListener('resize', function () { build(); update(); });
+    // which cards are on screen (dims the rest) and the first-visit hint on the "next" button
+    if ('IntersectionObserver' in window) {
+      var io = new IntersectionObserver(function (es) {
+        es.forEach(function (e) { e.target.classList.toggle('in-view', e.intersectionRatio >= 0.6); });
+        c.classList.add('io-ready');     // dim only once we know which cards are visible (no flash on load)
+      }, { root: track, threshold: [0, 0.6, 1] });
+      Array.prototype.forEach.call(cards, function (el) { io.observe(el); });
+    } else { Array.prototype.forEach.call(cards, function (el) { el.classList.add('in-view'); }); }
+    function stopPulse() { next.classList.remove('pulse'); }
+    next.classList.add('pulse');
+    next.addEventListener('click', stopPulse); prev.addEventListener('click', stopPulse);
+    track.addEventListener('scroll', function () { if (pos() > 8) stopPulse(); }, { passive: true });
     build(); update();
   });
 

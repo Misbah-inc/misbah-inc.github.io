@@ -1806,25 +1806,44 @@ h1, h2, h3, h4 {
 .topics-section .section-title { color: var(--white); }
 .topics-lead { max-width: 640px; margin: 0 auto 2.5rem; color: rgba(255,255,255,0.6); font-size: 1rem; }
 /* Topics slider: all cards in one scroll-snap row, 4 at a time on desktop; arrows + dots appear only when something is off-screen (assets/script.js) */
-.topic-carousel { position: relative; }
+.topic-carousel { position: relative; padding-inline: 64px; }
 .topic-track { display: flex; gap: 1.5rem; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; -webkit-overflow-scrolling: touch; text-align: start; padding: 4px 2px 8px; }
 .topic-track::-webkit-scrollbar { display: none; }
 .topic-track > .topic-card { flex: 0 0 calc((100% - 4.5rem) / 4); scroll-snap-align: start; min-width: 0; }
 .topic-track:focus-visible { outline: 2px solid var(--gold); outline-offset: 4px; border-radius: 10px; }
-.tc-btn { position: absolute; top: 34%; z-index: 2; width: 44px; height: 44px; border-radius: 50%; border: 1px solid var(--gold); background: rgba(14,31,14,0.92); color: var(--gold-light); display: none; align-items: center; justify-content: center; cursor: pointer; transition: background var(--ease), opacity var(--ease), transform var(--ease); box-shadow: 0 4px 16px rgba(0,0,0,0.4); }
+.tc-btn { position: absolute; top: 30%; z-index: 2; width: 44px; height: 44px; border-radius: 50%; border: 1px solid var(--gold); background: rgba(14,31,14,0.92); color: var(--gold-light); display: none; align-items: center; justify-content: center; cursor: pointer; transition: background .25s ease, color .25s ease, opacity .25s ease, transform .25s cubic-bezier(.3,1.4,.5,1), box-shadow .25s ease; box-shadow: 0 4px 16px rgba(0,0,0,0.4); }
 .tc-btn svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
-.tc-btn:hover:not(:disabled) { background: var(--gold); color: #1a1a1a; }
+.tc-btn:hover:not(:disabled) { background: var(--gold); color: #1a1a1a; transform: scale(1.1); box-shadow: 0 0 0 6px rgba(201,164,107,0.18), 0 6px 20px rgba(0,0,0,0.45); }
+.tc-btn:active:not(:disabled) { transform: scale(0.94); }
+.tc-btn:focus-visible { outline: 2px solid var(--gold-light); outline-offset: 3px; }
+.tc-btn svg { transition: transform .25s ease; }
+.tc-prev:hover:not(:disabled) svg { transform: translateX(-3px); } .tc-next:hover:not(:disabled) svg { transform: translateX(3px); }
+[dir="rtl"] .tc-prev:hover:not(:disabled) svg { transform: scaleX(-1) translateX(-3px); } [dir="rtl"] .tc-next:hover:not(:disabled) svg { transform: scaleX(-1) translateX(3px); }
+/* a quiet ring on the "next" button until the reader first uses the slider, so it is clear there is more */
+.tc-btn.pulse:not(:disabled)::after { content: ''; position: absolute; inset: -1px; border-radius: 50%; border: 2px solid var(--gold); animation: tc-pulse 2s ease-out infinite; pointer-events: none; }
+@keyframes tc-pulse { 0% { transform: scale(1); opacity: .7; } 100% { transform: scale(1.7); opacity: 0; } }
+/* cards that are scrolled out of view dim and shrink a little; they settle as they slide in */
+.topic-track > .topic-card { transition: opacity .5s ease, transform .5s cubic-bezier(.2,.8,.2,1), border-color var(--ease), box-shadow var(--ease); }
+.topic-carousel.has-overflow.io-ready .topic-track > .topic-card:not(.in-view) { opacity: .4; transform: scale(.965); }
 .tc-btn:disabled { opacity: 0.25; cursor: default; }
-.tc-prev { inset-inline-start: -22px; } .tc-next { inset-inline-end: -22px; }
+.tc-prev { inset-inline-start: 6px; } .tc-next { inset-inline-end: 6px; }
 [dir="rtl"] .tc-btn svg { transform: scaleX(-1); }
 .topic-carousel.has-overflow .tc-btn { display: flex; }
 .tc-dots { display: none; justify-content: center; gap: 8px; margin-top: 1.1rem; }
 .topic-carousel.has-overflow .tc-dots { display: flex; }
-.tc-dots button { width: 9px; height: 9px; padding: 0; border-radius: 50%; border: 1px solid var(--gold); background: transparent; cursor: pointer; }
-.tc-dots button.on { background: var(--gold); }
+.tc-dots button { width: 9px; height: 9px; padding: 0; border-radius: 50%; border: 1px solid var(--gold); background: transparent; cursor: pointer; transition: width .3s ease, background .3s ease; }
+.tc-dots button.on { background: var(--gold); width: 24px; border-radius: 6px; }
 @media (max-width: 1100px) { .topic-track > .topic-card { flex-basis: calc((100% - 3rem) / 3); } }
-@media (max-width: 760px) { .topic-track > .topic-card { flex-basis: calc((100% - 1.5rem) / 2); } .tc-prev { inset-inline-start: -8px; } .tc-next { inset-inline-end: -8px; } .topic-track { gap: 1rem; } .topic-track > .topic-card { } }
-@media (max-width: 520px) { .topic-track > .topic-card { flex-basis: 78%; } .tc-btn { width: 38px; height: 38px; } }
+@media (max-width: 1100px) { .topic-carousel { padding-inline: 56px; } }
+@media (max-width: 760px) {
+  .topic-carousel { padding-inline: 0; padding-bottom: 66px; }
+  .topic-track > .topic-card { flex-basis: calc((100% - 1rem) / 2); } .topic-track { gap: 1rem; }
+  .tc-btn { top: auto; bottom: 0; width: 42px; height: 42px; }
+  .tc-prev { inset-inline-start: 4px; } .tc-next { inset-inline-end: 4px; }
+  .tc-dots { position: absolute; bottom: 17px; left: 56px; right: 56px; margin: 0; gap: 6px; flex-wrap: wrap; pointer-events: none; }
+  .tc-dots button { pointer-events: auto; }
+}
+@media (max-width: 520px) { .topic-track > .topic-card { flex-basis: 78%; } }
 .topic-card {
   display: flex; flex-direction: column; overflow: hidden;
   border-radius: 14px; border: 1px solid rgba(201,164,107,0.28);
@@ -1844,7 +1863,7 @@ h1, h2, h3, h4 {
 [dir="rtl"] .topic-cta::after { content: ' ←'; }
 [dir="rtl"] .topic-chip, [dir="rtl"] .topic-cta { letter-spacing: 0; text-transform: none; font-size: 0.85rem; }
 [dir="rtl"] .topic-name { font-family: 'Amiri', serif; font-size: 1.45rem; }
-@media (prefers-reduced-motion: reduce) { .topic-card, .topic-card img, .tc-btn { transition: none; } .topic-track { scroll-behavior: auto; } }
+@media (prefers-reduced-motion: reduce) { .topic-card, .topic-card img, .tc-btn, .tc-btn svg, .tc-dots button { transition: none !important; } .tc-btn.pulse::after { animation: none; } .topic-carousel.has-overflow.io-ready .topic-track > .topic-card:not(.in-view) { opacity: 1; transform: none; } }
 [data-theme="light"] .topics-section .section-title { color: #1e3d1f; }
 [data-theme="light"] .topics-lead { color: #555; }
 [data-theme="light"] .tc-btn { background: #fff; color: #1e3d1f; border-color: #8a6a2f; }
