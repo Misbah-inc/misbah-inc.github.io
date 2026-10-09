@@ -2122,3 +2122,11 @@ html:not([data-theme="light"]) body .tg-ref { color: #b4ae9a; }
 }
 @media (prefers-reduced-motion: reduce) { .nav-links, .hamburger { transition: none !important; } }
 @media (prefers-reduced-transparency: reduce) { .nav-links { -webkit-backdrop-filter: none; backdrop-filter: none; background: #14281a; } [data-theme="light"] .nav-links { background: #fff; } }
+
+/* RTL featured card on phones: the RTL rule ([dir="rtl"] .featured-card { flex-direction: row-reverse }) came later and beat the phone
+   layout, so in Arabic / Farsi / Urdu the card stayed a row at phone width — a tall empty box above a squeezed picture. Stack it like English. */
+@media (max-width: 768px) {
+  [dir="rtl"] .featured-card { flex-direction: column; aspect-ratio: unset; }
+  [dir="rtl"] .featured-img { flex: none; width: 100%; aspect-ratio: 1200 / 760; min-height: unset; }
+  .featured-img img { object-fit: cover; }
+}

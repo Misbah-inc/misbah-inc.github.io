@@ -5,6 +5,12 @@ Format: `## [Date] — Summary` followed by bulleted details.
 
 ---
 
+## [2026-10-10] — Featured card in ar / fa / ur on phones
+
+- On phones and small tablets (≤ 768 px) the Featured article card was broken in Arabic, Farsi and Urdu: a tall empty box above a squeezed picture. The generic phone rule that stacks the card was overridden by the later `[dir="rtl"] .featured-card { flex-direction: row-reverse }`. The phone layout now also wins for RTL pages, and the picture is cropped to fill its box on phones.
+
+---
+
 ## [2026-10-10] — Header fixes on every page: language links, theme button, mobile glass menu
 
 - **Language switcher was wrong on 302 of 315 pages**: the generators copy the Lady Khadijah article's header into every page they write, so EN / AR / FA / UR all linked to `/…/articles/rabi_al_awwal/`. New `tools/wix_import/fix_header.py` rewrites the switcher on every page: each language links to the same page in that language (the page's own hreflang alternate, else the same path if it exists, else that language's articles index or home for English-only content), the current language is marked active. It also adds the **theme (light/dark) button**, which was missing from 158 pages. It runs at the end of `build_sitemap.py` and `build_taxo.py`; `check_site.py` now fails if a header regresses (headers wrong: 0). `script.js` now marks the active language by `hreflang` (it used to un-mark it on every page but the homepages).
