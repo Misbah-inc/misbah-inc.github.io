@@ -1695,6 +1695,15 @@ h1, h2, h3, h4 {
 
 /* homepage series card */
 .kw-home { background: var(--dark-section); }
+/* Homepage "Latest series" (Sermon of Muttaqin): the scene from the series poster instead of the plain green; the dark layer keeps the text readable */
+#muttaqin-series { position: relative; background-color: #14281a; background-image: linear-gradient(rgba(10,24,12,0.74), rgba(10,24,12,0.42) 45%, rgba(10,24,12,0.22)), url('/images/home/muttaqin-section.jpg'); background-size: cover; background-position: center bottom; background-repeat: no-repeat; }
+#muttaqin-series .section-label { color: var(--gold-light); }
+#muttaqin-series .section-title { color: #fff; text-shadow: 0 2px 12px rgba(0,0,0,0.6); }
+[data-theme="light"] #muttaqin-series .section-title { color: #fff; }
+#muttaqin-series .kw-home-card { background: rgba(10,24,12,0.62); -webkit-backdrop-filter: blur(3px); backdrop-filter: blur(3px); }
+[data-theme="light"] #muttaqin-series .kw-home-card { background: rgba(10,24,12,0.62); }
+[data-theme="light"] #muttaqin-series .kw-home-body p { color: rgba(255,255,255,0.85); }
+@media (max-width: 700px) { #muttaqin-series { background-image: linear-gradient(rgba(10,24,12,0.85), rgba(10,24,12,0.6)), url('/images/home/muttaqin-section-mobile.jpg'); } }
 .kw-home-card { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 0; margin-top: 2.5rem; border-radius: 18px; overflow: hidden; background: rgba(255,255,255,0.04); border: 1px solid rgba(201,164,107,0.3); text-align: start; }
 .kw-home-card img { width: 100%; height: 100%; object-fit: cover; }
 .kw-home-body { padding: 2rem; display: flex; flex-direction: column; justify-content: center; gap: 0.9rem; }

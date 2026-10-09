@@ -34,3 +34,9 @@ it easy to find which image belongs where as the library grows.
 | imam-hussain.jpg | articles/morning-and-evening-mourning-1-en.jpg | homepage Topics |
 | holy-prophet.jpg | articles/virtues-of-the-messenger-of-allah-en.jpg | homepage Topics (fa/ur fallback) |
 | khutbat-al-muttaqin.jpg | articles/khutbat-al-muttaqin-cover-en.jpg (centre crop) | homepage Topics (EN only) |
+
+## images/home/ (homepage section backgrounds)
+| File | Size | Source | Used in |
+|---|---|---|---|
+| muttaqin-section.jpg | 1920 × 900, ~115 KB | text-free strip of the Sermon of Muttaqin poster (city + crowd), sky extended and darkened | `index.html` → "Latest series" section background |
+| muttaqin-section-mobile.jpg | 720 × 600, ~36 KB | crop of the same | same, ≤ 700 px wide |
