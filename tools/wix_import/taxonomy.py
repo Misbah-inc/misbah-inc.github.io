@@ -111,6 +111,12 @@ for _n, (_m, _tags) in {3: (1, ['lady-ruqayyah'] + _MH), 4: (1, ['imam-sajjad'] 
 for _n, _tags in {6: ['lady-fatimah-zahra', 'ghadir'], 7: ['imam-ali', 'ghadir', 'ziyarat'], 8: ['ziyarat'], 9: ['imam-ali', 'ghadir']}.items():
     ITEMS[f'ghadir-booklets/{_n}'] = (12, 'series', _tags)
 ITEMS['ramadan-booklets/1'] = (9, 'series', ['lady-khadijah', 'ziyarat'])
+# Lady Khadijah series from the Telegram channels (build_khadijah.py): poems 8 parts, biography 4, ziyarat explanation 4
+ITEMS['lady-khadijah-poems'] = (4, 'series', ['lady-khadijah', 'holy-prophet'])
+ITEMS['lady-khadijah-biography'] = (4, 'series', ['lady-khadijah'])
+ITEMS['lady-khadijah-ziyarat'] = (4, 'series', ['lady-khadijah', 'ziyarat'])
+for _n in range(1, 13):
+    for _s in ('lady-khadijah-poems', 'lady-khadijah-biography', 'lady-khadijah-ziyarat'): ITEMS[f'{_s}/{_n}'] = ITEMS[_s]
 # Sermon of Muttaqin (Imam Ali's sermon, posted weekly since June 2026); the series is filed under Rabi' al-Awwal (month 3)
 ITEMS['khutbat-al-muttaqin'] = (3, 'series', ['imam-ali'])
 for _n in range(1, 15): ITEMS[f'khutbat-al-muttaqin/{_n}'] = ITEMS['khutbat-al-muttaqin']

@@ -5,6 +5,16 @@ Format: `## [Date] — Summary` followed by bulleted details.
 
 ---
 
+## [2026-10-10] — Three Lady Khadijah series from the Telegram channels, in four languages
+
+- **`/articles/lady-khadijah-poems/`** (8 poems), **`/articles/lady-khadijah-biography/`** (4 weekly chapters) and **`/articles/lady-khadijah-ziyarat/`** (4 Friday parts of the ziyarat commentary), each with parts `/1/`…, mirrored under `/ar/`, `/fa/`, `/ur/` — 3 series pages + 16 part pages per language, 76 pages. Part N is the same part in every language; every page links to its three siblings (language switcher + hreflang `en`, `ar`, `fa`, `ur`, `x-default`).
+- **Source:** the channels @misbah110 (fa), @misbah110_en, @misbah110_ar, @misbah110_ur — text word for word. Only Telegram furniture is removed (hashtag header, ✦━✦ dividers, the @channel footer, bullet emoji); a post split over two messages is joined; the repeated "🌸 Biography of Lady Khadijah… 🌸" title line (the series name) is not repeated on each page. Generator: `tools/wix_import/build_khadijah.py` (+ `tg_collect.py`, `tg_scan.py`); scans are cached in `work/tg/`. The 17 early daily "Introducing Lady Khadijah" parts (26 Aug–12 Sep) are intentionally not included.
+- **SEO per language:** `<html lang dir>`, canonical, hreflang for all four + x-default, Open Graph (`og:locale` en_US/ar_AR/fa_IR/ur_PK) and Twitter tags, `Article` + `BreadcrumbList` + `CreativeWorkSeries` JSON-LD with `inLanguage`, one h1, a title tag of the form "<heading> | <series> | <brand>" (≤ 70 chars) and a description from the part's own first paragraphs. All 76 pages audited, 0 issues; `check_site.py` 194 pages, 0 issues.
+- Filed under Rabi' al-Thani, type Series; tags Lady Khadijah (+ Holy Prophet for the poems, Ziyarat for the commentary). Series appear on the articles index, the Rabi' al-Thani / Series / Lady Khadijah tag pages, the sitemap (19 new URLs per language) and `feed.xml` (rebuilt: 63 items).
+- Cover: the existing Lady Khadijah illustration for all three series (one shared picture per series and language). New CSS: `.tg-ref` (reference lines).
+
+---
+
 ## [2026-10-09] — Liquid-glass theme, site-wide; inner pages follow the light/dark choice
 
 - **Liquid glass** (end of `assets/style.css`, filters in `assets/script.js`): the top bar is a floating frosted pill; menu pills, slider buttons, gold buttons, cards (articles, series parts, poster cards, topics, featured), quote and source panels, tags and chips are glass with a bright top edge, soft inner glow and springy hover. On Chromium-class browsers a faint wavy refraction is added (SVG displacement, set up by `script.js`); other browsers keep the frosted blur. The "Latest series" card sits on the poster scene as a glass pane. Respects `prefers-reduced-motion` and `prefers-reduced-transparency`.

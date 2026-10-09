@@ -2257,5 +2257,598 @@
   "descs": {
    "en": "Ramadan booklets from Misbah Inc.: ziyarat and reflections for the month of Ramadan."
   }
+ },
+ "lady-khadijah-poems/1": {
+  "slug": "lady-khadijah-poems/1",
+  "series": "lady-khadijah-poems",
+  "month": 4,
+  "langs": [
+   "en",
+   "ar",
+   "fa",
+   "ur"
+  ],
+  "titles": {
+   "en": "First Poem — Lady Khadijah (peace be upon her) After Hearing the Description of the Prophet from Waraqah ibn Nawfal",
+   "ar": "القصيدة الأولى — السيدة خديجة (سلام الله عليها) بعد سماع وصف النبي من ورقة بن نوفل",
+   "fa": "شعر اول — حضرت خدیجه (سلام الله علیها) پس از شنیدن توصیف پیامبر از ورقة بن نوفل",
+   "ur": "پہلی نظم — حضرت خدیجہ (سلام اللہ علیہا) نبی کریمؐ کی توصیف سننے کے بعد ورقہ بن نوفل سے"
+  },
+  "tags": [],
+  "tags_l": {
+   "en": [],
+   "ar": [],
+   "fa": [],
+   "ur": []
+  },
+  "published": "2026-08-29",
+  "img": true,
+  "descs": {
+   "en": "Lady Khadijah al-Kubra (peace be upon her) composed these verses upon hearing the description of the Messenger of Allah (peace be upon him and his family) from…",
+   "ar": "نظمت السيدة خديجة الكبرى (سلام الله عليها) هذه الأبيات حين سمعت وصف رسول الله (صلى الله عليه وآله) من ورقة بن نوفل.",
+   "fa": "حضرت خدیجه کبری (سلام الله علیها) این ابیات را پس از شنیدن توصیف رسول الله (صلی الله علیه و آله) از ورقة بن نوفل سروده‌اند.",
+   "ur": "حضرت خدیجہ کبریٰ (سلام اللہ علیہا) نے یہ اشعار ورقہ بن نوفل سے رسول اللہ (صلی اللہ علیہ و آلہ) کی توصیف سن کر کہے۔"
+  }
+ },
+ "lady-khadijah-poems/2": {
+  "slug": "lady-khadijah-poems/2",
+  "series": "lady-khadijah-poems",
+  "month": 4,
+  "langs": [
+   "en",
+   "ar",
+   "fa",
+   "ur"
+  ],
+  "titles": {
+   "en": "The Second Poem — Recited when, in that very state, the door-knocker was struck",
+   "ar": "القصيدة الثانية — حين قُرع البابُ وهي على تلك الحال",
+   "fa": "شعر دوم — هنگامی که در همان حال کوبه در زده شد",
+   "ur": "دوسرا شعر — جب اسی حالت میں دروازے کی کنڈی کھٹکائی گئی"
+  },
+  "tags": [],
+  "tags_l": {
+   "en": [],
+   "ar": [],
+   "fa": [],
+   "ur": []
+  },
+  "published": "2026-09-03",
+  "img": true,
+  "descs": {
+   "en": "❝O wind of the south — perhaps some knowledge of my beloved ones would quench a part of my burning.❞",
+   "ar": "ایـا ریـح الجنوب لعلّ علم من الاحباب یطفی بعض حرّي تستنجد بريح الجنوب، رجاءَ أن يُخمد خبرُ الأحبّة",
+   "fa": "بعضی از سوزش من فرونشیند.❞ تا من آن را به جان خود خریداری کنم.❞ چه بسیار آسانی‌ای که پس از هر دشواری می‌آید.❞",
+   "ur": "پا کر میری تپش کچھ کم ہو جائے۔❞ کتنی ہی آسانیاں ہیں جو ہر سختی کے بعد آتی ہیں!❞ اور تمہارے وصال کا ایک مہینہ ایک زمانے جیسا ہے۔❞"
+  }
+ },
+ "lady-khadijah-poems/3": {
+  "slug": "lady-khadijah-poems/3",
+  "series": "lady-khadijah-poems",
+  "month": 4,
+  "langs": [
+   "en",
+   "ar",
+   "fa",
+   "ur"
+  ],
+  "titles": {
+   "en": "Poem 3 — When She Saw That the Children of ʿAbd al-Muṭṭalib Had Come",
+   "ar": "القصيدة الثالثة — حين رأت أن أبناء عبد المطلب قد أتوا",
+   "fa": "شعر سوم — هنگامی که دید اولاد عبدالمطلب آمده‌اند",
+   "ur": "تیسرا شعر — جب دیکھا کہ عبدالمطلب کی اولاد آ گئی ہے"
+  },
+  "tags": [],
+  "tags_l": {
+   "en": [],
+   "ar": [],
+   "fa": [],
+   "ur": []
+  },
+  "published": "2026-09-09",
+  "img": true,
+  "descs": {
+   "en": "Union with you and meeting you are the sweetest joy of my life; I do not taste the sweetness of life until I see you.",
+   "ar": "الذّ حیاتی وصـلکم و لقائکم و لست الذّ العیش حتی اراکم و ما استخشیت عَینی من الناس غیرکم و لا لذّ فی قلبی حبیب سواکم",
+   "fa": "لذت داد زندگی مرا وصل و ملاقات شما؛ من نیستم کسی که لذت زندگانی را ببینم تا اینکه شما را ببینم و نترسید چشم من از مردمان غیر از شما؛ و از هیچ دوستی غیر از شما…",
+   "ur": "میری آنکھیں آپ کے سوا کسی انسان سے خوف زدہ نہیں ہوتیں؛ اور آپ کے سوا کوئی محبوب میرے دل کو لذت نہیں دیتا۔"
+  }
+ },
+ "lady-khadijah-poems/4": {
+  "slug": "lady-khadijah-poems/4",
+  "series": "lady-khadijah-poems",
+  "month": 4,
+  "langs": [
+   "en",
+   "ar",
+   "fa",
+   "ur"
+  ],
+  "titles": {
+   "en": "Poem 4 — After Abu Talib Announced the Purpose of Their Coming",
+   "ar": "القصيدة الرابعة — بعد أن أعلن أبو طالب هدف مجيئهم",
+   "fa": "شعر چهارم — پس از اینکه ابوطالب هدف از آمدنشان را اعلام کرد",
+   "ur": "چوتھا شعر — ابوطالب کے ان کے آنے کا مقصد بیان کرنے کے بعد"
+  },
+  "tags": [],
+  "tags_l": {
+   "en": [],
+   "ar": [],
+   "fa": [],
+   "ur": []
+  },
+  "published": "2026-09-11",
+  "img": true,
+  "descs": {
+   "en": "By remembering you, the heart is cooled from its burning; and in seeing you is the healing of ailing eyes.",
+   "ar": "بذکرکم یطفی الفؤاد من الوقد و رؤیتکم فیها شفا اعین الرمّد و من قال انی اشتکی من هواکم فقد کذبوا لو متّ فیه من الوجد",
+   "fa": "به یاد کردن شما دل از سوزش خاموش می‌شود؛ و در دیدن شما است شفای چشم‌های رمدزده هر که بگوید من از خواهش شما شکایت دارم دروغ گفته؛ اگر در هوای شما از وجد بمیرم…",
+   "ur": "تمہاری یاد سے دل کی جلن بجھ جاتی ہے؛ اور تمہیں دیکھنے میں ہی دردناک آنکھوں کی شفا ہے جو کوئی کہے کہ میں تمہاری محبت سے شکوہ کرتا ہوں، اس نے جھوٹ کہا؛ اگر میں…"
+  }
+ },
+ "lady-khadijah-poems/5": {
+  "slug": "lady-khadijah-poems/5",
+  "series": "lady-khadijah-poems",
+  "month": 4,
+  "langs": [
+   "en",
+   "ar",
+   "fa",
+   "ur"
+  ],
+  "titles": {
+   "en": "Fifth Poem — When the Camel Placed Its Head at the Prophet's Blessed Feet and Spoke",
+   "ar": "القصيدة الخامسة — عندما وضع الجمل رأسه عند قدمي النبي الشريفتين وتكلم",
+   "fa": "شعر پنجم — هنگامی که شتر به پاهای مبارک پیامبر سر گذاشت و نطق کرد",
+   "ur": "پانچواں شعر — جب اونٹ نے نبی کریم ﷺ کے مبارک قدموں پر سر رکھا اور بول اٹھا"
+  },
+  "tags": [],
+  "tags_l": {
+   "en": [],
+   "ar": [],
+   "fa": [],
+   "ur": []
+  },
+  "published": "2026-09-15",
+  "img": true,
+  "descs": {
+   "en": "The camel spoke, declaring the virtue of Ahmad; He is the one through whom Umm al-Qura — the land of Mecca — was honored.",
+   "ar": "فهو الشـفیع و خیر من وطـأ الثري❞ فهو الحبیب و لا سواه فی الوري❞ يا من تحسدونه، تمزقوا من غيظكم؛ فهو الحبيب ولا حبيب سواه في الورى.",
+   "fa": "نطق کرد شتر و خبر داد به فضیلت احمد؛ اینست آن کسی که ام‌القری یعنی زمین مکه به او شرافت یافت فهو الشـفیع و خیر من وطـأ الثري❞ اینست محمد، بهترین برانگیخته به…",
+   "ur": "فهو الشـفیع و خیر من وطـأ الثري❞ یہی محمد ﷺ ہیں، رسالت کے ساتھ بھیجے گئے سب سے بہترین ہستی جو تشریف لائے؛ پس وہی شفاعت کرنے والے اور زمین پر قدم رکھنے والوں…"
+  }
+ },
+ "lady-khadijah-poems/6": {
+  "slug": "lady-khadijah-poems/6",
+  "series": "lady-khadijah-poems",
+  "month": 4,
+  "langs": [
+   "en",
+   "ar",
+   "fa",
+   "ur"
+  ],
+  "titles": {
+   "en": "Sixth Poem — When She Prepared the Travel Garment for the Prophet",
+   "ar": "القصيدة السادسة — عندما هيأت ثوب السفر للنبي الشريف",
+   "fa": "شعر ششم — هنگامی که لباس سفر برای حضرت مهیا کرد",
+   "ur": "چھٹا شعر — جب انہوں نے نبی کریم ﷺ کے لیے سفر کا لباس تیار کیا"
+  },
+  "tags": [],
+  "tags_l": {
+   "en": [],
+   "ar": [],
+   "fa": [],
+   "ur": []
+  },
+  "published": "2026-09-21",
+  "img": true,
+  "descs": {
+   "en": "You have been granted arts of beauty from the nobility of loveliness; and with them you have captivated hearts completely.",
+   "ar": "💧 ❝نظر الی جسـمی التحیل و کیف ❝اوتیت من شرف الجمال فنوناً و لقد فتنت بها القلوب فتونـاً❞ لقد وهبت من شرف الجمال فنونًا عظيمة، وقد سحرت بها القلوب سحرًا تامًا.",
+   "fa": "برای نیکویی حسن در تو گوهرهایی پیدا کرده که در آن گوهر مکنونی پنهان است ای کسی که به آهوان بیابان عاریه داده‌ای گردن بلند و چشمان زیبا را",
+   "ur": "آپ کو حسن و جمال کی شرافت سے کئی فنون عطا کیے گئے ہیں؛ اور آپ نے ان فنون سے دلوں کو مسحور کر دیا ہے۔"
+  }
+ },
+ "lady-khadijah-poems/7": {
+  "slug": "lady-khadijah-poems/7",
+  "series": "lady-khadijah-poems",
+  "month": 4,
+  "langs": [
+   "en",
+   "ar",
+   "fa",
+   "ur"
+  ],
+  "titles": {
+   "en": "Poem Seven — When the Messenger of Allah (peace be upon Him and His family) journeyed to Sham with Maysara and Nasih",
+   "ar": "الشعر السابع — حين خرج رسول الله صلى الله عليه وآله إلى الشام مع ميسرة وناصح",
+   "fa": "شعر هفتم — هنگامی که رسول خدا صلی الله علیه و آله با میسره و ناصح به سفر شام رفت",
+   "ur": "ساتواں شعر — جب رسول اللہ صلی اللہ علیہ و آلہ میسرہ اور ناصح کے ہمراہ سفرِ شام پر روانہ ہوئے"
+  },
+  "tags": [],
+  "tags_l": {
+   "en": [],
+   "ar": [],
+   "fa": [],
+   "ur": []
+  },
+  "published": "2026-09-28",
+  "img": true,
+  "descs": {
+   "en": "These verses are Lady Khadijah's (peace be upon Her), spoken in the days the Messenger of Allah (peace be upon Him and His family) was away on the journey to…",
+   "ar": "هذه الأبيات للسيدة خديجة عليها السلام، قالتها في الأيام التي كان فيها رسول الله صلى الله عليه وآله في سفر الشام.",
+   "fa": "این ابیات از حضرت خدیجه سلام الله علیها است؛ در روزهایی که رسول خدا صلی الله علیه و آله در سفر شام به سر می‌برد.",
+   "ur": "اگر کوئی کہنے والا پوچھے کہ محبت کا ذائقہ کیسا ہے، تو میں کہتی ہوں: محبت شیریں ہے، لیکن اس میں عذاب اور تکلیف بھی ہے"
+  }
+ },
+ "lady-khadijah-poems/8": {
+  "slug": "lady-khadijah-poems/8",
+  "series": "lady-khadijah-poems",
+  "month": 4,
+  "langs": [
+   "en",
+   "ar",
+   "fa",
+   "ur"
+  ],
+  "titles": {
+   "en": "Eighth Poem — Upon the Prophet's return from his journey to Sham",
+   "ar": "القصيدة الثامنة — عند عودة النبي (صلى الله عليه وآله) من سفره إلى الشام",
+   "fa": "شعر هشتم — هنگام بازگشت حضرت از سفر شام",
+   "ur": "آٹھواں شعر — سفرِ شام سے نبی اکرم کی واپسی کے وقت"
+  },
+  "tags": [],
+  "tags_l": {
+   "en": [],
+   "ar": [],
+   "fa": [],
+   "ur": []
+  },
+  "published": "2026-10-05",
+  "img": true,
+  "descs": {
+   "en": "The beloved whom my heart longed for has returned from his journey, while the sun had left its mark upon his face.",
+   "ar": "جاء الحبیب الّذي اهواه من سفر والشمس قد اثرت فی وجَهه اثراً عجبت للشـمس من تقبیل و جنته والشمس لا ینبغی ان تدرك القمرا",
+   "fa": "آمد از سفر محبوبی که هوایش را در دل داشتم؛ در حالی که آفتاب در روی او اثر گذاشته تعجب دارم از آفتاب که روی محبوبم را بوسیده؛ و حال آنکه سزاوار نیست که آفتاب…",
+   "ur": "وہ محبوب سفر سے واپس آئے جن کی چاہت میرے دل میں تھی؛ اس حال میں کہ سورج نے ان کے چہرے پر اپنا اثر چھوڑا تھا"
+  }
+ },
+ "lady-khadijah-poems": {
+  "slug": "lady-khadijah-poems",
+  "kind": "series",
+  "month": 4,
+  "langs": [
+   "en",
+   "ar",
+   "fa",
+   "ur"
+  ],
+  "titles": {
+   "en": "The Poems of Lady Khadijah (p) About the Prophet (p)",
+   "ar": "أشعار السيدة خديجة (ع) في النبي (ص)",
+   "fa": "اشعار حضرت خدیجه (س) درباره‌ی پیامبر (ص)",
+   "ur": "نبی اکرم (ص) کے بارے میں حضرت خدیجہ (س) کے اشعار"
+  },
+  "tags": [],
+  "tags_l": {},
+  "published": "2026-10-05",
+  "img": true,
+  "descs": {
+   "en": "Eight poems attributed to Lady Khadijah (p) in praise of the Holy Prophet (p), with their meaning, one each week.",
+   "ar": "ثماني قصائد منسوبة إلى السيدة خديجة (ع) في مدح النبي الأكرم (ص)، مع معانيها.",
+   "fa": "هشت شعر منسوب به حضرت خدیجه (س) در وصف پیامبر اکرم (ص)، همراه با معنا.",
+   "ur": "حضرت خدیجہ (س) سے منسوب آٹھ اشعار نبی اکرم (ص) کی شان میں، مفہوم کے ساتھ۔"
+  }
+ },
+ "lady-khadijah-biography/1": {
+  "slug": "lady-khadijah-biography/1",
+  "series": "lady-khadijah-biography",
+  "month": 4,
+  "langs": [
+   "en",
+   "ar",
+   "fa",
+   "ur"
+  ],
+  "titles": {
+   "en": "Chapter One: Ancestors, Parents, and Relatives",
+   "ar": "الفصل الأول: الأجداد والوالدان والأقارب",
+   "fa": "فصل اول: اجداد و والدین و خویشاوندان",
+   "ur": "پہلا باب: اجداد، والدین اور رشتہ دار"
+  },
+  "tags": [],
+  "tags_l": {
+   "en": [],
+   "ar": [],
+   "fa": [],
+   "ur": []
+  },
+  "published": "2026-09-16",
+  "img": true,
+  "descs": {
+   "en": "The lineage of Lady Khadijah سلام الله علیها, from her father's side: And her mother's lineage: Khadijah's Father: Khuwaylid ibn Asad and His Ancestors",
+   "ar": "نسب السيدة خديجة سلام الله علیها من جهة والدها: ونسب والدتها: والد خديجة: خويلد بن أسد وأجداده كان والد هذه السيدة الجليلة خويلد بن أسد بن عبد العزى بن قصي…",
+   "fa": "نسب حضرت خدیجه سلام الله علیها از سوی پدر: و از سوی مادر: پدر خدیجه: خویلد بن اسد و اجداد او پدر آن والاگهر، خویلد بن اسد بن عبدالعزی بن قصی است که در قصی، نسب…",
+   "ur": "حضرت خدیجہ سلام اللہ علیہا کا نسب، والد کی طرف سے: اور ان کی والدہ کا نسب: خدیجہ کے والد: خویلد بن اسد اور ان کے اجداد"
+  }
+ },
+ "lady-khadijah-biography/2": {
+  "slug": "lady-khadijah-biography/2",
+  "series": "lady-khadijah-biography",
+  "month": 4,
+  "langs": [
+   "en",
+   "ar",
+   "fa",
+   "ur"
+  ],
+  "titles": {
+   "en": "Chapter One: Ancestors, Parents, and Relatives — Part Two",
+   "ar": "الفصل الأول: الأجداد والوالدان والأقارب — الجزء الثاني",
+   "fa": "فصل اول: اجداد و والدین و خویشاوندان — قسمت دوم",
+   "ur": "پہلا باب: اجداد، والدین اور رشتہ دار — دوسرا حصہ"
+  },
+  "tags": [],
+  "tags_l": {
+   "en": [],
+   "ar": [],
+   "fa": [],
+   "ur": []
+  },
+  "published": "2026-09-23",
+  "img": true,
+  "descs": {
+   "en": "Khuwaylid ibn Asad, one of the honored notables of Quraysh Khuwaylid, the father of Lady Khadijah (peace be upon her), was among the elders and prominent…",
+   "ar": "خويلد بن أسد، أحد وجهاء قريش المحترمين كان خويلد، والد السيدة خديجة سلام الله عليها، من كبار وجهاء قريش المعروفين وأتباع ملة إبراهيم، وكان في وضع مالي ممتاز…",
+   "fa": "خویلد بن اسد از بزرگان محترم قریش خویلد پدر حضرت خدیجه سلام الله علیها از بزرگان و شخصیت های برجسته ی قریش و پیرو آیین ابراهیم بود، او وضعیت مالی بسیار خوبی…",
+   "ur": "خویلد بن اسد، قریش کے معزز بزرگوں میں سے ایک خویلد کی بیٹی حضرت خدیجہ، ام المؤمنین، پہلی مسلمان خاتون اور نبی کریم کی حامی و معاون، اور حضرت فاطمہ کی والدہ…"
+  }
+ },
+ "lady-khadijah-biography/3": {
+  "slug": "lady-khadijah-biography/3",
+  "series": "lady-khadijah-biography",
+  "month": 4,
+  "langs": [
+   "en",
+   "ar",
+   "fa",
+   "ur"
+  ],
+  "titles": {
+   "en": "Chapter One: Ancestors, Parents, and Relatives — Part Three",
+   "ar": "الفصل الأول: الأجداد والوالدان والأقارب — القسم الثالث",
+   "fa": "فصل اول: اجداد و والدین و خویشاوندان — قسمت سوم",
+   "ur": "پہلا باب: اجداد، والدین اور رشتہ دار — تیسرا حصہ"
+  },
+  "tags": [],
+  "tags_l": {
+   "en": [],
+   "ar": [],
+   "fa": [],
+   "ur": []
+  },
+  "published": "2026-09-30",
+  "img": true,
+  "descs": {
+   "en": "⚔️ The Noble Father of Lady Khadijah: Chief of the Banu Asad in the Second Fijar War As we know, Lady Fatima (peace be upon Her) is the daughter of the Prophet…",
+   "ar": "⚔️ والد السيدة خديجة الجليل: رئيس قبيلة أسد في حرب الفجار الثانية",
+   "fa": "⚔️ پدر بزرگوار حضرت خانم خدیجه: رییس طایفه اسد در جنگ فجار دوم 🍎 ممانعت وی از انتقال حجر الاسود به یمن پدر حضرت خانم خدیجه کبری سلام الله علیها، خویلد کسی است…",
+   "ur": "⚔️ حضرت خدیجہ کے عظیم المرتبت والد: دوسری جنگ فجار میں قبیلہ اسد کے سردار"
+  }
+ },
+ "lady-khadijah-biography/4": {
+  "slug": "lady-khadijah-biography/4",
+  "series": "lady-khadijah-biography",
+  "month": 4,
+  "langs": [
+   "en",
+   "ar",
+   "fa",
+   "ur"
+  ],
+  "titles": {
+   "en": "Chapter One: Ancestors, Parents and Relatives — Part Four",
+   "ar": "الفصل الأول: الأجداد والوالدان والأقارب — الجزء الرابع",
+   "fa": "فصل اول: اجداد و والدین و خویشاوندان — قسمت چهارم",
+   "ur": "پہلا باب: آباء و اجداد، والدین اور رشتہ دار — حصہ چہارم"
+  },
+  "tags": [],
+  "tags_l": {
+   "en": [],
+   "ar": [],
+   "fa": [],
+   "ur": []
+  },
+  "published": "2026-10-07",
+  "img": true,
+  "descs": {
+   "en": "Asad, Father of Khuwaylid, Member of Hilf al-Fudul One of the prominent figures of the Arab world in the days before the Prophet's mission and the rising of…",
+   "ar": "(أسد) والد خويلد وعضو حلف الفضول زهرة بنت عمرو بن حنثرة، والدة جناب خويلد والدة جناب خويلد هي زهرة بنت عمرو بن حنثرة، وهي جدة السيدة خديجة عليها السلام.(1) (من…",
+   "fa": "(اسد) پدر خویلد، عضو حلف الفضول او حدود دو دهه پیش از آغاز رسالت جهانی پیامبر صلی الله علیه و آله در مکه می زیست و از چهره های نامدار و با نفوذ روزگار خویش به…",
+   "ur": "🤝 اس ترقی پسند اور انسانی حقوق کی مدافع انجمن کے تین مرکزی اور بنیادی اراکین کا نام چونکہ «فضل» تھا، اس لیے یہ جلد ہی «حلف الفضول» یعنی عرب جوانمردوں کے معاہدے…"
+  }
+ },
+ "lady-khadijah-biography": {
+  "slug": "lady-khadijah-biography",
+  "kind": "series",
+  "month": 4,
+  "langs": [
+   "en",
+   "ar",
+   "fa",
+   "ur"
+  ],
+  "titles": {
+   "en": "The Biography of Lady Khadijah al-Kubra (p)",
+   "ar": "سيرة السيدة خديجة الكبرى (ع)",
+   "fa": "زندگی‌نامه‌ی حضرت خدیجه‌ی کبری (س)",
+   "ur": "سوانحِ حیاتِ حضرت خدیجہ کبریٰ (س)"
+  },
+  "tags": [],
+  "tags_l": {},
+  "published": "2026-10-07",
+  "img": true,
+  "descs": {
+   "en": "The life of Lady Khadijah al-Kubra (p), chapter by chapter: her lineage, her family, her marriage to the Prophet (p) and her station.",
+   "ar": "سيرة السيدة خديجة الكبرى (ع) فصلًا فصلًا: نسبها وأسرتها وزواجها من النبي (ص) ومقامها.",
+   "fa": "زندگی‌نامه‌ی حضرت خدیجه‌ی کبری (س) فصل به فصل: نسب، خانواده، ازدواج با پیامبر (ص) و جایگاه ایشان.",
+   "ur": "حضرت خدیجہ کبریٰ (س) کی سوانح حیات باب بہ باب: نسب، خاندان، نبی اکرم (ص) سے نکاح اور مقام۔"
+  }
+ },
+ "lady-khadijah-ziyarat/1": {
+  "slug": "lady-khadijah-ziyarat/1",
+  "series": "lady-khadijah-ziyarat",
+  "month": 4,
+  "langs": [
+   "en",
+   "ar",
+   "fa",
+   "ur"
+  ],
+  "titles": {
+   "en": "Part One — Section One",
+   "ar": "الجزء الأول — القسم الأول",
+   "fa": "قسمت اول — بخش اول",
+   "ur": "حصہ اول — باب اول"
+  },
+  "tags": [],
+  "tags_l": {
+   "en": [],
+   "ar": [],
+   "fa": [],
+   "ur": []
+  },
+  "published": "2026-09-18",
+  "img": true,
+  "descs": {
+   "en": "Peace be upon you, O Mother of the Believers. The Prophet has a greater claim on the believers than their own selves, and his wives are their mothers.",
+   "ar": "ورد: یتبع... ❝السَّلامُ عَلَیْک یا اُمَّ الْمُؤْمِنِینَ❞ السلام علیکِ یا أمّ المؤمنین ❝النَّبِيُّ أَوْلَى بِالْمُؤْمِنِينَ مِنْ أَنْفُسِهِمْ وَأَزْوَاجُهُ…",
+   "fa": "سلام بر تو اى مادر مؤمنان پيامبر به مؤمنان از خودشان سزاوارتر [و نزديكتر] است و همسرانش مادران ايشانند",
+   "ur": "اے مؤمنوں کی ماں! آپ پر سلام ہو نبی مؤمنین کے لیے ان کی اپنی جانوں سے بھی زیادہ حق دار ہیں اور آپ کی ازواج ان کی مائیں ہیں"
+  }
+ },
+ "lady-khadijah-ziyarat/2": {
+  "slug": "lady-khadijah-ziyarat/2",
+  "series": "lady-khadijah-ziyarat",
+  "month": 4,
+  "langs": [
+   "en",
+   "ar",
+   "fa",
+   "ur"
+  ],
+  "titles": {
+   "en": "Part One — Section Two",
+   "ar": "القسم الأول — الجزء الثاني",
+   "fa": "قسمت اول — بخش دوم",
+   "ur": "قسط اول — حصہ دوم"
+  },
+  "tags": [],
+  "tags_l": {
+   "en": [],
+   "ar": [],
+   "fa": [],
+   "ur": []
+  },
+  "published": "2026-09-25",
+  "img": true,
+  "descs": {
+   "en": "Peace be upon You, O mother of the believers The Prophet is closer to the believers than their own selves, and His wives are their mothers",
+   "ar": "مناقب ابن شهرآشوب، ج ٤، ص ٢ الأمالي للصدوق، ص ٥٩٥ قال رسول الله صلى الله عليه وآله: البرهان في تفسير القرآن، ج ٢، ص ٦٧٥",
+   "fa": "سلام بر تو اى مادر مؤمنان پيامبر به مؤمنان از خودشان سزاوارتر [و نزديكتر] است و همسرانش مادران ايشانند",
+   "ur": "سلام ہو آپ پر، اے مومنوں کی ماں خدا کی قسم! جب لوگوں نے کفر کیا تو وہ مجھ پر ایمان لائیں، اور جب لوگوں نے مجھے ٹھکرایا تو انہوں نے مجھے پناہ دی، اور جب لوگوں…"
+  }
+ },
+ "lady-khadijah-ziyarat/3": {
+  "slug": "lady-khadijah-ziyarat/3",
+  "series": "lady-khadijah-ziyarat",
+  "month": 4,
+  "langs": [
+   "en",
+   "ar",
+   "fa",
+   "ur"
+  ],
+  "titles": {
+   "en": "Explanation of the Ziyarat of Ummul Muminin (p) — Part 3",
+   "ar": "شرح زيارة السيدة أم المؤمنين (خديجة الكبرى، ع) — القسم ٣",
+   "fa": "شرح زیارت حضرت ام‌المؤمنین (س) — بخش ۳",
+   "ur": "شرحِ زیارتِ حضرت ام المومنین (س) — حصہ ۳"
+  },
+  "tags": [],
+  "tags_l": {
+   "en": [],
+   "ar": [],
+   "fa": [],
+   "ur": []
+  },
+  "published": "2026-10-02",
+  "img": true,
+  "descs": {
+   "en": "Peace be upon you, O wife of the Master of the Messengers And the pure (and sweet) land, its vegetation grows by the command of its Lord; but the ill-natured…",
+   "ar": "1️⃣ النساء العفیفة (النساء العفيفات الطاهرات) قال رسول الله (ص) في رواية في بيان فضل السيدة خديجة الكبرى:",
+   "fa": "و سرزمين پاكيزه (و شيرين) گياهش به فرمان پروردگار ميرويد اما سرزمينهاي بدطينت (و شورهزار) جز گياه ناچيز و بيارزش از آن نميرويد، اينگونه، آيات را براي آنها كه…",
+   "ur": "اور پاکیزہ (اور شیریں) سرزمین اپنے پروردگار کے حکم سے سبزہ اگاتی ہے، لیکن بدطینت (اور شورزدہ) زمینوں سے ناچیز اور بے قدر سبزے کے سوا کچھ نہیں اگتا۔ ہم اسی طرح…"
+  }
+ },
+ "lady-khadijah-ziyarat/4": {
+  "slug": "lady-khadijah-ziyarat/4",
+  "series": "lady-khadijah-ziyarat",
+  "month": 4,
+  "langs": [
+   "en",
+   "ar",
+   "fa",
+   "ur"
+  ],
+  "titles": {
+   "en": "Explanation of the Ziyarat of Ummul Muminin (p) — Part 4",
+   "ar": "شرح زيارة السيدة أم المؤمنين (خديجة الكبرى، ع) — القسم ٤",
+   "fa": "شرح زیارت حضرت ام‌المؤمنین (س) — بخش ۴",
+   "ur": "شرحِ زیارتِ حضرت ام المومنین (س) — حصہ ۴"
+  },
+  "tags": [],
+  "tags_l": {
+   "en": [],
+   "ar": [],
+   "fa": [],
+   "ur": []
+  },
+  "published": "2026-10-09",
+  "img": true,
+  "descs": {
+   "en": "Peace be upon you, O Mother of Fatima al-Zahra, The Lady of the Women of the Worlds ▫️❝ Those who have believed and done righteous deeds, the purest (life) is…",
+   "ar": "ثم قالت السيدة فاطمة الزهراء (عليها السلام): وفي موضع آخر من هذه الخطبة المباركة تقول السيدة الصديقة الكبرى (عليها السلام):",
+   "fa": "▫️❞ آنها که ایمان آوردند، و عمل صالح انجام دادند پاکیزه‌ترین (زندگی) نصیبشان است و بهترین سرانجام‌ها. ❝",
+   "ur": "آپ پر سلام ہو، اے فاطمہ زہرا کی مادر، جو تمام جہانوں کی خواتین کی سردار ہیں ▫️❞ جو لوگ ایمان لائے اور نیک اعمال انجام دیے، پاکیزہ ترین (زندگی) ان کا نصیب ہے…"
+  }
+ },
+ "lady-khadijah-ziyarat": {
+  "slug": "lady-khadijah-ziyarat",
+  "kind": "series",
+  "month": 4,
+  "langs": [
+   "en",
+   "ar",
+   "fa",
+   "ur"
+  ],
+  "titles": {
+   "en": "Explanation of the Ziyarat of Ummul Muminin (p)",
+   "ar": "شرح زيارة السيدة أم المؤمنين (خديجة الكبرى، ع)",
+   "fa": "شرح زیارت حضرت ام‌المؤمنین (س)",
+   "ur": "شرحِ زیارتِ حضرت ام المومنین (س)"
+  },
+  "tags": [],
+  "tags_l": {},
+  "published": "2026-10-09",
+  "img": true,
+  "descs": {
+   "en": "A weekly commentary on the Ziyarat of Lady Khadijah al-Kubra, Ummul Muminin (p), phrase by phrase.",
+   "ar": "شرح أسبوعي لزيارة السيدة خديجة الكبرى أم المؤمنين (ع)، عبارةً عبارة.",
+   "fa": "شرح هفتگی زیارت حضرت خدیجه‌ی کبری، ام‌المؤمنین (س)، عبارت به عبارت.",
+   "ur": "حضرت خدیجہ کبریٰ ام المومنین (س) کی زیارت کی ہفتہ وار شرح، عبارت بہ عبارت۔"
+  }
  }
 }
