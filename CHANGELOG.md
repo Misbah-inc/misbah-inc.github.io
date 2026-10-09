@@ -5,6 +5,13 @@ Format: `## [Date] — Summary` followed by bulleted details.
 
 ---
 
+## [2026-10-10] — iOS-style liquid glass top bar
+
+- **Refraction:** script.js draws a displacement map for the bar's exact size (rounded-rect distance field, strongest at the rim) and uses it as a backdrop filter, so text and pictures passing under the bar bend near its edge like a lens. Redrawn on resize; mobile pill included. Chromium-based browsers only — Safari and Firefox do not allow SVG backdrop filters, so they keep the thin frost, saturation boost, bright rim and highlight below.
+- **Every browser:** thinner frost so the content stays recognisable; a bright conic rim; a specular highlight that follows the pointer over the bar and drifts as the page scrolls; an elastic body (the bar stretches a little wider and squashes lower when you scroll fast, then springs back); more transparent when the page is scrolled. Light theme keeps enough white for the logo/menu to stay readable over photos. Off for `prefers-reduced-motion` / `prefers-reduced-transparency`.
+
+---
+
 ## [2026-10-10] — Light is the default theme; broken social icons in ar / fa / ur
 
 - **Default theme = light.** Every page now ships `<html … data-theme="light">` (set by `fix_header.py`, so it survives rebuilds); a visitor's saved choice (`misbah-theme` in localStorage) still wins, and the theme button's label is set correctly when nothing is saved. Sections that sit on a photo (Morning & Evening Mourning, Latest series) keep light text in the light theme — their headings had turned dark green on a dark picture.
