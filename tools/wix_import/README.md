@@ -13,3 +13,5 @@ Run from the repo root. Needs Python 3 + Pillow. Downloaded pages live in `work/
 The scripts were written for the Al-Kawthar series first; per-series values (video IDs, titles) are hard-coded in `gen_kawthar.py`.
 
 After any import: add the article to `taxonomy.py` (`ITEMS`), then `build_sitemap.py`, `build_taxo.py`, `check_site.py`. `build_index.py` is now a library (card data); `build_taxo.py` writes the pages.
+
+**App feed:** after any import or retag, run `python3 tools/wix_import/build_feed.py` — it rewrites `feed.xml` (RSS 2.0, newest 20 per language, language readable from each link) for the Misbah app. Spec: `misbah-app/docs/article-feed-spec.md`. Deploy afterwards; `feed.xml` needs an `Access-Control-Allow-Origin: *` response header (CloudFront response headers policy on the `/feed.xml` behaviour) only for the app's web build.
