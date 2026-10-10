@@ -2184,7 +2184,7 @@ html:not([data-theme="light"]) body .tg-ref { color: #b4ae9a; }
   transition: transform .45s var(--glass-spring), box-shadow .3s ease; }
 .feat-series-card:hover, .feat-series-card:focus-visible { transform: translateY(-6px) scale(1.012);
   box-shadow: inset 0 1px 0 #fff, inset 0 0 0 1px rgba(201,164,107,0.3), 0 22px 46px rgba(30,61,31,0.18), 0 0 0 5px rgba(201,164,107,0.12); }
-.feat-series-card img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; }
+.feat-series-card img { display: block; width: 100%; height: auto; aspect-ratio: 1 / 1; object-fit: cover; }
 .feat-series-body { display: flex; flex-direction: column; gap: 0.5rem; padding: 1.1rem 1.25rem 1.35rem; }
 .feat-series-chip { align-self: flex-start; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #7a5b22; }
 [dir="rtl"] .feat-series-chip { letter-spacing: 0; text-transform: none; font-size: 0.85rem; }

@@ -5,6 +5,10 @@ Format: `## [Date] — Summary` followed by bulleted details.
 
 ---
 
+## [2026-10-10] — Khadijah cards: square pictures
+
+- Card pictures are now square (1:1) so the Ziyarat poster shows in full with its border. Poems/biography show the whole illustration on a blurred fill until their own posters arrive. Files are `feat-khadijah-*-v4.jpg`.
+
 ## [2026-10-10] — Own picture for the Ziyarat series
 
 - The Ziyarat-explanation series now has its own poster (`images/lady-khadijah-ziyarat-poster.jpg`, square, framed «يا أم المؤمنين»). Homepage card: `feat-khadijah-ziyarat-v3.jpg` (16:9 crop that keeps all the calligraphy and the dome); series page cover/OG/thumbnail in all four languages use the same crop. Poems and biography still use the shared illustration until their posters arrive.
