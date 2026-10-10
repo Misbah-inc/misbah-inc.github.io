@@ -43,3 +43,5 @@ it easy to find which image belongs where as the library grows.
 | muttaqin-section.jpg | 1920 × 900, ~115 KB | text-free strip of the Sermon of Muttaqin poster (city + crowd), sky extended and darkened | `index.html` → "Latest series" section background |
 | muttaqin-section-mobile.jpg | 720 × 600, ~36 KB | crop of the same | same, ≤ 700 px wide |
 | feat-khadijah-{biography,poems,ziyarat}-v2.jpg | 640 × 360, ~30 KB | the whole lady-khadijah-article.jpg in 16:9 (same image ×3; no cut-off calligraphy) | homepage Featured section, Lady Khadijah series cards (all languages) |
+
+| lady-khadijah-ziyarat-poster.jpg | 1200 × 1200 | user-supplied poster | Ziyarat series; source for feat-khadijah-ziyarat-v3.jpg and the ziyarat covers |
