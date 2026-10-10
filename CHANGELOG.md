@@ -5,6 +5,10 @@ Format: `## [Date] — Summary` followed by bulleted details.
 
 ---
 
+## [2026-10-10] — Lady Khadijah cards: whole picture
+
+- The three Featured cards used tight crops that cut the calligraphy mid-word and showed bare fabric. They now show the whole illustration (16:9, 640×360) with the verse and both figures intact.
+
 ## [2026-10-10] — Light-theme contrast fixes; footer WhatsApp / Telegram menus
 
 - **Text that vanished in the (new default) light theme.** Several pages styled their text with `var(--white)` on `var(--dark-bg)`; in the light palette `--dark-bg` is cream, so it came out white on cream: the whole **About** page (all four languages) and the title/subtitle banner of the **Articles, month, tag and type** pages. Fixed with light-theme colours. Also darkened labels that were under 3:1 on cream (reading time, month, "Read in", gold references and "next/previous part" captions). An automated contrast check (every text element, 16 page types × light and dark) now reports 0 problems.
