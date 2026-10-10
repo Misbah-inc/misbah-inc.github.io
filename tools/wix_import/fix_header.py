@@ -33,6 +33,46 @@ def theme_toggle():
     return TOGGLE
 
 
+_DD = {}
+
+
+def dropdown_blocks(lang):
+    """The homepage's WhatsApp / Telegram dropdown (button + the four channel links) for this language, as markup."""
+    if lang not in _DD:
+        f = ROOT + ('index.html' if lang == 'en' else f'{lang}/index.html')
+        s = open(f, encoding='utf-8').read()
+        blocks = {}
+        for key in ('wa', 'tg'):
+            i = s.index(f'<div class="social-dropdown" id="{key}-dropdown">')
+            depth, j = 0, i
+            for m in re.finditer(r'<div\b|</div>', s[i:]):
+                depth += 1 if m.group(0) == '<div' else -1
+                if depth == 0: j = i + m.end(); break
+            blocks[key] = s[i:j]
+        _DD[lang] = blocks
+    return _DD[lang]
+
+
+def balanced_div(s, start):
+    depth = 0
+    for m in re.finditer(r'<div\b|</div>', s[start:]):
+        depth += 1 if m.group(0) == '<div' else -1
+        if depth == 0: return start + m.end()
+    return len(s)
+
+
+def fix_footer(s, lang):
+    """The footer's WhatsApp and Telegram icons were single links (one channel); give them the same four-channel menus as the top of the homepage."""
+    i = s.find('<div class="footer-social"')
+    if i < 0: return s
+    j = balanced_div(s, i)
+    blk, new = s[i:j], s[i:j]
+    for key, pat in (('wa', r'<a href="https://chat\.whatsapp\.com/[^"]*" class="social-btn"[^>]*>.*?</a>'), ('tg', r'<a href="https://t\.me/misbah110[a-z_]*" class="social-btn"[^>]*>.*?</a>')):
+        d = dropdown_blocks(lang)[key].replace(f'id="{key}-dropdown"', f'id="{key}-dropdown-f"').replace(f'id="{key}-menu"', f'id="{key}-menu-f"').replace(f'aria-controls="{key}-menu"', f'aria-controls="{key}-menu-f"')
+        new = re.sub(pat, lambda _: d, new, count=1, flags=re.S)
+    return s[:i] + new + s[j:] if new != blk else s
+
+
 def fix(path):
     s = open(path, encoding='utf-8').read()
     # default theme = light: the attribute is the default, assets/theme.js replaces it with the visitor's saved choice
@@ -45,6 +85,9 @@ def fix(path):
     rel = os.path.relpath(path, ROOT).replace(os.sep, '/')
     first = rel.split('/')[0]
     cur = first if first in ('ar', 'fa', 'ur') else 'en'
+    s2 = fix_footer(s, cur)
+    if s2 != s:
+        s = s2; open(path, 'w', encoding='utf-8').write(s)
     rel_dir = rel[:-len('index.html')] if rel.endswith('index.html') else rel
     if cur != 'en': rel_dir = rel_dir[len(cur) + 1:]               # path without the language prefix, e.g. 'articles/x/1/'
     alts = {l: p for l, p in re.findall(r'hreflang="([a-z]{2})"\s+href="https://article\.misbah-inc\.com([^"]*)"', s)}

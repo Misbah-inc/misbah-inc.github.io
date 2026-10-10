@@ -5,6 +5,13 @@ Format: `## [Date] — Summary` followed by bulleted details.
 
 ---
 
+## [2026-10-10] — Light-theme contrast fixes; footer WhatsApp / Telegram menus
+
+- **Text that vanished in the (new default) light theme.** Several pages styled their text with `var(--white)` on `var(--dark-bg)`; in the light palette `--dark-bg` is cream, so it came out white on cream: the whole **About** page (all four languages) and the title/subtitle banner of the **Articles, month, tag and type** pages. Fixed with light-theme colours. Also darkened labels that were under 3:1 on cream (reading time, month, "Read in", gold references and "next/previous part" captions). An automated contrast check (every text element, 16 page types × light and dark) now reports 0 problems.
+- **Footer social icons:** the WhatsApp and Telegram icons in the footer were single links (one channel). They now open the same four-channel menus as the top of the homepage (EN/AR/FA/UR names in the page's language, opening upward), on all 315 pages — added by `fix_header.py`, which also runs after every build.
+
+---
+
 ## [2026-10-10] — Homepage: Featured section moved up, with the three Lady Khadijah series
 
 - The **Featured** section now sits straight after the hero on all four homepages (it was fourth). Order: hero → Featured → Latest series (English) → Topics → Al-Kawthar → Morning & Evening Mourning → YouTube.

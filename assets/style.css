@@ -2197,3 +2197,27 @@ html:not([data-theme="light"]) .feat-series-name, html:not([data-theme="light"])
 html:not([data-theme="light"]) .feat-series-desc { color: #b9b3a0; }
 @media (max-width: 900px) { .feat-series { grid-template-columns: 1fr; max-width: 520px; margin-inline: auto; } }
 @media (prefers-reduced-motion: reduce) { .feat-series-card { transition: none; transform: none !important; } }
+
+/* Light theme: text that assumed a dark page. These styles use var(--white) for text on var(--dark-bg); in the light palette --dark-bg is cream,
+   so the headings and paragraphs came out white-on-cream (About, and the banner of the Articles / month / tag / type pages). */
+html[data-theme="light"] body .al-hero h1 { color: #17341a; }
+html[data-theme="light"] body .al-sub { color: #7a5b22; }
+html[data-theme="light"] body .al-eyebrow { color: #1a5c1c; }
+html[data-theme="light"] body .about-banner h1 { color: #17341a; }
+html[data-theme="light"] body .about-banner h1 span { color: #1a5c1c; }
+html[data-theme="light"] body .about-banner p { color: rgba(30,50,30,0.78); }
+html[data-theme="light"] body .about-heading { color: #17341a; }
+html[data-theme="light"] body .about-text { color: rgba(30,45,30,0.86); }
+html[data-theme="light"] body .what-card h3, html[data-theme="light"] body .contact-card h3 { color: #1a5c1c; }
+html[data-theme="light"] body .what-card p { color: rgba(30,45,30,0.80); }
+html[data-theme="light"] body .commitment-highlight { color: #17341a; background: rgba(201,164,107,0.18); }
+html[data-theme="light"] body .contact-item, html[data-theme="light"] body .contact-item a { color: rgba(30,45,30,0.85); }
+html[data-theme="light"] body .contact-item a:hover { color: #1a5c1c; }
+/* small grey / gold labels that were under 3:1 on cream */
+html[data-theme="light"] body .art-reading { color: #666; }
+html[data-theme="light"] body .art-month { color: #5f5f5f; }
+html[data-theme="light"] body .art-lang-sw-inline .lsw-label { color: #6f6f6f; }
+html[data-theme="light"] body .quran-ref, html[data-theme="light"] body .art-toc-heading, html[data-theme="light"] body .kw-video-label,
+html[data-theme="light"] body .kw-partnav small, html[data-theme="light"] body .art-body sup.ref, html[data-theme="light"] body .art-body sup.ref a { color: #7a5b22; }
+html[data-theme="light"] body .art-divider { color: #a98443; }
+html[data-theme="light"] body .not-found-code, html[data-theme="light"] body .nf-code { color: #a98443; }
