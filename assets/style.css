@@ -2221,3 +2221,19 @@ html[data-theme="light"] body .quran-ref, html[data-theme="light"] body .art-toc
 html[data-theme="light"] body .kw-partnav small, html[data-theme="light"] body .art-body sup.ref, html[data-theme="light"] body .art-body sup.ref a { color: #7a5b22; }
 html[data-theme="light"] body .art-divider { color: #a98443; }
 html[data-theme="light"] body .not-found-code, html[data-theme="light"] body .nf-code { color: #a98443; }
+
+/* Browsers without backdrop-filter:url() (every iPhone, Safari, Firefox) cannot bend what is behind the bar, so the glass there has to
+   win on clarity instead: much less blur and tint than before, strong saturation, and a bright lens-like rim, so the picture behind the
+   bar reads as sitting *behind glass* rather than behind frosted plastic. */
+html:not(.glass-lens) .site-header,
+html:not(.glass-lens) .site-header.is-scrolled {
+  -webkit-backdrop-filter: blur(5px) saturate(2.1) brightness(1.06) contrast(1.04); backdrop-filter: blur(5px) saturate(2.1) brightness(1.06) contrast(1.04);
+  background: linear-gradient(180deg, rgba(255,255,255,0.20), rgba(255,255,255,0.03) 55%, rgba(255,255,255,0.10)), rgba(21,43,21,0.32);
+  box-shadow: inset 0 1px 1px rgba(255,255,255,0.8), inset 0 -1px 1px rgba(255,255,255,0.35), inset 0 0 22px rgba(255,255,255,0.22), 0 10px 30px rgba(0,0,0,0.22);
+}
+html:not(.glass-lens)[data-theme="light"] .site-header,
+html:not(.glass-lens)[data-theme="light"] .site-header.is-scrolled {
+  background: linear-gradient(180deg, rgba(255,255,255,0.42), rgba(255,255,255,0.10) 55%, rgba(255,255,255,0.22)), rgba(255,255,255,0.04);
+  box-shadow: inset 0 1px 1px #fff, inset 0 -1px 1px rgba(255,255,255,0.6), inset 0 0 22px rgba(255,255,255,0.45), 0 10px 30px rgba(30,61,31,0.18);
+}
+@media (prefers-reduced-transparency: reduce) { html:not(.glass-lens) .site-header { -webkit-backdrop-filter: none; backdrop-filter: none; background: #14281a; } html:not(.glass-lens)[data-theme="light"] .site-header { background: #fff; } }

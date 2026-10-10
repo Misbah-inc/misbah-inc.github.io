@@ -5,6 +5,10 @@ Format: `## [Date] — Summary` followed by bulleted details.
 
 ---
 
+## [2026-10-10] — Clearer glass bar on iPhone / Safari / Firefox
+
+- Only Chromium can bend the picture behind the bar (SVG refraction), so on phones the bar was frosted plastic. In browsers without it the bar now uses far less blur and tint (5px blur, strong saturation, bright rim), so the image behind reads as under glass. Chromium (laptop, Android Chrome) is unchanged.
+
 ## [2026-10-10] — Khadijah cards: square pictures
 
 - Card pictures are now square (1:1) so the Ziyarat poster shows in full with its border. Poems/biography show the whole illustration on a blurred fill until their own posters arrive. Files are `feat-khadijah-*-v4.jpg`.
