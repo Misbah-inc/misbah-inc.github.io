@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Misbah — Featured</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  /* Self-contained: every class starts with "mfs-" so it cannot clash with anything on the Wix page. Links open the article site in a new tab. */
+  .mfs, .mfs * { box-sizing: border-box; }
+  .mfs { --gold:#c9a46b; --green:#1e3d1f; font-family: 'Inter', system-ui, sans-serif; color:#2b2b2b; background:#f4f1dc; padding:3.5rem 1.25rem 4rem; margin:0; }
+  .mfs-wrap { max-width:1100px; margin:0 auto; }
+  .mfs-label { display:block; text-align:center; font-size:.75rem; font-weight:600; letter-spacing:.18em; text-transform:uppercase; color:#1e3d1f; margin-bottom:.4rem; }
+  .mfs-title { font-family:'Cinzel',serif; font-weight:600; text-align:center; font-size:clamp(1.8rem,4vw,2.6rem); color:var(--green); margin:0 0 .8rem; text-transform:uppercase; letter-spacing:.06em; }
+  .mfs-divider { text-align:center; color:var(--gold); font-size:.8rem; margin-bottom:1.5rem; }
+  .mfs-card { display:flex; background:#fff; border-radius:22px; overflow:hidden; text-decoration:none; color:inherit; box-shadow:0 14px 34px rgba(30,61,31,.12), 0 2px 6px rgba(30,61,31,.06); }
+  .mfs-card-img { flex:0 0 50%; background:#ede7d9; }
+  .mfs-card-img img { display:block; width:100%; height:100%; object-fit:cover; }
+  .mfs-card-body { flex:1; padding:2rem 2.5rem; display:flex; flex-direction:column; justify-content:center; }
+  .mfs-cat { align-self:flex-start; font-size:.68rem; font-weight:700; text-transform:uppercase; letter-spacing:.18em; color:#7a5b22; border-bottom:2px solid var(--gold); padding-bottom:.2rem; margin-bottom:1rem; }
+  .mfs-card h3 { font-family:'Cinzel',serif; font-weight:600; font-size:clamp(1.3rem,2.5vw,1.9rem); line-height:1.3; color:var(--green); margin:0 0 1rem; }
+  .mfs-card p { font-size:.95rem; line-height:1.75; color:#555; margin:0 0 1.5rem; }
+  .mfs-btn { align-self:flex-start; background:var(--gold); color:#14281a; font-weight:600; font-size:.9rem; padding:.7rem 1.6rem; border-radius:999px; text-decoration:none; transition:transform .25s ease, box-shadow .25s ease; }
+  .mfs-btn:hover { transform:translateY(-2px); box-shadow:0 4px 14px rgba(201,164,107,.5); }
+  .mfs-sub { font-family:'Cinzel',serif; font-weight:600; text-align:center; font-size:1.25rem; color:var(--green); margin:3rem 0 1.5rem; }
+  .mfs-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:1.5rem; }
+  .mfs-s { display:flex; flex-direction:column; overflow:hidden; border-radius:22px; text-decoration:none; color:inherit; background:linear-gradient(150deg,rgba(255,255,255,.9),rgba(255,255,255,.6)); border:1px solid #fff;
+    box-shadow:inset 0 1px 0 #fff, 0 14px 34px rgba(30,61,31,.12), 0 2px 6px rgba(30,61,31,.06); transition:transform .45s cubic-bezier(.34,1.56,.64,1), box-shadow .3s ease; }
+  .mfs-s:hover { transform:translateY(-6px) scale(1.012); box-shadow:inset 0 1px 0 #fff, 0 22px 46px rgba(30,61,31,.18), 0 0 0 5px rgba(201,164,107,.14); }
+  .mfs-s img { display:block; width:100%; aspect-ratio:1/1; object-fit:cover; }
+  .mfs-s-body { display:flex; flex-direction:column; gap:.5rem; padding:1.1rem 1.25rem 1.35rem; }
+  .mfs-chip { font-size:.7rem; font-weight:600; letter-spacing:.1em; text-transform:uppercase; color:#7a5b22; }
+  .mfs-s-name { font-family:'Cinzel',serif; font-weight:500; font-size:1.08rem; line-height:1.35; color:var(--green); }
+  .mfs-s-desc { font-size:.9rem; line-height:1.55; color:#555; }
+  @media (max-width:900px) {
+    .mfs-card { flex-direction:column; }
+    .mfs-card-img { flex:none; aspect-ratio:1200/760; }
+    .mfs-card-body { padding:1.6rem 1.4rem; }
+    .mfs-grid { grid-template-columns:1fr; max-width:520px; margin-inline:auto; }
+  }
+  @media (prefers-reduced-motion:reduce) { .mfs-s, .mfs-btn { transition:none; } .mfs-s:hover, .mfs-btn:hover { transform:none; } }
+</style>
+</head>
+<body style="margin:0">
+<section class="mfs" aria-labelledby="mfs-h">
+  <div class="mfs-wrap">
+    <span class="mfs-label">New Article on Misbah</span>
+    <h2 class="mfs-title" id="mfs-h">Featured</h2>
+    <div class="mfs-divider" aria-hidden="true">◆</div>
+
+    <article class="mfs-card">
+      <div class="mfs-card-img">
+        <img src="https://article.misbah-inc.com/images/lady-khadijah-article.jpg" alt="Lady Khadijah al-Kubra, Mother of the Believers" loading="lazy">
+      </div>
+      <div class="mfs-card-body">
+        <span class="mfs-cat">Lady Khadijah (p)</span>
+        <h3>Lady Khadijah (p), Ummul Mu'minin</h3>
+        <p>Lady Khadijah al-Kubra (p) was a source of comfort and strength for the Holy Prophet (p), the first believing woman, and a devoted supporter of Islam. She dedicated her wealth and life to the Prophet's mission, became the mother of Lady Fatimah al-Zahra (p), received the greetings of God through Jibril, and held a unique status honored by the Prophet and the Imams of Ahl al-Bayt.</p>
+        <a class="mfs-btn" href="https://article.misbah-inc.com/articles/rabi_al_awwal/" target="_blank" rel="noopener">Read More</a>
+      </div>
+    </article>
+
+    <h3 class="mfs-sub">More on Lady Khadijah (p)</h3>
+    <div class="mfs-grid">
+      <a class="mfs-s" href="https://article.misbah-inc.com/articles/lady-khadijah-biography/" target="_blank" rel="noopener">
+        <img src="https://article.misbah-inc.com/images/home/feat-khadijah-biography-v5.jpg" alt="" loading="lazy">
+        <span class="mfs-s-body">
+          <span class="mfs-chip">Series</span>
+          <span class="mfs-s-name">The Biography of Lady Khadijah al-Kubra (p)</span>
+          <span class="mfs-s-desc">The life of Lady Khadijah al-Kubra (p), chapter by chapter: her lineage, her family, her marriage to the Prophet (p) and her station.</span>
+        </span>
+      </a>
+      <a class="mfs-s" href="https://article.misbah-inc.com/articles/lady-khadijah-poems/" target="_blank" rel="noopener">
+        <img src="https://article.misbah-inc.com/images/home/feat-khadijah-poems-v5.jpg" alt="" loading="lazy">
+        <span class="mfs-s-body">
+          <span class="mfs-chip">Series</span>
+          <span class="mfs-s-name">The Poems of Lady Khadijah (p) About the Prophet (p)</span>
+          <span class="mfs-s-desc">Eight poems attributed to Lady Khadijah (p) in praise of the Holy Prophet (p), with their meaning, one each week.</span>
+        </span>
+      </a>
+      <a class="mfs-s" href="https://article.misbah-inc.com/articles/lady-khadijah-ziyarat/" target="_blank" rel="noopener">
+        <img src="https://article.misbah-inc.com/images/home/feat-khadijah-ziyarat-v4.jpg" alt="" loading="lazy">
+        <span class="mfs-s-body">
+          <span class="mfs-chip">Series</span>
+          <span class="mfs-s-name">Explanation of the Ziyarat of Ummul Muminin (p)</span>
+          <span class="mfs-s-desc">A weekly commentary on the Ziyarat of Lady Khadijah al-Kubra, Ummul Muminin (p), phrase by phrase.</span>
+        </span>
+      </a>
+    </div>
+  </div>
+</section>
+</body>
+</html>

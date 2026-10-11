@@ -2241,3 +2241,8 @@ html:not(.glass-lens)[data-theme="light"] .site-header.is-scrolled {
 /* Arabic-script headings: letter-spacing pulls the joined letters apart (visible gaps inside آمدید), a 1.08 line-height lets the descender of
    ح/ص touch the next line, and the pale offset shadow smears the dots. Give the hero title proper room and no tracking in ar / fa / ur. */
 [dir="rtl"] .hero-title { letter-spacing: 0; text-transform: none; line-height: 1.5; text-shadow: none; word-spacing: 0.08em; }
+
+/* Lady Khadijah series: every part shares the series cover, a 16:9 picture. The part card is a tall two-column box (long titles), and the
+   generic rule stretches the picture to the card's height with object-fit:cover — which crops a wide poster down to a narrow slice. Keep the
+   picture 16:9 and centred in its column instead, so the whole poster shows. */
+.kw-part-card img[src*="lady-khadijah"] { height: auto; min-height: 0; aspect-ratio: 16 / 9; align-self: center; object-fit: cover; }

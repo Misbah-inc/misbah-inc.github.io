@@ -5,6 +5,10 @@ Format: `## [Date] — Summary` followed by bulleted details.
 
 ---
 
+## [2026-10-11] — Khadijah series pages: whole picture on part cards
+
+- On the three Lady Khadijah series pages the part cards stretched the 16:9 cover to the card's full height and cropped it to a narrow slice. The picture now keeps its 16:9 shape, centred in its column.
+
 ## [2026-10-11] — Arabic-script hero title
 
 - Homepage title in Farsi / Arabic / Urdu: removed letter-spacing (it split joined letters), raised line-height 1.08 → 1.5 (the descender of ح touched the next line) and dropped the pale text shadow that smeared the dots.
