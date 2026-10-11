@@ -5,6 +5,10 @@ Format: `## [Date] — Summary` followed by bulleted details.
 
 ---
 
+## [2026-10-11] — Own picture for the Biography series
+
+- New poster (`images/lady-khadijah-biography-poster.jpg`): home card `feat-khadijah-biography-v5.jpg` (square crop keeping the figure and the caravan); series cover/OG/thumbnail in all four languages use a 1.9:1 crop. All three Khadijah series now have their own pictures.
+
 ## [2026-10-11] — Own picture for the Poems series
 
 - New poster (`images/lady-khadijah-poems-poster.jpg`, square): home card `feat-khadijah-poems-v5.jpg` shows it whole; series cover/OG/thumbnail (all four languages) use a 1.9:1 crop. Only the Biography card still uses the shared illustration.

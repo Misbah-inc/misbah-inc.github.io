@@ -46,3 +46,4 @@ it easy to find which image belongs where as the library grows.
 
 | lady-khadijah-ziyarat-poster.jpg | 1200 × 1200 | user-supplied poster | Ziyarat series; source for feat-khadijah-ziyarat-v3.jpg and the ziyarat covers |
 | lady-khadijah-poems-poster.jpg | 1200 × 1200 | user-supplied poster | Poems series; source for feat-khadijah-poems-v5.jpg and the poems covers |
+| lady-khadijah-biography-poster.jpg | 1000 × 1250 | user-supplied poster | Biography series; source for feat-khadijah-biography-v5.jpg and the biography covers |

@@ -17,7 +17,7 @@ def cards(lang):
     out = []
     for ser in SERIES:
         href = f"{PFX[lang]}/articles/{ser}/"
-        img = f"/images/home/feat-khadijah-{ser.split('-')[-1]}-{'v5' if ser.endswith('poems') else 'v4'}.jpg"   # three different crops of the Lady Khadijah illustration
+        img = f"/images/home/feat-khadijah-{ser.split('-')[-1]}-{'v4' if ser.endswith('ziyarat') else 'v5'}.jpg"   # three different crops of the Lady Khadijah illustration
         out.append(f'''      <a class="feat-series-card" href="{href}">
         <img src="{img}" alt="" width="480" height="270" loading="lazy" decoding="async">
         <span class="feat-series-body">
