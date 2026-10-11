@@ -45,3 +45,4 @@ it easy to find which image belongs where as the library grows.
 | feat-khadijah-{biography,poems,ziyarat}-v4.jpg | 800 × 800 | square; ziyarat = full poster, others = whole lady-khadijah-article.jpg on a blurred fill (same image ×3; no cut-off calligraphy) | homepage Featured section, Lady Khadijah series cards (all languages) |
 
 | lady-khadijah-ziyarat-poster.jpg | 1200 × 1200 | user-supplied poster | Ziyarat series; source for feat-khadijah-ziyarat-v3.jpg and the ziyarat covers |
+| lady-khadijah-poems-poster.jpg | 1200 × 1200 | user-supplied poster | Poems series; source for feat-khadijah-poems-v5.jpg and the poems covers |

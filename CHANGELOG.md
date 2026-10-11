@@ -5,6 +5,10 @@ Format: `## [Date] — Summary` followed by bulleted details.
 
 ---
 
+## [2026-10-11] — Own picture for the Poems series
+
+- New poster (`images/lady-khadijah-poems-poster.jpg`, square): home card `feat-khadijah-poems-v5.jpg` shows it whole; series cover/OG/thumbnail (all four languages) use a 1.9:1 crop. Only the Biography card still uses the shared illustration.
+
 ## [2026-10-10] — Clearer glass bar on iPhone / Safari / Firefox
 
 - Only Chromium can bend the picture behind the bar (SVG refraction), so on phones the bar was frosted plastic. In browsers without it the bar now uses far less blur and tint (5px blur, strong saturation, bright rim), so the image behind reads as under glass. Chromium (laptop, Android Chrome) is unchanged.
