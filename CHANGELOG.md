@@ -5,6 +5,10 @@ Format: `## [Date] — Summary` followed by bulleted details.
 
 ---
 
+## [2026-10-11] — Arabic-script hero title
+
+- Homepage title in Farsi / Arabic / Urdu: removed letter-spacing (it split joined letters), raised line-height 1.08 → 1.5 (the descender of ح touched the next line) and dropped the pale text shadow that smeared the dots.
+
 ## [2026-10-11] — Own picture for the Biography series
 
 - New poster (`images/lady-khadijah-biography-poster.jpg`): home card `feat-khadijah-biography-v5.jpg` (square crop keeping the figure and the caravan); series cover/OG/thumbnail in all four languages use a 1.9:1 crop. All three Khadijah series now have their own pictures.
