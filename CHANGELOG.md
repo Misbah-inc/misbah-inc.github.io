@@ -5,6 +5,10 @@ Format: `## [Date] — Summary` followed by bulleted details.
 
 ---
 
+## [2026-10-11] — Phone number in Arabic / Farsi / Urdu footers
+
+- The footer phone number was reordered by right-to-left text rules (the "+" and the brackets jumped around). It is now isolated as left-to-right on every page.
+
 ## [2026-10-11] — Khadijah series pages: whole picture on part cards
 
 - On the three Lady Khadijah series pages the part cards stretched the 16:9 cover to the card's full height and cropped it to a narrow slice. The picture now keeps its 16:9 shape, centred in its column.

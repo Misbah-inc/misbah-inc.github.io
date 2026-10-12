@@ -2246,3 +2246,6 @@ html:not(.glass-lens)[data-theme="light"] .site-header.is-scrolled {
    generic rule stretches the picture to the card's height with object-fit:cover — which crops a wide poster down to a narrow slice. Keep the
    picture 16:9 and centred in its column instead, so the whole poster shows. */
 .kw-part-card img[src*="lady-khadijah"] { height: auto; min-height: 0; aspect-ratio: 16 / 9; align-self: center; object-fit: cover; }
+
+/* Phone numbers are left-to-right text: inside a right-to-left page the bidi algorithm reordered "+1 (888) 471-7174" (the + and the brackets jumped around). Isolate it. */
+a[href^="tel:"], .footer-contact-item bdi { direction: ltr; unicode-bidi: isolate; display: inline-block; }
