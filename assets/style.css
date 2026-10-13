@@ -1757,7 +1757,7 @@ h1, h2, h3, h4 {
 .al-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.4rem; margin-top: 2rem; }
 .al-card { display: flex; flex-direction: column; background: #fff; border-radius: 14px; overflow: hidden; border: 1px solid rgba(26,61,27,0.12); box-shadow: 0 3px 18px rgba(0,0,0,0.07); transition: transform 0.2s ease, box-shadow 0.2s ease; }
 .al-card:hover { transform: translateY(-3px); box-shadow: 0 10px 30px rgba(0,0,0,0.14); }
-.al-card img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; background: #ede7d9; }
+.al-card img { width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; background: #ede7d9; }
 .al-body { padding: 1rem 1.15rem 1.25rem; display: flex; flex-wrap: wrap; align-items: center; gap: 0.35rem 0.7rem; }
 .al-tag { font-size: 0.68rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--gold); }
 .al-month { font-size: 0.72rem; color: #777; }

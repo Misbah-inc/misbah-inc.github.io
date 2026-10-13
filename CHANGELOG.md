@@ -5,6 +5,10 @@ Format: `## [Date] — Summary` followed by bulleted details.
 
 ---
 
+## [2026-10-12] — Articles list: pictures no longer cropped
+
+- Cards on the Articles page (and the month / tag / type pages) cropped every picture to a squarish box: the `<img height="270">` attribute fixed the height at 270px, so the CSS `aspect-ratio: 16/9` was ignored and wide pictures were cut at the sides (Ziyarat, Biography, Virtues of the Messenger, Letter of Imam Sadiq…). Added `height: auto`; all 43 cards now measure exactly 16:9.
+
 ## [2026-10-12] — Homepage: this month's occasions above Featured
 
 - New first section right after the hero in all four languages: **Shia Calendar — Month of Jumada al-Ula**, a card with the wide poster (square on phones), the post's opening line and a Read button to the new article. Built by `build_home_featured.py` (idempotent); the Featured section follows it.

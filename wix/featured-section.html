@@ -15,8 +15,10 @@
   .mfs-title { font-family:'Cinzel',serif; font-weight:600; text-align:center; font-size:clamp(1.8rem,4vw,2.6rem); color:var(--green); margin:0 0 .8rem; text-transform:uppercase; letter-spacing:.06em; }
   .mfs-divider { text-align:center; color:var(--gold); font-size:.8rem; margin-bottom:1.5rem; }
   .mfs-card { display:flex; background:#fff; border-radius:22px; overflow:hidden; text-decoration:none; color:inherit; box-shadow:0 14px 34px rgba(30,61,31,.12), 0 2px 6px rgba(30,61,31,.06); }
-  .mfs-card-img { flex:0 0 50%; background:#ede7d9; }
-  .mfs-card-img img { display:block; width:100%; height:100%; object-fit:cover; }
+  /* The picture is always shown whole (object-fit: contain). Where the frame is taller than the picture, the gap is filled with a blurred copy of the same picture, so nothing is cropped or stretched. */
+  .mfs-card-img { flex:0 0 50%; position:relative; overflow:hidden; background:#ede7d9; min-height:300px; }
+  .mfs-card-img::before { content:''; position:absolute; inset:-20px; background:var(--bg) center/cover; filter:blur(22px) saturate(1.1); transform:scale(1.1); }
+  .mfs-card-img img { position:absolute; inset:0; width:100%; height:100%; object-fit:contain; display:block; }
   .mfs-card-body { flex:1; padding:2rem 2.5rem; display:flex; flex-direction:column; justify-content:center; }
   .mfs-cat { align-self:flex-start; font-size:.68rem; font-weight:700; text-transform:uppercase; letter-spacing:.18em; color:#7a5b22; border-bottom:2px solid var(--gold); padding-bottom:.2rem; margin-bottom:1rem; }
   .mfs-card h3 { font-family:'Cinzel',serif; font-weight:600; font-size:clamp(1.3rem,2.5vw,1.9rem); line-height:1.3; color:var(--green); margin:0 0 1rem; }
@@ -35,7 +37,7 @@
   .mfs-s-desc { font-size:.9rem; line-height:1.55; color:#555; }
   @media (max-width:900px) {
     .mfs-card { flex-direction:column; }
-    .mfs-card-img { flex:none; aspect-ratio:1200/760; }
+    .mfs-card-img { flex:none; aspect-ratio:1200/760; min-height:0; }
     .mfs-card-body { padding:1.6rem 1.4rem; }
     .mfs-grid { grid-template-columns:1fr; max-width:520px; margin-inline:auto; }
   }
@@ -50,7 +52,7 @@
     <div class="mfs-divider" aria-hidden="true">◆</div>
 
     <article class="mfs-card">
-      <div class="mfs-card-img">
+      <div class="mfs-card-img" style="--bg:url('https://article.misbah-inc.com/images/lady-khadijah-article.jpg')">
         <img src="https://article.misbah-inc.com/images/lady-khadijah-article.jpg" alt="Lady Khadijah al-Kubra, Mother of the Believers" loading="lazy">
       </div>
       <div class="mfs-card-body">
