@@ -2249,3 +2249,8 @@ html:not(.glass-lens)[data-theme="light"] .site-header.is-scrolled {
 
 /* Phone numbers are left-to-right text: inside a right-to-left page the bidi algorithm reordered "+1 (888) 471-7174" (the + and the brackets jumped around). Isolate it. */
 a[href^="tel:"], .footer-contact-item bdi { direction: ltr; unicode-bidi: isolate; display: inline-block; }
+
+/* Shia-calendar occasions list: one card-like row per occasion, the number kept from the post */
+.occ-list { list-style: none; margin: 1.2rem 0; padding: 0; display: grid; gap: 0.9rem; }
+.occ-list li { padding: 1rem 1.2rem; border-radius: 16px; line-height: 1.85; background: linear-gradient(150deg, rgba(255,255,255,0.8), rgba(255,255,255,0.5)); border: 1px solid rgba(201,164,107,0.35); border-inline-start: 4px solid #c9a46b; }
+html:not([data-theme="light"]) body .occ-list li { background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.14); border-inline-start-color: #c9a46b; }

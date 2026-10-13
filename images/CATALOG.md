@@ -47,3 +47,4 @@ it easy to find which image belongs where as the library grows.
 | lady-khadijah-ziyarat-poster.jpg | 1200 × 1200 | user-supplied poster | Ziyarat series; source for feat-khadijah-ziyarat-v3.jpg and the ziyarat covers |
 | lady-khadijah-poems-poster.jpg | 1200 × 1200 | user-supplied poster | Poems series; source for feat-khadijah-poems-v5.jpg and the poems covers |
 | lady-khadijah-biography-poster.jpg | 1000 × 1250 | user-supplied poster | Biography series; source for feat-khadijah-biography-v5.jpg and the biography covers |
+| occasions-of-jumada-al-ula-{en,ar,fa,ur}.jpg, og-, thumb-, -mobile.jpg | 1600×900 / 1200×630 / 480×252 / 1000×1000 | user-supplied (wide + square) | Jumada al-Ula occasions article |

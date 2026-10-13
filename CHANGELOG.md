@@ -5,6 +5,12 @@ Format: `## [Date] — Summary` followed by bulleted details.
 
 ---
 
+## [2026-10-12] — New article: Occasions of the Month of Jumada al-Ula (4 languages)
+
+- `/articles/occasions-of-jumada-al-ula/` (+ `/ar/`, `/fa/`, `/ur/`): the Shia-calendar post of 12 Oct 2026 (#تقویم_شیعه #مناسبت_های_ماه #جمادی_الأولی), word for word from the four channels (fa #22933, en #23724, ar #469, ur #509); the five occasions are a numbered list. Filed under Jumada al-Awwal, type *Shia calendar announcement*; new tag **Lady Zaynab al-Kubra (p)** (ar/fa/ur names unreviewed by a native speaker) plus Lady Fatimah al-Zahra, Imam Hasan, the Holy Prophet.
+- Picture: the wide image is the banner (and OG / thumbnail crop); phones get the supplied square image through `<picture>`. Same picture in all four languages (it has no text).
+- Sitemap (hreflang alternates), feed and the month / tag pages updated. Generator: `tools/wix_import/build_occasions_jumada.py <dir with wide.* and square.*>`; the posts are kept in `work/tg/jumada1-posts.json`. check_site: 198 pages, 0 issues.
+
 ## [2026-10-11] — Phone number in Arabic / Farsi / Urdu footers
 
 - The footer phone number was reordered by right-to-left text rules (the "+" and the brackets jumped around). It is now isolated as left-to-right on every page.

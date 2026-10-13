@@ -38,6 +38,7 @@ TAGS = {
  'lady-khadijah': _t('person', 'Lady Khadijah (p)', 'السيدة خديجة (ع)', 'حضرت خدیجه (س)', 'حضرت خدیجہ (س)'),
  'lady-masoumah': _t('person', "Lady Fatimah al-Ma'soumah (p)", 'السيدة فاطمة المعصومة (ع)', 'حضرت فاطمه معصومه (س)', 'حضرت فاطمہ معصومہ (س)'),
  'lady-umm-al-banin': _t('person', 'Lady Umm al-Banin (p)', 'السيدة أم البنين (ع)', 'حضرت ام‌البنین (س)', 'حضرت ام البنین (س)'),
+ 'lady-zaynab': _t('person', 'Lady Zaynab al-Kubra (p)', 'السيدة زينب الكبرى (ع)', 'حضرت زینب کبری (س)', 'حضرت زینب کبریٰ (س)'),
  'lady-ruqayyah': _t('person', 'Lady Ruqayyah (p)', 'السيدة رقية (ع)', 'حضرت رقیه (س)', 'حضرت رقیہ (س)'),
  'muhsin-ibn-ali': _t('person', 'Muhsin ibn Ali (p)', 'محسن بن علي (ع)', 'محسن بن علی (ع)', 'محسن بن علی (ع)'),
  'sayyid-abdul-azim': _t('person', 'Sayyid Abdul Azim al-Hasani (p)', 'السيد عبد العظيم الحسني (ع)', 'حضرت عبدالعظیم حسنی (ع)', 'حضرت عبدالعظیم حسنی (ع)'),
@@ -90,6 +91,7 @@ ITEMS = {
  'muharram-1447-food-drive': (1, 'announcement', ['imam-hussain', 'community-service']),
  'ghadir-day-2025-thank-you': (12, 'announcement', ['imam-ali', 'ghadir', 'community-service']),
  'arrival-of-safar-announcement': (2, 'announcement', ['lady-ruqayyah']),
+ 'occasions-of-jumada-al-ula': (5, 'announcement', ['lady-zaynab', 'lady-fatimah-zahra', 'imam-hasan', 'holy-prophet']),
 }
 # every Mourning chapter inherits the series' tags
 for _n in range(1, 11): ITEMS[f'morning-and-evening-mourning/{_n}'] = ITEMS['morning-and-evening-mourning']
