@@ -2254,3 +2254,8 @@ a[href^="tel:"], .footer-contact-item bdi { direction: ltr; unicode-bidi: isolat
 .occ-list { list-style: none; margin: 1.2rem 0; padding: 0; display: grid; gap: 0.9rem; }
 .occ-list li { padding: 1rem 1.2rem; border-radius: 16px; line-height: 1.85; background: linear-gradient(150deg, rgba(255,255,255,0.8), rgba(255,255,255,0.5)); border: 1px solid rgba(201,164,107,0.35); border-inline-start: 4px solid #c9a46b; }
 html:not([data-theme="light"]) body .occ-list li { background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.14); border-inline-start-color: #c9a46b; }
+
+/* Homepage "month's occasions" block: the picture is a wide poster, so fill the frame instead of letterboxing it (the featured article's picture is contained) */
+.occ-feature .featured-img img { object-fit: cover; }
+.occ-section { padding-bottom: 1rem; }
+@media (max-width: 768px) { .occ-feature .featured-img { aspect-ratio: 1 / 1; } }

@@ -5,6 +5,10 @@ Format: `## [Date] — Summary` followed by bulleted details.
 
 ---
 
+## [2026-10-12] — Homepage: this month's occasions above Featured
+
+- New first section right after the hero in all four languages: **Shia Calendar — Month of Jumada al-Ula**, a card with the wide poster (square on phones), the post's opening line and a Read button to the new article. Built by `build_home_featured.py` (idempotent); the Featured section follows it.
+
 ## [2026-10-12] — New article: Occasions of the Month of Jumada al-Ula (4 languages)
 
 - `/articles/occasions-of-jumada-al-ula/` (+ `/ar/`, `/fa/`, `/ur/`): the Shia-calendar post of 12 Oct 2026 (#تقویم_شیعه #مناسبت_های_ماه #جمادی_الأولی), word for word from the four channels (fa #22933, en #23724, ar #469, ur #509); the five occasions are a numbered list. Filed under Jumada al-Awwal, type *Shia calendar announcement*; new tag **Lady Zaynab al-Kubra (p)** (ar/fa/ur names unreviewed by a native speaker) plus Lady Fatimah al-Zahra, Imam Hasan, the Holy Prophet.
