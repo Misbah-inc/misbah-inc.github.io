@@ -5,6 +5,10 @@ Format: `## [Date] — Summary` followed by bulleted details.
 
 ---
 
+## [2026-10-14] — Muttaqin Part 15: its own poster
+
+- Part 15 now uses its supplied poster (banner, series-page card, social image, thumbnail) instead of the generated card. `build_muttaqin.py --poster <part> <file>` does one part. Part 14 still uses the generated card until its poster is supplied.
+
 ## [2026-10-14] — Text size buttons on every page
 
 - **A− / A+** beside the theme button in the header of every page (desktop bar and mobile menu), labelled in the page's language. Six steps (90 %–160 %; 140 % at most on phones, where 160 % would push the page wider than the screen). The page content scales (`zoom` on `<main>`) while the header and footer keep their size, so the bar never overflows; the choice is remembered (`localStorage` `misbah-fs`). Code: `assets/theme.js` + the end of `style.css`.

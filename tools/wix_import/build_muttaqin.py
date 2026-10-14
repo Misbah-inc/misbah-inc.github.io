@@ -92,7 +92,7 @@ def cover(label, title, foot, path_stems):
         out.save(D + stem, 'JPEG', quality=84, progressive=True, optimize=True)
 
 
-POSTER_PARTS = set(range(1, 14))   # parts whose cover is a supplied portrait poster (made once by posters_from); 14 still uses the generated card
+POSTER_PARTS = set(range(1, 14)) | {15}   # parts whose cover is a supplied portrait poster (made once by posters_from / poster_one); 14 still uses the generated card
 BANNER = (720, 1280)               # portrait banner shown on the part page (.kw-banner--tall caps it at 560px tall)
 
 
@@ -120,6 +120,28 @@ def posters_from(src_dir, first_file=2):
             bg.paste(fg, ((W - fg.width) // 2, 0))
             bg.save(D + stem, 'JPEG', quality=82, progressive=True, optimize=True)
         print('poster', n, os.path.getsize(D + f'{s}.jpg') // 1024, 'KB banner')
+
+
+def poster_one(n, path):
+    """One poster for part n (same files as posters_from): banner, portrait card thumb, OG and card thumb on a blurred copy."""
+    from PIL import ImageFilter, ImageEnhance
+    im = Image.open(path).convert('RGB')
+    s = f'{SER}-{n}-{LANG}'
+    q = 82
+    ban = im.resize(BANNER, Image.LANCZOS)
+    while True:
+        ban.save(D + f'{s}.jpg', 'JPEG', quality=q, progressive=True, optimize=True)
+        if os.path.getsize(D + f'{s}.jpg') <= 200_000 or q <= 60: break
+        q -= 4
+    im.resize((360, 640), Image.LANCZOS).save(D + f'thumb-p-{s}.jpg', 'JPEG', quality=80, progressive=True, optimize=True)
+    for stem, (W, H) in ((f'og-{s}.jpg', (1200, 630)), (f'thumb-{s}.jpg', (480, 270))):
+        bg = im.resize((W, round(W * im.height / im.width)), Image.LANCZOS)
+        y = (bg.height - H) // 2
+        bg = bg.crop((0, y, W, y + H)).filter(ImageFilter.GaussianBlur(H / 22))
+        bg = ImageEnhance.Brightness(bg).enhance(0.45)
+        fg = im.resize((round(H * im.width / im.height), H), Image.LANCZOS)
+        bg.paste(fg, ((W - fg.width) // 2, 0))
+        bg.save(D + stem, 'JPEG', quality=82, progressive=True, optimize=True)
 
 
 def make_covers():
@@ -302,5 +324,7 @@ def home():
 if __name__ == '__main__':
     if len(sys.argv) > 2 and sys.argv[1] == '--posters':
         posters_from(sys.argv[2])
+    if len(sys.argv) > 3 and sys.argv[1] == '--poster':      # --poster <part> <file>
+        poster_one(int(sys.argv[2]), sys.argv[3])
     main()
     home()
