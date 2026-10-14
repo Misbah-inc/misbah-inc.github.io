@@ -1117,10 +1117,16 @@
   "series": "khutbat-al-muttaqin",
   "month": 3,
   "langs": [
-   "en"
+   "en",
+   "ar",
+   "fa",
+   "ur"
   ],
   "titles": {
-   "en": "Sermon of Muttaqin, Part 1 — Their Speech is Correct and Upright"
+   "en": "Sermon of Muttaqin, Part 1 — Their Speech is Correct and Upright",
+   "ar": "خطبة المتقين، القسم ١ — حُسنُ الكلام",
+   "fa": "خطبه متقین، بخش ۱ — نیکو گفتار",
+   "ur": "خطبۂ متقین، حصہ ۱ — نیک اور درست گفتار"
   },
   "tags": [
    "Imam Ali (p)"
@@ -1128,12 +1134,24 @@
   "tags_l": {
    "en": [
     "Imam Ali (p)"
+   ],
+   "ar": [
+    "Imam Ali (p)"
+   ],
+   "fa": [
+    "Imam Ali (p)"
+   ],
+   "ur": [
+    "Imam Ali (p)"
    ]
   },
   "published": "2026-06-16",
   "img": true,
   "descs": {
-   "en": "Part 1 of the Sermon of Muttaqin: the God-conscious speak rightly and beautifully. Imam Ali's reply to Hammām, and Lady Fiḍḍah, who spoke only in Qur'an."
+   "en": "Part 1 of the Sermon of Muttaqin: the God-conscious speak rightly and beautifully. Imam Ali's reply to Hammām, and Lady Fiḍḍah, who spoke only in Qur'an.",
+   "ar": "القسم ١ من خطبة المتقين: المتقون صواب المنطق. جواب الإمام علي (ع) لهمّام، والسيدة فضّة التي لم تتكلم إلا بالقرآن.",
+   "fa": "بخش ۱ خطبه متقین: متقین گفتاری درست و نیکو دارند. پاسخ امام علی (ع) به همام و داستان فضه که جز با قرآن سخن نگفت.",
+   "ur": "حصہ ۱ خطبۂ متقین: متقین کی گفتار درست اور نیک ہوتی ہے۔ ہمام کو امام علی (ع) کا جواب اور فضہ خاتون جو صرف قرآن کی زبان میں بولتی تھیں۔"
   }
  },
  "khutbat-al-muttaqin/2": {
@@ -1453,17 +1471,26 @@
   "kind": "series",
   "month": 3,
   "langs": [
-   "en"
+   "en",
+   "ar",
+   "fa",
+   "ur"
   ],
   "titles": {
-   "en": "Sermon of Muttaqin"
+   "en": "Sermon of Muttaqin",
+   "ar": "خطبة المتقين",
+   "fa": "خطبه متقین",
+   "ur": "خطبۂ متقین"
   },
   "tags": [],
   "tags_l": {},
   "published": "2026-10-06",
   "img": true,
   "descs": {
-   "en": "A series on the Sermon of Muttaqin (Khutbat al-Muttaqin) by Imam Ali (p): the characteristics of the God-conscious, one at a time, with stories from the Ahl al-Bayt (p)."
+   "en": "A series on the Sermon of Muttaqin (Khutbat al-Muttaqin) by Imam Ali (p): the characteristics of the God-conscious, one at a time, with stories from the Ahl al-Bayt (p).",
+   "ar": "سلسلة عن خطبة المتقين للإمام علي (ع): صفات المتقين صفةً صفة، مع قصص من أهل البيت (ع).",
+   "fa": "مجموعه‌ای درباره‌ی خطبه متقین امام علی (ع): ویژگی‌های پرهیزکاران، یکی پس از دیگری، همراه با داستان‌هایی از اهل بیت (ع).",
+   "ur": "امام علی (ع) کے خطبۂ متقین پر ایک سلسلہ: متقین کی صفات ایک ایک کر کے، اہل بیت (ع) کے واقعات کے ساتھ۔"
   }
  },
  "recognition-of-arbaeen/1": {

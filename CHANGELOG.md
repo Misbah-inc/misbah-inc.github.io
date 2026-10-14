@@ -5,6 +5,12 @@ Format: `## [Date] — Summary` followed by bulleted details.
 
 ---
 
+## [2026-10-14] — Sermon of Muttaqin, Part 1 in Farsi, Arabic and Urdu
+
+- `/fa/`, `/ar/`, `/ur/articles/khutbat-al-muttaqin/1/` plus a series page in each language (listing only the parts that exist there, so far Part 1). Text word for word from the editor's posts (`tools/wix_import/muttaqin_src/part01.<lang>.txt`); only hashtags, separators and emoji bullets removed; sources moved into a *Sources* list. The English Part 1 and the English series page now list the other languages in their hreflang set; catalogue, sitemap and feed updated.
+- Picture = the English Part 1 poster (shared). The English YouTube video is not repeated on the other languages' pages. Series names, one-line descriptions and the part subtitles in ar/fa/ur were written for this site and are **not reviewed by a native speaker**.
+- Generator: `tools/wix_import/build_muttaqin_l10n.py` — add a part by dropping `part<NN>.<lang>.txt` files (+ `CHARS` / `DESC` entries) and re-running it, then `build_sitemap.py`, `build_taxo.py`.
+
 ## [2026-10-14] — General audit: links, social image, titles, descriptions, hreflang, sitemap
 
 - **Nav/footer "Connect", "Subscribe", "Contact Us"** (all 329 pages, 4 languages) pointed at `/connect`, which never existed (404). They now go to https://www.misbah-inc.com/subscribe.
