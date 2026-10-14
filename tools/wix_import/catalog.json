@@ -1159,10 +1159,16 @@
   "series": "khutbat-al-muttaqin",
   "month": 3,
   "langs": [
-   "en"
+   "en",
+   "ar",
+   "fa",
+   "ur"
   ],
   "titles": {
-   "en": "Sermon of Muttaqin, Part 2 — Their Manner of Dress, Conduct, and Way of Life is based upon Moderation"
+   "en": "Sermon of Muttaqin, Part 2 — Their Manner of Dress, Conduct, and Way of Life is based upon Moderation",
+   "ar": "خطبة المتقين، القسم ٢ — مَلْبَسُهُمُ الْاقْتِصَادُ",
+   "fa": "خطبه متقین، بخش ۲ — میانه‌روی در پوشش و رفتار",
+   "ur": "خطبۂ متقین، حصہ ۲ — لباس اور طرزِ زندگی میں اعتدال"
   },
   "tags": [
    "Imam Ali (p)"
@@ -1170,12 +1176,24 @@
   "tags_l": {
    "en": [
     "Imam Ali (p)"
+   ],
+   "ar": [
+    "Imam Ali (p)"
+   ],
+   "fa": [
+    "Imam Ali (p)"
+   ],
+   "ur": [
+    "Imam Ali (p)"
    ]
   },
   "published": "2026-06-20",
   "img": true,
   "descs": {
-   "en": "Part 2 of the Sermon of Muttaqin: the God-conscious live by moderation in dress and conduct, as in the story of Salmān al-Fārsī, governor of Madāʾin."
+   "en": "Part 2 of the Sermon of Muttaqin: the God-conscious live by moderation in dress and conduct, as in the story of Salmān al-Fārsī, governor of Madāʾin.",
+   "ar": "القسم ٢ من خطبة المتقين: ملبسهم الاقتصاد، الاعتدال في اللباس والسلوك، وقصة سلمان الفارسي والي المدائن.",
+   "fa": "بخش ۲ خطبه متقین: پوشش، رفتار و روش زندگی متقین بر پایه میانه‌روی است. داستان جناب سلمان فارسی، حاکم مدائن.",
+   "ur": "حصہ ۲ خطبۂ متقین: متقین کا لباس، طرزِ عمل اور طریقہ زندگی اعتدال پر مبنی ہے۔ جناب سلمان فارسی، والیِ مدائن کا واقعہ۔"
   }
  },
  "khutbat-al-muttaqin/3": {

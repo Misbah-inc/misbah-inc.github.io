@@ -5,6 +5,10 @@ Format: `## [Date] — Summary` followed by bulleted details.
 
 ---
 
+## [2026-10-14] — Sermon of Muttaqin, Part 2 in Farsi, Arabic and Urdu
+
+- `/fa/`, `/ar/`, `/ur/articles/khutbat-al-muttaqin/2/` (Moderation in dress and conduct — the story of Salman al-Farisi), word for word from the posts (`muttaqin_src/part02.<lang>.txt`); the Bihar al-Anwar reference is in a Sources list. Series pages in the three languages now list Parts 1–2; hreflang / sitemap / feed updated. The page-title subtitles («میانه‌روی در پوشش و رفتار», «مَلْبَسُهُمُ الْاقْتِصَادُ», «لباس اور طرزِ زندگی میں اعتدال») are short forms of the posts' subtitle lines, not reviewed by a native speaker. The Urdu source repeats a sentence ("…کوئی فرق نہیں پڑتا…" twice); kept as supplied.
+
 ## [2026-10-14] — Sermon of Muttaqin, Part 1 in Farsi, Arabic and Urdu
 
 - `/fa/`, `/ar/`, `/ur/articles/khutbat-al-muttaqin/1/` plus a series page in each language (listing only the parts that exist there, so far Part 1). Text word for word from the editor's posts (`tools/wix_import/muttaqin_src/part01.<lang>.txt`); only hashtags, separators and emoji bullets removed; sources moved into a *Sources* list. The English Part 1 and the English series page now list the other languages in their hreflang set; catalogue, sitemap and feed updated.
