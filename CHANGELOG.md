@@ -5,6 +5,10 @@ Format: `## [Date] — Summary` followed by bulleted details.
 
 ---
 
+## [2026-10-14] — Muttaqin Parts 1–2: titles are the editor's own lines
+
+- Farsi / Arabic / Urdu page headings now end with the subtitle line supplied for each part («گفتاری درست و نیکو دارند», «مَنْطِقُهُمُ الصَّوَابُ», «متقین کی گفتار درست اور نیک ہوتی ہے»; Part 2: the posts' own lines, minus a stray word in the Farsi one) instead of my shortened versions.
+
 ## [2026-10-14] — Sermon of Muttaqin, Part 2 in Farsi, Arabic and Urdu
 
 - `/fa/`, `/ar/`, `/ur/articles/khutbat-al-muttaqin/2/` (Moderation in dress and conduct — the story of Salman al-Farisi), word for word from the posts (`muttaqin_src/part02.<lang>.txt`); the Bihar al-Anwar reference is in a Sources list. Series pages in the three languages now list Parts 1–2; hreflang / sitemap / feed updated. The page-title subtitles («میانه‌روی در پوشش و رفتار», «مَلْبَسُهُمُ الْاقْتِصَادُ», «لباس اور طرزِ زندگی میں اعتدال») are short forms of the posts' subtitle lines, not reviewed by a native speaker. The Urdu source repeats a sentence ("…کوئی فرق نہیں پڑتا…" twice); kept as supplied.
