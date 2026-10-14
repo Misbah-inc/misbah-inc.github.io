@@ -35,11 +35,11 @@
   var LBL = { en: ['Smaller text', 'Larger text'], ar: ['تصغير الخط', 'تكبير الخط'], fa: ['کوچک‌تر کردن متن', 'بزرگ‌تر کردن متن'], ur: ['متن چھوٹا کریں', 'متن بڑا کریں'] };
   function maxStep() { return window.innerWidth < 768 ? STEPS.length - 2 : STEPS.length - 1; }   // on a phone 160% would push the page wider than the screen
   var i = 1;
-  try { var s = parseInt(localStorage.getItem(KEY), 10); if (s >= 0 && s < STEPS.length) i = Math.min(s, top()); } catch (e) {}
+  try { var s = parseInt(localStorage.getItem(KEY), 10); if (s >= 0 && s < STEPS.length) i = Math.min(s, maxStep()); } catch (e) {}
   function apply() { root.style.setProperty('--fs', STEPS[i]); try { localStorage.setItem(KEY, i); } catch (e) {} sync(); }
   function sync() {
     document.querySelectorAll('.fs-ctl').forEach(function (c) {
-      c.querySelector('[data-fs="-1"]').disabled = i === 0; c.querySelector('[data-fs="1"]').disabled = i >= top();
+      c.querySelector('[data-fs="-1"]').disabled = i === 0; c.querySelector('[data-fs="1"]').disabled = i >= maxStep();
     });
   }
   if (i !== 1) root.style.setProperty('--fs', STEPS[i]);
@@ -55,7 +55,7 @@
   }
   document.addEventListener('click', function (e) {
     var b = e.target.closest('.fs-ctl button'); if (!b) return;
-    i = Math.max(0, Math.min(top(), i + parseInt(b.getAttribute('data-fs'), 10))); apply();
+    i = Math.max(0, Math.min(maxStep(), i + parseInt(b.getAttribute('data-fs'), 10))); apply();
   });
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', build); else build();
 })();
