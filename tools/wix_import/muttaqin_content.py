@@ -24,6 +24,7 @@ PARTS = {
  12: ('IaXhLHzHS1E', '2026-09-22', 'Lean and Slender Bodies', 'They possess lean bodies and slender'),
  13: ('4m8l1m1da2M', '2026-09-29', 'Few and Modest Needs', 'Their needs are few and modest'),
  14: ('56EvctLGXeo', '2026-10-06', 'Chaste, Pure Souls', 'Their souls are chaste, pure, and guarded from sin'),
+ 15: ('wzn9qUMPkMs', '2026-10-13', 'Brief Patience, Lasting Comfort', 'They endured patiently for only a few days, and it resulted in an everlasting comfort'),
 }
 
 DROP = {   # line prefixes (after cleaning) to leave out — see the module note

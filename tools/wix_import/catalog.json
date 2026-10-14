@@ -1502,7 +1502,7 @@
   },
   "tags": [],
   "tags_l": {},
-  "published": "2026-10-06",
+  "published": "2026-10-13",
   "img": true,
   "descs": {
    "en": "A series on the Sermon of Muttaqin (Khutbat al-Muttaqin) by Imam Ali (p): the characteristics of the God-conscious, one at a time, with stories from the Ahl al-Bayt (p).",
@@ -2925,6 +2925,30 @@
    "ar": "شهر جمادى الأولى هو الشهر الخامس في التقويم الهجري القمري. ١) الخامس من جمادى الأولى؛ الولادة الميمونة لمولاتنا وسيدتنا الصدّيقة الصغرى، عقيلة بني هاشم، زينب…",
    "fa": "ماه جمادی‌الاولی پنجمین ماه در تقویم هجری قمری است. ۱) پنجم جمادی‌الاولی؛ ولادت باسعادت حضرت مولاتنا و سیدتنا صدّیقهٔ صغری، عقیلهٔ بنی‌هاشم، زینب کبری…",
    "ur": "جمادی الاولیٰ ہجری قمری کیلنڈر کا پانچواں مہینہ ہے۔ ۱) پانچ جمادی الاولیٰ؛ ہماری مولا و سیدہ، صدیقۂ صغریٰ، عقیلۂ بنی ہاشم، زینب کبریٰ سلام اللہ علیہا کی…"
+  }
+ },
+ "khutbat-al-muttaqin/15": {
+  "slug": "khutbat-al-muttaqin/15",
+  "series": "khutbat-al-muttaqin",
+  "month": 3,
+  "langs": [
+   "en"
+  ],
+  "titles": {
+   "en": "Sermon of Muttaqin, Part 15 — They endured patiently for only a few days, and it resulted in an everlasting comfort"
+  },
+  "tags": [
+   "Imam Ali (p)"
+  ],
+  "tags_l": {
+   "en": [
+    "Imam Ali (p)"
+   ]
+  },
+  "published": "2026-10-13",
+  "img": true,
+  "descs": {
+   "en": "Part 15 of the Sermon of Muttaqin: the God-conscious endure a few days of patience for lasting comfort, and the story of Lady Rubab (p), wife of Imam Hussein (p), after Karbala."
   }
  }
 }

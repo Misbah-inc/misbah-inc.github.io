@@ -121,7 +121,7 @@ for _n in range(1, 13):
     for _s in ('lady-khadijah-poems', 'lady-khadijah-biography', 'lady-khadijah-ziyarat'): ITEMS[f'{_s}/{_n}'] = ITEMS[_s]
 # Sermon of Muttaqin (Imam Ali's sermon, posted weekly since June 2026); the series is filed under Rabi' al-Awwal (month 3)
 ITEMS['khutbat-al-muttaqin'] = (3, 'series', ['imam-ali'])
-for _n in range(1, 15): ITEMS[f'khutbat-al-muttaqin/{_n}'] = ITEMS['khutbat-al-muttaqin']
+for _n in range(1, 16): ITEMS[f'khutbat-al-muttaqin/{_n}'] = ITEMS['khutbat-al-muttaqin']
 
 
 def meta(slug):

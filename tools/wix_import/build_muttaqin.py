@@ -16,7 +16,7 @@ from PIL import Image, ImageDraw, ImageFont
 SER = 'khutbat-al-muttaqin'
 NAME = 'Sermon of Muttaqin'
 LANG = 'en'
-SERIES_DATE = '2026-10-06'          # newest part; moves the series to the top of the articles index
+SERIES_DATE = '2026-10-13'          # newest part; moves the series to the top of the articles index
 SERIES_DESC = ('A series on the Sermon of Muttaqin (Khutbat al-Muttaqin) by Imam Ali (p): the characteristics of the '
                'God-conscious, one at a time, with stories from the Ahl al-Bayt (p).')
 DESC = {
@@ -33,6 +33,7 @@ DESC = {
  11: "Part 11 of the Sermon of Muttaqin: people are safe from the harm of the God-conscious, and Muslim ibn Aqīl's refusal to kill Ibn Ziyād in Hani's house.",
  12: "Part 12 of the Sermon of Muttaqin: the bodies of the God-conscious are lean and slender, and the marks of worship seen on Abu al-Fadl al-Abbas (p).",
  13: "Part 13 of the Sermon of Muttaqin: the needs of the God-conscious are few and modest, and the story of Lady Narjis (p), the Roman princess and captive.",
+ 15: "Part 15 of the Sermon of Muttaqin: the God-conscious endure a few days of patience for lasting comfort, and the story of Lady Rubab (p), wife of Imam Hussein (p), after Karbala.",
  14: "Part 14 of the Sermon of Muttaqin: the souls of the God-conscious are chaste, pure and guarded from sin, and the four qualities Allah praised in Jaʿfar ibn Abi Talib.",
 }
 SHORT = {n: v[2] for n, v in MC.PARTS.items()}
@@ -158,7 +159,7 @@ def load(n):
     vid, pub, short, yt = MC.PARTS[n]
     blocks, refs = MC.parse(n)
     title = f'{NAME}, Part {n} — {yt[0].upper() + yt[1:]}'
-    return dict(title=title, desc=DESC[n], published=pub, modified=pub, heads=[], hero_video=vid, body=[{'t': 'p', 'x': t} for _, t in blocks],   # real text: page() counts words from it for the reading time
+    return dict(title=title, desc=DESC[n], published=pub, modified=pub, heads=[], hero_video=None if vid.startswith('part') else vid, body=[{'t': 'p', 'x': t} for _, t in blocks],   # real text: page() counts words from it for the reading time
                 
                 tags=['Imam Ali (p)'], og='x', img=dict(w=BANNER[0], h=BANNER[1], orig=BANNER) if n in POSTER_PARTS else dict(w=1200, h=630, orig=(1200, 630)), blocks=blocks, refs=refs, short=short, yt=yt)
 
