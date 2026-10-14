@@ -2259,3 +2259,17 @@ html:not([data-theme="light"]) body .occ-list li { background: rgba(255,255,255,
 .occ-feature .featured-img img { object-fit: cover; }
 .occ-section { padding-bottom: 1rem; }
 @media (max-width: 768px) { .occ-feature .featured-img { aspect-ratio: 1 / 1; } }
+
+/* Text-size buttons (theme.js): a small pill beside the theme button */
+.fs-ctl { display: inline-flex; align-items: center; flex-shrink: 0; border-radius: 999px; overflow: hidden; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.14); }
+.fs-ctl button { all: unset; box-sizing: border-box; cursor: pointer; width: 30px; height: 32px; display: inline-flex; align-items: center; justify-content: center; color: var(--gold-light); font: 700 0.9rem/1 'Inter', sans-serif; }
+.fs-ctl button + button { border-inline-start: 1px solid rgba(255,255,255,0.14); }
+.fs-ctl button small { font-size: 0.7rem; margin-inline-start: 1px; }
+.fs-ctl button:hover:not(:disabled) { background: rgba(255,255,255,0.17); }
+.fs-ctl button:focus-visible { outline: 2px solid var(--gold); outline-offset: -2px; }
+.fs-ctl button:disabled { opacity: 0.35; cursor: default; }
+[data-theme="light"] .fs-ctl { background: rgba(30,61,31,0.07); border-color: rgba(30,61,31,0.18); }
+[data-theme="light"] .fs-ctl button { color: #1e3d1f; }
+[data-theme="light"] .fs-ctl button + button { border-inline-start-color: rgba(30,61,31,0.18); }
+@media (max-width: 768px) { .nav-links .fs-ctl { grid-column: 1; justify-self: start; margin-top: 4px; } .nav-links .fs-ctl button { width: 42px; height: 44px; } }
+main { zoom: var(--fs, 1); }

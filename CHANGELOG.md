@@ -5,6 +5,10 @@ Format: `## [Date] — Summary` followed by bulleted details.
 
 ---
 
+## [2026-10-14] — Text size buttons on every page
+
+- **A− / A+** beside the theme button in the header of every page (desktop bar and mobile menu), labelled in the page's language. Six steps (90 %–160 %; 140 % at most on phones, where 160 % would push the page wider than the screen). The page content scales (`zoom` on `<main>`) while the header and footer keep their size, so the bar never overflows; the choice is remembered (`localStorage` `misbah-fs`). Code: `assets/theme.js` + the end of `style.css`.
+
 ## [2026-10-14] — Sermon of Muttaqin, Part 15 (English)
 
 - `/articles/khutbat-al-muttaqin/15/` — "They endured patiently for only a few days, and it resulted in an everlasting comfort" (Lady Rubab (p)); video wzn9qUMPkMs (published 13 Oct 2026), text word for word from the supplied post (`muttaqin_src/wzn9qUMPkMs.txt`), references as a list. Series page, homepage part buttons, month/tag pages, sitemap updated; series date 13 Oct. The cover is the generated card for now (the supplied Part 15 poster did not arrive as a file). Farsi / Arabic / Urdu follow when sent (`build_muttaqin_l10n.py`).
