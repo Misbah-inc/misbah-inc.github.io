@@ -5,6 +5,10 @@ Format: `## [Date] — Summary` followed by bulleted details.
 
 ---
 
+## [2026-10-14] — Muttaqin: the video on every language
+
+- Farsi / Arabic / Urdu Part 1–2 pages now start with the same YouTube video as the English page (the other voices are being added to that one video as audio tracks, so viewers pick their language in the player). VideoObject structured data included.
+
 ## [2026-10-14] — Muttaqin Parts 1–2: titles are the editor's own lines
 
 - Farsi / Arabic / Urdu page headings now end with the subtitle line supplied for each part («گفتاری درست و نیکو دارند», «مَنْطِقُهُمُ الصَّوَابُ», «متقین کی گفتار درست اور نیک ہوتی ہے»; Part 2: the posts' own lines, minus a stray word in the Farsi one) instead of my shortened versions.

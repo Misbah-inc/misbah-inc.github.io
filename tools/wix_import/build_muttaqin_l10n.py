@@ -131,7 +131,8 @@ def main(dry=False):
                 continue
             char = CHARS[n][l]
             title = f"{NAME[l]}، {S[l]['part'].format(n=num(n, l))} — {char}" if l != 'ur' else f"{NAME[l]}، {S[l]['part'].format(n=num(n, l))} — {char}"
-            arts[(l, n)] = dict(lang=l, title=title, desc=DESC[n][l], published=a_en['published'], modified=a_en['published'], heads=[], hero_video=None,
+            arts[(l, n)] = dict(lang=l, title=title, desc=DESC[n][l], published=a_en['published'], modified=a_en['published'], heads=[], hero_video=a_en['hero_video'],   # one video for all languages: the other voices are added as audio tracks
+                                
                                 body=[{'t': 'p', 'x': t} for _, t in blocks], tags=[], og='x', img=a_en['img'], blocks=blocks, refs=refs)
     if dry: return
     for (l, n), a in arts.items():
