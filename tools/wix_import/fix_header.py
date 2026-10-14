@@ -73,8 +73,24 @@ def fix_footer(s, lang):
     return s[:i] + new + s[j:] if new != blk else s
 
 
+_VER = {}
+def asset_ver(name):
+    """Short hash of the asset's content: the page links ?v=<hash>, so a changed stylesheet / script is fetched at once instead of after the 10-minute cache."""
+    if name not in _VER:
+        import hashlib
+        _VER[name] = hashlib.md5(open(ROOT + 'assets/' + name, 'rb').read()).hexdigest()[:8]
+    return _VER[name]
+
+
+def version_assets(s):
+    return re.sub(r'(assets/(theme\.js|script\.js|style\.css))(\?v=[0-9a-f]+)?(?=")', lambda m: f'{m.group(1)}?v={asset_ver(m.group(2))}', s)
+
+
 def fix(path):
     s = open(path, encoding='utf-8').read()
+    sv = version_assets(s)
+    if sv != s:
+        s = sv; open(path, 'w', encoding='utf-8').write(s)
     # default theme = light: the attribute is the default, assets/theme.js replaces it with the visitor's saved choice
     ht = re.search(r'<html [^>]*>', s)
     if ht and 'data-theme' not in ht.group(0):

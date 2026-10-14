@@ -5,6 +5,10 @@ Format: `## [Date] — Summary` followed by bulleted details.
 
 ---
 
+## [2026-10-14] — Assets are versioned (changes show at once)
+
+- Pages link `style.css`, `script.js` and `theme.js` with `?v=<content hash>` (added by `fix_header.py`, which every build runs), so a changed stylesheet or script is fetched immediately instead of staying in the browser's 10-minute cache. This is why the new text-size buttons did not show for some visitors right after publishing.
+
 ## [2026-10-14] — Muttaqin Part 15: its own poster
 
 - Part 15 now uses its supplied poster (banner, series-page card, social image, thumbnail) instead of the generated card. `build_muttaqin.py --poster <part> <file>` does one part. Part 14 still uses the generated card until its poster is supplied.
