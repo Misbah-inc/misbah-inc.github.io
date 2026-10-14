@@ -29,3 +29,6 @@ import xml.dom.minidom as m; m.parse(ROOT + 'sitemap.xml'); print('sitemap urls'
 # every build ends by making the headers right (language links to the same page, theme button): see fix_header.py
 import fix_header as _fh
 _fh.main()
+
+import add_lastmod as _lm
+_lm.main()

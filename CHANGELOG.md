@@ -5,6 +5,16 @@ Format: `## [Date] — Summary` followed by bulleted details.
 
 ---
 
+## [2026-10-14] — General audit: links, social image, titles, descriptions, hreflang, sitemap
+
+- **Nav/footer "Connect", "Subscribe", "Contact Us"** (all 329 pages, 4 languages) pointed at `/connect`, which never existed (404). They now go to https://www.misbah-inc.com/subscribe.
+- **Default social image**: the homepages and About pages referenced `images/mosque-madinah-hero.jpg`, which was never committed (404 in every share preview). New `images/og-default.jpg` (1200×630, logo on dark green, no text) replaces it; `og:image:height` corrected to 630.
+- **Titles**: 72 titles clipped with "…" now use the full H1; the four Biography chapters and the Ziyarat parts no longer share one title.
+- **Meta descriptions**: 20 that were glued ("Chapter SixSweeter…"), Arabic on an English page (Ayatul Kursi), or identical (fa Ziyarat 1/2) rewritten from the page's own text; meta, OG, Twitter and JSON-LD all updated. `build_articles.py` now prevents the cause.
+- **hreflang** no longer points at `noindex` filter pages (and those pages carry none); sitemap grew from 222 to 298 URLs: 72 indexable filter pages plus the four `rabi_al_awwal` pages. Every URL now has `<lastmod>` (`add_lastmod.py`).
+- `rabi_al_awwal` pages: second `<h1>` (hero) demoted to `<p>`.
+- Removed empty `assets/hero/biymnih.webp` (0 bytes, unreferenced). CLAUDE.md: old domain removed from the SEO checklist; rules above documented.
+
 ## [2026-10-12] — Articles list: pictures no longer cropped
 
 - Cards on the Articles page (and the month / tag / type pages) cropped every picture to a squarish box: the `<img height="270">` attribute fixed the height at 270px, so the CSS `aspect-ratio: 16/9` was ignored and wide pictures were cut at the sides (Ziyarat, Biography, Virtues of the Messenger, Letter of Imam Sadiq…). Added `height: auto`; all 43 cards now measure exactly 16:9.

@@ -75,7 +75,7 @@ def url(lang, path=''):
 def build_head(lang, tp, title, desc, path, langs, ld, noindex=False, og='/images/kawthar/og-part1-en.jpg'):
     h = head(lang, tp, title=title, desc=desc, parts=(), og_img=og, og_type='website', published='', ld=ld)
     hl = ''.join(f'  <link rel="alternate" hreflang="{l}" href="{url(l, path)}">\n' for l in langs)
-    hl += f'  <link rel="alternate" hreflang="x-default" href="{url("en" if "en" in langs else langs[0], path)}">'
+    if langs: hl += f'  <link rel="alternate" hreflang="x-default" href="{url("en" if "en" in langs else langs[0], path)}">'
     h = re.sub(r'  <!-- Canonical \+ hreflang -->.*?(?=\n\n  <!-- Open Graph)', f'  <!-- Canonical + hreflang -->\n  <link rel="canonical" href="{url(lang, path)}">\n{hl}', h, flags=re.S)
     h = h.replace(f'content="{SITE}{PFX[lang]}/articles/{G.SLUG}/"', f'content="{url(lang, path)}"')
     if noindex: h = h.replace('  <meta name="description"', '  <meta name="robots" content="noindex, follow">\n  <meta name="description"', 1)
@@ -189,9 +189,11 @@ def filter_page(kind, key, lang, n_by_lang):
     u = U[lang]; L = S[lang]; tp = template(lang)
     name = label(kind, key, lang)
     ents = [e for e in entries(lang) if (kind, key) in keys_of(e)]
-    langs = [l for l in LANGS if n_by_lang.get(l, 0) > 0]
-    path = f'{kind}/{key}/'
+    # hreflang may only name pages that are indexable (2+ entries), the same rule the sitemap uses;
+    # a thin noindex page gets none, since Google drops hreflang that points at noindex.
     thin = len(ents) < 2
+    langs = [] if thin else [l for l in LANGS if n_by_lang.get(l, 0) >= 2]
+    path = f'{kind}/{key}/'
     desc = u['page_desc'].format(name=name)
     title = f"{name} | {L['brand']}"
     ld = {"@context": "https://schema.org", "@graph": [
@@ -284,3 +286,6 @@ if __name__ == '__main__':
 # every build ends by making the headers right (language links to the same page, theme button): see fix_header.py
 import fix_header as _fh
 _fh.main()
+
+import add_lastmod as _lm
+_lm.main()

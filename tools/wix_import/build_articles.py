@@ -13,6 +13,17 @@ def clip(t, n=155):
     t = re.sub(r'\s+', ' ', t).strip()
     if len(t) <= n: return t
     return t[:n].rsplit(' ', 1)[0].rstrip('،,.;:') + '…'
+def _arab_ratio(t):
+    l = sum(1 for c in t if c.isalpha())
+    return sum(1 for c in t if '\u0600' <= c <= '\u06ff') / l if l else 0
+_GLUED = re.compile(r'[a-z][A-Z]|[A-Za-z0-9\)\]»”’][\u0600-\u06ff]|[\u0600-\u06ff][A-Za-z\(]')
+def good_desc(t, lang):
+    """Wix's JSON-LD description glues the headings onto the first paragraph and can start with
+    Arabic quotation on a Latin page; such a string is not a usable meta description."""
+    if not t: return False
+    r = _arab_ratio(t)
+    if lang == 'en': return r < .2 and not _GLUED.search(t)
+    return r >= .5
 DROP_TAGS = {'latest', 'previous', 'youtube blogs', 'Latest', 'Previous', 'YouTube Blogs', 'تازه ها', 'الأحدث', 'السابق'}
 
 
@@ -208,11 +219,15 @@ def page(slug, lang, a, langs_avail, TP, month_key=None, meta_title=None, series
     fs = slug.replace('/', '-')
     words = len(' '.join(b['x'] for b in a['body'] if 'x' in b and isinstance(b['x'], str)).split())
     mins = max(1, round(words / 180))
-    title_tag = f"{a['title'][:80]} | {L['brand']}"
-    if len(title_tag) > 70: title_tag = f"{clip(a['title'], 56)} | {L['brand']}"
+    # Never clip a title with "…": series parts differ only in their "— Part N" tail, and a clipped
+    # title made four chapters share one <title>. Search engines truncate long titles themselves.
+    title_tag = f"{a['title']} | {L['brand']}"
+    if len(title_tag) > 110: title_tag = f"{clip(a['title'], 56)} | {L['brand']}"
     ctags = TX.tag_list(slug.split('?')[0], lang) if slug in TX.ITEMS else None
     if ctags: a = dict(a, tags=[c[2] for c in ctags])
-    desc = clip(a['desc'] or next((b['x'] for b in a['body'] if b['t'] == 'p' and len(b['x']) > 60), a['title']), 160)
+    def _para_ok(x): return len(x) > 60 and (_arab_ratio(x) < .15 if lang == 'en' else _arab_ratio(x) >= .6)
+    desc = clip(a['desc'] if good_desc(a['desc'], lang) else
+                next((b['x'] for b in a['body'] if b['t'] == 'p' and _para_ok(b['x'])), a['title']), 160)
     img = a.get('img')  # dict or None
     og_img = f'/images/articles/og-{fs}-{lang}.jpg' if img else '/images/articles/og-fallback.jpg'
 

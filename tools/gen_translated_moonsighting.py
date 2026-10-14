@@ -37,8 +37,8 @@ LANGS = {
           </svg>
         </button>
         <div class="dropdown-panel" role="menu">
-          <a href="/connect#subscribe" class="dropdown-item" role="menuitem">اشترك</a>
-          <a href="/connect#contact"   class="dropdown-item" role="menuitem">اتصل بنا</a>
+          <a href="https://www.misbah-inc.com/subscribe" class="dropdown-item" role="menuitem">اشترك</a>
+          <a href="https://www.misbah-inc.com/subscribe"   class="dropdown-item" role="menuitem">اتصل بنا</a>
         </div>
       </div>
       <a href="/hijri-calendar/" class="nav-link">التقويم الهجري</a>
@@ -84,8 +84,8 @@ LANGS = {
           </svg>
         </button>
         <div class="dropdown-panel" role="menu">
-          <a href="/connect#subscribe" class="dropdown-item" role="menuitem">اشتراک</a>
-          <a href="/connect#contact"   class="dropdown-item" role="menuitem">تماس با ما</a>
+          <a href="https://www.misbah-inc.com/subscribe" class="dropdown-item" role="menuitem">اشتراک</a>
+          <a href="https://www.misbah-inc.com/subscribe"   class="dropdown-item" role="menuitem">تماس با ما</a>
         </div>
       </div>
       <a href="/hijri-calendar/" class="nav-link">تقویم هجری</a>
@@ -131,8 +131,8 @@ LANGS = {
           </svg>
         </button>
         <div class="dropdown-panel" role="menu">
-          <a href="/connect#subscribe" class="dropdown-item" role="menuitem">سبسکرائب</a>
-          <a href="/connect#contact"   class="dropdown-item" role="menuitem">ہم سے رابطہ</a>
+          <a href="https://www.misbah-inc.com/subscribe" class="dropdown-item" role="menuitem">سبسکرائب</a>
+          <a href="https://www.misbah-inc.com/subscribe"   class="dropdown-item" role="menuitem">ہم سے رابطہ</a>
         </div>
       </div>
       <a href="/hijri-calendar/" class="nav-link">ہجری تقویم</a>

@@ -5,6 +5,7 @@
   <!-- ── Homepages ───────────────────────────────────────────── -->
   <url>
     <loc>https://article.misbah-inc.com/</loc>
+    <lastmod>2026-10-13</lastmod>
     <xhtml:link rel="alternate" hreflang="en"        href="https://article.misbah-inc.com/"/>
     <xhtml:link rel="alternate" hreflang="ar"        href="https://article.misbah-inc.com/ar/"/>
     <xhtml:link rel="alternate" hreflang="fa"        href="https://article.misbah-inc.com/fa/"/>
@@ -15,6 +16,7 @@
   </url>
   <url>
     <loc>https://article.misbah-inc.com/ar/</loc>
+    <lastmod>2026-10-13</lastmod>
     <xhtml:link rel="alternate" hreflang="en"        href="https://article.misbah-inc.com/"/>
     <xhtml:link rel="alternate" hreflang="ar"        href="https://article.misbah-inc.com/ar/"/>
     <xhtml:link rel="alternate" hreflang="fa"        href="https://article.misbah-inc.com/fa/"/>
@@ -25,6 +27,7 @@
   </url>
   <url>
     <loc>https://article.misbah-inc.com/fa/</loc>
+    <lastmod>2026-10-13</lastmod>
     <xhtml:link rel="alternate" hreflang="en"        href="https://article.misbah-inc.com/"/>
     <xhtml:link rel="alternate" hreflang="ar"        href="https://article.misbah-inc.com/ar/"/>
     <xhtml:link rel="alternate" hreflang="fa"        href="https://article.misbah-inc.com/fa/"/>
@@ -35,6 +38,7 @@
   </url>
   <url>
     <loc>https://article.misbah-inc.com/ur/</loc>
+    <lastmod>2026-10-13</lastmod>
     <xhtml:link rel="alternate" hreflang="en"        href="https://article.misbah-inc.com/"/>
     <xhtml:link rel="alternate" hreflang="ar"        href="https://article.misbah-inc.com/ar/"/>
     <xhtml:link rel="alternate" hreflang="fa"        href="https://article.misbah-inc.com/fa/"/>
@@ -47,6 +51,7 @@
   <!-- ── About ───────────────────────────────────────────────── -->
   <url>
     <loc>https://article.misbah-inc.com/about/</loc>
+    <lastmod>2026-10-13</lastmod>
     <xhtml:link rel="alternate" hreflang="en"        href="https://article.misbah-inc.com/about/"/>
     <xhtml:link rel="alternate" hreflang="ar"        href="https://article.misbah-inc.com/ar/about/"/>
     <xhtml:link rel="alternate" hreflang="fa"        href="https://article.misbah-inc.com/fa/about/"/>
@@ -57,6 +62,7 @@
   </url>
   <url>
     <loc>https://article.misbah-inc.com/ar/about/</loc>
+    <lastmod>2026-10-13</lastmod>
     <xhtml:link rel="alternate" hreflang="en"        href="https://article.misbah-inc.com/about/"/>
     <xhtml:link rel="alternate" hreflang="ar"        href="https://article.misbah-inc.com/ar/about/"/>
     <xhtml:link rel="alternate" hreflang="fa"        href="https://article.misbah-inc.com/fa/about/"/>
@@ -67,6 +73,7 @@
   </url>
   <url>
     <loc>https://article.misbah-inc.com/fa/about/</loc>
+    <lastmod>2026-10-13</lastmod>
     <xhtml:link rel="alternate" hreflang="en"        href="https://article.misbah-inc.com/about/"/>
     <xhtml:link rel="alternate" hreflang="ar"        href="https://article.misbah-inc.com/ar/about/"/>
     <xhtml:link rel="alternate" hreflang="fa"        href="https://article.misbah-inc.com/fa/about/"/>
@@ -77,6 +84,7 @@
   </url>
   <url>
     <loc>https://article.misbah-inc.com/ur/about/</loc>
+    <lastmod>2026-10-13</lastmod>
     <xhtml:link rel="alternate" hreflang="en"        href="https://article.misbah-inc.com/about/"/>
     <xhtml:link rel="alternate" hreflang="ar"        href="https://article.misbah-inc.com/ar/about/"/>
     <xhtml:link rel="alternate" hreflang="fa"        href="https://article.misbah-inc.com/fa/about/"/>
@@ -255,6 +263,53 @@
 
 
 
+
+
+  <!-- ── Khadijah virtues article (original, hand-maintained; survives build_sitemap.py) ── -->
+  <url>
+    <loc>https://article.misbah-inc.com/articles/rabi_al_awwal/</loc>
+    <lastmod>2026-10-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://article.misbah-inc.com/articles/rabi_al_awwal/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://article.misbah-inc.com/ar/articles/rabi_al_awwal/"/>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://article.misbah-inc.com/fa/articles/rabi_al_awwal/"/>
+    <xhtml:link rel="alternate" hreflang="ur" href="https://article.misbah-inc.com/ur/articles/rabi_al_awwal/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://article.misbah-inc.com/articles/rabi_al_awwal/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://article.misbah-inc.com/ar/articles/rabi_al_awwal/</loc>
+    <lastmod>2026-10-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://article.misbah-inc.com/articles/rabi_al_awwal/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://article.misbah-inc.com/ar/articles/rabi_al_awwal/"/>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://article.misbah-inc.com/fa/articles/rabi_al_awwal/"/>
+    <xhtml:link rel="alternate" hreflang="ur" href="https://article.misbah-inc.com/ur/articles/rabi_al_awwal/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://article.misbah-inc.com/articles/rabi_al_awwal/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://article.misbah-inc.com/fa/articles/rabi_al_awwal/</loc>
+    <lastmod>2026-10-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://article.misbah-inc.com/articles/rabi_al_awwal/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://article.misbah-inc.com/ar/articles/rabi_al_awwal/"/>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://article.misbah-inc.com/fa/articles/rabi_al_awwal/"/>
+    <xhtml:link rel="alternate" hreflang="ur" href="https://article.misbah-inc.com/ur/articles/rabi_al_awwal/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://article.misbah-inc.com/articles/rabi_al_awwal/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://article.misbah-inc.com/ur/articles/rabi_al_awwal/</loc>
+    <lastmod>2026-10-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://article.misbah-inc.com/articles/rabi_al_awwal/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://article.misbah-inc.com/ar/articles/rabi_al_awwal/"/>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://article.misbah-inc.com/fa/articles/rabi_al_awwal/"/>
+    <xhtml:link rel="alternate" hreflang="ur" href="https://article.misbah-inc.com/ur/articles/rabi_al_awwal/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://article.misbah-inc.com/articles/rabi_al_awwal/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 
   <!-- ── Imported articles + indexes ────────────────────────────── -->
   <url>
@@ -2226,5 +2281,751 @@
     <lastmod>2025-05-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+
+  <!-- ── Filter pages (month / type / tag), only those with 2+ entries ── -->
+  <url>
+    <loc>https://article.misbah-inc.com/ar/articles/month/any-time/</loc>
+    <lastmod>2026-10-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://article.misbah-inc.com/articles/month/any-time/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://article.misbah-inc.com/ar/articles/month/any-time/"/>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://article.misbah-inc.com/fa/articles/month/any-time/"/>
+    <xhtml:link rel="alternate" hreflang="ur" href="https://article.misbah-inc.com/ur/articles/month/any-time/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://article.misbah-inc.com/articles/month/any-time/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://article.misbah-inc.com/articles/month/any-time/</loc>
+    <lastmod>2026-10-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://article.misbah-inc.com/articles/month/any-time/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://article.misbah-inc.com/ar/articles/month/any-time/"/>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://article.misbah-inc.com/fa/articles/month/any-time/"/>
+    <xhtml:link rel="alternate" hreflang="ur" href="https://article.misbah-inc.com/ur/articles/month/any-time/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://article.misbah-inc.com/articles/month/any-time/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://article.misbah-inc.com/fa/articles/month/any-time/</loc>
+    <lastmod>2026-10-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://article.misbah-inc.com/articles/month/any-time/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://article.misbah-inc.com/ar/articles/month/any-time/"/>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://article.misbah-inc.com/fa/articles/month/any-time/"/>
+    <xhtml:link rel="alternate" hreflang="ur" href="https://article.misbah-inc.com/ur/articles/month/any-time/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://article.misbah-inc.com/articles/month/any-time/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://article.misbah-inc.com/ur/articles/month/any-time/</loc>
+    <lastmod>2026-10-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://article.misbah-inc.com/articles/month/any-time/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://article.misbah-inc.com/ar/articles/month/any-time/"/>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://article.misbah-inc.com/fa/articles/month/any-time/"/>
+    <xhtml:link rel="alternate" hreflang="ur" href="https://article.misbah-inc.com/ur/articles/month/any-time/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://article.misbah-inc.com/articles/month/any-time/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://article.misbah-inc.com/articles/month/dhu-al-hijjah/</loc>
+    <lastmod>2026-10-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://article.misbah-inc.com/articles/month/dhu-al-hijjah/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://article.misbah-inc.com/articles/month/dhu-al-hijjah/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://article.misbah-inc.com/articles/month/jumada-al-awwal/</loc>
+    <lastmod>2026-10-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://article.misbah-inc.com/articles/month/jumada-al-awwal/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://article.misbah-inc.com/articles/month/jumada-al-awwal/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://article.misbah-inc.com/articles/month/muharram/</loc>
+    <lastmod>2026-10-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://article.misbah-inc.com/articles/month/muharram/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://article.misbah-inc.com/articles/month/muharram/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://article.misbah-inc.com/ar/articles/month/rabi-al-awwal/</loc>
+    <lastmod>2026-10-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://article.misbah-inc.com/articles/month/rabi-al-awwal/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://article.misbah-inc.com/ar/articles/month/rabi-al-awwal/"/>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://article.misbah-inc.com/fa/articles/month/rabi-al-awwal/"/>
+    <xhtml:link rel="alternate" hreflang="ur" href="https://article.misbah-inc.com/ur/articles/month/rabi-al-awwal/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://article.misbah-inc.com/articles/month/rabi-al-awwal/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://article.misbah-inc.com/articles/month/rabi-al-awwal/</loc>
+    <lastmod>2026-10-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://article.misbah-inc.com/articles/month/rabi-al-awwal/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://article.misbah-inc.com/ar/articles/month/rabi-al-awwal/"/>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://article.misbah-inc.com/fa/articles/month/rabi-al-awwal/"/>
+    <xhtml:link rel="alternate" hreflang="ur" href="https://article.misbah-inc.com/ur/articles/month/rabi-al-awwal/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://article.misbah-inc.com/articles/month/rabi-al-awwal/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://article.misbah-inc.com/fa/articles/month/rabi-al-awwal/</loc>
+    <lastmod>2026-10-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://article.misbah-inc.com/articles/month/rabi-al-awwal/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://article.misbah-inc.com/ar/articles/month/rabi-al-awwal/"/>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://article.misbah-inc.com/fa/articles/month/rabi-al-awwal/"/>
+    <xhtml:link rel="alternate" hreflang="ur" href="https://article.misbah-inc.com/ur/articles/month/rabi-al-awwal/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://article.misbah-inc.com/articles/month/rabi-al-awwal/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://article.misbah-inc.com/ur/articles/month/rabi-al-awwal/</loc>
+    <lastmod>2026-10-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://article.misbah-inc.com/articles/month/rabi-al-awwal/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://article.misbah-inc.com/ar/articles/month/rabi-al-awwal/"/>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://article.misbah-inc.com/fa/articles/month/rabi-al-awwal/"/>
+    <xhtml:link rel="alternate" hreflang="ur" href="https://article.misbah-inc.com/ur/articles/month/rabi-al-awwal/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://article.misbah-inc.com/articles/month/rabi-al-awwal/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://article.misbah-inc.com/ar/articles/month/rabi-al-thani/</loc>
+    <lastmod>2026-10-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://article.misbah-inc.com/articles/month/rabi-al-thani/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://article.misbah-inc.com/ar/articles/month/rabi-al-thani/"/>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://article.misbah-inc.com/fa/articles/month/rabi-al-thani/"/>
+    <xhtml:link rel="alternate" hreflang="ur" href="https://article.misbah-inc.com/ur/articles/month/rabi-al-thani/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://article.misbah-inc.com/articles/month/rabi-al-thani/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://article.misbah-inc.com/articles/month/rabi-al-thani/</loc>
+    <lastmod>2026-10-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://article.misbah-inc.com/articles/month/rabi-al-thani/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://article.misbah-inc.com/ar/articles/month/rabi-al-thani/"/>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://article.misbah-inc.com/fa/articles/month/rabi-al-thani/"/>
+    <xhtml:link rel="alternate" hreflang="ur" href="https://article.misbah-inc.com/ur/articles/month/rabi-al-thani/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://article.misbah-inc.com/articles/month/rabi-al-thani/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://article.misbah-inc.com/fa/articles/month/rabi-al-thani/</loc>
+    <lastmod>2026-10-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://article.misbah-inc.com/articles/month/rabi-al-thani/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://article.misbah-inc.com/ar/articles/month/rabi-al-thani/"/>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://article.misbah-inc.com/fa/articles/month/rabi-al-thani/"/>
+    <xhtml:link rel="alternate" hreflang="ur" href="https://article.misbah-inc.com/ur/articles/month/rabi-al-thani/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://article.misbah-inc.com/articles/month/rabi-al-thani/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://article.misbah-inc.com/ur/articles/month/rabi-al-thani/</loc>
+    <lastmod>2026-10-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://article.misbah-inc.com/articles/month/rabi-al-thani/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://article.misbah-inc.com/ar/articles/month/rabi-al-thani/"/>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://article.misbah-inc.com/fa/articles/month/rabi-al-thani/"/>
+    <xhtml:link rel="alternate" hreflang="ur" href="https://article.misbah-inc.com/ur/articles/month/rabi-al-thani/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://article.misbah-inc.com/articles/month/rabi-al-thani/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://article.misbah-inc.com/articles/month/ramadan/</loc>
+    <lastmod>2026-10-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://article.misbah-inc.com/articles/month/ramadan/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://article.misbah-inc.com/articles/month/ramadan/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://article.misbah-inc.com/articles/month/safar/</loc>
+    <lastmod>2026-10-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://article.misbah-inc.com/articles/month/safar/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://article.misbah-inc.com/articles/month/safar/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://article.misbah-inc.com/articles/tag/arbaeen/</loc>
+    <lastmod>2026-10-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://article.misbah-inc.com/articles/tag/arbaeen/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://article.misbah-inc.com/articles/tag/arbaeen/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://article.misbah-inc.com/articles/tag/community-service/</loc>
+    <lastmod>2026-10-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://article.misbah-inc.com/articles/tag/community-service/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://article.misbah-inc.com/articles/tag/community-service/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://article.misbah-inc.com/articles/tag/ghadir/</loc>
+    <lastmod>2026-10-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://article.misbah-inc.com/articles/tag/ghadir/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://article.misbah-inc.com/articles/tag/ghadir/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://article.misbah-inc.com/ar/articles/tag/holy-prophet/</loc>
+    <lastmod>2026-10-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://article.misbah-inc.com/articles/tag/holy-prophet/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://article.misbah-inc.com/ar/articles/tag/holy-prophet/"/>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://article.misbah-inc.com/fa/articles/tag/holy-prophet/"/>
+    <xhtml:link rel="alternate" hreflang="ur" href="https://article.misbah-inc.com/ur/articles/tag/holy-prophet/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://article.misbah-inc.com/articles/tag/holy-prophet/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://article.misbah-inc.com/articles/tag/holy-prophet/</loc>
+    <lastmod>2026-10-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://article.misbah-inc.com/articles/tag/holy-prophet/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://article.misbah-inc.com/ar/articles/tag/holy-prophet/"/>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://article.misbah-inc.com/fa/articles/tag/holy-prophet/"/>
+    <xhtml:link rel="alternate" hreflang="ur" href="https://article.misbah-inc.com/ur/articles/tag/holy-prophet/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://article.misbah-inc.com/articles/tag/holy-prophet/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://article.misbah-inc.com/fa/articles/tag/holy-prophet/</loc>
+    <lastmod>2026-10-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://article.misbah-inc.com/articles/tag/holy-prophet/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://article.misbah-inc.com/ar/articles/tag/holy-prophet/"/>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://article.misbah-inc.com/fa/articles/tag/holy-prophet/"/>
+    <xhtml:link rel="alternate" hreflang="ur" href="https://article.misbah-inc.com/ur/articles/tag/holy-prophet/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://article.misbah-inc.com/articles/tag/holy-prophet/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://article.misbah-inc.com/ur/articles/tag/holy-prophet/</loc>
+    <lastmod>2026-10-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://article.misbah-inc.com/articles/tag/holy-prophet/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://article.misbah-inc.com/ar/articles/tag/holy-prophet/"/>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://article.misbah-inc.com/fa/articles/tag/holy-prophet/"/>
+    <xhtml:link rel="alternate" hreflang="ur" href="https://article.misbah-inc.com/ur/articles/tag/holy-prophet/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://article.misbah-inc.com/articles/tag/holy-prophet/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://article.misbah-inc.com/articles/tag/imam-ali/</loc>
+    <lastmod>2026-10-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://article.misbah-inc.com/articles/tag/imam-ali/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://article.misbah-inc.com/articles/tag/imam-ali/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://article.misbah-inc.com/articles/tag/imam-hasan/</loc>
+    <lastmod>2026-10-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://article.misbah-inc.com/articles/tag/imam-hasan/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://article.misbah-inc.com/articles/tag/imam-hasan/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://article.misbah-inc.com/articles/tag/imam-hussain/</loc>
+    <lastmod>2026-10-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://article.misbah-inc.com/articles/tag/imam-hussain/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://article.misbah-inc.com/articles/tag/imam-hussain/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://article.misbah-inc.com/articles/tag/imam-mahdi/</loc>
+    <lastmod>2026-10-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://article.misbah-inc.com/articles/tag/imam-mahdi/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://article.misbah-inc.com/articles/tag/imam-mahdi/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://article.misbah-inc.com/articles/tag/imam-ridha/</loc>
+    <lastmod>2026-10-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://article.misbah-inc.com/articles/tag/imam-ridha/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://article.misbah-inc.com/articles/tag/imam-ridha/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://article.misbah-inc.com/ar/articles/tag/imam-sadiq/</loc>
+    <lastmod>2026-10-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://article.misbah-inc.com/articles/tag/imam-sadiq/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://article.misbah-inc.com/ar/articles/tag/imam-sadiq/"/>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://article.misbah-inc.com/fa/articles/tag/imam-sadiq/"/>
+    <xhtml:link rel="alternate" hreflang="ur" href="https://article.misbah-inc.com/ur/articles/tag/imam-sadiq/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://article.misbah-inc.com/articles/tag/imam-sadiq/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://article.misbah-inc.com/articles/tag/imam-sadiq/</loc>
+    <lastmod>2026-10-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://article.misbah-inc.com/articles/tag/imam-sadiq/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://article.misbah-inc.com/ar/articles/tag/imam-sadiq/"/>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://article.misbah-inc.com/fa/articles/tag/imam-sadiq/"/>
+    <xhtml:link rel="alternate" hreflang="ur" href="https://article.misbah-inc.com/ur/articles/tag/imam-sadiq/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://article.misbah-inc.com/articles/tag/imam-sadiq/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://article.misbah-inc.com/fa/articles/tag/imam-sadiq/</loc>
+    <lastmod>2026-10-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://article.misbah-inc.com/articles/tag/imam-sadiq/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://article.misbah-inc.com/ar/articles/tag/imam-sadiq/"/>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://article.misbah-inc.com/fa/articles/tag/imam-sadiq/"/>
+    <xhtml:link rel="alternate" hreflang="ur" href="https://article.misbah-inc.com/ur/articles/tag/imam-sadiq/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://article.misbah-inc.com/articles/tag/imam-sadiq/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://article.misbah-inc.com/ur/articles/tag/imam-sadiq/</loc>
+    <lastmod>2026-10-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://article.misbah-inc.com/articles/tag/imam-sadiq/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://article.misbah-inc.com/ar/articles/tag/imam-sadiq/"/>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://article.misbah-inc.com/fa/articles/tag/imam-sadiq/"/>
+    <xhtml:link rel="alternate" hreflang="ur" href="https://article.misbah-inc.com/ur/articles/tag/imam-sadiq/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://article.misbah-inc.com/articles/tag/imam-sadiq/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://article.misbah-inc.com/ar/articles/tag/lady-fatimah-zahra/</loc>
+    <lastmod>2026-10-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://article.misbah-inc.com/articles/tag/lady-fatimah-zahra/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://article.misbah-inc.com/ar/articles/tag/lady-fatimah-zahra/"/>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://article.misbah-inc.com/fa/articles/tag/lady-fatimah-zahra/"/>
+    <xhtml:link rel="alternate" hreflang="ur" href="https://article.misbah-inc.com/ur/articles/tag/lady-fatimah-zahra/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://article.misbah-inc.com/articles/tag/lady-fatimah-zahra/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://article.misbah-inc.com/articles/tag/lady-fatimah-zahra/</loc>
+    <lastmod>2026-10-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://article.misbah-inc.com/articles/tag/lady-fatimah-zahra/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://article.misbah-inc.com/ar/articles/tag/lady-fatimah-zahra/"/>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://article.misbah-inc.com/fa/articles/tag/lady-fatimah-zahra/"/>
+    <xhtml:link rel="alternate" hreflang="ur" href="https://article.misbah-inc.com/ur/articles/tag/lady-fatimah-zahra/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://article.misbah-inc.com/articles/tag/lady-fatimah-zahra/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://article.misbah-inc.com/fa/articles/tag/lady-fatimah-zahra/</loc>
+    <lastmod>2026-10-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://article.misbah-inc.com/articles/tag/lady-fatimah-zahra/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://article.misbah-inc.com/ar/articles/tag/lady-fatimah-zahra/"/>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://article.misbah-inc.com/fa/articles/tag/lady-fatimah-zahra/"/>
+    <xhtml:link rel="alternate" hreflang="ur" href="https://article.misbah-inc.com/ur/articles/tag/lady-fatimah-zahra/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://article.misbah-inc.com/articles/tag/lady-fatimah-zahra/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://article.misbah-inc.com/ur/articles/tag/lady-fatimah-zahra/</loc>
+    <lastmod>2026-10-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://article.misbah-inc.com/articles/tag/lady-fatimah-zahra/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://article.misbah-inc.com/ar/articles/tag/lady-fatimah-zahra/"/>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://article.misbah-inc.com/fa/articles/tag/lady-fatimah-zahra/"/>
+    <xhtml:link rel="alternate" hreflang="ur" href="https://article.misbah-inc.com/ur/articles/tag/lady-fatimah-zahra/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://article.misbah-inc.com/articles/tag/lady-fatimah-zahra/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://article.misbah-inc.com/ar/articles/tag/lady-khadijah/</loc>
+    <lastmod>2026-10-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://article.misbah-inc.com/articles/tag/lady-khadijah/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://article.misbah-inc.com/ar/articles/tag/lady-khadijah/"/>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://article.misbah-inc.com/fa/articles/tag/lady-khadijah/"/>
+    <xhtml:link rel="alternate" hreflang="ur" href="https://article.misbah-inc.com/ur/articles/tag/lady-khadijah/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://article.misbah-inc.com/articles/tag/lady-khadijah/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://article.misbah-inc.com/articles/tag/lady-khadijah/</loc>
+    <lastmod>2026-10-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://article.misbah-inc.com/articles/tag/lady-khadijah/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://article.misbah-inc.com/ar/articles/tag/lady-khadijah/"/>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://article.misbah-inc.com/fa/articles/tag/lady-khadijah/"/>
+    <xhtml:link rel="alternate" hreflang="ur" href="https://article.misbah-inc.com/ur/articles/tag/lady-khadijah/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://article.misbah-inc.com/articles/tag/lady-khadijah/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://article.misbah-inc.com/fa/articles/tag/lady-khadijah/</loc>
+    <lastmod>2026-10-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://article.misbah-inc.com/articles/tag/lady-khadijah/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://article.misbah-inc.com/ar/articles/tag/lady-khadijah/"/>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://article.misbah-inc.com/fa/articles/tag/lady-khadijah/"/>
+    <xhtml:link rel="alternate" hreflang="ur" href="https://article.misbah-inc.com/ur/articles/tag/lady-khadijah/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://article.misbah-inc.com/articles/tag/lady-khadijah/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://article.misbah-inc.com/ur/articles/tag/lady-khadijah/</loc>
+    <lastmod>2026-10-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://article.misbah-inc.com/articles/tag/lady-khadijah/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://article.misbah-inc.com/ar/articles/tag/lady-khadijah/"/>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://article.misbah-inc.com/fa/articles/tag/lady-khadijah/"/>
+    <xhtml:link rel="alternate" hreflang="ur" href="https://article.misbah-inc.com/ur/articles/tag/lady-khadijah/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://article.misbah-inc.com/articles/tag/lady-khadijah/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://article.misbah-inc.com/ar/articles/tag/lady-masoumah/</loc>
+    <lastmod>2026-10-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://article.misbah-inc.com/articles/tag/lady-masoumah/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://article.misbah-inc.com/ar/articles/tag/lady-masoumah/"/>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://article.misbah-inc.com/fa/articles/tag/lady-masoumah/"/>
+    <xhtml:link rel="alternate" hreflang="ur" href="https://article.misbah-inc.com/ur/articles/tag/lady-masoumah/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://article.misbah-inc.com/articles/tag/lady-masoumah/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://article.misbah-inc.com/articles/tag/lady-masoumah/</loc>
+    <lastmod>2026-10-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://article.misbah-inc.com/articles/tag/lady-masoumah/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://article.misbah-inc.com/ar/articles/tag/lady-masoumah/"/>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://article.misbah-inc.com/fa/articles/tag/lady-masoumah/"/>
+    <xhtml:link rel="alternate" hreflang="ur" href="https://article.misbah-inc.com/ur/articles/tag/lady-masoumah/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://article.misbah-inc.com/articles/tag/lady-masoumah/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://article.misbah-inc.com/fa/articles/tag/lady-masoumah/</loc>
+    <lastmod>2026-10-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://article.misbah-inc.com/articles/tag/lady-masoumah/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://article.misbah-inc.com/ar/articles/tag/lady-masoumah/"/>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://article.misbah-inc.com/fa/articles/tag/lady-masoumah/"/>
+    <xhtml:link rel="alternate" hreflang="ur" href="https://article.misbah-inc.com/ur/articles/tag/lady-masoumah/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://article.misbah-inc.com/articles/tag/lady-masoumah/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://article.misbah-inc.com/ur/articles/tag/lady-masoumah/</loc>
+    <lastmod>2026-10-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://article.misbah-inc.com/articles/tag/lady-masoumah/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://article.misbah-inc.com/ar/articles/tag/lady-masoumah/"/>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://article.misbah-inc.com/fa/articles/tag/lady-masoumah/"/>
+    <xhtml:link rel="alternate" hreflang="ur" href="https://article.misbah-inc.com/ur/articles/tag/lady-masoumah/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://article.misbah-inc.com/articles/tag/lady-masoumah/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://article.misbah-inc.com/articles/tag/lady-ruqayyah/</loc>
+    <lastmod>2026-10-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://article.misbah-inc.com/articles/tag/lady-ruqayyah/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://article.misbah-inc.com/articles/tag/lady-ruqayyah/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://article.misbah-inc.com/articles/tag/mourning/</loc>
+    <lastmod>2026-10-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://article.misbah-inc.com/articles/tag/mourning/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://article.misbah-inc.com/articles/tag/mourning/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://article.misbah-inc.com/ar/articles/tag/quran/</loc>
+    <lastmod>2026-10-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://article.misbah-inc.com/articles/tag/quran/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://article.misbah-inc.com/ar/articles/tag/quran/"/>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://article.misbah-inc.com/fa/articles/tag/quran/"/>
+    <xhtml:link rel="alternate" hreflang="ur" href="https://article.misbah-inc.com/ur/articles/tag/quran/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://article.misbah-inc.com/articles/tag/quran/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://article.misbah-inc.com/articles/tag/quran/</loc>
+    <lastmod>2026-10-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://article.misbah-inc.com/articles/tag/quran/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://article.misbah-inc.com/ar/articles/tag/quran/"/>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://article.misbah-inc.com/fa/articles/tag/quran/"/>
+    <xhtml:link rel="alternate" hreflang="ur" href="https://article.misbah-inc.com/ur/articles/tag/quran/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://article.misbah-inc.com/articles/tag/quran/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://article.misbah-inc.com/fa/articles/tag/quran/</loc>
+    <lastmod>2026-10-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://article.misbah-inc.com/articles/tag/quran/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://article.misbah-inc.com/ar/articles/tag/quran/"/>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://article.misbah-inc.com/fa/articles/tag/quran/"/>
+    <xhtml:link rel="alternate" hreflang="ur" href="https://article.misbah-inc.com/ur/articles/tag/quran/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://article.misbah-inc.com/articles/tag/quran/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://article.misbah-inc.com/ur/articles/tag/quran/</loc>
+    <lastmod>2026-10-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://article.misbah-inc.com/articles/tag/quran/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://article.misbah-inc.com/ar/articles/tag/quran/"/>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://article.misbah-inc.com/fa/articles/tag/quran/"/>
+    <xhtml:link rel="alternate" hreflang="ur" href="https://article.misbah-inc.com/ur/articles/tag/quran/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://article.misbah-inc.com/articles/tag/quran/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://article.misbah-inc.com/ar/articles/tag/sayyid-abdul-azim/</loc>
+    <lastmod>2026-10-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://article.misbah-inc.com/articles/tag/sayyid-abdul-azim/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://article.misbah-inc.com/ar/articles/tag/sayyid-abdul-azim/"/>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://article.misbah-inc.com/fa/articles/tag/sayyid-abdul-azim/"/>
+    <xhtml:link rel="alternate" hreflang="ur" href="https://article.misbah-inc.com/ur/articles/tag/sayyid-abdul-azim/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://article.misbah-inc.com/articles/tag/sayyid-abdul-azim/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://article.misbah-inc.com/articles/tag/sayyid-abdul-azim/</loc>
+    <lastmod>2026-10-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://article.misbah-inc.com/articles/tag/sayyid-abdul-azim/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://article.misbah-inc.com/ar/articles/tag/sayyid-abdul-azim/"/>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://article.misbah-inc.com/fa/articles/tag/sayyid-abdul-azim/"/>
+    <xhtml:link rel="alternate" hreflang="ur" href="https://article.misbah-inc.com/ur/articles/tag/sayyid-abdul-azim/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://article.misbah-inc.com/articles/tag/sayyid-abdul-azim/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://article.misbah-inc.com/fa/articles/tag/sayyid-abdul-azim/</loc>
+    <lastmod>2026-10-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://article.misbah-inc.com/articles/tag/sayyid-abdul-azim/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://article.misbah-inc.com/ar/articles/tag/sayyid-abdul-azim/"/>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://article.misbah-inc.com/fa/articles/tag/sayyid-abdul-azim/"/>
+    <xhtml:link rel="alternate" hreflang="ur" href="https://article.misbah-inc.com/ur/articles/tag/sayyid-abdul-azim/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://article.misbah-inc.com/articles/tag/sayyid-abdul-azim/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://article.misbah-inc.com/ur/articles/tag/sayyid-abdul-azim/</loc>
+    <lastmod>2026-10-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://article.misbah-inc.com/articles/tag/sayyid-abdul-azim/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://article.misbah-inc.com/ar/articles/tag/sayyid-abdul-azim/"/>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://article.misbah-inc.com/fa/articles/tag/sayyid-abdul-azim/"/>
+    <xhtml:link rel="alternate" hreflang="ur" href="https://article.misbah-inc.com/ur/articles/tag/sayyid-abdul-azim/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://article.misbah-inc.com/articles/tag/sayyid-abdul-azim/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://article.misbah-inc.com/articles/tag/wilayah/</loc>
+    <lastmod>2026-10-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://article.misbah-inc.com/articles/tag/wilayah/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://article.misbah-inc.com/articles/tag/wilayah/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://article.misbah-inc.com/ar/articles/tag/ziyarat/</loc>
+    <lastmod>2026-10-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://article.misbah-inc.com/articles/tag/ziyarat/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://article.misbah-inc.com/ar/articles/tag/ziyarat/"/>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://article.misbah-inc.com/fa/articles/tag/ziyarat/"/>
+    <xhtml:link rel="alternate" hreflang="ur" href="https://article.misbah-inc.com/ur/articles/tag/ziyarat/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://article.misbah-inc.com/articles/tag/ziyarat/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://article.misbah-inc.com/articles/tag/ziyarat/</loc>
+    <lastmod>2026-10-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://article.misbah-inc.com/articles/tag/ziyarat/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://article.misbah-inc.com/ar/articles/tag/ziyarat/"/>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://article.misbah-inc.com/fa/articles/tag/ziyarat/"/>
+    <xhtml:link rel="alternate" hreflang="ur" href="https://article.misbah-inc.com/ur/articles/tag/ziyarat/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://article.misbah-inc.com/articles/tag/ziyarat/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://article.misbah-inc.com/fa/articles/tag/ziyarat/</loc>
+    <lastmod>2026-10-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://article.misbah-inc.com/articles/tag/ziyarat/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://article.misbah-inc.com/ar/articles/tag/ziyarat/"/>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://article.misbah-inc.com/fa/articles/tag/ziyarat/"/>
+    <xhtml:link rel="alternate" hreflang="ur" href="https://article.misbah-inc.com/ur/articles/tag/ziyarat/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://article.misbah-inc.com/articles/tag/ziyarat/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://article.misbah-inc.com/ur/articles/tag/ziyarat/</loc>
+    <lastmod>2026-10-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://article.misbah-inc.com/articles/tag/ziyarat/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://article.misbah-inc.com/ar/articles/tag/ziyarat/"/>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://article.misbah-inc.com/fa/articles/tag/ziyarat/"/>
+    <xhtml:link rel="alternate" hreflang="ur" href="https://article.misbah-inc.com/ur/articles/tag/ziyarat/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://article.misbah-inc.com/articles/tag/ziyarat/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://article.misbah-inc.com/ar/articles/type/announcement/</loc>
+    <lastmod>2026-10-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://article.misbah-inc.com/articles/type/announcement/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://article.misbah-inc.com/ar/articles/type/announcement/"/>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://article.misbah-inc.com/fa/articles/type/announcement/"/>
+    <xhtml:link rel="alternate" hreflang="ur" href="https://article.misbah-inc.com/ur/articles/type/announcement/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://article.misbah-inc.com/articles/type/announcement/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://article.misbah-inc.com/articles/type/announcement/</loc>
+    <lastmod>2026-10-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://article.misbah-inc.com/articles/type/announcement/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://article.misbah-inc.com/ar/articles/type/announcement/"/>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://article.misbah-inc.com/fa/articles/type/announcement/"/>
+    <xhtml:link rel="alternate" hreflang="ur" href="https://article.misbah-inc.com/ur/articles/type/announcement/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://article.misbah-inc.com/articles/type/announcement/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://article.misbah-inc.com/fa/articles/type/announcement/</loc>
+    <lastmod>2026-10-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://article.misbah-inc.com/articles/type/announcement/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://article.misbah-inc.com/ar/articles/type/announcement/"/>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://article.misbah-inc.com/fa/articles/type/announcement/"/>
+    <xhtml:link rel="alternate" hreflang="ur" href="https://article.misbah-inc.com/ur/articles/type/announcement/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://article.misbah-inc.com/articles/type/announcement/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://article.misbah-inc.com/ur/articles/type/announcement/</loc>
+    <lastmod>2026-10-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://article.misbah-inc.com/articles/type/announcement/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://article.misbah-inc.com/ar/articles/type/announcement/"/>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://article.misbah-inc.com/fa/articles/type/announcement/"/>
+    <xhtml:link rel="alternate" hreflang="ur" href="https://article.misbah-inc.com/ur/articles/type/announcement/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://article.misbah-inc.com/articles/type/announcement/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://article.misbah-inc.com/ar/articles/type/article/</loc>
+    <lastmod>2026-10-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://article.misbah-inc.com/articles/type/article/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://article.misbah-inc.com/ar/articles/type/article/"/>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://article.misbah-inc.com/fa/articles/type/article/"/>
+    <xhtml:link rel="alternate" hreflang="ur" href="https://article.misbah-inc.com/ur/articles/type/article/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://article.misbah-inc.com/articles/type/article/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://article.misbah-inc.com/articles/type/article/</loc>
+    <lastmod>2026-10-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://article.misbah-inc.com/articles/type/article/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://article.misbah-inc.com/ar/articles/type/article/"/>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://article.misbah-inc.com/fa/articles/type/article/"/>
+    <xhtml:link rel="alternate" hreflang="ur" href="https://article.misbah-inc.com/ur/articles/type/article/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://article.misbah-inc.com/articles/type/article/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://article.misbah-inc.com/fa/articles/type/article/</loc>
+    <lastmod>2026-10-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://article.misbah-inc.com/articles/type/article/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://article.misbah-inc.com/ar/articles/type/article/"/>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://article.misbah-inc.com/fa/articles/type/article/"/>
+    <xhtml:link rel="alternate" hreflang="ur" href="https://article.misbah-inc.com/ur/articles/type/article/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://article.misbah-inc.com/articles/type/article/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://article.misbah-inc.com/ur/articles/type/article/</loc>
+    <lastmod>2026-10-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://article.misbah-inc.com/articles/type/article/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://article.misbah-inc.com/ar/articles/type/article/"/>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://article.misbah-inc.com/fa/articles/type/article/"/>
+    <xhtml:link rel="alternate" hreflang="ur" href="https://article.misbah-inc.com/ur/articles/type/article/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://article.misbah-inc.com/articles/type/article/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://article.misbah-inc.com/ar/articles/type/series/</loc>
+    <lastmod>2026-10-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://article.misbah-inc.com/articles/type/series/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://article.misbah-inc.com/ar/articles/type/series/"/>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://article.misbah-inc.com/fa/articles/type/series/"/>
+    <xhtml:link rel="alternate" hreflang="ur" href="https://article.misbah-inc.com/ur/articles/type/series/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://article.misbah-inc.com/articles/type/series/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://article.misbah-inc.com/articles/type/series/</loc>
+    <lastmod>2026-10-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://article.misbah-inc.com/articles/type/series/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://article.misbah-inc.com/ar/articles/type/series/"/>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://article.misbah-inc.com/fa/articles/type/series/"/>
+    <xhtml:link rel="alternate" hreflang="ur" href="https://article.misbah-inc.com/ur/articles/type/series/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://article.misbah-inc.com/articles/type/series/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://article.misbah-inc.com/fa/articles/type/series/</loc>
+    <lastmod>2026-10-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://article.misbah-inc.com/articles/type/series/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://article.misbah-inc.com/ar/articles/type/series/"/>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://article.misbah-inc.com/fa/articles/type/series/"/>
+    <xhtml:link rel="alternate" hreflang="ur" href="https://article.misbah-inc.com/ur/articles/type/series/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://article.misbah-inc.com/articles/type/series/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://article.misbah-inc.com/ur/articles/type/series/</loc>
+    <lastmod>2026-10-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://article.misbah-inc.com/articles/type/series/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://article.misbah-inc.com/ar/articles/type/series/"/>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://article.misbah-inc.com/fa/articles/type/series/"/>
+    <xhtml:link rel="alternate" hreflang="ur" href="https://article.misbah-inc.com/ur/articles/type/series/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://article.misbah-inc.com/articles/type/series/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
 </urlset>

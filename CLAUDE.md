@@ -1,4 +1,4 @@
-﻿# CLAUDE.md — Misbah Inc. Website
+# CLAUDE.md — Misbah Inc. Website
 
 Claude Code instructions for working with this repository.
 
@@ -113,7 +113,7 @@ Run through this checklist whenever creating or updating any page.
 - [ ] `<html lang="XX" dir="ltr/rtl">` — correct language code and direction
 
 ### 2. Canonical + hreflang
-- [ ] `<link rel="canonical" href="https://misbah128.com/path/">` — absolute URL, trailing slash consistent
+- [ ] `<link rel="canonical" href="https://article.misbah-inc.com/path/">` — absolute URL, trailing slash consistent
 - [ ] `<link rel="alternate" hreflang="en" href="...">` — for every language variant that exists
 - [ ] `<link rel="alternate" hreflang="ar" href="...">` — Arabic variant
 - [ ] `<link rel="alternate" hreflang="fa" href="...">` — Farsi variant
@@ -143,7 +143,7 @@ Run through this checklist whenever creating or updating any page.
 - [ ] Article pages → `Article` + `BreadcrumbList` + `Organization` (reference only)
 - [ ] Other pages → `WebPage` + `BreadcrumbList`
 - [ ] All `@id` values use absolute URLs with fragment (`#website`, `#organization`, `#article`)
-- [ ] `Organization @id` (`https://misbah128.com/#organization`) — define fully on homepage, reference elsewhere
+- [ ] `Organization @id` (`https://article.misbah-inc.com/#organization`) — define fully on homepage, reference elsewhere
 
 ### 6. Images
 - [ ] Every `<img>` has a descriptive `alt` attribute
@@ -164,7 +164,7 @@ Run through this checklist whenever creating or updating any page.
 ---
 
 **OG image reference:**
-- Homepage / general pages: `mosque-madinah-hero.jpg` (1200×675)
+- Homepage / general pages: `images/og-default.jpg` (1200×630)
 - Article pages: use the article's own featured image
 
 ---
@@ -259,9 +259,20 @@ Articles also come as **series** (several parts, one page listing them): `articl
 
 ---
 
+## Subscribe and Contact
+
+There is no `/connect/` page here. Every nav item (Connect dropdown: Subscribe, Contact Us) and footer link goes to **https://www.misbah-inc.com/subscribe** on the Wix site (Oct 2026; `/connect` and `/contact` do not exist there). `tools/gen_translated_moonsighting.py` is the only generator that hard-codes the nav; the rest copy it from each language's Khadijah article.
+
+## Meta rules the generators enforce
+
+- `<title>` is the full H1 + brand and is **never clipped with "…"** (series parts differ only in "— Part N"; clipping made four chapters share one title). `build_articles.py`.
+- Meta descriptions: Wix's JSON-LD description glues headings onto the first paragraph and may be Arabic on an English page. `good_desc()` rejects those and falls back to the first paragraph in the page's own language.
+- hreflang may only name **indexable** pages (filter pages with 2+ entries); a thin `noindex` page gets no hreflang. `build_taxo.py`.
+- `add_lastmod.py` fills every sitemap `<lastmod>` from git. `build_sitemap.py` rewrites only from the "Imported articles" comment to the end, so hand-kept blocks above it (homepages, the Khadijah `rabi_al_awwal` article) survive.
+- Empty `alt=""` on card thumbnails that sit beside their own title text is correct, not a gap.
+
 ## Pending Pages (not yet built)
 
 - `/articles/` — Articles index / listing page
-- `/connect/` — Subscribe + contact form
 - `/about/` — About Misbah Inc.
 - Multilingual homepages: full translated content for `/ar/`, `/fa/`, `/ur/`
