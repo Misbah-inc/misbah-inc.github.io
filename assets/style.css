@@ -2278,3 +2278,7 @@ main { zoom: var(--fs, 1); }
 .art-body .art-quote { margin: 1.4rem 0; padding: 1rem 1.3rem; border-radius: 14px; border-inline-start: 4px solid #c9a46b; background: linear-gradient(150deg, rgba(255,255,255,0.8), rgba(255,255,255,0.5)); font-style: normal; line-height: 1.9; }
 .art-body .art-quote::before { content: '❝'; color: #c9a46b; margin-inline-end: 0.4rem; font-size: 1.3em; line-height: 0; vertical-align: -0.15em; }
 html:not([data-theme="light"]) body .art-body .art-quote { background: rgba(255,255,255,0.06); }
+
+/* Featured: four cards in a row on wide screens (the newest article plus the three series), two on tablets, one on phones */
+@media (min-width: 1000px) { .feat-series { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1.1rem; } .feat-series-name { font-size: 0.98rem; } .feat-series-desc { font-size: 0.85rem; } }
+@media (min-width: 561px) and (max-width: 999px) { .feat-series { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: none; } }
