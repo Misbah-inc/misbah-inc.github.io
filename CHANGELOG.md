@@ -15,6 +15,10 @@ Format: `## [Date] — Summary` followed by bulleted details.
 - The article now has its pictures: the wide poster as banner / share image / thumbnail, the square one for phones (`images/zaynab-khadijah-poster-*.jpg`).
 - **Featured** (homepage, four languages): the article is the first card of the "More on Lady Khadijah (p)" row, followed by the three series; the row is four across on wide screens, two on tablets, one on phones. Card picture `images/home/feat-zaynab-khadijah-v1.jpg` (square).
 
+## [2026-10-16] — Logo and "MISBAH" lead to the main website
+
+- In the header of every page (all four languages) the logo / MISBAH wordmark now links to https://www.misbah-inc.com/ (`/ar`, `/fa`, `/ur` on the translated pages) instead of this site's own homepage; the aria-label says so. Enforced by `fix_header.py`, which every build runs. The article site's home is still reachable from the breadcrumb "Home" link and the Articles menu.
+
 ## [2026-10-14] — Assets are versioned (changes show at once)
 
 - Pages link `style.css`, `script.js` and `theme.js` with `?v=<content hash>` (added by `fix_header.py`, which every build runs), so a changed stylesheet or script is fetched immediately instead of staying in the browser's 10-minute cache. This is why the new text-size buttons did not show for some visitors right after publishing.

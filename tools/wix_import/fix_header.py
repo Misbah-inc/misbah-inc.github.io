@@ -73,6 +73,8 @@ def fix_footer(s, lang):
     return s[:i] + new + s[j:] if new != blk else s
 
 
+MAIN = {'en': 'https://www.misbah-inc.com/', 'ar': 'https://www.misbah-inc.com/ar', 'fa': 'https://www.misbah-inc.com/fa', 'ur': 'https://www.misbah-inc.com/ur'}
+MAIN_LABEL = {'en': 'Misbah Inc. main website', 'ar': 'الموقع الرئيسي لمصباح إنك.', 'fa': 'وب‌سایت اصلی مصباح انک.', 'ur': 'مصباح انک. کی مرکزی ویب سائٹ'}
 _VER = {}
 def asset_ver(name):
     """Short hash of the asset's content: the page links ?v=<hash>, so a changed stylesheet / script is fetched at once instead of after the 10-minute cache."""
@@ -101,6 +103,12 @@ def fix(path):
     rel = os.path.relpath(path, ROOT).replace(os.sep, '/')
     first = rel.split('/')[0]
     cur = first if first in ('ar', 'fa', 'ur') else 'en'
+    # the logo / "MISBAH" in the header leads to the organisation's main website (in the page's language), not to this article site's homepage
+    logo = re.sub(r'<a href="[^"]*" class="nav-logo" aria-label="[^"]*">',
+                  lambda _: f'<a href="{MAIN[cur]}" class="nav-logo" aria-label="{MAIN_LABEL[cur]}">', s, count=1)
+    if logo != s:
+        s = logo; open(path, 'w', encoding='utf-8').write(s)
+        m = re.search(r'<header class="site-header">.*?</header>', s, re.S)
     s2 = fix_footer(s, cur)
     if s2 != s:
         s = s2; open(path, 'w', encoding='utf-8').write(s)
