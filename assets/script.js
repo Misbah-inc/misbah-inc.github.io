@@ -290,3 +290,16 @@ document.addEventListener('DOMContentLoaded', () => {
   })();
 
 });
+
+/* Collapsible "Sources" list of a structured chapter; a footnote link opens it first */
+(function () {
+  var btn = document.querySelector('.bio-sources-btn'), body = document.querySelector('.bio-sources-body');
+  if (!btn || !body) return;
+  function set(open) { body.classList.toggle('open', open); btn.setAttribute('aria-expanded', open ? 'true' : 'false'); }
+  btn.addEventListener('click', function () { set(!body.classList.contains('open')); });
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest('.bio-ref a'); if (!a) return;
+    set(true);
+    var t = document.getElementById(a.getAttribute('href').slice(1)); if (t) { e.preventDefault(); t.scrollIntoView({ block: 'center', behavior: 'smooth' }); history.replaceState(null, '', a.getAttribute('href')); }
+  });
+})();

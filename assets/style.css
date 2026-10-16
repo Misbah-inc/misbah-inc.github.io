@@ -2282,3 +2282,39 @@ html:not([data-theme="light"]) body .art-body .art-quote { background: rgba(255,
 /* Featured: four cards in a row on wide screens (the newest article plus the three series), two on tablets, one on phones */
 @media (min-width: 1000px) { .feat-series { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1.1rem; } .feat-series-name { font-size: 0.98rem; } .feat-series-desc { font-size: 0.85rem; } }
 @media (min-width: 561px) and (max-width: 999px) { .feat-series { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: none; } }
+
+/* ── Structured chapter (Biography of Lady Khadijah, chapter 1): contents box, numbered sections, footnote links, collapsible sources ── */
+.bio-ch { --bio-gold: #c9a46b; --bio-green: #1e3d1f; }
+.bio-toc { background: #fff; border: 1px solid rgba(30,61,31,0.14); border-top: 4px solid var(--bio-gold); border-radius: 0 0 14px 14px; padding: 1.2rem 1.6rem; margin: 0 0 2.4rem; }
+.bio-toc-heading { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: #8a6a2f; margin-bottom: 0.8rem; }
+[dir="rtl"] .bio-toc-heading { letter-spacing: 0; text-transform: none; font-size: 0.95rem; }
+.bio-toc ol { margin: 0; padding-inline-start: 1.3rem; }
+.bio-toc li { margin-bottom: 0.5rem; line-height: 1.55; }
+.bio-toc a { color: var(--bio-green); text-decoration: none; font-weight: 500; font-size: 0.93rem; }
+.bio-toc a:hover { color: #8a6a2f; text-decoration: underline; }
+.bio-part-label { display: flex; align-items: center; gap: 0.8rem; margin: 2.6rem 0 1.1rem; scroll-margin-top: 90px; padding-bottom: 0.6rem; border-bottom: 1px solid rgba(201,164,107,0.5); }
+.bio-part-num { flex: none; min-width: 2.1rem; height: 2.1rem; padding: 0 0.5rem; display: inline-flex; align-items: center; justify-content: center; border-radius: 999px; background: var(--bio-green); color: #fff; font-family: 'Cinzel', serif; font-size: 0.8rem; }
+.bio-part-title { margin: 0; font-family: 'Cinzel', serif; font-size: 1.12rem; line-height: 1.4; color: var(--bio-green); }
+[dir="rtl"] .bio-part-title { font-family: 'Amiri', serif; font-size: 1.4rem; line-height: 1.6; }
+.bio-ref { font-size: 0.72em; line-height: 0; margin-inline-start: 0.1em; }
+.bio-ref a { color: #8a6a2f; text-decoration: none; font-weight: 700; }
+.bio-ref a:hover { text-decoration: underline; }
+.bio-sources { margin-top: 2.6rem; padding-top: 1.6rem; border-top: 1px solid rgba(0,0,0,0.08); }
+.bio-sources-btn { all: unset; box-sizing: border-box; cursor: pointer; width: 100%; display: flex; align-items: center; justify-content: space-between; padding: 0.85rem 1.25rem; border: 1px solid rgba(30,61,31,0.18); border-radius: 12px; color: var(--bio-green); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; }
+[dir="rtl"] .bio-sources-btn { letter-spacing: 0; text-transform: none; font-size: 1rem; }
+.bio-sources-btn:hover { background: rgba(201,164,107,0.1); }
+.bio-sources-btn:focus-visible { outline: 2px solid var(--bio-gold); outline-offset: 2px; }
+.bio-sources-chevron { transition: transform .3s; }
+.bio-sources-btn[aria-expanded="true"] .bio-sources-chevron { transform: rotate(180deg); }
+.bio-sources-body { display: none; margin-top: 1rem; padding: 1.2rem 1.5rem; background: #fff; border: 1px solid rgba(0,0,0,0.07); border-radius: 12px; }
+.bio-sources-body.open { display: block; }
+.bio-src-group + .bio-src-group { margin-top: 1.1rem; padding-top: 1rem; border-top: 1px dashed rgba(0,0,0,0.12); }
+.bio-src-label { font-family: 'Cinzel', serif; font-size: 0.78rem; color: #8a6a2f; margin-bottom: 0.4rem; }
+.bio-sources-body ol { margin: 0; padding-inline-start: 1.5rem; }
+.bio-sources-body li { font-size: 0.85rem; line-height: 1.7; color: #555; margin-bottom: 0.35rem; }
+.bio-sources-body li:target { background: rgba(201,164,107,0.22); border-radius: 6px; }
+html:not([data-theme="light"]) body .bio-toc, html:not([data-theme="light"]) body .bio-sources-body { background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.16); }
+html:not([data-theme="light"]) body .bio-toc a, html:not([data-theme="light"]) body .bio-part-title, html:not([data-theme="light"]) body .bio-sources-btn { color: #f3e8c8; }
+html:not([data-theme="light"]) body .bio-sources-body li { color: #b9b3a0; }
+html:not([data-theme="light"]) body .bio-ref a, html:not([data-theme="light"]) body .bio-toc-heading, html:not([data-theme="light"]) body .bio-src-label { color: #d9b878; }
+html:not([data-theme="light"]) body .bio-part-num { background: #c9a46b; color: #14281a; }
