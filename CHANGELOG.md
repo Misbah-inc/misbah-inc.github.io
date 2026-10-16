@@ -15,6 +15,10 @@ Format: `## [Date] — Summary` followed by bulleted details.
 - The article now has its pictures: the wide poster as banner / share image / thumbnail, the square one for phones (`images/zaynab-khadijah-poster-*.jpg`).
 - **Featured** (homepage, four languages): the article is the first card of the "More on Lady Khadijah (p)" row, followed by the three series; the row is four across on wide screens, two on tablets, one on phones. Card picture `images/home/feat-zaynab-khadijah-v1.jpg` (square).
 
+## [2026-10-16] — Zaynab/Khadijah article: new title
+
+- Title is now «شباهت حضرت خانم زینب کبری (س) به حضرت خانم خدیجه کبری (س)» (Farsi, as supplied); English "The Resemblance of Lady Zaynab al-Kubra (p) to Lady Khadijah al-Kubra (p)", Arabic «شبه السيدة زينب الكبرى (ع) بالسيدة خديجة الكبرى (ع)», Urdu «حضرت بی بی زینب کبریٰ (س) کی حضرت بی بی خدیجہ کبریٰ (س) سے شباہت» follow the wording of each post (not reviewed by a native speaker). Updated on the article, the homepage card, the Articles lists, sitemap and feed.
+
 ## [2026-10-16] — Logo and "MISBAH" lead to the main website
 
 - In the header of every page (all four languages) the logo / MISBAH wordmark now links to https://www.misbah-inc.com/ (`/ar`, `/fa`, `/ur` on the translated pages) instead of this site's own homepage; the aria-label says so. Enforced by `fix_header.py`, which every build runs. The article site's home is still reachable from the breadcrumb "Home" link and the Articles menu.

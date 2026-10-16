@@ -2,7 +2,7 @@
 
 Source: fa @misbah110 #22964, en @misbah110_en #23758, ar @misbah110_ar #499, ur @misbah110_ur #538 (work/tg/zaynab-khadijah-posts.json).
 Text word for word; removed: the hashtag header, the ✦━✦ divider, the @channel footer and the emoji that open each paragraph.
-The heading is the editor's own special-edition hashtag (second line of the header) with underscores turned into spaces.
+The heading is the editor's own title (Farsi: «شباهت حضرت خانم زینب کبری (س) به حضرت خانم خدیجه کبری (س)»); en / ar / ur follow the wording of each language's post.
 Until its pictures arrive the page uses images/og-default.jpg (logo on green): usage  python3 build_zaynab_khadijah.py [<wide image> [<square image>]]
 """
 import os as _os
@@ -18,10 +18,10 @@ SLUG = 'resemblance-of-lady-zaynab-to-lady-khadijah'
 DATE = '2026-10-16'
 D = ROOT + 'images/articles/'
 POSTS = json.load(open(HERE + 'work/tg/zaynab-khadijah-posts.json', encoding='utf-8'))
-TITLES = {'en': 'Special Edition: Luminous Appearance of Lady Zaynab (p)',
-          'ar': 'ملف خاص: الظهور النوراني للسيدة زينب عليها السلام',
-          'fa': 'ویژه‌نامه ظهور نورانی حضرت خانم زینب سلام الله علیها',
-          'ur': 'خصوصی شمارہ: ظہورِ نورانی حضرت بی بی زینب سلام اللہ علیہا'}
+TITLES = {'en': 'The Resemblance of Lady Zaynab al-Kubra (p) to Lady Khadijah al-Kubra (p)',
+          'ar': 'شبه السيدة زينب الكبرى (ع) بالسيدة خديجة الكبرى (ع)',
+          'fa': 'شباهت حضرت خانم زینب کبری (س) به حضرت خانم خدیجه کبری (س)',
+          'ur': 'حضرت بی بی زینب کبریٰ (س) کی حضرت بی بی خدیجہ کبریٰ (س) سے شباہت'}
 DIV = re.compile(r'^[\s✦━❁ا🌸─\-–—_•·]*$')
 LEAD = re.compile(r'^[\s💫🌹🍎✨🤍]+')
 
@@ -100,4 +100,7 @@ def build(wide=None, square=None):
 
 
 if __name__ == '__main__':
-    build(*sys.argv[1:3])
+    a = sys.argv[1:3]
+    if not a and os.path.exists(ROOT + 'images/zaynab-khadijah-poster-wide.jpg'):      # default: the supplied posters
+        a = [ROOT + 'images/zaynab-khadijah-poster-wide.jpg', ROOT + 'images/zaynab-khadijah-poster-square.jpg']
+    build(*a)
