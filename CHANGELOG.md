@@ -5,6 +5,11 @@ Format: `## [Date] — Summary` followed by bulleted details.
 
 ---
 
+## [2026-10-16] — New article: Lady Zaynab's resemblance to Lady Khadijah; Shia-calendar card off the homepage
+
+- `/articles/resemblance-of-lady-zaynab-to-lady-khadijah/` (+ `/ar/`, `/fa/`, `/ur/`): the special-edition post of 16 Oct 2026 (the Prophet's words at Lady Zaynab's birth and naming — «she is like Khadijah al-Kubra»), word for word from the four channels (fa #22964, en #23758, ar #499, ur #538). Filed under Jumada al-Awwal, type *Article*, tags Lady Zaynab, Lady Khadijah, the Holy Prophet; the narrations are quote blocks, the source (*al-Khasa'is al-Zaynabiyyah*, p. 60) a Source list. Heading = the editor's special-edition hashtag. Picture: the site's default logo card until its pictures arrive. Generator: `tools/wix_import/build_zaynab_khadijah.py [wide [square]]`.
+- The homepage **Shia Calendar — Month of Jumada al-Ula** card was removed (all four languages); the Jumada al-Ula article itself stays online. `build_home_featured.py` keeps `occasions()` if it should come back.
+
 ## [2026-10-14] — Assets are versioned (changes show at once)
 
 - Pages link `style.css`, `script.js` and `theme.js` with `?v=<content hash>` (added by `fix_header.py`, which every build runs), so a changed stylesheet or script is fetched immediately instead of staying in the browser's 10-minute cache. This is why the new text-size buttons did not show for some visitors right after publishing.

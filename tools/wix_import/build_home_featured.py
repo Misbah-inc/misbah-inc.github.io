@@ -98,9 +98,9 @@ def build(lang):
     s = s[:start] + s[end:].lstrip('\n')
     btn = re.search(r'<a href="[^"]*" class="btn btn-gold">(.*?)</a>', article, re.S).group(1)
     s = re.sub(re.escape(OCC_MARK) + r'\s*<section class="section featured-section occ-section".*?</section>\n*', '', s, flags=re.S)
-    # insert straight after the hero: the month's occasions first, then Featured
+    # insert straight after the hero
     h = re.search(r'<section class="hero".*?</section>\n', s, re.S)
-    s = s[:h.end()] + '\n' + occasions(lang, btn) + new + s[h.end():]
+    s = s[:h.end()] + '\n' + new + s[h.end():]   # the month's-occasions card (occasions()) was taken off the homepage on 16 Oct 2026; kept here to bring back
     open(f, 'w', encoding='utf-8').write(s)
 
 

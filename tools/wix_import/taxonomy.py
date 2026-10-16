@@ -91,6 +91,7 @@ ITEMS = {
  'muharram-1447-food-drive': (1, 'announcement', ['imam-hussain', 'community-service']),
  'ghadir-day-2025-thank-you': (12, 'announcement', ['imam-ali', 'ghadir', 'community-service']),
  'arrival-of-safar-announcement': (2, 'announcement', ['lady-ruqayyah']),
+ 'resemblance-of-lady-zaynab-to-lady-khadijah': (5, 'article', ['lady-zaynab', 'lady-khadijah', 'holy-prophet']),
  'occasions-of-jumada-al-ula': (5, 'announcement', ['lady-zaynab', 'lady-fatimah-zahra', 'imam-hasan', 'holy-prophet']),
 }
 # every Mourning chapter inherits the series' tags
