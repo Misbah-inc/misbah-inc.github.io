@@ -15,6 +15,10 @@ Format: `## [Date] — Summary` followed by bulleted details.
 - The article now has its pictures: the wide poster as banner / share image / thumbnail, the square one for phones (`images/zaynab-khadijah-poster-*.jpg`).
 - **Featured** (homepage, four languages): the article is the first card of the "More on Lady Khadijah (p)" row, followed by the three series; the row is four across on wide screens, two on tablets, one on phones. Card picture `images/home/feat-zaynab-khadijah-v1.jpg` (square).
 
+## [2026-10-17] — Zaynab/Khadijah article: the rewritten opening in Arabic, Farsi and Urdu
+
+- The same rewrite (Prophet away travelling, Lady Zaynab (p) still unnamed at that time, Imam Ali's answer, the Prophet hurrying to the house; then the dangling "When Amir al-Mu'minin … came … and said:") is now on the `/ar/`, `/fa/` and `/ur/` pages. These are **my translations of the English text** (each in the register and honorifics of its own post), not reviewed by a native speaker; the Telegram posts keep their original wording.
+
 ## [2026-10-17] — Zaynab/Khadijah article (English): the narration's opening rewritten
 
 - English page: the paragraph "It is narrated that when Lady Zaynab (peace be upon her) was born, Amir al-Mu'minin … came to the Prophet and said:" is replaced, at the editor's request, by two paragraphs (the Prophet away travelling, the unnamed baby, Imam Ali's answer, the Prophet hurrying to the house; then "When Amir al-Mu'minin … said:"). The Telegram post keeps its original wording, and the Arabic, Farsi and Urdu pages are unchanged until their wording is supplied (`OVERRIDES` in `build_zaynab_khadijah.py`). "The baby still unnamed" became "Lady Zaynab (peace be upon her) still unnamed at that time", out of respect.

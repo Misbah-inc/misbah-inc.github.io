@@ -39,10 +39,20 @@ def parse(text):
     return blocks, refs
 
 
-# Editor's rewrites of a paragraph on the website (the Telegram post keeps its original wording): language -> [(start of the post's paragraph, [replacement paragraphs])]
+# Editor's rewrites of a paragraph on the website (the Telegram post keeps its original wording; fa / ar / ur are my translations of the English rewrite, not yet reviewed by a native speaker): language -> [(start of the post's paragraph, [replacement paragraphs])]
 OVERRIDES = {'en': [("It is narrated that when Lady Zaynab (peace be upon her) was born, Amir al-Mu'minin", [
     "It is narrated that when Lady Zaynab (peace be upon her) was born the Prophet (peace be upon him and his family) was away travelling, and the days went by with Lady Zaynab (peace be upon her) still unnamed at that time. Lady Fatima (peace be upon her) asked Imam Ali (peace be upon him) why they were waiting. He answered that this choice was not his to make: it belonged to the Prophet (peace be upon him and his family). When the Prophet (peace be upon him and his family) returned and heard the news, he did not wait a moment. He hurried straight to the house.",
-    "When Amir al-Mu'minin (peace be upon him) came to the Prophet and said:"])]}
+    "When Amir al-Mu'minin (peace be upon him) came to the Prophet and said:"])],
+ 'fa': [("در روایتی آمده است: زمانی که حضرت زینب (س) متولد شد", [
+    "در روایتی آمده است: زمانی که حضرت زینب (س) متولد شد، پیامبر (ص) در سفر بودند و روزها گذشت در حالی که حضرت زینب (س) در آن زمان هنوز بی‌نام بودند. حضرت فاطمه (س) از امام علی (ع) پرسیدند که چرا منتظر مانده‌اند. ایشان پاسخ دادند که این انتخاب با ایشان نیست؛ این کار از آنِ پیامبر (ص) است. هنگامی که پیامبر (ص) بازگشتند و خبر را شنیدند، لحظه‌ای درنگ نکردند و یکراست به سوی خانه شتافتند.",
+    "هنگامی که حضرت امیرالمؤمنین (ع) خدمت پیامبر آمد و عرض کرد:"])],
+ 'ar': [("جاء في الرواية: لمّا وُلدت السيدة زينب", [
+    "جاء في الرواية: لمّا وُلدت السيدة زينب (ع) كان النبي (ص) مسافراً، ومرّت الأيام والسيدة زينب (ع) ما زالت في ذلك الوقت بلا اسم. فسألت السيدة فاطمة (ع) الإمام علياً (ع) عن سبب الانتظار، فأجاب بأنّ هذا الاختيار ليس إليه، بل هو للنبي (ص). فلمّا عاد النبي (ص) وسمع الخبر لم ينتظر لحظة، بل أسرع إلى البيت مباشرة.",
+    "وحين جاء أمير المؤمنين (ع) إلى النبي وقال:"])],
+ 'ur': [("ایک روایت میں آیا ہے: جب حضرت زینب (س) پیدا ہوئیں", [
+    "ایک روایت میں آیا ہے: جب حضرت زینب (س) پیدا ہوئیں تو پیغمبر اکرم (ص) سفر پر تھے، اور دن گزرتے گئے جبکہ حضرت زینب (س) اس وقت تک بے نام تھیں۔ حضرت فاطمہ (س) نے امام علی (ع) سے پوچھا کہ کس بات کا انتظار کیا جا رہا ہے۔ انہوں نے جواب دیا کہ یہ انتخاب ان کے اختیار میں نہیں؛ یہ پیغمبر (ص) کا حق ہے۔ جب پیغمبر (ص) واپس آئے اور خبر سنی تو انہوں نے ایک لمحہ بھی انتظار نہ کیا اور سیدھے گھر کی طرف روانہ ہو گئے۔",
+    "جب حضرت امیرالمؤمنین (ع) پیغمبر (ص) کی خدمت میں آئے اور عرض کیا:"])],
+}
 
 
 REFS_H = {'en': 'Source', 'ar': 'المصدر', 'fa': 'منبع', 'ur': 'حوالہ'}
