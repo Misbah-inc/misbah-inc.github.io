@@ -325,6 +325,7 @@
 
 
 
+
   <!-- ── Imported articles + indexes ────────────────────────────── -->
   <url>
     <loc>https://article.misbah-inc.com/articles/</loc>
@@ -410,6 +411,50 @@
     <xhtml:link rel="alternate" hreflang="fa" href="https://article.misbah-inc.com/fa/articles/resemblance-of-lady-zaynab-to-lady-khadijah/"/>
     <xhtml:link rel="alternate" hreflang="ur" href="https://article.misbah-inc.com/ur/articles/resemblance-of-lady-zaynab-to-lady-khadijah/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://article.misbah-inc.com/articles/resemblance-of-lady-zaynab-to-lady-khadijah/"/>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://article.misbah-inc.com/articles/resemblance-of-lady-zaynab-to-lady-khadijah/1/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://article.misbah-inc.com/articles/resemblance-of-lady-zaynab-to-lady-khadijah/1/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://article.misbah-inc.com/ar/articles/resemblance-of-lady-zaynab-to-lady-khadijah/1/"/>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://article.misbah-inc.com/fa/articles/resemblance-of-lady-zaynab-to-lady-khadijah/1/"/>
+    <xhtml:link rel="alternate" hreflang="ur" href="https://article.misbah-inc.com/ur/articles/resemblance-of-lady-zaynab-to-lady-khadijah/1/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://article.misbah-inc.com/articles/resemblance-of-lady-zaynab-to-lady-khadijah/1/"/>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://article.misbah-inc.com/ar/articles/resemblance-of-lady-zaynab-to-lady-khadijah/1/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://article.misbah-inc.com/articles/resemblance-of-lady-zaynab-to-lady-khadijah/1/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://article.misbah-inc.com/ar/articles/resemblance-of-lady-zaynab-to-lady-khadijah/1/"/>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://article.misbah-inc.com/fa/articles/resemblance-of-lady-zaynab-to-lady-khadijah/1/"/>
+    <xhtml:link rel="alternate" hreflang="ur" href="https://article.misbah-inc.com/ur/articles/resemblance-of-lady-zaynab-to-lady-khadijah/1/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://article.misbah-inc.com/articles/resemblance-of-lady-zaynab-to-lady-khadijah/1/"/>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://article.misbah-inc.com/fa/articles/resemblance-of-lady-zaynab-to-lady-khadijah/1/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://article.misbah-inc.com/articles/resemblance-of-lady-zaynab-to-lady-khadijah/1/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://article.misbah-inc.com/ar/articles/resemblance-of-lady-zaynab-to-lady-khadijah/1/"/>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://article.misbah-inc.com/fa/articles/resemblance-of-lady-zaynab-to-lady-khadijah/1/"/>
+    <xhtml:link rel="alternate" hreflang="ur" href="https://article.misbah-inc.com/ur/articles/resemblance-of-lady-zaynab-to-lady-khadijah/1/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://article.misbah-inc.com/articles/resemblance-of-lady-zaynab-to-lady-khadijah/1/"/>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://article.misbah-inc.com/ur/articles/resemblance-of-lady-zaynab-to-lady-khadijah/1/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://article.misbah-inc.com/articles/resemblance-of-lady-zaynab-to-lady-khadijah/1/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://article.misbah-inc.com/ar/articles/resemblance-of-lady-zaynab-to-lady-khadijah/1/"/>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://article.misbah-inc.com/fa/articles/resemblance-of-lady-zaynab-to-lady-khadijah/1/"/>
+    <xhtml:link rel="alternate" hreflang="ur" href="https://article.misbah-inc.com/ur/articles/resemblance-of-lady-zaynab-to-lady-khadijah/1/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://article.misbah-inc.com/articles/resemblance-of-lady-zaynab-to-lady-khadijah/1/"/>
     <lastmod>2026-10-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>

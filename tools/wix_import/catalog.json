@@ -2953,6 +2953,7 @@
  },
  "resemblance-of-lady-zaynab-to-lady-khadijah": {
   "slug": "resemblance-of-lady-zaynab-to-lady-khadijah",
+  "kind": "series",
   "month": 5,
   "langs": [
    "en",
@@ -2965,6 +2966,33 @@
    "ar": "شبه السيدة زينب الكبرى (ع) بالسيدة خديجة الكبرى (ع)",
    "fa": "شباهت حضرت خانم زینب کبری (س) به حضرت خانم خدیجه کبری (س)",
    "ur": "حضرت بی بی زینب کبریٰ (س) کی حضرت بی بی خدیجہ کبریٰ (س) سے شباہت"
+  },
+  "tags": [],
+  "tags_l": {},
+  "published": "2026-10-16",
+  "img": true,
+  "descs": {
+   "en": "A special edition of the Misbah channel on the resemblance of Lady Zaynab al-Kubra (p) to Lady Khadijah al-Kubra (p), part by part.",
+   "ar": "ملف خاص من قناة مصباح عن شبه السيدة زينب الكبرى (ع) بالسيدة خديجة الكبرى (ع)، جزءاً جزءاً.",
+   "fa": "ویژه‌نامه‌ی کانال مصباح درباره‌ی شباهت حضرت خانم زینب کبری (س) به حضرت خانم خدیجه کبری (س)، بخش به بخش.",
+   "ur": "مصباح چینل کا خصوصی شمارہ: حضرت بی بی زینب کبریٰ (س) کی حضرت بی بی خدیجہ کبریٰ (س) سے شباہت، حصہ بہ حصہ۔"
+  }
+ },
+ "resemblance-of-lady-zaynab-to-lady-khadijah/1": {
+  "slug": "resemblance-of-lady-zaynab-to-lady-khadijah/1",
+  "series": "resemblance-of-lady-zaynab-to-lady-khadijah",
+  "month": 5,
+  "langs": [
+   "en",
+   "ar",
+   "fa",
+   "ur"
+  ],
+  "titles": {
+   "en": "The Resemblance of Lady Zaynab al-Kubra (p) to Lady Khadijah al-Kubra (p) — Part 1",
+   "ar": "شبه السيدة زينب الكبرى (ع) بالسيدة خديجة الكبرى (ع) — القسم ١",
+   "fa": "شباهت حضرت خانم زینب کبری (س) به حضرت خانم خدیجه کبری (س) — بخش ۱",
+   "ur": "حضرت بی بی زینب کبریٰ (س) کی حضرت بی بی خدیجہ کبریٰ (س) سے شباہت — حصہ ۱"
   },
   "tags": [],
   "tags_l": {

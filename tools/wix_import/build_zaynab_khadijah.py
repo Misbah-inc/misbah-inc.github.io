@@ -76,11 +76,11 @@ def images(wide=None, square=None):
         w = Image.open(wide).convert('RGB')
         ban = w.resize((1600, round(1600 * w.height / w.width)), Image.LANCZOS)
         og = ImageOps.fit(w, (1200, 630), Image.LANCZOS, centering=(0.5, 0.45))
-        if square: Image.open(square).convert('RGB').resize((1000, 1000), Image.LANCZOS).save(D + f'{SLUG}-mobile.jpg', 'JPEG', quality=80, progressive=True, optimize=True)
+        if square: Image.open(square).convert('RGB').resize((1000, 1000), Image.LANCZOS).save(D + f'{SLUG}-1-mobile.jpg', 'JPEG', quality=80, progressive=True, optimize=True)
     else:
         og = Image.open(ROOT + 'images/og-default.jpg').convert('RGB'); ban = og
     for l in LANGS4:
-        f = f'{SLUG}-{l}'
+        f = f'{SLUG}-1-{l}'
         ban.save(D + f + '.jpg', 'JPEG', quality=80, progressive=True, optimize=True)
         og.save(D + f'og-{f}.jpg', 'JPEG', quality=80, progressive=True, optimize=True)
         og.resize((480, round(480 * og.height / og.width)), Image.LANCZOS).save(D + f'thumb-{f}.jpg', 'JPEG', quality=80, progressive=True, optimize=True)
@@ -88,12 +88,19 @@ def images(wide=None, square=None):
 
 
 def mobile_banner(path, lang):
-    if not os.path.exists(D + f'{SLUG}-mobile.jpg'): return
+    if not os.path.exists(D + f'{SLUG}-1-mobile.jpg'): return
     s = open(path, encoding='utf-8').read()
-    old = re.search(r'(<div class="kw-banner[^"]*"[^>]*>\s*)(<img src="/images/articles/' + SLUG + '-' + lang + r'\.jpg"[^>]*>)', s)
+    old = re.search(r'(<div class="kw-banner[^"]*"[^>]*>\s*)(<img src="/images/articles/' + SLUG + '-1-' + lang + r'\.jpg"[^>]*>)', s)
     if not old or '<picture' in s: return
-    pic = f'<picture><source media="(max-width: 700px)" srcset="/images/articles/{SLUG}-mobile.jpg" width="1000" height="1000">{old.group(2)}</picture>'
+    pic = f'<picture><source media="(max-width: 700px)" srcset="/images/articles/{SLUG}-1-mobile.jpg" width="1000" height="1000">{old.group(2)}</picture>'
     open(path, 'w', encoding='utf-8').write(s.replace(old.group(0), old.group(1) + pic))
+
+
+NAME = TITLES                      # the series name = the article's title
+SERIES_DESC = {'en': 'A special edition of the Misbah channel on the resemblance of Lady Zaynab al-Kubra (p) to Lady Khadijah al-Kubra (p), part by part.',
+               'ar': 'ملف خاص من قناة مصباح عن شبه السيدة زينب الكبرى (ع) بالسيدة خديجة الكبرى (ع)، جزءاً جزءاً.',
+               'fa': 'ویژه‌نامه‌ی کانال مصباح درباره‌ی شباهت حضرت خانم زینب کبری (س) به حضرت خانم خدیجه کبری (س)، بخش به بخش.',
+               'ur': 'مصباح چینل کا خصوصی شمارہ: حضرت بی بی زینب کبریٰ (س) کی حضرت بی بی خدیجہ کبریٰ (س) سے شباہت، حصہ بہ حصہ۔'}
 
 
 def build(wide=None, square=None):
@@ -110,10 +117,19 @@ def build(wide=None, square=None):
         arts[l] = dict(lang=l, title=TITLES[l], desc=desc, published=DATE, modified=DATE, heads=[], hero_video=None, body=[{'t': 'p', 'x': t} for k, t in blocks],
                        tags=[], og='x', img=dict(w=size[0], h=size[1], orig=size), blocks=blocks, refs=refs)
         titles[l], descs[l] = TITLES[l], desc
+    import build_mourning as M
     for l in LANGS4:
-        path = BA.page(SLUG, l, arts[l], LANGS4, TP)
+        arts[l]['title'] = f"{NAME[l]} — {S[l]['part'].format(n=num(1, l))}"          # part heading; the series keeps the plain title
+        arts[l]['heads'] = [{'t': 'p', 'x': S[l]['part'].format(n=num(1, l))}]
+        href = lambda n=None, lg=l: f"{PFX[lg]}/articles/{SLUG}/" + (f'{n}/' if n else '')
+        sr = dict(name=NAME[l], href=href(), n=1)
+        path = BA.page(f'{SLUG}/1', l, arts[l], LANGS4, TP, series=sr)
         mobile_banner(ROOT + path, l)
-    CAT[SLUG] = dict(slug=SLUG, month=5, langs=LANGS4, titles=titles, tags=[], tags_l={l: [] for l in LANGS4}, published=DATE, img=True, descs=descs)
+    M.SER, M.NAME, M.series_desc, M.TP = SLUG, NAME, (lambda lang: SERIES_DESC[lang]), TP
+    for l in LANGS4:
+        M.series_page(l, {(l, 1): arts[l]}, LANGS4)
+    CAT[f'{SLUG}/1'] = dict(slug=f'{SLUG}/1', series=SLUG, month=5, langs=LANGS4, titles={l: arts[l]['title'] for l in LANGS4}, tags=[], tags_l={l: [] for l in LANGS4}, published=DATE, img=True, descs=descs)
+    CAT[SLUG] = dict(slug=SLUG, kind='series', month=5, langs=LANGS4, titles=NAME, tags=[], tags_l={}, published=DATE, img=True, descs=SERIES_DESC)
     json.dump(CAT, open(HERE + 'catalog.json', 'w'), ensure_ascii=False, indent=1)
     print(titles)
 

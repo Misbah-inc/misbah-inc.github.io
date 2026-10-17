@@ -15,6 +15,10 @@ Format: `## [Date] — Summary` followed by bulleted details.
 - The article now has its pictures: the wide poster as banner / share image / thumbnail, the square one for phones (`images/zaynab-khadijah-poster-*.jpg`).
 - **Featured** (homepage, four languages): the article is the first card of the "More on Lady Khadijah (p)" row, followed by the three series; the row is four across on wide screens, two on tablets, one on phones. Card picture `images/home/feat-zaynab-khadijah-v1.jpg` (square).
 
+## [2026-10-17] — The Zaynab/Khadijah article is now a series, with this text as Part 1
+
+- `/…/articles/resemblance-of-lady-zaynab-to-lady-khadijah/` is now the **series page** (all four languages; it keeps the old address) and the text is **Part 1** at `/…/1/` (heading "<series title> — Part 1"). New parts: add the posts to `POSTS`-style data in `build_zaynab_khadijah.py` and rebuild. Series description lines in ar/fa/ur are my wording (unreviewed). Filed as a series under Jumada al-Awwal with the same tags. The homepage Featured card now reads Series with the series description. Picture files were renamed to `…-1-<lang>.jpg` (banner, og, thumb) and `…-1-mobile.jpg`.
+
 ## [2026-10-17] — Zaynab/Khadijah article: the rewritten opening in Arabic, Farsi and Urdu
 
 - The same rewrite (Prophet away travelling, Lady Zaynab (p) still unnamed at that time, Imam Ali's answer, the Prophet hurrying to the house; then the dangling "When Amir al-Mu'minin … came … and said:") is now on the `/ar/`, `/fa/` and `/ur/` pages. These are **my translations of the English text** (each in the register and honorifics of its own post), not reviewed by a native speaker; the Telegram posts keep their original wording.
