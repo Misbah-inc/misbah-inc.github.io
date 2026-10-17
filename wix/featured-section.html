@@ -26,21 +26,22 @@
   .mfs-btn { align-self:flex-start; background:var(--gold); color:#14281a; font-weight:600; font-size:.9rem; padding:.7rem 1.6rem; border-radius:999px; text-decoration:none; transition:transform .25s ease, box-shadow .25s ease; }
   .mfs-btn:hover { transform:translateY(-2px); box-shadow:0 4px 14px rgba(201,164,107,.5); }
   .mfs-sub { font-family:'Cinzel',serif; font-weight:600; text-align:center; font-size:1.25rem; color:var(--green); margin:3rem 0 1.5rem; }
-  .mfs-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:1.5rem; }
+  .mfs-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:1.1rem; }
   .mfs-s { display:flex; flex-direction:column; overflow:hidden; border-radius:22px; text-decoration:none; color:inherit; background:linear-gradient(150deg,rgba(255,255,255,.9),rgba(255,255,255,.6)); border:1px solid #fff;
     box-shadow:inset 0 1px 0 #fff, 0 14px 34px rgba(30,61,31,.12), 0 2px 6px rgba(30,61,31,.06); transition:transform .45s cubic-bezier(.34,1.56,.64,1), box-shadow .3s ease; }
   .mfs-s:hover { transform:translateY(-6px) scale(1.012); box-shadow:inset 0 1px 0 #fff, 0 22px 46px rgba(30,61,31,.18), 0 0 0 5px rgba(201,164,107,.14); }
   .mfs-s img { display:block; width:100%; aspect-ratio:1/1; object-fit:cover; }
   .mfs-s-body { display:flex; flex-direction:column; gap:.5rem; padding:1.1rem 1.25rem 1.35rem; }
   .mfs-chip { font-size:.7rem; font-weight:600; letter-spacing:.1em; text-transform:uppercase; color:#7a5b22; }
-  .mfs-s-name { font-family:'Cinzel',serif; font-weight:500; font-size:1.08rem; line-height:1.35; color:var(--green); }
-  .mfs-s-desc { font-size:.9rem; line-height:1.55; color:#555; }
+  .mfs-s-name { font-family:'Cinzel',serif; font-weight:500; font-size:.98rem; line-height:1.35; color:var(--green); }
+  .mfs-s-desc { font-size:.85rem; line-height:1.55; color:#555; }
   @media (max-width:900px) {
     .mfs-card { flex-direction:column; }
     .mfs-card-img { flex:none; aspect-ratio:1200/760; min-height:0; }
     .mfs-card-body { padding:1.6rem 1.4rem; }
-    .mfs-grid { grid-template-columns:1fr; max-width:520px; margin-inline:auto; }
   }
+  @media (max-width:999px) { .mfs-grid { grid-template-columns:repeat(2,minmax(0,1fr)); gap:1.25rem; } }
+  @media (max-width:560px) { .mfs-grid { grid-template-columns:1fr; max-width:520px; margin-inline:auto; } }
   @media (prefers-reduced-motion:reduce) { .mfs-s, .mfs-btn { transition:none; } .mfs-s:hover, .mfs-btn:hover { transform:none; } }
 </style>
 </head>
@@ -65,6 +66,14 @@
 
     <h3 class="mfs-sub">More on Lady Khadijah (p)</h3>
     <div class="mfs-grid">
+      <a class="mfs-s" href="https://article.misbah-inc.com/articles/resemblance-of-lady-zaynab-to-lady-khadijah/" target="_blank" rel="noopener">
+        <img src="https://article.misbah-inc.com/images/home/feat-zaynab-khadijah-v1.jpg" alt="" loading="lazy">
+        <span class="mfs-s-body">
+          <span class="mfs-chip">Series</span>
+          <span class="mfs-s-name">The Resemblance of Lady Zaynab al-Kubra (p) to Lady Khadijah al-Kubra (p)</span>
+          <span class="mfs-s-desc">A special edition of the Misbah channel on the resemblance of Lady Zaynab al-Kubra (p) to Lady Khadijah al-Kubra (p), part by part.</span>
+        </span>
+      </a>
       <a class="mfs-s" href="https://article.misbah-inc.com/articles/lady-khadijah-biography/" target="_blank" rel="noopener">
         <img src="https://article.misbah-inc.com/images/home/feat-khadijah-biography-v5.jpg" alt="" loading="lazy">
         <span class="mfs-s-body">
