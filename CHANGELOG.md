@@ -15,6 +15,10 @@ Format: `## [Date] — Summary` followed by bulleted details.
 - The article now has its pictures: the wide poster as banner / share image / thumbnail, the square one for phones (`images/zaynab-khadijah-poster-*.jpg`).
 - **Featured** (homepage, four languages): the article is the first card of the "More on Lady Khadijah (p)" row, followed by the three series; the row is four across on wide screens, two on tablets, one on phones. Card picture `images/home/feat-zaynab-khadijah-v1.jpg` (square).
 
+## [2026-10-17] — Zaynab/Khadijah article (English): the narration's opening rewritten
+
+- English page: the paragraph "It is narrated that when Lady Zaynab (peace be upon her) was born, Amir al-Mu'minin … came to the Prophet and said:" is replaced, at the editor's request, by two paragraphs (the Prophet away travelling, the unnamed baby, Imam Ali's answer, the Prophet hurrying to the house; then "When Amir al-Mu'minin … said:"). The Telegram post keeps its original wording, and the Arabic, Farsi and Urdu pages are unchanged until their wording is supplied (`OVERRIDES` in `build_zaynab_khadijah.py`).
+
 ## [2026-10-16] — Biography of Lady Khadijah, chapter 1 laid out like the Rabi' al-Awwal article
 
 - `/…/articles/lady-khadijah-biography/1/` (all four languages): a **contents box** ("In this chapter" / «في هذا الفصل» / «در این فصل» / «اس باب میں») linking to the four sections, **numbered section headings** (the post's own 🌳 lines, trailing colon dropped; I, II, III, IV — ١ ٢ ٣ ٤ / ۱ ۲ ۳ ۴ in ar / fa, ur), the Arabic genealogies in quotation boxes, **footnote numbers (1)(2)… as links** into a collapsible **Sources** list at the end (grouped by the sections that cite them; a footnote link opens the list and highlights the source). Text word for word. Generator: `tools/wix_import/build_khadijah_ch1.py` (rewrites only that page's body, in place, idempotent); styles `.bio-*` in `style.css`, the toggle at the end of `script.js`. Chapters 2–4 are unchanged.

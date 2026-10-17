@@ -39,6 +39,12 @@ def parse(text):
     return blocks, refs
 
 
+# Editor's rewrites of a paragraph on the website (the Telegram post keeps its original wording): language -> [(start of the post's paragraph, [replacement paragraphs])]
+OVERRIDES = {'en': [("It is narrated that when Lady Zaynab (peace be upon her) was born, Amir al-Mu'minin", [
+    "It is narrated that when Lady Zaynab (peace be upon her) was born the Prophet (peace be upon him and his family) was away travelling, and the days went by with the baby still unnamed. Lady Fatima (peace be upon her) asked Imam Ali (peace be upon him) why they were waiting. He answered that this choice was not his to make: it belonged to the Prophet (peace be upon him and his family). When the Prophet (peace be upon him and his family) returned and heard the news, he did not wait a moment. He hurried straight to the house.",
+    "When Amir al-Mu'minin (peace be upon him) came to the Prophet and said:"])]}
+
+
 REFS_H = {'en': 'Source', 'ar': 'المصدر', 'fa': 'منبع', 'ur': 'حوالہ'}
 
 
@@ -87,6 +93,9 @@ def build(wide=None, square=None):
     titles, descs, arts = {}, {}, {}
     for l in LANGS4:
         blocks, refs = parse(POSTS[l]['text'])
+        for start, new in OVERRIDES.get(l, []):
+            i = next(i for i, (k, t) in enumerate(blocks) if t.startswith(start))
+            blocks[i:i + 1] = [('P', t) for t in new]
         desc = BA.clip(re.sub(r'\s+', ' ', blocks[0][1]), 160)
         arts[l] = dict(lang=l, title=TITLES[l], desc=desc, published=DATE, modified=DATE, heads=[], hero_video=None, body=[{'t': 'p', 'x': t} for k, t in blocks],
                        tags=[], og='x', img=dict(w=size[0], h=size[1], orig=size), blocks=blocks, refs=refs)
