@@ -17,7 +17,7 @@ Format: `## [Date] — Summary` followed by bulleted details.
 
 ## [2026-10-17] — Zaynab/Khadijah article (English): the narration's opening rewritten
 
-- English page: the paragraph "It is narrated that when Lady Zaynab (peace be upon her) was born, Amir al-Mu'minin … came to the Prophet and said:" is replaced, at the editor's request, by two paragraphs (the Prophet away travelling, the unnamed baby, Imam Ali's answer, the Prophet hurrying to the house; then "When Amir al-Mu'minin … said:"). The Telegram post keeps its original wording, and the Arabic, Farsi and Urdu pages are unchanged until their wording is supplied (`OVERRIDES` in `build_zaynab_khadijah.py`).
+- English page: the paragraph "It is narrated that when Lady Zaynab (peace be upon her) was born, Amir al-Mu'minin … came to the Prophet and said:" is replaced, at the editor's request, by two paragraphs (the Prophet away travelling, the unnamed baby, Imam Ali's answer, the Prophet hurrying to the house; then "When Amir al-Mu'minin … said:"). The Telegram post keeps its original wording, and the Arabic, Farsi and Urdu pages are unchanged until their wording is supplied (`OVERRIDES` in `build_zaynab_khadijah.py`). "The baby still unnamed" became "Lady Zaynab (peace be upon her) still unnamed at that time", out of respect.
 
 ## [2026-10-16] — Biography of Lady Khadijah, chapter 1 laid out like the Rabi' al-Awwal article
 
