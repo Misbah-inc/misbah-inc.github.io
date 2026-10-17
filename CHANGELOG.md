@@ -15,6 +15,10 @@ Format: `## [Date] — Summary` followed by bulleted details.
 - The article now has its pictures: the wide poster as banner / share image / thumbnail, the square one for phones (`images/zaynab-khadijah-poster-*.jpg`).
 - **Featured** (homepage, four languages): the article is the first card of the "More on Lady Khadijah (p)" row, followed by the three series; the row is four across on wide screens, two on tablets, one on phones. Card picture `images/home/feat-zaynab-khadijah-v1.jpg` (square).
 
+## [2026-10-17] — Zaynab/Khadijah series: Part 2 (four languages)
+
+- `/…/articles/resemblance-of-lady-zaynab-to-lady-khadijah/2/` — «خدیجة و أین مثل خدیجة؟ / زینب و ما زینب؟» (posts of 17 Oct 21:22 UTC: fa #22982, en #23775, ar #516, ur #556). Word for word: the two Arabic title lines, three sections (Khadijah — the Prophet's words recorded by Umm Salamah; Zaynab — the scholars' words; the Infallibles' expressions about Lady Zaynab), the hadiths in Arabic boxes, their translations as quotations (ar has none in the post), each 📚 source line kept right under its hadith. Series page, Part 1 → Part 2 navigation, catalogue, sitemap, feed updated; Part 2 uses the series picture. `build_zaynab_khadijah.py` now builds all parts (`PARTS`).
+
 ## [2026-10-17] — The Zaynab/Khadijah article is now a series, with this text as Part 1
 
 - `/…/articles/resemblance-of-lady-zaynab-to-lady-khadijah/` is now the **series page** (all four languages; it keeps the old address) and the text is **Part 1** at `/…/1/` (heading "<series title> — Part 1"). New parts: add the posts to `POSTS`-style data in `build_zaynab_khadijah.py` and rebuild. Series description lines in ar/fa/ur are my wording (unreviewed). Filed as a series under Jumada al-Awwal with the same tags. The homepage Featured card now reads Series with the series description. Picture files were renamed to `…-1-<lang>.jpg` (banner, og, thumb) and `…-1-mobile.jpg`.

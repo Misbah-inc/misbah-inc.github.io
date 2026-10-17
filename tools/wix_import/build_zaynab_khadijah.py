@@ -1,4 +1,4 @@
-"""Special edition: the resemblance of Lady Zaynab (p) to Lady Khadijah (p) — one article in four languages (posted 16 Oct 2026).
+"""Special edition: the resemblance of Lady Zaynab (p) to Lady Khadijah (p) — a series in four languages (Part 1: 16 Oct 2026, Part 2: 17 Oct 2026).
 
 Source: fa @misbah110 #22964, en @misbah110_en #23758, ar @misbah110_ar #499, ur @misbah110_ur #538 (work/tg/zaynab-khadijah-posts.json).
 Text word for word; removed: the hashtag header, the ✦━✦ divider, the @channel footer and the emoji that open each paragraph.
@@ -17,7 +17,9 @@ LANGS4 = ['en', 'ar', 'fa', 'ur']
 SLUG = 'resemblance-of-lady-zaynab-to-lady-khadijah'
 DATE = '2026-10-16'
 D = ROOT + 'images/articles/'
-POSTS = json.load(open(HERE + 'work/tg/zaynab-khadijah-posts.json', encoding='utf-8'))
+POSTS = json.load(open(HERE + 'work/tg/zaynab-khadijah-posts.json', encoding='utf-8'))        # part 1
+PARTS = {1: dict(posts=POSTS, date='2026-10-16'),
+         2: dict(posts=json.load(open(HERE + 'work/tg/zaynab-khadijah-posts-2.json', encoding='utf-8')), date='2026-10-17')}   # part 2: fa #22982, en #23775, ar #516, ur #556
 TITLES = {'en': 'The Resemblance of Lady Zaynab al-Kubra (p) to Lady Khadijah al-Kubra (p)',
           'ar': 'شبه السيدة زينب الكبرى (ع) بالسيدة خديجة الكبرى (ع)',
           'fa': 'شباهت حضرت خانم زینب کبری (س) به حضرت خانم خدیجه کبری (س)',
@@ -37,6 +39,26 @@ def parse(text):
             blocks.append(('Q', ' '.join(lines).strip('❝❞ ').replace('❝', '').replace('❞', '').strip())); continue
         blocks.append(('P', LEAD.sub('', ' '.join(lines))))
     return blocks, refs
+
+
+def parse2(text):
+    """Part 2: titles (A) / section headings (H) / sub-headings (S) / hadith in Arabic (A) / translations (Q) / sources (R) / prose (P)."""
+    blocks, first = [], True
+    strip = lambda t: re.sub(r'^[\s🌹🌿✨📜📚]+', '', t).strip()
+    for para in re.split(r'\n\s*\n', text):
+        lines = [l.strip() for l in para.split('\n') if l.strip() and not l.strip().startswith(('#', '@')) and not DIV.match(l.strip())]
+        if not lines: continue
+        if first:                                   # the two Arabic title lines of the post
+            first = False
+            blocks += [('A', strip(l).strip('«»').strip()) for l in lines]; continue
+        head = lines[0]
+        if head.startswith('📚'): blocks += [('R', strip(l)) for l in lines]
+        elif head.startswith('📜'): blocks.append(('A', strip(' '.join(lines)).strip('«»').strip()))
+        elif head.startswith('«'): blocks.append(('Q', ' '.join(lines).strip('«»').strip()))
+        elif head.startswith(('🌿 «', '🌹 «', '✨')): blocks.append(('H', strip(' '.join(lines))))
+        elif head.startswith('🌿'): blocks.append(('S', strip(' '.join(lines))))
+        else: blocks.append(('P', strip(' '.join(lines))))
+    return blocks, []
 
 
 # Editor's rewrites of a paragraph on the website (the Telegram post keeps its original wording; fa / ar / ur are my translations of the English rewrite, not yet reviewed by a native speaker): language -> [(start of the post's paragraph, [replacement paragraphs])]
@@ -61,7 +83,12 @@ REFS_H = {'en': 'Source', 'ar': 'المصدر', 'fa': 'منبع', 'ur': 'حوا�
 def body(a):
     out = []
     for k, t in a['blocks']:
-        out.append(f'<blockquote class="art-quote">{esc(t)}</blockquote>' if k == 'Q' else f'<p>{esc(t)}</p>')
+        if k == 'Q': out.append(f'<blockquote class="art-quote">{esc(t)}</blockquote>')
+        elif k == 'H': out.append(f'<h3 class="art-section-title">{esc(t)}</h3>')
+        elif k == 'S': out.append(f'<p class="kw-subhead">{esc(t)}</p>')
+        elif k == 'A': out.append(f'<div class="quran-verse"><span class="quran-ar" lang="ar" dir="rtl">{esc(t)}</span></div>')
+        elif k == 'R': out.append(f'<p class="tg-ref">{esc(t)}</p>')
+        else: out.append(f'<p>{esc(t)}</p>')
     if a['refs']:
         out.append(f'<h3 class="art-section-title">{REFS_H[a["lang"]]}</h3>')
         out.append('<ul class="kw-sources-list">' + ''.join(f'<li>{esc(r)}</li>' for r in a['refs']) + '</ul>')
@@ -87,12 +114,12 @@ def images(wide=None, square=None):
     return ban.size
 
 
-def mobile_banner(path, lang):
-    if not os.path.exists(D + f'{SLUG}-1-mobile.jpg'): return
+def mobile_banner(path, lang, part=1):
+    if not os.path.exists(D + f'{SLUG}-{part}-mobile.jpg'): return
     s = open(path, encoding='utf-8').read()
-    old = re.search(r'(<div class="kw-banner[^"]*"[^>]*>\s*)(<img src="/images/articles/' + SLUG + '-1-' + lang + r'\.jpg"[^>]*>)', s)
+    old = re.search(r'(<div class="kw-banner[^"]*"[^>]*>\s*)(<img src="/images/articles/' + SLUG + '-' + str(part) + '-' + lang + r'\.jpg"[^>]*>)', s)
     if not old or '<picture' in s: return
-    pic = f'<picture><source media="(max-width: 700px)" srcset="/images/articles/{SLUG}-1-mobile.jpg" width="1000" height="1000">{old.group(2)}</picture>'
+    pic = f'<picture><source media="(max-width: 700px)" srcset="/images/articles/{SLUG}-{part}-mobile.jpg" width="1000" height="1000">{old.group(2)}</picture>'
     open(path, 'w', encoding='utf-8').write(s.replace(old.group(0), old.group(1) + pic))
 
 
@@ -104,34 +131,46 @@ SERIES_DESC = {'en': 'A special edition of the Misbah channel on the resemblance
 
 
 def build(wide=None, square=None):
+    import shutil
+    import build_mourning as M
     size = images(wide, square)
+    for n in PARTS:                                  # later parts share the series picture until they get their own
+        if n == 1: continue
+        for l in LANGS4:
+            for stem in (f'{SLUG}', f'og-{SLUG}', f'thumb-{SLUG}'):
+                shutil.copy(D + f'{stem}-1-{l}.jpg', D + f'{stem}-{n}-{l}.jpg')
+        shutil.copy(D + f'{SLUG}-1-mobile.jpg', D + f'{SLUG}-{n}-mobile.jpg')
     CAT = json.load(open(HERE + 'catalog.json'))
     TP = {l: template(l) for l in LANGS4}
-    titles, descs, arts = {}, {}, {}
-    for l in LANGS4:
-        blocks, refs = parse(POSTS[l]['text'])
-        for start, new in OVERRIDES.get(l, []):
-            i = next(i for i, (k, t) in enumerate(blocks) if t.startswith(start))
-            blocks[i:i + 1] = [('P', t) for t in new]
-        desc = BA.clip(re.sub(r'\s+', ' ', blocks[0][1]), 160)
-        arts[l] = dict(lang=l, title=TITLES[l], desc=desc, published=DATE, modified=DATE, heads=[], hero_video=None, body=[{'t': 'p', 'x': t} for k, t in blocks],
-                       tags=[], og='x', img=dict(w=size[0], h=size[1], orig=size), blocks=blocks, refs=refs)
-        titles[l], descs[l] = TITLES[l], desc
-    import build_mourning as M
-    for l in LANGS4:
-        arts[l]['title'] = f"{NAME[l]} — {S[l]['part'].format(n=num(1, l))}"          # part heading; the series keeps the plain title
-        arts[l]['heads'] = [{'t': 'p', 'x': S[l]['part'].format(n=num(1, l))}]
-        href = lambda n=None, lg=l: f"{PFX[lg]}/articles/{SLUG}/" + (f'{n}/' if n else '')
-        sr = dict(name=NAME[l], href=href(), n=1)
-        path = BA.page(f'{SLUG}/1', l, arts[l], LANGS4, TP, series=sr)
-        mobile_banner(ROOT + path, l)
+    arts = {}
+    for n, pt in PARTS.items():
+        for l in LANGS4:
+            text = pt['posts'][l]['text']
+            blocks, refs = parse(text) if n == 1 else parse2(text)
+            for start, new in (OVERRIDES.get(l, []) if n == 1 else []):
+                k = next(k for k, (kk, t) in enumerate(blocks) if t.startswith(start))
+                blocks[k:k + 1] = [('P', t) for t in new]
+            first = next(t for kk, t in blocks if kk == 'P')
+            desc = BA.clip(re.sub(r'\s+', ' ', first), 160)
+            arts[(l, n)] = dict(lang=l, title=f"{NAME[l]} — {S[l]['part'].format(n=num(n, l))}", desc=desc, published=pt['date'], modified=pt['date'],
+                                heads=[{'t': 'p', 'x': S[l]['part'].format(n=num(n, l))}], hero_video=None, body=[{'t': 'p', 'x': t} for kk, t in blocks],
+                                tags=[], og='x', img=dict(w=size[0], h=size[1], orig=size), blocks=blocks, refs=refs)
+    for (l, n), a in arts.items():
+        href = lambda k=None, lg=l: f"{PFX[lg]}/articles/{SLUG}/" + (f'{k}/' if k else '')
+        sr = dict(name=NAME[l], href=href(), n=n)
+        if (l, n - 1) in arts: sr['prev'] = (href(n - 1), arts[(l, n - 1)]['title'])
+        if (l, n + 1) in arts: sr['next'] = (href(n + 1), arts[(l, n + 1)]['title'])
+        path = BA.page(f'{SLUG}/{n}', l, a, LANGS4, TP, series=sr)
+        mobile_banner(ROOT + path, l, n)
+        CAT[f'{SLUG}/{n}'] = dict(CAT.get(f'{SLUG}/{n}', {}), slug=f'{SLUG}/{n}', series=SLUG, month=5, langs=LANGS4, titles={ll: arts[(ll, n)]['title'] for ll in LANGS4},
+                                  tags=[], tags_l={ll: [] for ll in LANGS4}, published=PARTS[n]['date'], img=True, descs={ll: arts[(ll, n)]['desc'] for ll in LANGS4})
     M.SER, M.NAME, M.series_desc, M.TP = SLUG, NAME, (lambda lang: SERIES_DESC[lang]), TP
     for l in LANGS4:
-        M.series_page(l, {(l, 1): arts[l]}, LANGS4)
-    CAT[f'{SLUG}/1'] = dict(slug=f'{SLUG}/1', series=SLUG, month=5, langs=LANGS4, titles={l: arts[l]['title'] for l in LANGS4}, tags=[], tags_l={l: [] for l in LANGS4}, published=DATE, img=True, descs=descs)
-    CAT[SLUG] = dict(slug=SLUG, kind='series', month=5, langs=LANGS4, titles=NAME, tags=[], tags_l={}, published=DATE, img=True, descs=SERIES_DESC)
+        M.series_page(l, {(l, n): arts[(l, n)] for n in PARTS}, LANGS4)
+    last = max(pt['date'] for pt in PARTS.values())
+    CAT[SLUG] = dict(slug=SLUG, kind='series', month=5, langs=LANGS4, titles=NAME, tags=[], tags_l={}, published=last, img=True, descs=SERIES_DESC)
     json.dump(CAT, open(HERE + 'catalog.json', 'w'), ensure_ascii=False, indent=1)
-    print(titles)
+    print({n: {l: arts[(l, n)]['title'][-12:] for l in LANGS4} for n in PARTS})
 
 
 if __name__ == '__main__':

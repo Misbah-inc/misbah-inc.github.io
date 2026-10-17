@@ -2969,7 +2969,7 @@
   },
   "tags": [],
   "tags_l": {},
-  "published": "2026-10-16",
+  "published": "2026-10-17",
   "img": true,
   "descs": {
    "en": "A special edition of the Misbah channel on the resemblance of Lady Zaynab al-Kubra (p) to Lady Khadijah al-Kubra (p), part by part.",
@@ -3008,6 +3008,38 @@
    "ar": "أعزاءنا متابعي قناة مصباح، في أيام ولادة السيدة زينب عليها السلام النورانية، كونوا معنا في الملف الخاص عن شبه السيدة زينب الكبرى عليها السلام بالسيدة خديجة…",
    "fa": "همراهان گرامی کانال مصباح در ایام نورانی ولادت حضرت خانم زینب سلام الله علیها، با ویژه نامه شباهت حضرت خانم زینب کبری سلام الله علیها با حضرت خانم خدیجه کبری…",
    "ur": "مصباح چینل کے محترم ساتھیو! حضرت بی بی زینب سلام اللہ علیہا کی ولادت کے نورانی ایام میں، حضرت بی بی زینب کبریٰ سلام اللہ علیہا کی حضرت بی بی خدیجہ کبریٰ سلام…"
+  }
+ },
+ "resemblance-of-lady-zaynab-to-lady-khadijah/2": {
+  "slug": "resemblance-of-lady-zaynab-to-lady-khadijah/2",
+  "series": "resemblance-of-lady-zaynab-to-lady-khadijah",
+  "month": 5,
+  "langs": [
+   "en",
+   "ar",
+   "fa",
+   "ur"
+  ],
+  "titles": {
+   "en": "The Resemblance of Lady Zaynab al-Kubra (p) to Lady Khadijah al-Kubra (p) — Part 2",
+   "ar": "شبه السيدة زينب الكبرى (ع) بالسيدة خديجة الكبرى (ع) — القسم ٢",
+   "fa": "شباهت حضرت خانم زینب کبری (س) به حضرت خانم خدیجه کبری (س) — بخش ۲",
+   "ur": "حضرت بی بی زینب کبریٰ (س) کی حضرت بی بی خدیجہ کبریٰ (س) سے شباہت — حصہ ۲"
+  },
+  "tags": [],
+  "tags_l": {
+   "en": [],
+   "ar": [],
+   "fa": [],
+   "ur": []
+  },
+  "published": "2026-10-17",
+  "img": true,
+  "descs": {
+   "en": "Umm Salamah narrates that one day we mentioned Lady Khadijah (peace be upon her) in the presence of the Messenger of God (peace be upon him and his family)…",
+   "ar": "روت أم سلمة أنّنا ذكرنا يومًا السيدة خديجة سلام الله عليها عند رسول الله صلى الله عليه وآله، فبكى النبي وقال:",
+   "fa": "ام‌سلمه نقل می‌کند که روزی نزد رسول خدا صلی‌الله‌علیه‌وآله از حضرت خدیجه سلام‌الله‌علیها یاد کردیم. پیامبر گریستند و فرمودند:",
+   "ur": "ام سلمہ بیان کرتی ہیں کہ ایک دن ہم نے رسولِ خدا صلی اللہ علیہ و آلہ کے پاس حضرت خدیجہ سلام اللہ علیہا کا ذکر کیا۔ نبی اکرم رو پڑے اور فرمایا:"
   }
  }
 }
