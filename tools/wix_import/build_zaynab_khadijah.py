@@ -19,7 +19,7 @@ DATE = '2026-10-16'
 D = ROOT + 'images/articles/'
 POSTS = json.load(open(HERE + 'work/tg/zaynab-khadijah-posts.json', encoding='utf-8'))        # part 1
 PARTS = {1: dict(posts=POSTS, date='2026-10-16'),
-         2: dict(posts=json.load(open(HERE + 'work/tg/zaynab-khadijah-posts-2.json', encoding='utf-8')), date='2026-10-17')}   # part 2: fa #22982, en #23775, ar #516, ur #556
+         2: dict(posts=json.load(open(HERE + 'work/tg/zaynab-khadijah-posts-2.json', encoding='utf-8')), date='2026-10-17', image=ROOT + 'images/zaynab-khadijah-part2.jpg')}   # part 2 (picture from the channels' photo post, 800x450 — the Telegram preview size): fa #22982, en #23775, ar #516, ur #556
 TITLES = {'en': 'The Resemblance of Lady Zaynab al-Kubra (p) to Lady Khadijah al-Kubra (p)',
           'ar': 'شبه السيدة زينب الكبرى (ع) بالسيدة خديجة الكبرى (ع)',
           'fa': 'شباهت حضرت خانم زینب کبری (س) به حضرت خانم خدیجه کبری (س)',
@@ -134,12 +134,25 @@ def build(wide=None, square=None):
     import shutil
     import build_mourning as M
     size = images(wide, square)
-    for n in PARTS:                                  # later parts share the series picture until they get their own
+    sizes = {1: size}
+    for n, pt in PARTS.items():                      # later parts: their own picture if they have one, else the series picture
         if n == 1: continue
-        for l in LANGS4:
-            for stem in (f'{SLUG}', f'og-{SLUG}', f'thumb-{SLUG}'):
-                shutil.copy(D + f'{stem}-1-{l}.jpg', D + f'{stem}-{n}-{l}.jpg')
-        shutil.copy(D + f'{SLUG}-1-mobile.jpg', D + f'{SLUG}-{n}-mobile.jpg')
+        if pt.get('image'):
+            im = Image.open(pt['image']).convert('RGB')
+            if im.width < 1600: im = im.resize((1600, round(1600 * im.height / im.width)), Image.LANCZOS)   # same banner width as Part 1 (a sharper original would be better)
+            sizes[n] = im.size
+            og = ImageOps.fit(im, (1200, 630), Image.LANCZOS, centering=(0.5, 0.5))
+            for l in LANGS4:
+                im.save(D + f'{SLUG}-{n}-{l}.jpg', 'JPEG', quality=84, progressive=True, optimize=True)
+                og.save(D + f'og-{SLUG}-{n}-{l}.jpg', 'JPEG', quality=80, progressive=True, optimize=True)
+                im.resize((480, round(480 * im.height / im.width)), Image.LANCZOS).save(D + f'thumb-{SLUG}-{n}-{l}.jpg', 'JPEG', quality=80, progressive=True, optimize=True)
+            if os.path.exists(D + f'{SLUG}-{n}-mobile.jpg'): os.remove(D + f'{SLUG}-{n}-mobile.jpg')   # no square version: phones get the wide one
+        else:
+            sizes[n] = size
+            for l in LANGS4:
+                for stem in (f'{SLUG}', f'og-{SLUG}', f'thumb-{SLUG}'):
+                    shutil.copy(D + f'{stem}-1-{l}.jpg', D + f'{stem}-{n}-{l}.jpg')
+            shutil.copy(D + f'{SLUG}-1-mobile.jpg', D + f'{SLUG}-{n}-mobile.jpg')
     CAT = json.load(open(HERE + 'catalog.json'))
     TP = {l: template(l) for l in LANGS4}
     arts = {}
@@ -154,7 +167,7 @@ def build(wide=None, square=None):
             desc = BA.clip(re.sub(r'\s+', ' ', first), 160)
             arts[(l, n)] = dict(lang=l, title=f"{NAME[l]} — {S[l]['part'].format(n=num(n, l))}", desc=desc, published=pt['date'], modified=pt['date'],
                                 heads=[{'t': 'p', 'x': S[l]['part'].format(n=num(n, l))}], hero_video=None, body=[{'t': 'p', 'x': t} for kk, t in blocks],
-                                tags=[], og='x', img=dict(w=size[0], h=size[1], orig=size), blocks=blocks, refs=refs)
+                                tags=[], og='x', img=dict(w=sizes[n][0], h=sizes[n][1], orig=sizes[n]), blocks=blocks, refs=refs)
     for (l, n), a in arts.items():
         href = lambda k=None, lg=l: f"{PFX[lg]}/articles/{SLUG}/" + (f'{k}/' if k else '')
         sr = dict(name=NAME[l], href=href(), n=n)

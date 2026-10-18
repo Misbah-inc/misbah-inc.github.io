@@ -15,6 +15,10 @@ Format: `## [Date] — Summary` followed by bulleted details.
 - The article now has its pictures: the wide poster as banner / share image / thumbnail, the square one for phones (`images/zaynab-khadijah-poster-*.jpg`).
 - **Featured** (homepage, four languages): the article is the first card of the "More on Lady Khadijah (p)" row, followed by the three series; the row is four across on wide screens, two on tablets, one on phones. Card picture `images/home/feat-zaynab-khadijah-v1.jpg` (square).
 
+## [2026-10-17] — Zaynab/Khadijah series: Part 2 has its own picture
+
+- Part 2's banner, social image and card thumbnail are now the picture from the channels' photo post of 17 Oct (two ladies in prayer, bright rays — one set in a house, one in a camp), the same in every language. The Telegram web preview only exposes it at 800×450, so it is enlarged to the 1600-px banner width (a little soft); send the original file for a sharper banner. No square version, so phones get the wide one. Series picture (Part 1's) is unchanged. `PARTS[n]['image']` in `build_zaynab_khadijah.py`.
+
 ## [2026-10-17] — Zaynab/Khadijah series: Part 2 (four languages)
 
 - `/…/articles/resemblance-of-lady-zaynab-to-lady-khadijah/2/` — «خدیجة و أین مثل خدیجة؟ / زینب و ما زینب؟» (posts of 17 Oct 21:22 UTC: fa #22982, en #23775, ar #516, ur #556). Word for word: the two Arabic title lines, three sections (Khadijah — the Prophet's words recorded by Umm Salamah; Zaynab — the scholars' words; the Infallibles' expressions about Lady Zaynab), the hadiths in Arabic boxes, their translations as quotations (ar has none in the post), each 📚 source line kept right under its hadith. Series page, Part 1 → Part 2 navigation, catalogue, sitemap, feed updated; Part 2 uses the series picture. `build_zaynab_khadijah.py` now builds all parts (`PARTS`).
