@@ -19,7 +19,8 @@ DATE = '2026-10-16'
 D = ROOT + 'images/articles/'
 POSTS = json.load(open(HERE + 'work/tg/zaynab-khadijah-posts.json', encoding='utf-8'))        # part 1
 PARTS = {1: dict(posts=POSTS, date='2026-10-16'),
-         2: dict(posts=json.load(open(HERE + 'work/tg/zaynab-khadijah-posts-2.json', encoding='utf-8')), date='2026-10-17', image=ROOT + 'images/zaynab-khadijah-part2.jpg')}   # part 2 (picture from the channels' photo post, 800x450 — the Telegram preview size): fa #22982, en #23775, ar #516, ur #556
+         2: dict(posts=json.load(open(HERE + 'work/tg/zaynab-khadijah-posts-2.json', encoding='utf-8')), date='2026-10-17', image=ROOT + 'images/zaynab-khadijah-part2.jpg'),
+         3: dict(posts=json.load(open(HERE + 'work/tg/zaynab-khadijah-posts-3.json', encoding='utf-8')), date='2026-10-18', image=ROOT + 'images/zaynab-khadijah-part3.jpg')}   # part 3: fa #22988, en #23780, ar #522, ur #565   # part 2 (picture from the channels' photo post, 800x450 — the Telegram preview size): fa #22982, en #23775, ar #516, ur #556
 TITLES = {'en': 'The Resemblance of Lady Zaynab al-Kubra (p) to Lady Khadijah al-Kubra (p)',
           'ar': 'شبه السيدة زينب الكبرى (ع) بالسيدة خديجة الكبرى (ع)',
           'fa': 'شباهت حضرت خانم زینب کبری (س) به حضرت خانم خدیجه کبری (س)',
@@ -61,6 +62,30 @@ def parse2(text):
     return blocks, []
 
 
+def parse3(text, lang):
+    """Part 3 (line by line, each line opens with its own emoji): T title, H numbered heading, P prose, S sub-heading, A Arabic quotation,
+    Q its translation (the plain line after it; the Arabic page has none), R source."""
+    blocks = []
+    strip = lambda t: re.sub(r'^[\s🌸🌹💫🌿📜📚]+', '', t).replace('**', '').strip()
+    for para in re.split(r'\n\s*\n', text):
+        lines = [l.strip() for l in para.split('\n') if l.strip() and not l.strip().startswith(('#', '@')) and not DIV.match(l.strip())]
+        for l in lines:
+            emo = l[0] if l[0] in '🌸🌹💫🌿📜📚' else ''
+            t = strip(l)
+            if not t: continue
+            if emo == '🌸': blocks.append(('T', t.strip('🌸 ')))
+            elif emo == '🌹': blocks.append(('H', t))
+            elif emo == '💫': blocks.append(('P', t))
+            elif emo == '🌿': blocks.append(('S', t))
+            elif emo == '📚': blocks.append(('R', t))
+            elif emo == '📜':
+                m = re.match(r'«(.*?)»[\s؛;]*(.*)$', t)
+                if m and m.group(2): blocks += [('A', m.group(1).strip()), ('Q', m.group(2).strip())]
+                else: blocks.append(('A', t.strip('«»').strip()))
+            else: blocks.append(('Q' if blocks and blocks[-1][0] == 'A' and lang != 'ar' else 'P', t))
+    return blocks, []
+
+
 # Editor's rewrites of a paragraph on the website (the Telegram post keeps its original wording; fa / ar / ur are my translations of the English rewrite, not yet reviewed by a native speaker): language -> [(start of the post's paragraph, [replacement paragraphs])]
 OVERRIDES = {'en': [("It is narrated that when Lady Zaynab (peace be upon her) was born, Amir al-Mu'minin", [
     "It is narrated that when Lady Zaynab (peace be upon her) was born the Prophet (peace be upon him and his family) was away travelling, and the days went by with Lady Zaynab (peace be upon her) still unnamed at that time. Lady Fatima (peace be upon her) asked Imam Ali (peace be upon him) why they were waiting. He answered that this choice was not his to make: it belonged to the Prophet (peace be upon him and his family). When the Prophet (peace be upon him and his family) returned and heard the news, he did not wait a moment. He hurried straight to the house.",
@@ -83,7 +108,8 @@ REFS_H = {'en': 'Source', 'ar': 'المصدر', 'fa': 'منبع', 'ur': 'حوا�
 def body(a):
     out = []
     for k, t in a['blocks']:
-        if k == 'Q': out.append(f'<blockquote class="art-quote">{esc(t)}</blockquote>')
+        if k == 'T': out.append(f'<h2 class="art-part-title">{esc(t)}</h2>')
+        elif k == 'Q': out.append(f'<blockquote class="art-quote">{esc(t)}</blockquote>')
         elif k == 'H': out.append(f'<h3 class="art-section-title">{esc(t)}</h3>')
         elif k == 'S': out.append(f'<p class="kw-subhead">{esc(t)}</p>')
         elif k == 'A': out.append(f'<div class="quran-verse"><span class="quran-ar" lang="ar" dir="rtl">{esc(t)}</span></div>')
@@ -159,7 +185,7 @@ def build(wide=None, square=None):
     for n, pt in PARTS.items():
         for l in LANGS4:
             text = pt['posts'][l]['text']
-            blocks, refs = parse(text) if n == 1 else parse2(text)
+            blocks, refs = parse(text) if n == 1 else (parse2(text) if n == 2 else parse3(text, l))
             for start, new in (OVERRIDES.get(l, []) if n == 1 else []):
                 k = next(k for k, (kk, t) in enumerate(blocks) if t.startswith(start))
                 blocks[k:k + 1] = [('P', t) for t in new]

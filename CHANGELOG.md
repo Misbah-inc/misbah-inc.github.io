@@ -15,6 +15,10 @@ Format: `## [Date] — Summary` followed by bulleted details.
 - The article now has its pictures: the wide poster as banner / share image / thumbnail, the square one for phones (`images/zaynab-khadijah-poster-*.jpg`).
 - **Featured** (homepage, four languages): the article is the first card of the "More on Lady Khadijah (p)" row, followed by the three series; the row is four across on wide screens, two on tablets, one on phones. Card picture `images/home/feat-zaynab-khadijah-v1.jpg` (square).
 
+## [2026-10-18] — Zaynab/Khadijah series: Part 3 (four languages)
+
+- `/…/articles/resemblance-of-lady-zaynab-to-lady-khadijah/3/` — «بخشی از وجوه شباهت هر دو خاتون» / "Some Aspects of Resemblance Between the Two Ladies" (posts of 18 Oct 20:47 UTC: fa #22988, en #23780, ar #522, ur #565). Word for word (only the stray `**` markdown marks dropped): 1. the title «Kubra» with both ladies' lists of titles; 2. intellect and wisdom, each Arabic quotation in a box with its translation and source. The Arabic post has no translations. Own picture from the photo post (two veiled figures in a house and in a camp; 800×450 from the Telegram preview, enlarged like Part 2's), same in all languages. Series page, Part 2 ↔ Part 3 navigation, catalogue, sitemap, feed updated. `build_zaynab_khadijah.py`: `parse3()`.
+
 ## [2026-10-17] — Zaynab/Khadijah series: Part 2 has its own picture
 
 - Part 2's banner, social image and card thumbnail are now the picture from the channels' photo post of 17 Oct (two ladies in prayer, bright rays — one set in a house, one in a camp), the same in every language. The Telegram web preview only exposes it at 800×450, so it is enlarged to the 1600-px banner width (a little soft); send the original file for a sharper banner. No square version, so phones get the wide one. Series picture (Part 1's) is unchanged. `PARTS[n]['image']` in `build_zaynab_khadijah.py`.
