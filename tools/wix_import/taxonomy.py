@@ -98,6 +98,11 @@ ITEMS = {
  'resemblance-of-lady-zaynab-to-lady-khadijah/3': (5, 'series', ['lady-zaynab', 'lady-khadijah', 'holy-prophet']),
  'resemblance-of-lady-zaynab-to-lady-khadijah/2': (5, 'series', ['lady-zaynab', 'lady-khadijah', 'holy-prophet']),
  'resemblance-of-lady-zaynab-to-lady-khadijah/1': (5, 'series', ['lady-zaynab', 'lady-khadijah', 'holy-prophet']),
+ 'musibat-al-zahra': (5, 'series', ['lady-fatimah-zahra', 'mourning']),
+ 'musibat-al-zahra/4': (5, 'series', ['lady-fatimah-zahra', 'mourning']),
+ 'musibat-al-zahra/3': (5, 'series', ['lady-fatimah-zahra', 'mourning']),
+ 'musibat-al-zahra/2': (5, 'series', ['lady-fatimah-zahra', 'mourning']),
+ 'musibat-al-zahra/1': (5, 'series', ['lady-fatimah-zahra', 'mourning']),
  'occasions-of-jumada-al-ula': (5, 'announcement', ['lady-zaynab', 'lady-fatimah-zahra', 'imam-hasan', 'holy-prophet']),
 }
 # every Mourning chapter inherits the series' tags
