@@ -59,7 +59,7 @@ def entries(lang):
                     tag={'en': 'Lady Khadijah (p)', 'ar': 'السيدة خديجة عليها السلام', 'fa': 'حضرت خدیجه سلام الله علیها', 'ur': 'حضرت خدیجہ سلام اللہ علیہا'}[lang],
                     img=thumb('images/lady-khadijah-article.jpg', 'rabi_al_awwal'), series=False))
     # Al-Kawthar series
-    out.append(dict(slug='al-kawthar', href=f'{PFX[lang]}/articles/al-kawthar/', title=S[lang]['series'], month=None, date='2026-10-05',
+    out.append(dict(slug='al-kawthar', href=f'{PFX[lang]}/articles/al-kawthar/', title=S[lang]['series'], month=None, date='2026-10-23',
                     tag=UI[lang]['series'], img=thumb(f'images/kawthar/part1-{lang}.jpg', f'al-kawthar-{lang}'), series=True))
     for slug, c in CAT.items():
         if lang not in c['langs'] or c.get('series'): continue        # chapters are listed on their series page

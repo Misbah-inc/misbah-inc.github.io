@@ -14,10 +14,10 @@ from gen_kawthar import PFX, LANGS, ROOT, SITE
 PER_LANG = 20
 CAT = json.load(open(HERE + 'catalog.json'))
 # Al-Kawthar is listed as a series card on the index; the feed wants its two parts as separate items.
-EXTRA = {'en': [('al-kawthar/part-1', '2026-09-25'), ('al-kawthar/part-2', '2026-10-01')],
-         'ar': [('al-kawthar/part-1', '2026-09-29'), ('al-kawthar/part-2', '2026-10-05')],
-         'fa': [('al-kawthar/part-1', '2026-09-29'), ('al-kawthar/part-2', '2026-10-05')],
-         'ur': [('al-kawthar/part-1', '2026-09-29'), ('al-kawthar/part-2', '2026-10-05')]}
+EXTRA = {'en': [('al-kawthar/part-1', '2026-09-25'), ('al-kawthar/part-2', '2026-10-01'), ('al-kawthar/part-3', '2026-10-07'), ('al-kawthar/part-4', '2026-10-15'), ('al-kawthar/part-5', '2026-10-21')],
+         'ar': [('al-kawthar/part-1', '2026-09-29'), ('al-kawthar/part-2', '2026-10-05'), ('al-kawthar/part-3', '2026-10-10'), ('al-kawthar/part-4', '2026-10-16'), ('al-kawthar/part-5', '2026-10-23')],
+         'fa': [('al-kawthar/part-1', '2026-09-29'), ('al-kawthar/part-2', '2026-10-05'), ('al-kawthar/part-3', '2026-10-08'), ('al-kawthar/part-4', '2026-10-14'), ('al-kawthar/part-5', '2026-10-22')],
+         'ur': [('al-kawthar/part-1', '2026-09-29'), ('al-kawthar/part-2', '2026-10-05'), ('al-kawthar/part-3', '2026-10-10'), ('al-kawthar/part-4', '2026-10-18')]}
 
 
 def page_path(lang, slug):
