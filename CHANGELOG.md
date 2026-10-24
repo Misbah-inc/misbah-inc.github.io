@@ -15,6 +15,10 @@ Format: `## [Date] — Summary` followed by bulleted details.
 - The article now has its pictures: the wide poster as banner / share image / thumbnail, the square one for phones (`images/zaynab-khadijah-poster-*.jpg`).
 - **Featured** (homepage, four languages): the article is the first card of the "More on Lady Khadijah (p)" row, followed by the three series; the row is four across on wide screens, two on tablets, one on phones. Card picture `images/home/feat-zaynab-khadijah-v1.jpg` (square).
 
+## [2026-10-24] — Spotify menu next to Telegram (homepage hero and every footer)
+
+- A Spotify icon with a two-entry menu — **Misbah Podcast** (open.spotify.com/show/1T4EHdbm7O0UhUMxXJ0y9w) and **Kawthar Series** (…/1uIz5DDmEnCKS1OtrTsQFv) — sits right after Telegram in the four homepages' icon row and in the footer social row of all pages; same hover / tap behaviour as the WhatsApp and Telegram menus. Entry names: Misbah Podcast / «بودكاست مصباح» / «پادکست مصباح» / «مصباح پوڈکاسٹ» and the Kawthar series name in each language (taken from the channels' own hashtags and the series titles). Added by `fix_header.py` (idempotent, runs on every build). The same menu is in `wix/hero-section.html` for the Wix site.
+
 ## [2026-10-24] — Sermon of Muttaqin, Part 3 in Farsi, Arabic and Urdu
 
 - `/fa/`, `/ar/`, `/ur/articles/khutbat-al-muttaqin/3/` — «مَشْيُهُمُ التَّوَاضُعُ» (Malik al-Ashtar and the man who threw clay at him in Kufa), word for word from the posts of 20 Oct (fa #23007, ar #540, ur #584; `muttaqin_src/part03.<lang>.txt`); only the Arabic line is a quotation box (the Arabic text's narrative lines are fully vowelled, so the vowel heuristic is off for this part); the *Bihar al-Anwar* reference is in the Sources list. Same video as the English page; the three series pages now list Parts 1–3; English Part 3 and the series page link all four languages. Titles are the posts' own subtitle lines. Part 15 (English only) still waits for translations.
