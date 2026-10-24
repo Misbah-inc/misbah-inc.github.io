@@ -31,9 +31,13 @@ REFS_H = {'ar': 'المصادر', 'fa': 'منابع', 'ur': 'حوالہ جات'}
 # the characteristic each part is about, in the part's own words (taken from its text); desc = one sentence for search results
 CHARS = {
  1: {'ar': 'مَنْطِقُهُمُ الصَّوَابُ', 'fa': 'گفتاری درست و نیکو دارند', 'ur': 'متقین کی گفتار درست اور نیک ہوتی ہے'},
+ 3: {'ar': 'مَشْيُهُمُ التَّوَاضُعُ', 'fa': 'راه رفتن آنان، یعنی رفتار، منش و زندگی‌شان، همراه با تواضع و فروتنی است', 'ur': 'ان کی چال اور زندگی گزارنے کا انداز تواضع اور عاجزی سے آراستہ ہوتا ہے'},   # the posts' own subtitle lines
  2: {'ar': 'مَلْبَسُهُمُ الْاقْتِصَادُ', 'fa': 'پوشش، رفتار و روش زندگی آن‌ها بر پایه میانه‌روی است', 'ur': 'ان کا لباس، طرزِ عمل اور طریقہ زندگی اعتدال پر مبنی ہے'},   # the editor's own title lines
 }
 DESC = {
+ 3: {'ar': 'القسم ٣ من خطبة المتقين: مشيهم التواضع. صبر مالك الأشتر على من رماه بالطين في سوق الكوفة.',
+     'fa': 'بخش ۳ خطبه متقین: راه رفتن متقین با تواضع و فروتنی است. صبر مالک اشتر در برابر اهانتِ مردی در بازار کوفه.',
+     'ur': 'حصہ ۳ خطبۂ متقین: متقین کی چال تواضع اور عاجزی سے آراستہ ہوتی ہے۔ کوفہ کے بازار میں مالک اشتر کا صبر۔'},
  1: {'ar': 'القسم ١ من خطبة المتقين: المتقون صواب المنطق. جواب الإمام علي (ع) لهمّام، والسيدة فضّة التي لم تتكلم إلا بالقرآن.',
      'fa': 'بخش ۱ خطبه متقین: متقین گفتاری درست و نیکو دارند. پاسخ امام علی (ع) به همام و داستان فضه که جز با قرآن سخن نگفت.',
      'ur': 'حصہ ۱ خطبۂ متقین: متقین کی گفتار درست اور نیک ہوتی ہے۔ ہمام کو امام علی (ع) کا جواب اور فضہ خاتون جو صرف قرآن کی زبان میں بولتی تھیں۔'},
@@ -45,6 +49,9 @@ DIAC = re.compile(r'[ً-ْٰ]')
 ARLET = re.compile(r'[ء-يٮ-ە]')
 SEP = re.compile(r'^[\s▪️◾️🔸▫️⸻➖\-—_*]*$')
 BUL = re.compile(r'^[\s⚜️🔸▪️▫️◾️🔳📙📓📔📖✨️•]+')
+
+
+EXPLICIT_A = {3: ['مَشْيُهُمُ التَّوَاضُعُ']}      # parts whose narrative lines are fully vowelled too: only these lines are quotation boxes
 
 
 def vowelled(t):
@@ -59,8 +66,8 @@ def parse(n, lang):
     for bi, block in enumerate(paras):
         lines = [l.strip() for l in block.split('\n')]
         for ln in lines:
-            if not ln or SEP.match(ln) or ln.startswith('#') or ln.startswith('༺'): continue
-            is_ref = ln[:1] in '📓📔📙'
+            if not ln or SEP.match(ln) or ln.startswith(('#', '༺', '@')): continue
+            is_ref = ln[:1] in '📓📔📙' or re.match(r'^(المصدر|ماخذ|مصدر)\s*:', ln) is not None
             emph = ln.startswith('⚜')
             ln = BUL.sub('', ln).strip()
             if not ln: continue
@@ -70,7 +77,7 @@ def parse(n, lang):
             if re.match(r'^(اولین ویژگی|وأوَّلُ صفةٍ|خطبہ متقین میں امام کی بیان کردہ پہلی صفت)', ln): blocks.append(('H', ln)); continue
             if emph:
                 blocks.append(('S', ln)); continue
-            if vowelled(ln) and not re.match(r'^(يا|اے|ای) ', ln): blocks.append(('A', ln)); continue
+            if (ln in EXPLICIT_A.get(n, []) if n in EXPLICIT_A else vowelled(ln) and not re.match(r'^(يا|اے|ای) ', ln)): blocks.append(('A', ln)); continue
             blocks.append(('P', ln))
     return blocks, refs
 

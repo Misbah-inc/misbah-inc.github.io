@@ -1201,10 +1201,16 @@
   "series": "khutbat-al-muttaqin",
   "month": 3,
   "langs": [
-   "en"
+   "en",
+   "ar",
+   "fa",
+   "ur"
   ],
   "titles": {
-   "en": "Sermon of Muttaqin, Part 3 — They walk with humility"
+   "en": "Sermon of Muttaqin, Part 3 — They walk with humility",
+   "ar": "خطبة المتقين، القسم ٣ — مَشْيُهُمُ التَّوَاضُعُ",
+   "fa": "خطبه متقین، بخش ۳ — راه رفتن آنان، یعنی رفتار، منش و زندگی‌شان، همراه با تواضع و فروتنی است",
+   "ur": "خطبۂ متقین، حصہ ۳ — ان کی چال اور زندگی گزارنے کا انداز تواضع اور عاجزی سے آراستہ ہوتا ہے"
   },
   "tags": [
    "Imam Ali (p)"
@@ -1212,12 +1218,24 @@
   "tags_l": {
    "en": [
     "Imam Ali (p)"
+   ],
+   "ar": [
+    "Imam Ali (p)"
+   ],
+   "fa": [
+    "Imam Ali (p)"
+   ],
+   "ur": [
+    "Imam Ali (p)"
    ]
   },
   "published": "2026-06-27",
   "img": true,
   "descs": {
-   "en": "Part 3 of the Sermon of Muttaqin: the God-conscious walk with humility. Mālik al-Ashtar's patience with the shopkeeper who insulted him in Kūfah."
+   "en": "Part 3 of the Sermon of Muttaqin: the God-conscious walk with humility. Mālik al-Ashtar's patience with the shopkeeper who insulted him in Kūfah.",
+   "ar": "القسم ٣ من خطبة المتقين: مشيهم التواضع. صبر مالك الأشتر على من رماه بالطين في سوق الكوفة.",
+   "fa": "بخش ۳ خطبه متقین: راه رفتن متقین با تواضع و فروتنی است. صبر مالک اشتر در برابر اهانتِ مردی در بازار کوفه.",
+   "ur": "حصہ ۳ خطبۂ متقین: متقین کی چال تواضع اور عاجزی سے آراستہ ہوتی ہے۔ کوفہ کے بازار میں مالک اشتر کا صبر۔"
   }
  },
  "khutbat-al-muttaqin/4": {
