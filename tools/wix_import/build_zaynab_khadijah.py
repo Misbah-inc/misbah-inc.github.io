@@ -20,7 +20,10 @@ D = ROOT + 'images/articles/'
 POSTS = json.load(open(HERE + 'work/tg/zaynab-khadijah-posts.json', encoding='utf-8'))        # part 1
 PARTS = {1: dict(posts=POSTS, date='2026-10-16'),
          2: dict(posts=json.load(open(HERE + 'work/tg/zaynab-khadijah-posts-2.json', encoding='utf-8')), date='2026-10-17', image=ROOT + 'images/zaynab-khadijah-part2.jpg'),
-         3: dict(posts=json.load(open(HERE + 'work/tg/zaynab-khadijah-posts-3.json', encoding='utf-8')), date='2026-10-18', image=ROOT + 'images/zaynab-khadijah-part3.jpg')}   # part 3: fa #22988, en #23780, ar #522, ur #565   # part 2 (picture from the channels' photo post, 800x450 — the Telegram preview size): fa #22982, en #23775, ar #516, ur #556
+         3: dict(posts=json.load(open(HERE + 'work/tg/zaynab-khadijah-posts-3.json', encoding='utf-8')), date='2026-10-18', image=ROOT + 'images/zaynab-khadijah-part3.jpg')}   # part 3: fa #22988, en #23780, ar #522, ur #565
+_P46 = json.load(open(HERE + 'work/tg/zaynab-khadijah-posts-4-6.json', encoding='utf-8'))      # part 4: fa #22994, en #23786, ur #571 (no Arabic post); 5: fa #23023, en #23818, ar #556, ur #600; 6: fa #23043, en #23836, ar #573, ur #618
+for _n, _d in ((4, '2026-10-19'), (5, '2026-10-21'), (6, '2026-10-23')):
+    PARTS[_n] = dict(posts=_P46[str(_n)], date=_d, image=ROOT + f'images/zaynab-khadijah-part{_n}.jpg')   # part 2 (picture from the channels' photo post, 800x450 — the Telegram preview size): fa #22982, en #23775, ar #516, ur #556
 TITLES = {'en': 'The Resemblance of Lady Zaynab al-Kubra (p) to Lady Khadijah al-Kubra (p)',
           'ar': 'شبه السيدة زينب الكبرى (ع) بالسيدة خديجة الكبرى (ع)',
           'fa': 'شباهت حضرت خانم زینب کبری (س) به حضرت خانم خدیجه کبری (س)',
@@ -63,26 +66,36 @@ def parse2(text):
 
 
 def parse3(text, lang):
-    """Part 3 (line by line, each line opens with its own emoji): T title, H numbered heading, P prose, S sub-heading, A Arabic quotation,
-    Q its translation (the plain line after it; the Arabic page has none), R source."""
+    """Parts 3+ (line by line, each line opens with its own emoji): T title, H numbered heading, P prose, S sub-heading (a line ending in a colon),
+    A Arabic quotation (a 📜 line or a heavily vowelled one), Q its translation (the next plain / ❝…❞ line; the Arabic page has none), R source."""
+    DIAC = re.compile(r'[ً-ْٰ]'); ARL = re.compile(r'[ء-يٮ-ە]')
+    vowelled = lambda t: (lambda a: a >= 6 and len(DIAC.findall(t)) / a > 0.3)(len(ARL.findall(t)))
+    numbered = lambda t: re.match(r'^[0-9٠-٩۰-۹]+\s*[.\-)۔]\s*\S', t)
+    EMO = '🌸🌹💫🌿📜📚💧🌙🍎✨'
     blocks = []
-    strip = lambda t: re.sub(r'^[\s🌸🌹💫🌿📜📚]+', '', t).replace('**', '').strip()
     for para in re.split(r'\n\s*\n', text):
         lines = [l.strip() for l in para.split('\n') if l.strip() and not l.strip().startswith(('#', '@')) and not DIV.match(l.strip())]
         for l in lines:
-            emo = l[0] if l[0] in '🌸🌹💫🌿📜📚' else ''
-            t = strip(l)
+            emo = l[0] if l[0] in EMO else ''
+            t = re.sub(r'^[\s' + EMO + r']+', '', l).replace('**', '').strip()
+            quoted = t.startswith('❝')
+            t = t.replace('❝', '').replace('❞', '').strip()
+            if t.startswith('«') and t.endswith('»') and t.count('«') == 1: t = t[1:-1].strip()
+            m = re.match(r'^«(.*?)»[\s؛;]*(.*)$', t)                      # a quoted Arabic text followed by its translation on the same line
             if not t: continue
-            if emo == '🌸': blocks.append(('T', t.strip('🌸 ')))
-            elif emo == '🌹': blocks.append(('H', t))
-            elif emo == '💫': blocks.append(('P', t))
-            elif emo == '🌿': blocks.append(('S', t))
+            prev = blocks[-1][0] if blocks else ''
+            if emo == '🌸':
+                blocks.append(('H' if numbered(t.strip('🌸 ')) else 'T', t.strip('🌸 ')))
             elif emo == '📚': blocks.append(('R', t))
-            elif emo == '📜':
-                m = re.match(r'«(.*?)»[\s؛;]*(.*)$', t)
-                if m and m.group(2): blocks += [('A', m.group(1).strip()), ('Q', m.group(2).strip())]
-                else: blocks.append(('A', t.strip('«»').strip()))
-            else: blocks.append(('Q' if blocks and blocks[-1][0] == 'A' and lang != 'ar' else 'P', t))
+            elif emo == '💫': blocks.append(('P', t))
+            elif t.endswith((':', '：')): blocks.append(('S', t))
+            elif emo == '📜' and m and m.group(2): blocks += [('A', m.group(1).strip()), ('Q', m.group(2).strip())]
+            elif emo == '📜' or vowelled(t): blocks.append(('A', t))
+            elif emo == '🌹': blocks.append(('H', t))
+            elif emo in ('💫', '🌿', '💧', '🌙', '🍎', '✨'): blocks.append(('P', t))
+            elif numbered(t) and prev in ('T', ''): blocks.append(('H', t))
+            elif prev == 'A' and lang != 'ar': blocks.append(('Q', t))
+            else: blocks.append(('P', t))
     return blocks, []
 
 
@@ -182,8 +195,9 @@ def build(wide=None, square=None):
     CAT = json.load(open(HERE + 'catalog.json'))
     TP = {l: template(l) for l in LANGS4}
     arts = {}
+    avail = lambda n: [l for l in LANGS4 if l in PARTS[n]['posts']]          # a language is skipped for a part whose post does not exist (Part 4 has no Arabic post)
     for n, pt in PARTS.items():
-        for l in LANGS4:
+        for l in avail(n):
             text = pt['posts'][l]['text']
             blocks, refs = parse(text) if n == 1 else (parse2(text) if n == 2 else parse3(text, l))
             for start, new in (OVERRIDES.get(l, []) if n == 1 else []):
@@ -197,19 +211,20 @@ def build(wide=None, square=None):
     for (l, n), a in arts.items():
         href = lambda k=None, lg=l: f"{PFX[lg]}/articles/{SLUG}/" + (f'{k}/' if k else '')
         sr = dict(name=NAME[l], href=href(), n=n)
-        if (l, n - 1) in arts: sr['prev'] = (href(n - 1), arts[(l, n - 1)]['title'])
-        if (l, n + 1) in arts: sr['next'] = (href(n + 1), arts[(l, n + 1)]['title'])
-        path = BA.page(f'{SLUG}/{n}', l, a, LANGS4, TP, series=sr)
+        before = [k for k in PARTS if k < n and (l, k) in arts]; after = [k for k in PARTS if k > n and (l, k) in arts]
+        if before: sr['prev'] = (href(max(before)), arts[(l, max(before))]['title'])
+        if after: sr['next'] = (href(min(after)), arts[(l, min(after))]['title'])
+        path = BA.page(f'{SLUG}/{n}', l, a, avail(n), TP, series=sr)
         mobile_banner(ROOT + path, l, n)
-        CAT[f'{SLUG}/{n}'] = dict(CAT.get(f'{SLUG}/{n}', {}), slug=f'{SLUG}/{n}', series=SLUG, month=5, langs=LANGS4, titles={ll: arts[(ll, n)]['title'] for ll in LANGS4},
-                                  tags=[], tags_l={ll: [] for ll in LANGS4}, published=PARTS[n]['date'], img=True, descs={ll: arts[(ll, n)]['desc'] for ll in LANGS4})
+        CAT[f'{SLUG}/{n}'] = dict(CAT.get(f'{SLUG}/{n}', {}), slug=f'{SLUG}/{n}', series=SLUG, month=5, langs=avail(n), titles={ll: arts[(ll, n)]['title'] for ll in avail(n)},
+                                  tags=[], tags_l={ll: [] for ll in avail(n)}, published=PARTS[n]['date'], img=True, descs={ll: arts[(ll, n)]['desc'] for ll in avail(n)})
     M.SER, M.NAME, M.series_desc, M.TP = SLUG, NAME, (lambda lang: SERIES_DESC[lang]), TP
     for l in LANGS4:
-        M.series_page(l, {(l, n): arts[(l, n)] for n in PARTS}, LANGS4)
+        M.series_page(l, {(l, n): arts[(l, n)] for n in PARTS if (l, n) in arts}, LANGS4)
     last = max(pt['date'] for pt in PARTS.values())
     CAT[SLUG] = dict(slug=SLUG, kind='series', month=5, langs=LANGS4, titles=NAME, tags=[], tags_l={}, published=last, img=True, descs=SERIES_DESC)
     json.dump(CAT, open(HERE + 'catalog.json', 'w'), ensure_ascii=False, indent=1)
-    print({n: {l: arts[(l, n)]['title'][-12:] for l in LANGS4} for n in PARTS})
+    print({n: avail(n) for n in PARTS})
 
 
 if __name__ == '__main__':
