@@ -322,7 +322,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 320);                                                                   // = the CSS fade-out (0.3 s)
   }
   function tick() { if (hold || paused || document.hidden) return; i = (i + 1) % items.length; show(i); }
-  function start() { clearInterval(timer); timer = setInterval(tick, 1650); }
+  function start() { clearInterval(timer); timer = setInterval(tick, 2650); }
   el.addEventListener('mouseenter', function () { hold = true; });
   el.addEventListener('mouseleave', function () { hold = false; });
   el.addEventListener('focusin', function () { hold = true; });
