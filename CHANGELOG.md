@@ -15,6 +15,10 @@ Format: `## [Date] — Summary` followed by bulleted details.
 - The article now has its pictures: the wide poster as banner / share image / thumbnail, the square one for phones (`images/zaynab-khadijah-poster-*.jpg`).
 - **Featured** (homepage, four languages): the article is the first card of the "More on Lady Khadijah (p)" row, followed by the three series; the row is four across on wide screens, two on tablets, one on phones. Card picture `images/home/feat-zaynab-khadijah-v1.jpg` (square).
 
+## [2026-10-25] — "What's new" line on the homepages
+
+- A small line under the social icons on the four homepages: a *New* tag and one sentence at a time, fading to the next every ~6.5 s (six updates now: Spotify, Zaynab–Khadijah Part 7, Muttaqin Part 3 in ar/fa/ur, the Musibat al-Zahra series, Kawthar Parts 3–5, the text-size buttons). Each sentence links to its page when it has one. It stops while hovered / focused or with its pause button, does not rotate at all for visitors who prefer reduced motion, and shows the newest sentence without JavaScript. To announce something: add an entry at the top of `ITEMS` in `tools/wix_import/build_whats_new.py` (sentence in each language + optional path) and run it; trim old entries. The sentences are my wording (not reviewed by a native speaker). Styles `.wn*` in `style.css`, rotation at the end of `script.js`.
+
 ## [2026-10-25] — Zaynab/Khadijah series: Part 7
 
 - **Part 7** (posted 24 Oct 18:38 UTC; fa #23051, en #23844 + #23845 — the English post continued in a second message —, ar #582, ur #624): sections 7 (modesty, chastity and veiling), 8 (precedence in faith and wilayah; deputyship and wasiyya) and 9 (Mother of the Believers and Mother of Calamities), each Arabic quotation in a box with its translation and source; the post's own picture as banner. Series page, Part 6 ↔ 7 links, sitemap and feed updated. Nothing in Parts 1–6 was edited on the channels (checked). Arabic Part 4 still has no post. The 24 Oct posts tagged #Fatimiyya / martyrdom of Zahra are a different topic and were not added.

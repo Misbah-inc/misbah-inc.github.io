@@ -303,3 +303,33 @@ document.addEventListener('DOMContentLoaded', () => {
     var t = document.getElementById(a.getAttribute('href').slice(1)); if (t) { e.preventDefault(); t.scrollIntoView({ block: 'center', behavior: 'smooth' }); history.replaceState(null, '', a.getAttribute('href')); }
   });
 })();
+
+/* "What's new" line: fades through the sentences; paused while hovered / focused or by its button; not rotating at all for reduced motion */
+(function () {
+  var el = document.querySelector('.wn');
+  if (!el) return;
+  var items; try { items = JSON.parse(el.getAttribute('data-items')); } catch (e) { return; }
+  if (!items || items.length < 2) return;
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduce) return;
+  var ctl = el.querySelector('.wn-ctl'), i = 0, timer = null, hold = false, paused = false;
+  function show(k) {
+    el.classList.add('out');
+    setTimeout(function () {
+      var old = el.querySelector('.wn-text'), it = items[k], n = document.createElement(it.h ? 'a' : 'span');
+      n.className = 'wn-text'; n.textContent = it.t; if (it.h) n.setAttribute('href', it.h);
+      old.replaceWith(n); el.classList.remove('out');
+    }, 360);
+  }
+  function tick() { if (hold || paused || document.hidden) return; i = (i + 1) % items.length; show(i); }
+  function start() { clearInterval(timer); timer = setInterval(tick, 6500); }
+  el.addEventListener('mouseenter', function () { hold = true; });
+  el.addEventListener('mouseleave', function () { hold = false; });
+  el.addEventListener('focusin', function () { hold = true; });
+  el.addEventListener('focusout', function () { hold = false; });
+  if (ctl) ctl.addEventListener('click', function () {
+    paused = !paused; ctl.classList.toggle('is-paused', paused);
+    ctl.setAttribute('aria-label', paused ? el.getAttribute('data-play') : el.getAttribute('data-pause'));
+  });
+  start();
+})();
