@@ -318,11 +318,11 @@ document.addEventListener('DOMContentLoaded', () => {
     setTimeout(function () {
       var old = el.querySelector('.wn-text'), it = items[k], n = document.createElement(it.h ? 'a' : 'span');
       n.className = 'wn-text'; n.textContent = it.t; if (it.h) n.setAttribute('href', it.h);
-      old.replaceWith(n); el.classList.remove('out');
-    }, 360);
+      old.replaceWith(n); void n.offsetWidth; el.classList.remove('out');     // reflow first, so the new sentence really fades in from 0
+    }, 1150);                                                                  // = the CSS fade-out (1.1 s)
   }
   function tick() { if (hold || paused || document.hidden) return; i = (i + 1) % items.length; show(i); }
-  function start() { clearInterval(timer); timer = setInterval(tick, 6500); }
+  function start() { clearInterval(timer); timer = setInterval(tick, 8000); }
   el.addEventListener('mouseenter', function () { hold = true; });
   el.addEventListener('mouseleave', function () { hold = false; });
   el.addEventListener('focusin', function () { hold = true; });
