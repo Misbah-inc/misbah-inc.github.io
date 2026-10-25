@@ -2323,7 +2323,7 @@ html:not([data-theme="light"]) body .bio-part-num { background: #c9a46b; color: 
 .wn { margin: 1.1rem auto 0; width: 100%; max-width: 640px; min-height: 1.7em; display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 0.2rem 0.6rem; font-size: 0.78rem; line-height: 1.55; color: rgba(232,213,163,0.88); }
 .wn-label { flex: none; border: 1px solid rgba(201,164,107,0.55); color: #c9a46b; border-radius: 999px; padding: 0 0.6rem; font-size: 0.66rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; }
 [dir="rtl"] .wn-label { letter-spacing: 0; text-transform: none; font-size: 0.78rem; }
-.wn-text { color: inherit; text-decoration: none; transition: opacity 0.55s ease-in-out; }
+.wn-text { color: inherit; text-decoration: none; transition: opacity 0.3s ease-in-out; }
 a.wn-text:hover, a.wn-text:focus-visible { text-decoration: underline; }
 .wn.out .wn-text { opacity: 0; }
 .wn-ctl { all: unset; box-sizing: border-box; flex: none; width: 18px; height: 18px; cursor: pointer; opacity: 0.55; position: relative; }
