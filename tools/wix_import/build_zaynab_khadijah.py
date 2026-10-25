@@ -22,8 +22,9 @@ PARTS = {1: dict(posts=POSTS, date='2026-10-16'),
          2: dict(posts=json.load(open(HERE + 'work/tg/zaynab-khadijah-posts-2.json', encoding='utf-8')), date='2026-10-17', image=ROOT + 'images/zaynab-khadijah-part2.jpg'),
          3: dict(posts=json.load(open(HERE + 'work/tg/zaynab-khadijah-posts-3.json', encoding='utf-8')), date='2026-10-18', image=ROOT + 'images/zaynab-khadijah-part3.jpg')}   # part 3: fa #22988, en #23780, ar #522, ur #565
 _P46 = json.load(open(HERE + 'work/tg/zaynab-khadijah-posts-4-6.json', encoding='utf-8'))      # part 4: fa #22994, en #23786, ur #571 (no Arabic post); 5: fa #23023, en #23818, ar #556, ur #600; 6: fa #23043, en #23836, ar #573, ur #618
-for _n, _d in ((4, '2026-10-19'), (5, '2026-10-21'), (6, '2026-10-23')):
-    PARTS[_n] = dict(posts=_P46[str(_n)], date=_d, image=ROOT + f'images/zaynab-khadijah-part{_n}.jpg')   # part 2 (picture from the channels' photo post, 800x450 — the Telegram preview size): fa #22982, en #23775, ar #516, ur #556
+_P7 = json.load(open(HERE + 'work/tg/zaynab-khadijah-posts-7.json', encoding='utf-8'))        # part 7 (24 Oct): fa #23051, en #23844 + #23845, ar #582, ur #624
+for _n, _d in ((4, '2026-10-19'), (5, '2026-10-21'), (6, '2026-10-23'), (7, '2026-10-24')):
+    PARTS[_n] = dict(posts=(_P46[str(_n)] if _n < 7 else _P7), date=_d, image=ROOT + f'images/zaynab-khadijah-part{_n}.jpg')   # part 2 (picture from the channels' photo post, 800x450 — the Telegram preview size): fa #22982, en #23775, ar #516, ur #556
 TITLES = {'en': 'The Resemblance of Lady Zaynab al-Kubra (p) to Lady Khadijah al-Kubra (p)',
           'ar': 'شبه السيدة زينب الكبرى (ع) بالسيدة خديجة الكبرى (ع)',
           'fa': 'شباهت حضرت خانم زینب کبری (س) به حضرت خانم خدیجه کبری (س)',
@@ -74,7 +75,7 @@ def parse3(text, lang):
     EMO = '🌸🌹💫🌿📜📚💧🌙🍎✨'
     blocks = []
     for para in re.split(r'\n\s*\n', text):
-        lines = [l.strip() for l in para.split('\n') if l.strip() and not l.strip().startswith(('#', '@')) and not DIV.match(l.strip())]
+        lines = [l.strip() for l in para.split('\n') if l.strip() and not l.strip().startswith(('#', '@')) and not DIV.match(l.strip()) and not re.match(r'^[❤️\d\s]+$', l.strip())]
         for l in lines:
             emo = l[0] if l[0] in EMO else ''
             t = re.sub(r'^[\s' + EMO + r']+', '', l).replace('**', '').strip()

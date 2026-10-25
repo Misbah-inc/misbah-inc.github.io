@@ -95,6 +95,7 @@ ITEMS = {
  'ghadir-day-2025-thank-you': (12, 'announcement', ['imam-ali', 'ghadir', 'community-service']),
  'arrival-of-safar-announcement': (2, 'announcement', ['lady-ruqayyah']),
  'resemblance-of-lady-zaynab-to-lady-khadijah': (5, 'series', ['lady-zaynab', 'lady-khadijah', 'holy-prophet']),
+ 'resemblance-of-lady-zaynab-to-lady-khadijah/7': (5, 'series', ['lady-zaynab', 'lady-khadijah', 'holy-prophet']),
  'resemblance-of-lady-zaynab-to-lady-khadijah/6': (5, 'series', ['lady-zaynab', 'lady-khadijah', 'holy-prophet']),
  'resemblance-of-lady-zaynab-to-lady-khadijah/5': (5, 'series', ['lady-zaynab', 'lady-khadijah', 'holy-prophet']),
  'resemblance-of-lady-zaynab-to-lady-khadijah/4': (5, 'series', ['lady-zaynab', 'lady-khadijah', 'holy-prophet']),

@@ -2987,7 +2987,7 @@
   },
   "tags": [],
   "tags_l": {},
-  "published": "2026-10-23",
+  "published": "2026-10-24",
   "img": true,
   "descs": {
    "en": "A special edition of the Misbah channel on the resemblance of Lady Zaynab al-Kubra (p) to Lady Khadijah al-Kubra (p), part by part.",
@@ -3429,6 +3429,38 @@
    "en": "Allah Almighty says in the Holy Qur’an: In a narration explaining the interpretation of this verse, it is stated that the twelve months refer to the twelve…",
    "ar": "بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ إِنَّ عِدَّةَ الشُّهُورِ عِنْدَ اللهِ اثْنَا عَشَرَ شَهْرًا فِي كِتَابِ اللهِ يَوْمَ خَلَقَ السَّمَاوَاتِ وَالْأَرْضَ…",
    "fa": "بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ همانا تعدادِ ماه های سال نزد خداوند دوازده ماه در کتابِ خداوند است و از میانِ دوازده ماه سال، چهار ماهِ آن حرام است. در…"
+  }
+ },
+ "resemblance-of-lady-zaynab-to-lady-khadijah/7": {
+  "slug": "resemblance-of-lady-zaynab-to-lady-khadijah/7",
+  "series": "resemblance-of-lady-zaynab-to-lady-khadijah",
+  "month": 5,
+  "langs": [
+   "en",
+   "ar",
+   "fa",
+   "ur"
+  ],
+  "titles": {
+   "en": "The Resemblance of Lady Zaynab al-Kubra (p) to Lady Khadijah al-Kubra (p) — Part 7",
+   "ar": "شبه السيدة زينب الكبرى (ع) بالسيدة خديجة الكبرى (ع) — القسم ٧",
+   "fa": "شباهت حضرت خانم زینب کبری (س) به حضرت خانم خدیجه کبری (س) — بخش ۷",
+   "ur": "حضرت بی بی زینب کبریٰ (س) کی حضرت بی بی خدیجہ کبریٰ (س) سے شباہت — حصہ ۷"
+  },
+  "tags": [],
+  "tags_l": {
+   "en": [],
+   "ar": [],
+   "fa": [],
+   "ur": []
+  },
+  "published": "2026-10-24",
+  "img": true,
+  "descs": {
+   "en": "Yahya Mazini reports that for a long time he lived in Medina as a neighbour of Amir al-Mu'minin (a), and not even once did anyone see Lady Zaynab or hear her…",
+   "ar": "ينقل يحيى المازني أنه أقام مدة طويلة في المدينة جارًا لأمير المؤمنين (ع)، ولم يرَ أحدٌ السيدة زينب ولو مرة واحدة ولم يسمع صوتها.",
+   "fa": "یحیی مازنی نقل می‌کند که مدت‌ها در مدینه در همسایگی امیرالمؤمنین (ع) بود و حتی یک بار هم کسی حضرت زینب را ندید و صدای او را نشنید.",
+   "ur": "یحییٰ مازنی نقل کرتے ہیں کہ وہ مدتوں مدینہ میں امیرالمؤمنین (ع) کے ہمسائے میں رہے اور ایک بار بھی کسی نے حضرت زینب کو نہیں دیکھا اور نہ ان کی آواز سنی۔"
   }
  }
 }

@@ -15,6 +15,10 @@ Format: `## [Date] — Summary` followed by bulleted details.
 - The article now has its pictures: the wide poster as banner / share image / thumbnail, the square one for phones (`images/zaynab-khadijah-poster-*.jpg`).
 - **Featured** (homepage, four languages): the article is the first card of the "More on Lady Khadijah (p)" row, followed by the three series; the row is four across on wide screens, two on tablets, one on phones. Card picture `images/home/feat-zaynab-khadijah-v1.jpg` (square).
 
+## [2026-10-25] — Zaynab/Khadijah series: Part 7
+
+- **Part 7** (posted 24 Oct 18:38 UTC; fa #23051, en #23844 + #23845 — the English post continued in a second message —, ar #582, ur #624): sections 7 (modesty, chastity and veiling), 8 (precedence in faith and wilayah; deputyship and wasiyya) and 9 (Mother of the Believers and Mother of Calamities), each Arabic quotation in a box with its translation and source; the post's own picture as banner. Series page, Part 6 ↔ 7 links, sitemap and feed updated. Nothing in Parts 1–6 was edited on the channels (checked). Arabic Part 4 still has no post. The 24 Oct posts tagged #Fatimiyya / martyrdom of Zahra are a different topic and were not added.
+
 ## [2026-10-24] — Spotify menu next to Telegram (homepage hero and every footer)
 
 - A Spotify icon with a two-entry menu — **Misbah Podcast** (open.spotify.com/show/1T4EHdbm7O0UhUMxXJ0y9w) and **Kawthar Series** (…/1uIz5DDmEnCKS1OtrTsQFv) — sits right after Telegram in the four homepages' icon row and in the footer social row of all pages; same hover / tap behaviour as the WhatsApp and Telegram menus. Entry names: Misbah Podcast / «بودكاست مصباح» / «پادکست مصباح» / «مصباح پوڈکاسٹ» and the Kawthar series name in each language (taken from the channels' own hashtags and the series titles). Added by `fix_header.py` (idempotent, runs on every build). The same menu is in `wix/hero-section.html` for the Wix site.
