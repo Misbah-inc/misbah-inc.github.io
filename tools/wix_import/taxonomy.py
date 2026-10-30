@@ -59,6 +59,7 @@ ITEMS = {
  'al-kawthar': (0, 'series', ['lady-fatimah-zahra', 'quran']),
  'al-kawthar/part-3': (0, 'series', ['lady-fatimah-zahra', 'quran']),
  'al-kawthar/part-4': (0, 'series', ['lady-fatimah-zahra', 'quran']),
+ 'al-kawthar/part-6': (0, 'series', ['lady-fatimah-zahra', 'quran']),
  'al-kawthar/part-5': (0, 'series', ['lady-fatimah-zahra', 'quran']),
  'morning-and-evening-mourning': (1, 'series', ['imam-hussain', 'imam-mahdi', 'mourning']),            # (guess) Muharram: the series is built on Ziarat al-Nahiya
  'virtues-of-ziarat-lady-masoumah': (4, 'article', ['lady-masoumah', 'imam-ridha', 'ziyarat']),

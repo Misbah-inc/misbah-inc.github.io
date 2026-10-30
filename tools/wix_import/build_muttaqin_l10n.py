@@ -31,10 +31,12 @@ REFS_H = {'ar': 'المصادر', 'fa': 'منابع', 'ur': 'حوالہ جات'}
 # the characteristic each part is about, in the part's own words (taken from its text); desc = one sentence for search results
 CHARS = {
  1: {'ar': 'مَنْطِقُهُمُ الصَّوَابُ', 'fa': 'گفتاری درست و نیکو دارند', 'ur': 'متقین کی گفتار درست اور نیک ہوتی ہے'},
+ 4: {'fa': 'چشمان خود را از آنچه خدا بر آن‌ها حرام کرده فرو می‌گیرند و نظر را کوتاه می‌کنند'},   # the post's own translation line
  3: {'ar': 'مَشْيُهُمُ التَّوَاضُعُ', 'fa': 'راه رفتن آنان، یعنی رفتار، منش و زندگی‌شان، همراه با تواضع و فروتنی است', 'ur': 'ان کی چال اور زندگی گزارنے کا انداز تواضع اور عاجزی سے آراستہ ہوتا ہے'},   # the posts' own subtitle lines
  2: {'ar': 'مَلْبَسُهُمُ الْاقْتِصَادُ', 'fa': 'پوشش، رفتار و روش زندگی آن‌ها بر پایه میانه‌روی است', 'ur': 'ان کا لباس، طرزِ عمل اور طریقہ زندگی اعتدال پر مبنی ہے'},   # the editor's own title lines
 }
 DESC = {
+ 4: {'fa': 'بخش ۴ خطبه متقین: متقین چشمان خود را از آنچه خدا حرام کرده فرو می‌گیرند. داستان محمدباقر استرآبادی (میرداماد) و دختر شاه عباس.'},
  3: {'ar': 'القسم ٣ من خطبة المتقين: مشيهم التواضع. صبر مالك الأشتر على من رماه بالطين في سوق الكوفة.',
      'fa': 'بخش ۳ خطبه متقین: راه رفتن متقین با تواضع و فروتنی است. صبر مالک اشتر در برابر اهانتِ مردی در بازار کوفه.',
      'ur': 'حصہ ۳ خطبۂ متقین: متقین کی چال تواضع اور عاجزی سے آراستہ ہوتی ہے۔ کوفہ کے بازار میں مالک اشتر کا صبر۔'},
@@ -47,8 +49,8 @@ DESC = {
 }
 DIAC = re.compile(r'[ً-ْٰ]')
 ARLET = re.compile(r'[ء-يٮ-ە]')
-SEP = re.compile(r'^[\s▪️◾️🔸▫️⸻➖\-—_*]*$')
-BUL = re.compile(r'^[\s⚜️🔸▪️▫️◾️🔳📙📓📔📖✨️•]+')
+SEP = re.compile(r'^[\s▪️◾️🔸▫️⸻➖\-—_*✦━ا]*$')
+BUL = re.compile(r'^[\s⚜️🔸▪️▫️◾️🔳📙📓📔📖✨️•💫🌹📚🌿]+')
 
 
 EXPLICIT_A = {3: ['مَشْيُهُمُ التَّوَاضُعُ']}      # parts whose narrative lines are fully vowelled too: only these lines are quotation boxes
@@ -61,15 +63,19 @@ def vowelled(t):
 
 def parse(n, lang):
     raw = open(HERE + f'muttaqin_src/part{n:02d}.{lang}.txt', encoding='utf-8').read()
-    blocks, refs, in_refs = [], [], False
+    blocks, refs, in_refs, skip_next = [], [], False, False
     paras = [b for b in re.split(r'\n\s*\n', raw) if b.strip()]
     for bi, block in enumerate(paras):
         lines = [l.strip() for l in block.split('\n')]
         for ln in lines:
             if not ln or SEP.match(ln) or ln.startswith(('#', '༺', '@')): continue
-            is_ref = ln[:1] in '📓📔📙' or re.match(r'^(المصدر|ماخذ|مصدر)\s*:', ln) is not None
+            if ln.startswith('🌸'): skip_next = True; continue                       # the post's title line and the subtitle under it are header furniture (part 4 fa)
+            if skip_next:
+                skip_next = False
+                if not ln.startswith(('💫', '🌹')): continue
+            is_ref = ln[:1] in '📓📔📙📚' or re.match(r'^(المصدر|ماخذ|مصدر)\s*:', ln) is not None
             emph = ln.startswith('⚜')
-            ln = BUL.sub('', ln).strip()
+            ln = BUL.sub('', ln).replace('❞', '').replace('❝', '').strip()
             if not ln: continue
             if lang != 'fa' and re.match(r'^سور[ةۂه]', ln): in_refs = True      # ar / ur: the sources start at the surah line and run to the end
             if is_ref or in_refs:

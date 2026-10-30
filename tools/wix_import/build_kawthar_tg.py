@@ -19,13 +19,13 @@ LANGS4 = ['en', 'ar', 'fa', 'ur']
 SER = 'al-kawthar'
 D = ROOT + 'images/articles/'
 P = json.load(open(HERE + 'work/tg/kawthar-new.json', encoding='utf-8'))
-ORD = {'en': {3: 'Part 3', 4: 'Part 4', 5: 'Part 5'}, 'ar': {3: 'القسم الثالث', 4: 'القسم الرابع', 5: 'القسم الخامس'},
-       'fa': {3: 'بخش سوم', 4: 'بخش چهارم', 5: 'بخش پنجم'}, 'ur': {3: 'حصہ سوم', 4: 'حصہ چہارم', 5: 'حصہ پنجم'}}
+ORD = {'en': {3: 'Part 3', 4: 'Part 4', 5: 'Part 5', 6: 'Part 6'}, 'ar': {3: 'القسم الثالث', 4: 'القسم الرابع', 5: 'القسم الخامس', 6: 'القسم السادس'},
+       'fa': {3: 'بخش سوم', 4: 'بخش چهارم', 5: 'بخش پنجم', 6: 'بخش ششم'}, 'ur': {3: 'حصہ سوم', 4: 'حصہ چہارم', 5: 'حصہ پنجم', 6: 'حصہ ششم'}}
 UI = {'en': 'Sources', 'ar': 'المصادر', 'fa': 'منابع', 'ur': 'حوالہ جات'}
 DIV = re.compile(r'^[\s━▪️🥀➖─\-–—_•·✦❁🌸]*$')
 EMO = '🌸📖🖋💡📜✨🍏🌿🔹🏰❤️👑🕊📚💫🌹🔸▪️⚜️🔲'
 FATIMA = re.compile(r'Lady Fatima al-Zahra|السيدة فاطمة الزهراء|حضرت فاطمه زهرا|حضرت فاطمہ زہرا|فاطمة الزهراء|Fatima al-Zahra')
-PARTLINE = re.compile(r'^(Part|الجزء|القسم|بخش|قسمت|حصہ|حصه)\s*[\d٠-٩۰-۹]*\s*(الأول|الثاني|الثالث|الرابع|الخامس|اول|دوم|سوم|چهارم|چہارم|پنجم)?$')
+PARTLINE = re.compile(r'^(Part|الجزء|القسم|بخش|قسمت|حصہ|حصه)\s*[\d٠-٩۰-۹]*\s*(الأول|الثاني|الثالث|الرابع|الخامس|السادس|اول|دوم|سوم|چهارم|چہارم|پنجم|ششم|چھٹا|چھٹا)?$')
 ZAHRA = re.compile(r'الزهراء|الزَّهْرَاء|زهرا|زہرا|Zahra'); RIDA = re.compile(r'الرضا|رضا|Ridha|Rida')
 ARL = re.compile(r'[ء-يٮ-ە]'); LAT = re.compile(r'[A-Za-z]')
 ESC = lambda t: html.escape(t, quote=False)
@@ -54,15 +54,18 @@ def parse(text, lang):
             rest = [l for l in rest if l and not PARTLINE.match(l) and 'Kawthar of the Qur' not in l and 'کوثر القرآن' not in l and 'كَوْثَر' not in l[:12] and not (ZAHRA.search(l) and not RIDA.search(l))]
             if len(rest) >= 1 and lines and not any(x.startswith(('📖', '🖋')) for x in lines): title = ' '.join(rest)
             continue
+        adj = False
         for l in lines:
+            was_adj, adj = adj, False
             t = re.sub(r'^[\s' + EMO + r']+', '', l).strip()
+            if not in_src and re.match(r'^[¹²³⁴⁵⁶⁷⁸⁹⁰]+\s*[.\-]?\s*\S', t): in_src = True
             if re.match(r'^(Resources|Sources|المصادر|مصادر|منابع|مآخذ|حوالہ جات|حوالے)\s*:?\s*$', t): in_src = True; continue
             if in_src: sources.append(re.sub(r'^[•📚📗\s]+', '', t)); continue
             if not t: continue
             prev = blocks[-1][0] if blocks else ''
-            if l.startswith('📜') and arabic(t.strip('«»')): blocks.append(('A', t.strip('«»').strip()))
+            if l.startswith('📜') and arabic(t.strip('«»')): blocks.append(('A', t.strip('«»').strip())); adj = True
             elif l.startswith('📜'): blocks.append(('Q' if prev == 'A' else 'P', t))
-            elif prev == 'A' and lang != 'ar' and t[:1] in '“"«': blocks.append(('Q', t.strip('“”"«»')))
+            elif prev == 'A' and lang != 'ar' and (t[:1] in '“"«' or was_adj): blocks.append(('Q', t.strip('“”"«»')))
             else: blocks.append(('P', t))
     return title, blocks, (sources + mid_sources)
 

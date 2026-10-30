@@ -29,7 +29,7 @@ POSTS = {
  'lady-khadijah-poems': {'fa': [22600, 22618, 22660, 22683, 22714, 22772, 22819, 22883], 'en': [23357, 23374, 23416, 23440, 23477, 23536, 23585, 23667],
                          'ar': [153, 171, 212, 237, 267, 323, 366, 423], 'ur': [167, 185, 228, 251, 281, 345, 395, 459]},
  'lady-khadijah-biography': {'fa': [22731, 22790, 22838, 22894], 'en': [23493, 23552, 23605, 23681], 'ar': [283, 338, 383, 433], 'ur': [298, 361, 414, 469]},
- 'lady-khadijah-ziyarat': {'fa': [22747, 22806, 22859, 22912], 'en': [23511, 23569, 23631, 23701], 'ar': [298, 351, 400, 449], 'ur': [314, 377, 432, 486]},
+ 'lady-khadijah-ziyarat': {'fa': [22747, 22806, 22859, 22912, 23108], 'en': [23511, 23569, 23631, 23701, 23907], 'ar': [298, 351, 400, 449, 638], 'ur': [314, 377, 432, 486, 683]},
 }
 SERIES_TAGS = {'lady-khadijah-poems': ['lady-khadijah', 'holy-prophet'], 'lady-khadijah-biography': ['lady-khadijah'], 'lady-khadijah-ziyarat': ['lady-khadijah', 'ziyarat']}
 SERIES_DESC = {
@@ -155,6 +155,7 @@ D = ROOT + 'images/articles/'
 def covers(ser, lang, bg):
     """One shared illustration for the series (no text on it: Arabic would need shaping); banner, og, thumb per series+language."""
     s = f'{ser}-cover-{lang}'
+    if os.path.exists(D + f'{s}.jpg'): return              # the series covers are the supplied posters now: never overwrite them
     im = Image.open(SRC).convert('RGB')
     ban = ImageOps.fit(im, (1200, 630), Image.LANCZOS, centering=(0.5, 0.4)); ban.save(D + f'{s}.jpg', 'JPEG', quality=80, progressive=True, optimize=True)
     ban.save(D + f'og-{s}.jpg', 'JPEG', quality=80, progressive=True, optimize=True)

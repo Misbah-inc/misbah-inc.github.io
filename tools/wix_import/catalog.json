@@ -1243,10 +1243,12 @@
   "series": "khutbat-al-muttaqin",
   "month": 3,
   "langs": [
-   "en"
+   "en",
+   "fa"
   ],
   "titles": {
-   "en": "Sermon of Muttaqin, Part 4 — They restrain their eye from which Allah has made unlawful"
+   "en": "Sermon of Muttaqin, Part 4 — They restrain their eye from which Allah has made unlawful",
+   "fa": "خطبه متقین، بخش ۴ — چشمان خود را از آنچه خدا بر آن‌ها حرام کرده فرو می‌گیرند و نظر را کوتاه می‌کنند"
   },
   "tags": [
    "Imam Ali (p)"
@@ -1254,12 +1256,16 @@
   "tags_l": {
    "en": [
     "Imam Ali (p)"
+   ],
+   "fa": [
+    "Imam Ali (p)"
    ]
   },
   "published": "2026-07-15",
   "img": true,
   "descs": {
-   "en": "Part 4 of the Sermon of Muttaqin: the God-conscious lower their gaze from what Allah forbade, and the story of the seminary student who became Mir Damad."
+   "en": "Part 4 of the Sermon of Muttaqin: the God-conscious lower their gaze from what Allah forbade, and the story of the seminary student who became Mir Damad.",
+   "fa": "بخش ۴ خطبه متقین: متقین چشمان خود را از آنچه خدا حرام کرده فرو می‌گیرند. داستان محمدباقر استرآبادی (میرداماد) و دختر شاه عباس."
   }
  },
  "khutbat-al-muttaqin/5": {
@@ -2905,7 +2911,7 @@
   },
   "tags": [],
   "tags_l": {},
-  "published": "2026-10-09",
+  "published": "2026-10-30",
   "img": true,
   "descs": {
    "en": "A weekly commentary on the Ziyarat of Lady Khadijah al-Kubra, Ummul Muminin (p), phrase by phrase.",
@@ -3407,7 +3413,8 @@
   "langs": [
    "en",
    "ar",
-   "fa"
+   "fa",
+   "ur"
   ],
   "slug": "al-kawthar/part-5",
   "series": "al-kawthar",
@@ -3415,20 +3422,23 @@
   "titles": {
    "en": "The Series of Al-Kawthar — Part 5",
    "ar": "سلسلة مباحث الكوثر — القسم الخامس",
-   "fa": "سلسله مباحث کوثر — بخش پنجم"
+   "fa": "سلسله مباحث کوثر — بخش پنجم",
+   "ur": "سلسلۂ مباحثِ کوثر — حصہ پنجم"
   },
   "tags": [],
   "tags_l": {
    "en": [],
    "ar": [],
-   "fa": []
+   "fa": [],
+   "ur": []
   },
-  "published": "2026-10-23",
+  "published": "2026-10-25",
   "img": true,
   "descs": {
    "en": "Allah Almighty says in the Holy Qur’an: In a narration explaining the interpretation of this verse, it is stated that the twelve months refer to the twelve…",
    "ar": "بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ إِنَّ عِدَّةَ الشُّهُورِ عِنْدَ اللهِ اثْنَا عَشَرَ شَهْرًا فِي كِتَابِ اللهِ يَوْمَ خَلَقَ السَّمَاوَاتِ وَالْأَرْضَ…",
-   "fa": "بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ همانا تعدادِ ماه های سال نزد خداوند دوازده ماه در کتابِ خداوند است و از میانِ دوازده ماه سال، چهار ماهِ آن حرام است. در…"
+   "fa": "بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ در روایت، ذیلِ تفسیرِ آیۀ فوق می فرمایند: دوازده شهر یعنی دوازده امام، و چهار ماهِ حرام یعنی چهار امام در میانِ دوازده…",
+   "ur": "بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ روایت میں اس آیت کی تفسیر کے تحت بیان ہوا ہے کہ بارہ مہینوں سے مراد بارہ امام ہیں اور چار حرمت والے مہینوں سے مراد وہ چار…"
   }
  },
  "resemblance-of-lady-zaynab-to-lady-khadijah/7": {
@@ -3461,6 +3471,62 @@
    "ar": "ينقل يحيى المازني أنه أقام مدة طويلة في المدينة جارًا لأمير المؤمنين (ع)، ولم يرَ أحدٌ السيدة زينب ولو مرة واحدة ولم يسمع صوتها.",
    "fa": "یحیی مازنی نقل می‌کند که مدت‌ها در مدینه در همسایگی امیرالمؤمنین (ع) بود و حتی یک بار هم کسی حضرت زینب را ندید و صدای او را نشنید.",
    "ur": "یحییٰ مازنی نقل کرتے ہیں کہ وہ مدتوں مدینہ میں امیرالمؤمنین (ع) کے ہمسائے میں رہے اور ایک بار بھی کسی نے حضرت زینب کو نہیں دیکھا اور نہ ان کی آواز سنی۔"
+  }
+ },
+ "al-kawthar/part-6": {
+  "langs": [
+   "en",
+   "fa"
+  ],
+  "slug": "al-kawthar/part-6",
+  "series": "al-kawthar",
+  "month": 0,
+  "titles": {
+   "en": "The Series of Al-Kawthar — Part 6",
+   "fa": "سلسله مباحث کوثر — بخش ششم"
+  },
+  "tags": [],
+  "tags_l": {
+   "en": [],
+   "fa": []
+  },
+  "published": "2026-10-29",
+  "img": true,
+  "descs": {
+   "en": "In the previous discussion, we explained that Ali ibn Musa al-Rida (peace be upon him) possesses both the Alawi and Fatimi characteristics, and for this…",
+   "fa": "در مبحث قبلی بیان شد که حضرت علی بن موسی الرضا (علیه‌السلام) هم شاخصه علوی دارند و هم شاخصه فاطمی، و به همين جهت است که لقب ایشان سلطان است. امیرالمؤمنین…"
+  }
+ },
+ "lady-khadijah-ziyarat/5": {
+  "slug": "lady-khadijah-ziyarat/5",
+  "series": "lady-khadijah-ziyarat",
+  "month": 4,
+  "langs": [
+   "en",
+   "ar",
+   "fa",
+   "ur"
+  ],
+  "titles": {
+   "en": "Explanation of the Ziyarat of Umm al-Muminin (peace be upon Her) — The passage: \"O First of the Believing Women\"",
+   "ar": "شرح زيارة أم المؤمنين سلام الله عليها — فقرة «يا أَوَّلَ الْمُؤْمِناتِ»",
+   "fa": "شرح زیارت حضرت ام المومنین سلام الله علیها — فراز «یا أَوَّلَ الْمُؤْمِناتِ»",
+   "ur": "شرحِ زیارتِ حضرت ام المومنین سلام اللہ علیہا — فقرہ «یا أَوَّلَ الْمُؤْمِناتِ»"
+  },
+  "tags": [],
+  "tags_l": {
+   "en": [],
+   "ar": [],
+   "fa": [],
+   "ur": []
+  },
+  "published": "2026-10-30",
+  "img": true,
+  "descs": {
+   "en": "Peace be upon You, O first of the women who believed ▫️❝ And the forerunners are the foremost; they are the ones brought near [to Allah]. ❞",
+   "ar": "اَلسَّلامُ عَلَیْک یا أَوَّلَ الْمُؤْمِناتِ ❞ وَالسَّابِقُونَ السَّابِقُونَ ﴿١٠﴾ أُولَئِكَ الْمُقَرَّبُونَ ﴿١١﴾ ❝",
+   "fa": "سلام بر تو ای نخستین بانوی ایمان‌آورنده ▫️❞ و سبقت‌گیرندگان مقدمند آنانند همان مقربان [خدا] ❝ ❞ مادرت، حضرت خدیجه دختر خویلد، نخستین بانویی است که به خداوند و…",
+   "ur": "آپ پر سلام ہو، اے سب سے پہلے ایمان لانے والی خاتون ▫️❞ اور سبقت لے جانے والے تو آگے ہی ہیں، وہی (خدا کے) مقرب ہیں۔ ❝"
   }
  }
 }
