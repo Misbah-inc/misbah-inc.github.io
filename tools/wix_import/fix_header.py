@@ -114,9 +114,22 @@ def version_assets(s):
     return re.sub(r'(assets/(theme\.js|script\.js|style\.css))(\?v=[0-9a-f]+)?(?=")', lambda m: f'{m.group(1)}?v={asset_ver(m.group(2))}', s)
 
 
+# Google Ads tag (Google Ad Grants account): Google asks for it as high in <head> as possible, once per page, on every page
+GTAG_ID = 'AW-18517033323'
+GTAG = (f'<!-- Google tag (gtag.js) -->\n'
+        f'<script async src="https://www.googletagmanager.com/gtag/js?id={GTAG_ID}"></script>\n'
+        f'<script>\n  window.dataLayer = window.dataLayer || [];\n  function gtag(){{dataLayer.push(arguments);}}\n'
+        f"  gtag('js', new Date());\n\n  gtag('config', '{GTAG_ID}');\n</script>\n")
+
+
+def add_gtag(s):
+    if 'googletagmanager.com/gtag/js' in s: return s
+    return re.sub(r'<head>\s*', lambda m: m.group(0) + GTAG, s, count=1)
+
+
 def fix(path):
     s = open(path, encoding='utf-8').read()
-    sv = version_assets(s)
+    sv = add_gtag(version_assets(s))
     if sv != s:
         s = sv; open(path, 'w', encoding='utf-8').write(s)
     if 'id="tg-dropdown"' in s:                          # homepage hero: Spotify beside Telegram

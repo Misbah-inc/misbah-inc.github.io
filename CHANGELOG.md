@@ -1,7 +1,11 @@
 # Changelog
 
 All notable changes to the Misbah Inc. website are recorded here.
-Format: `## [Date] — Summary` followed by bulleted details.
+Format: `## 2026-10-31
+
+- Added the Google Ads tag (gtag.js, `AW-18517033323`, Google Ad Grants) to the `<head>` of every page, inserted by `tools/wix_import/fix_header.py` so new pages get it on every build.
+
+## [Date] — Summary` followed by bulleted details.
 
 ---
 
