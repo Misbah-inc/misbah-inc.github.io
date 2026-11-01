@@ -4,6 +4,7 @@ All notable changes to the Misbah Inc. website are recorded here.
 Format: `## 2026-10-31
 
 - Added the Google Ads tag (gtag.js, `AW-18517033323`, Google Ad Grants) to the `<head>` of every page, inserted by `tools/wix_import/fix_header.py` so new pages get it on every build.
+- Added the Google Ads "Sign-up" conversion (`AW-18517033323/JNY9CNeluqAdEOuCzv1E`): its snippet sits right after the Google tag on every page, and `assets/script.js` reports one conversion each time a visitor clicks a link that joins a Misbah Telegram channel (t.me) or WhatsApp group (chat.whatsapp.com). The links still open normally in a new tab.
 
 ## [Date] — Summary` followed by bulleted details.
 

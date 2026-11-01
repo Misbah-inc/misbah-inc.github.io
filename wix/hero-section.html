@@ -10,6 +10,23 @@
 
   gtag('config', 'AW-18517033323');
 </script>
+<!-- Event snippet for Sign-up conversion page -->
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-18517033323/JNY9CNeluqAdEOuCzv1E',
+      'value': 1.0,
+      'currency': 'USD',
+      'event_callback': callback
+  });
+  return false;
+}
+</script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Misbah — Welcome</title>

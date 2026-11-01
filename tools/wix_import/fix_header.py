@@ -122,9 +122,21 @@ GTAG = (f'<!-- Google tag (gtag.js) -->\n'
         f"  gtag('js', new Date());\n\n  gtag('config', '{GTAG_ID}');\n</script>\n")
 
 
+# The "Sign-up" conversion: on this site that means joining a Telegram channel or WhatsApp group, so assets/script.js
+# calls gtag_report_conversion() on clicks to t.me / chat.whatsapp.com. Called without a url: those links open in a
+# new tab, and Google's redirect callback would instead take this tab away.
+CONV = ("<!-- Event snippet for Sign-up conversion page -->\n<script>\nfunction gtag_report_conversion(url) {\n"
+        "  var callback = function () {\n    if (typeof(url) != 'undefined') {\n      window.location = url;\n    }\n  };\n"
+        "  gtag('event', 'conversion', {\n      'send_to': 'AW-18517033323/JNY9CNeluqAdEOuCzv1E',\n      'value': 1.0,\n"
+        "      'currency': 'USD',\n      'event_callback': callback\n  });\n  return false;\n}\n</script>\n")
+
+
 def add_gtag(s):
-    if 'googletagmanager.com/gtag/js' in s: return s
-    return re.sub(r'<head>\s*', lambda m: m.group(0) + GTAG, s, count=1)
+    if 'googletagmanager.com/gtag/js' not in s:
+        s = re.sub(r'<head>\s*', lambda m: m.group(0) + GTAG, s, count=1)
+    if 'gtag_report_conversion' not in s:
+        s = s.replace(f"gtag('config', '{GTAG_ID}');\n</script>\n", f"gtag('config', '{GTAG_ID}');\n</script>\n" + CONV, 1)
+    return s
 
 
 def fix(path):

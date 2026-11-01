@@ -334,3 +334,10 @@ document.addEventListener('DOMContentLoaded', () => {
   });
   start();
 })();
+
+/* Google Ads "Sign-up" conversion: a click that joins one of our Telegram channels or WhatsApp groups */
+document.addEventListener('click', function (e) {
+  var a = e.target.closest && e.target.closest('a[href]');
+  if (!a || typeof gtag_report_conversion !== 'function') return;
+  if (/^https:\/\/(t\.me|chat\.whatsapp\.com)\//.test(a.href)) gtag_report_conversion();
+});
