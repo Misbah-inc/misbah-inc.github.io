@@ -2337,3 +2337,6 @@ a.wn-text:hover, a.wn-text:focus-visible { text-decoration: underline; }
 [data-theme="light"] .wn-label { color: #7a5b22; border-color: rgba(122,91,34,0.5); }
 [data-theme="light"] .wn-ctl { color: #7a5b22; }
 @media (prefers-reduced-motion: reduce) { .wn-text { transition: none; } .wn-ctl { display: none; } }
+
+/* translation under an Arabic quotation box (Behind That Door…) */
+.bio-ch .art-quote-tr { margin: -0.4rem 0 1.4rem; padding-inline-start: 1rem; border-inline-start: 2px solid var(--gold, #c9a227); color: var(--text-muted, inherit); font-style: normal; }

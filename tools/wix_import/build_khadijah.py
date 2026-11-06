@@ -24,19 +24,21 @@ NAMES = {
  'lady-khadijah-biography': {'en': 'The Biography of Lady Khadijah al-Kubra (p)', 'ar': 'سيرة السيدة خديجة الكبرى (ع)', 'fa': 'زندگی‌نامه‌ی حضرت خدیجه‌ی کبری (س)', 'ur': 'سوانحِ حیاتِ حضرت خدیجہ کبریٰ (س)'},
  'lady-khadijah-ziyarat': {'en': 'Explanation of the Ziyarat of Ummul Muminin (p)', 'ar': 'شرح زيارة السيدة أم المؤمنين (خديجة الكبرى، ع)', 'fa': 'شرح زیارت حضرت ام‌المؤمنین (س)', 'ur': 'شرحِ زیارتِ حضرت ام المومنین (س)'},
 }
-# main post ids, in order; part n = n-th item, the same part in every language
+# main post ids, in order; part n = n-th item, the same part in every language.
+# None = a number the channel never posted (Poem 11): its URL stays free so /12 is still Poem 12.
 POSTS = {
- 'lady-khadijah-poems': {'fa': [22600, 22618, 22660, 22683, 22714, 22772, 22819, 22883], 'en': [23357, 23374, 23416, 23440, 23477, 23536, 23585, 23667],
-                         'ar': [153, 171, 212, 237, 267, 323, 366, 423], 'ur': [167, 185, 228, 251, 281, 345, 395, 459]},
- 'lady-khadijah-biography': {'fa': [22731, 22790, 22838, 22894], 'en': [23493, 23552, 23605, 23681], 'ar': [283, 338, 383, 433], 'ur': [298, 361, 414, 469]},
- 'lady-khadijah-ziyarat': {'fa': [22747, 22806, 22859, 22912, 23108], 'en': [23511, 23569, 23631, 23701, 23907], 'ar': [298, 351, 400, 449, 638], 'ur': [314, 377, 432, 486, 683]},
+ 'lady-khadijah-poems': {'fa': [22600, 22618, 22660, 22683, 22714, 22772, 22819, 22883, 22929, 22990, None, 23070, 23125], 'en': [23357, 23374, 23416, 23440, 23477, 23536, 23585, 23667, 23720, 23782, None, 23866, 23935],
+                         'ar': [153, 171, 212, 237, 267, 323, 366, 423, 466, 524, None, 602, 657], 'ur': [167, 185, 228, 251, 281, 345, 395, 459, 505, 567, None, 646, 702]},
+ 'lady-khadijah-biography': {'fa': [22731, 22790, 22838, 22894, 22943, 23013, 23092, 23143], 'en': [23493, 23552, 23605, 23681, 23734, 23807, 23889, 23953],
+                             'ar': [283, 338, 383, 433, 479, 546, 624, 675], 'ur': [298, 361, 414, 469, 518, 590, 668, 719]},
+ 'lady-khadijah-ziyarat': {'fa': [22747, 22806, 22859, 22912, 23108, 23163], 'en': [23511, 23569, 23631, 23701, 23907, 23973], 'ar': [298, 351, 400, 449, 638, 692], 'ur': [314, 377, 432, 486, 683, 739]},
 }
 SERIES_TAGS = {'lady-khadijah-poems': ['lady-khadijah', 'holy-prophet'], 'lady-khadijah-biography': ['lady-khadijah'], 'lady-khadijah-ziyarat': ['lady-khadijah', 'ziyarat']}
 SERIES_DESC = {
- 'lady-khadijah-poems': {'en': 'Eight poems attributed to Lady Khadijah (p) in praise of the Holy Prophet (p), with their meaning, one each week.',
-                         'ar': 'ثماني قصائد منسوبة إلى السيدة خديجة (ع) في مدح النبي الأكرم (ص)، مع معانيها.',
-                         'fa': 'هشت شعر منسوب به حضرت خدیجه (س) در وصف پیامبر اکرم (ص)، همراه با معنا.',
-                         'ur': 'حضرت خدیجہ (س) سے منسوب آٹھ اشعار نبی اکرم (ص) کی شان میں، مفہوم کے ساتھ۔'},
+ 'lady-khadijah-poems': {'en': 'Poems attributed to Lady Khadijah (p) in praise of the Holy Prophet (p), with their meaning, one each week.',
+                         'ar': 'قصائد منسوبة إلى السيدة خديجة (ع) في مدح النبي الأكرم (ص)، مع معانيها.',
+                         'fa': 'اشعاری منسوب به حضرت خدیجه (س) در وصف پیامبر اکرم (ص)، همراه با معنا.',
+                         'ur': 'حضرت خدیجہ (س) سے منسوب اشعار نبی اکرم (ص) کی شان میں، مفہوم کے ساتھ۔'},
  'lady-khadijah-biography': {'en': 'The life of Lady Khadijah al-Kubra (p), chapter by chapter: her lineage, her family, her marriage to the Prophet (p) and her station.',
                              'ar': 'سيرة السيدة خديجة الكبرى (ع) فصلًا فصلًا: نسبها وأسرتها وزواجها من النبي (ص) ومقامها.',
                              'fa': 'زندگی‌نامه‌ی حضرت خدیجه‌ی کبری (س) فصل به فصل: نسب، خانواده، ازدواج با پیامبر (ص) و جایگاه ایشان.',
@@ -170,6 +172,7 @@ def build(only=None):
         parsed = {}
         for lang in LANGS4:
             for n, pid in enumerate(POSTS[ser][lang], 1):
+                if pid is None: continue
                 main = SCAN[lang][pid]; cont = continuation(lang, pid)
                 d = parse([main['text']] + [c['text'] for c in cont])
                 d['date'] = main['date'][:10]; d['pid'] = pid; d['cont'] = [c['n'] for c in cont]
@@ -194,8 +197,10 @@ def build(only=None):
             name = NAMES[ser][lang]
             href = lambda k=None, l=lang: f"{PFX[l]}/articles/{ser}/" + (f'{k}/' if k else '')
             sr = dict(name=name, href=href(), n=n)
-            if (lang, n - 1) in arts: sr['prev'] = (href(n - 1), arts[(lang, n - 1)]['title'])
-            if (lang, n + 1) in arts: sr['next'] = (href(n + 1), arts[(lang, n + 1)]['title'])
+            have = sorted(k for (l, k) in arts if l == lang)
+            i = have.index(n)
+            if i > 0: sr['prev'] = (href(have[i - 1]), arts[(lang, have[i - 1])]['title'])
+            if i + 1 < len(have): sr['next'] = (href(have[i + 1]), arts[(lang, have[i + 1])]['title'])
             path = BA.page(f'{ser}/{n}', lang, a, LANGS4, TP, series=sr)
             retitle(ROOT + path, a['title'], SHORT[ser][lang], S[lang]['brand'])
             fix_cover(ROOT + path, ser, lang)
@@ -209,11 +214,11 @@ def build(only=None):
             for n in range(1, nparts + 1):
                 for src, dst in ((f'thumb-{ser}-cover-{lang}.jpg', f'thumb-{ser}-{n}-{lang}.jpg'), (f'{ser}-cover-{lang}.jpg', f'{ser}-{n}-{lang}.jpg'), (f'og-{ser}-cover-{lang}.jpg', f'og-{ser}-{n}-{lang}.jpg')):
                     if not os.path.exists(D + dst): shutil.copy(D + src, D + dst); tmp.append(D + dst)
-            cards = {(lang, n): dict(arts[(lang, n)], heads=[{'t': 'p', 'x': S[lang]['part'].format(n=num(n, lang))}]) for n in range(1, nparts + 1)}
+            cards = {(lang, n): dict(arts[(lang, n)], heads=[{'t': 'p', 'x': S[lang]['part'].format(n=num(n, lang))}]) for n in range(1, nparts + 1) if (lang, n) in arts}
             M.series_page(lang, cards, LANGS4)
             fix_cover(ROOT + f"{PFX[lang].lstrip('/')}{'/' if PFX[lang] else ''}articles/{ser}/index.html", ser, lang, series_page=True, nparts=nparts)
             for f in tmp: os.remove(f)
-        print(ser, {l: [parsed[(l, n)]['cont'] for n in range(1, nparts + 1)] for l in LANGS4})
+        print(ser, {l: [parsed[(l, n)]['cont'] for n in range(1, nparts + 1) if (l, n) in parsed] for l in LANGS4})
     json.dump(CAT, open(HERE + 'catalog.json', 'w'), ensure_ascii=False, indent=1)
 
 

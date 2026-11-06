@@ -60,6 +60,7 @@ ITEMS = {
  'al-kawthar/part-3': (0, 'series', ['lady-fatimah-zahra', 'quran']),
  'al-kawthar/part-4': (0, 'series', ['lady-fatimah-zahra', 'quran']),
  'al-kawthar/part-6': (0, 'series', ['lady-fatimah-zahra', 'quran']),
+ 'al-kawthar/part-7': (0, 'series', ['lady-fatimah-zahra', 'quran']),
  'al-kawthar/part-5': (0, 'series', ['lady-fatimah-zahra', 'quran']),
  'morning-and-evening-mourning': (1, 'series', ['imam-hussain', 'imam-mahdi', 'mourning']),            # (guess) Muharram: the series is built on Ziarat al-Nahiya
  'virtues-of-ziarat-lady-masoumah': (4, 'article', ['lady-masoumah', 'imam-ridha', 'ziyarat']),
@@ -104,6 +105,17 @@ ITEMS = {
  'resemblance-of-lady-zaynab-to-lady-khadijah/2': (5, 'series', ['lady-zaynab', 'lady-khadijah', 'holy-prophet']),
  'resemblance-of-lady-zaynab-to-lady-khadijah/1': (5, 'series', ['lady-zaynab', 'lady-khadijah', 'holy-prophet']),
  'musibat-al-zahra': (5, 'series', ['lady-fatimah-zahra', 'mourning']),
+ 'behind-that-door': (5, 'series', ['lady-fatimah-zahra', 'mourning']),
+ 'behind-that-door/1': (5, 'series', ['lady-fatimah-zahra', 'mourning']),
+ 'behind-that-door/2': (5, 'series', ['lady-fatimah-zahra', 'mourning']),
+ 'behind-that-door/3': (5, 'series', ['lady-fatimah-zahra', 'mourning']),
+ 'behind-that-door/4': (5, 'series', ['lady-fatimah-zahra', 'mourning']),
+ 'behind-that-door/5': (5, 'series', ['lady-fatimah-zahra', 'mourning']),
+ 'behind-that-door/6': (5, 'series', ['lady-fatimah-zahra', 'mourning']),
+ 'behind-that-door/7': (5, 'series', ['lady-fatimah-zahra', 'mourning']),
+ 'behind-that-door/8': (5, 'series', ['lady-fatimah-zahra', 'mourning']),
+ 'behind-that-door/9': (5, 'series', ['lady-fatimah-zahra', 'mourning']),
+ 'behind-that-door/10': (5, 'series', ['lady-fatimah-zahra', 'mourning']),
  'musibat-al-zahra/4': (5, 'series', ['lady-fatimah-zahra', 'mourning']),
  'musibat-al-zahra/3': (5, 'series', ['lady-fatimah-zahra', 'mourning']),
  'musibat-al-zahra/2': (5, 'series', ['lady-fatimah-zahra', 'mourning']),
@@ -130,11 +142,11 @@ for _n, (_m, _tags) in {3: (1, ['lady-ruqayyah'] + _MH), 4: (1, ['imam-sajjad'] 
 for _n, _tags in {6: ['lady-fatimah-zahra', 'ghadir'], 7: ['imam-ali', 'ghadir', 'ziyarat'], 8: ['ziyarat'], 9: ['imam-ali', 'ghadir']}.items():
     ITEMS[f'ghadir-booklets/{_n}'] = (12, 'series', _tags)
 ITEMS['ramadan-booklets/1'] = (9, 'series', ['lady-khadijah', 'ziyarat'])
-# Lady Khadijah series from the Telegram channels (build_khadijah.py): poems 8 parts, biography 4, ziyarat explanation 4
+# Lady Khadijah series from the Telegram channels (build_khadijah.py): poems, biography and ziyarat explanation, one part a week
 ITEMS['lady-khadijah-poems'] = (4, 'series', ['lady-khadijah', 'holy-prophet'])
 ITEMS['lady-khadijah-biography'] = (4, 'series', ['lady-khadijah'])
 ITEMS['lady-khadijah-ziyarat'] = (4, 'series', ['lady-khadijah', 'ziyarat'])
-for _n in range(1, 13):
+for _n in range(1, 41):
     for _s in ('lady-khadijah-poems', 'lady-khadijah-biography', 'lady-khadijah-ziyarat'): ITEMS[f'{_s}/{_n}'] = ITEMS[_s]
 # Sermon of Muttaqin (Imam Ali's sermon, posted weekly since June 2026); the series is filed under Rabi' al-Awwal (month 3)
 ITEMS['khutbat-al-muttaqin'] = (3, 'series', ['imam-ali'])

@@ -2601,13 +2601,13 @@
   },
   "tags": [],
   "tags_l": {},
-  "published": "2026-10-05",
+  "published": "2026-11-02",
   "img": true,
   "descs": {
-   "en": "Eight poems attributed to Lady Khadijah (p) in praise of the Holy Prophet (p), with their meaning, one each week.",
-   "ar": "ثماني قصائد منسوبة إلى السيدة خديجة (ع) في مدح النبي الأكرم (ص)، مع معانيها.",
-   "fa": "هشت شعر منسوب به حضرت خدیجه (س) در وصف پیامبر اکرم (ص)، همراه با معنا.",
-   "ur": "حضرت خدیجہ (س) سے منسوب آٹھ اشعار نبی اکرم (ص) کی شان میں، مفہوم کے ساتھ۔"
+   "en": "Poems attributed to Lady Khadijah (p) in praise of the Holy Prophet (p), with their meaning, one each week.",
+   "ar": "قصائد منسوبة إلى السيدة خديجة (ع) في مدح النبي الأكرم (ص)، مع معانيها.",
+   "fa": "اشعاری منسوب به حضرت خدیجه (س) در وصف پیامبر اکرم (ص)، همراه با معنا.",
+   "ur": "حضرت خدیجہ (س) سے منسوب اشعار نبی اکرم (ص) کی شان میں، مفہوم کے ساتھ۔"
   }
  },
  "lady-khadijah-biography/1": {
@@ -2756,7 +2756,7 @@
   },
   "tags": [],
   "tags_l": {},
-  "published": "2026-10-07",
+  "published": "2026-11-04",
   "img": true,
   "descs": {
    "en": "The life of Lady Khadijah al-Kubra (p), chapter by chapter: her lineage, her family, her marriage to the Prophet (p) and her station.",
@@ -2911,7 +2911,7 @@
   },
   "tags": [],
   "tags_l": {},
-  "published": "2026-10-30",
+  "published": "2026-11-06",
   "img": true,
   "descs": {
    "en": "A weekly commentary on the Ziyarat of Lady Khadijah al-Kubra, Ummul Muminin (p), phrase by phrase.",
@@ -3476,25 +3476,33 @@
  "al-kawthar/part-6": {
   "langs": [
    "en",
-   "fa"
+   "ar",
+   "fa",
+   "ur"
   ],
   "slug": "al-kawthar/part-6",
   "series": "al-kawthar",
   "month": 0,
   "titles": {
    "en": "The Series of Al-Kawthar — Part 6",
-   "fa": "سلسله مباحث کوثر — بخش ششم"
+   "ar": "سلسلة مباحث الكوثر — القسم السادس",
+   "fa": "سلسله مباحث کوثر — بخش ششم",
+   "ur": "سلسلۂ مباحثِ کوثر — حصہ ششم"
   },
   "tags": [],
   "tags_l": {
    "en": [],
-   "fa": []
+   "ar": [],
+   "fa": [],
+   "ur": []
   },
-  "published": "2026-10-29",
+  "published": "2026-10-31",
   "img": true,
   "descs": {
    "en": "In the previous discussion, we explained that Ali ibn Musa al-Rida (peace be upon him) possesses both the Alawi and Fatimi characteristics, and for this…",
-   "fa": "در مبحث قبلی بیان شد که حضرت علی بن موسی الرضا (علیه‌السلام) هم شاخصه علوی دارند و هم شاخصه فاطمی، و به همين جهت است که لقب ایشان سلطان است. امیرالمؤمنین…"
+   "ar": "بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ ذكرنا في المبحث السابق أن الإمام علي بن موسى الرضا عليه السلام يحمل الخصوصيتين العلوية والفاطمية ولهذا لقب بالسلطان. يقول…",
+   "fa": "در مبحث قبلی بیان شد که حضرت علی بن موسی الرضا (علیه‌السلام) هم شاخصه علوی دارند و هم شاخصه فاطمی، و به همين جهت است که لقب ایشان سلطان است. امیرالمؤمنین…",
+   "ur": "گزشتہ مبحث میں بیان کیا گیا تھا کہ حضرت علی بن موسیٰ الرضا علیہ السلام میں علوی اور فاطمی، دونوں خصوصیات پائی جاتی ہیں، اور اسی وجہ سے آپ کا لقب سلطان ہے۔…"
   }
  },
  "lady-khadijah-ziyarat/5": {
@@ -3527,6 +3535,505 @@
    "ar": "اَلسَّلامُ عَلَیْک یا أَوَّلَ الْمُؤْمِناتِ ❞ وَالسَّابِقُونَ السَّابِقُونَ ﴿١٠﴾ أُولَئِكَ الْمُقَرَّبُونَ ﴿١١﴾ ❝",
    "fa": "سلام بر تو ای نخستین بانوی ایمان‌آورنده ▫️❞ و سبقت‌گیرندگان مقدمند آنانند همان مقربان [خدا] ❝ ❞ مادرت، حضرت خدیجه دختر خویلد، نخستین بانویی است که به خداوند و…",
    "ur": "آپ پر سلام ہو، اے سب سے پہلے ایمان لانے والی خاتون ▫️❞ اور سبقت لے جانے والے تو آگے ہی ہیں، وہی (خدا کے) مقرب ہیں۔ ❝"
+  }
+ },
+ "lady-khadijah-poems/9": {
+  "slug": "lady-khadijah-poems/9",
+  "series": "lady-khadijah-poems",
+  "month": 4,
+  "langs": [
+   "en",
+   "ar",
+   "fa",
+   "ur"
+  ],
+  "titles": {
+   "en": "Poem Nine — When Khadija asked him to return to the caravan and Gabriel surrounded him",
+   "ar": "القصيدة التاسعة — حين طلبت خديجة منه أن يعود إلى القافلة وأحاط به جبرئيل",
+   "fa": "شعر نهم — هنگامی که خدیجه از او خواست به کاروان بازگردد و جبرئیل او را احاطه کرد",
+   "ur": "نواں شعر — جب خدیجہ نے ان سے کاروان کی طرف لوٹ جانے کو کہا اور جبرئیل نے انہیں گھیر لیا"
+  },
+  "tags": [],
+  "tags_l": {
+   "en": [],
+   "ar": [],
+   "fa": [],
+   "ur": []
+  },
+  "published": "2026-10-12",
+  "img": true,
+  "descs": {
+   "en": "Yes, I have from you a binding tie, what a binding tie! And the thread of union through the long days can never be severed.",
+   "ar": "نعم، لي منكم رباط يلزمني، وأي رباط! وحبل الوصل على مدى الأيام الطويلة لا ينقطع. عيني لا تخلو ساعة من خيالكم؛ وقلبي لا يغفل عن حبكم، وفمي لا يغفل عن ذكركم.",
+   "fa": "آری برایم از شما الزام‌کننده‌ای هست، چه الزام‌کننده‌ای! و رشته وصل روزهای دراز پاره‌شدنی نیست و اگر نبود دلی که در محبت شما جریحه‌دار شده؛ اشک‌هایم با خون جاری…",
+   "ur": "ہاں، میرے لیے آپ کی طرف سے ایک لازم کر دینے والا رشتہ ہے، کیسا لازم کرنے والا! اور طویل دنوں کا رشتۂ وصل ٹوٹنے والا نہیں۔"
+  }
+ },
+ "lady-khadijah-poems/10": {
+  "slug": "lady-khadijah-poems/10",
+  "series": "lady-khadijah-poems",
+  "month": 4,
+  "langs": [
+   "en",
+   "ar",
+   "fa",
+   "ur"
+  ],
+  "titles": {
+   "en": "Poem Ten — A quatrain (rubaʿi) When the Prophet was giving his report of the trade journey",
+   "ar": "القصيدة العاشرة — رباعية عندما كان النبي (ص) يروي تقرير رحلة التجارة",
+   "fa": "شعر دهم — رباعی هنگامی که حضرت گزارش سفر تجارت را بیان می‌فرمود",
+   "ur": "دسواں شعر — رباعی جب آنحضرت تجارتی سفر کی رپورٹ بیان فرما رہے تھے"
+  },
+  "tags": [],
+  "tags_l": {
+   "en": [],
+   "ar": [],
+   "fa": [],
+   "ur": []
+  },
+  "published": "2026-10-19",
+  "img": true,
+  "descs": {
+   "en": "If I were to spend my evening amid every blessing, and the world and the kingdom of the Persian emperors were mine forever;",
+   "ar": "فلا تساوي عندي جناح بعوضة، إن لم تكن عيني ناظرة إلى عينك.",
+   "fa": "اگر من روز را در میان همه نعمت‌ها شب کنم؛ و همیشه دنیا و مملکت سلاطین کسروی برای من باشد برابر بال پشه‌ای نیست در پیش من؛ اگر چشم من به چشم تو نظر نداشته باشد",
+   "ur": "اگر میں شام کو تمام نعمتوں کے درمیان کروں، اور دنیا اور کسریٰ جیسے بادشاہوں کی سلطنت ہمیشہ میرے لیے رہے؛"
+  }
+ },
+ "lady-khadijah-poems/12": {
+  "slug": "lady-khadijah-poems/12",
+  "series": "lady-khadijah-poems",
+  "month": 4,
+  "langs": [
+   "en",
+   "ar",
+   "fa",
+   "ur"
+  ],
+  "titles": {
+   "en": "Poem Twelve — When the Prophet proposed marriage",
+   "ar": "القصيدة الثانية عشرة — حين طلب النبي الزواج",
+   "fa": "شعر دوازدهم — هنگامی که حضرت درخواست ازدواج کرد",
+   "ur": "بارہواں شعر — جب حضرت نے شادی کی درخواست کی"
+  },
+  "tags": [],
+  "tags_l": {
+   "en": [],
+   "ar": [],
+   "fa": [],
+   "ur": []
+  },
+  "published": "2026-10-26",
+  "img": true,
+  "descs": {
+   "en": "O Sa'd, if you pass through the valley of Arak, deliver word to that well where a part of me was lost.",
+   "ar": "واسأل ظباء ذلك القفر؛ هل لأسير الحب منهم خلاص. احكم بما شئت وبما ترضى؛ فإن قلبي لا يرضى إلا ما ترضاه.",
+   "fa": "ای سعد اگر به وادی اراک گذشتی؛ برسان به آن چاهی که در آنجا از من ضایع شده و سؤال کن از آهوان آن بیابان؛ که آیا کسی که اسیر محبت شد از آنها رهایی دارد",
+   "ur": "اے سعد! اگر تم وادیٔ اراک سے گزرو؛ تو اس کنویں تک پہنچا دینا جہاں مجھ سے کچھ ضائع ہو گیا۔ اور اس بیابان کے ہرنوں سے پوچھنا؛ کہ کیا جو محبت کا اسیر ہو گیا ان کے…"
+  }
+ },
+ "lady-khadijah-poems/13": {
+  "slug": "lady-khadijah-poems/13",
+  "series": "lady-khadijah-poems",
+  "month": 4,
+  "langs": [
+   "en",
+   "ar",
+   "fa",
+   "ur"
+  ],
+  "titles": {
+   "en": "Poem Thirteen — After the Prophet's reply to her, in which he apologized for his poverty",
+   "ar": "القصيدة الثالثة عشرة — بعد الرد على اعتذار النبي عن فقره",
+   "fa": "شعر سیزدهم — پس از پاسخ به عذرخواهی حضرت از فقر",
+   "ur": "تیرہواں شعر — فقر کے بارے میں حضرت کی معذرت کے جواب کے بعد"
+  },
+  "tags": [],
+  "tags_l": {
+   "en": [],
+   "ar": [],
+   "fa": [],
+   "ur": []
+  },
+  "published": "2026-11-02",
+  "img": true,
+  "descs": {
+   "en": "By Allah, the north wind never blows but I remember the nights of union. No flash of lightning gleamed from your direction, but I imagined, in the phantom of a…",
+   "ar": "واللّه ما هبّ نسـیم الشـمال الّا تـذکّرت لیالی الوصال أُقسم بالله، ما هبّت نسمة الشمال إلا تذكّرتُ ليالي الوصال.",
+   "fa": "به ذات خدا سوگند که نسیم شمال نمی‌وزد؛ مگر اینکه یاد شب‌های وصال می‌کنم و برقی از سوی شما نجستن کرد؛ مگر اینکه در خواب خیال دوستانم را می‌دیدم",
+   "ur": "خدا کی قسم! شمال کی ہوا جب بھی چلتی ہے، مجھے وصال کی راتیں یاد آ جاتی ہیں۔ آپ کی جانب سے بجلی کی کوئی چمک نہیں اٹھی، مگر یہ کہ میں نے خواب کے خیالی عکس میں…"
+  }
+ },
+ "lady-khadijah-biography/5": {
+  "slug": "lady-khadijah-biography/5",
+  "series": "lady-khadijah-biography",
+  "month": 4,
+  "langs": [
+   "en",
+   "ar",
+   "fa",
+   "ur"
+  ],
+  "titles": {
+   "en": "Chapter One: Ancestors, Parents and Relatives — Part Five",
+   "ar": "الفصل الأول: الأجداد والوالدان والأقارب — الجزء الخامس",
+   "fa": "فصل اول: اجداد و والدین و خویشاوندان — قسمت پنجم",
+   "ur": "پہلا باب: آباء و اجداد، والدین اور رشتہ دار — حصہ پنجم"
+  },
+  "tags": [],
+  "tags_l": {
+   "en": [],
+   "ar": [],
+   "fa": [],
+   "ur": []
+  },
+  "published": "2026-10-14",
+  "img": true,
+  "descs": {
+   "en": "Qusayy Qusayy is the fourth ancestor of the Prophet (Salla Allahu alayhi wa aalih). His name was Zayd and his kunya was Abu al-Mughirah. He was called \"Qusayy\"…",
+   "ar": "قُصَيّ 4️⃣ رئاسة مجلس الشورى «دار الندوة» (أمير الندوة)؛ 5️⃣ إعطاء اللواء لحاملي ألوية الحرب. وانتفع الناس طوال حياته بآرائه وتوجيهاته. وقال لقبيلة قريش لأول…",
+   "fa": "قصی قصی جد چهارم پیامبر صلی الله علیه و آله می‌باشد. نام او زید و با کنیه ابوالمغیره خوانده می‌شد. از این رو به او قصی می‌گفتند که ربیعه بن حزام از طایفه «بنی…",
+   "ur": "قُصَیّ 1️⃣ حجابت (کعبہ کی کلید برداری)؛ 2️⃣ سقایت (حاجیوں کو پانی پہنچانا)؛ 3️⃣ رفادت (حاجیوں کو کھانا کھلانا اور خوراک پہنچانا)؛"
+  }
+ },
+ "lady-khadijah-biography/6": {
+  "slug": "lady-khadijah-biography/6",
+  "series": "lady-khadijah-biography",
+  "month": 4,
+  "langs": [
+   "en",
+   "ar",
+   "fa",
+   "ur"
+  ],
+  "titles": {
+   "en": "Chapter One: Ancestors, Parents and Relatives — Part Six",
+   "ar": "الفصل الأول: الأجداد والوالدان والأقارب — الجزء السادس",
+   "fa": "فصل اول: اجداد و والدین و خویشاوندان — قسمت ششم",
+   "ur": "پہلا باب: آباء و اجداد، والدین اور رشتہ دار — حصہ ششم"
+  },
+  "tags": [],
+  "tags_l": {
+   "en": [],
+   "ar": [],
+   "fa": [],
+   "ur": []
+  },
+  "published": "2026-10-21",
+  "img": true,
+  "descs": {
+   "en": "The Mother of Lady Khadijah (Salam Allah alayha): Fatimah bint Za'idah and Her Ancestors The mother of Lady Khadijah (Salam Allah alayha) was Fatimah bint…",
+   "ar": "والدة السيدة خديجة عليها السلام: فاطمة بنت زائدة وأجدادها كانت والدة السيدة خديجة عليها السلام هي فاطمة بنت زائدة بن الأصم بن رواحة بن حجر بن عبد بن معيص بن…",
+   "fa": "مادر حضرت خانم خدیجه سلام الله علیها: فاطمه بنت زائده و اجداد ایشان مادر حضرت خانم خدیجه سلام الله علیها، فاطمه بنت زائده بن اصم بن رواحه بن حجر بن عبد بن معیص…",
+   "ur": "وہ ایک طرف اخلاقی آلودگیوں اور منحرف عقائد سے بیزار رہتی تھیں اور دوسری طرف اپنے وجود کو انسانی فضائل اور روحانی اقدار سے آراستہ کرتی تھیں، اور اپنے توحید پرست…"
+  }
+ },
+ "lady-khadijah-biography/7": {
+  "slug": "lady-khadijah-biography/7",
+  "series": "lady-khadijah-biography",
+  "month": 4,
+  "langs": [
+   "en",
+   "ar",
+   "fa",
+   "ur"
+  ],
+  "titles": {
+   "en": "Chapter Two: Her Birth and Titles — Part One",
+   "ar": "الفصل الثاني: ولادتها وألقابها — الجزء الأول",
+   "fa": "فصل دوم: ولادت و القاب ایشان — قسمت اول",
+   "ur": "دوسرا باب: ولادت اور القاب — حصہ اول"
+  },
+  "tags": [],
+  "tags_l": {
+   "en": [],
+   "ar": [],
+   "fa": [],
+   "ur": []
+  },
+  "published": "2026-10-28",
+  "img": true,
+  "descs": {
+   "en": "The Mother of the Believers, Lady Khadijah al-Kubra (Salam Allah alayha), was the devoted first wife of the Messenger of Allah (Salla Allahu alayhi wa aalih)…",
+   "ar": "إن شاء الله سنذكر في مبحث الزواج أن عمر السيدة خديجة الكبرى عليها السلام عند زواجها من النبي صلى الله عليه وآله كان بين 25 و27 سنة.",
+   "fa": "ام المؤمنین حضرت خانم خدیجه کبری سلام الله علیها، اولین همسر فداکار رسول خدا صلی الله علیه و آله و نخستین بانوی مسلمان و مادر مهربان حضرت زهرا سلام الله علیها…",
+   "ur": "حضرت خدیجہ کبریٰ سلام اللہ علیہا ایک عظیم اور بزرگوار خاندان میں پیدا ہوئیں، پسندیدہ اخلاق اور نمایاں صفات کے ساتھ پروان چڑھیں اور دانشمندی، تیز ذہانت…"
+  }
+ },
+ "lady-khadijah-biography/8": {
+  "slug": "lady-khadijah-biography/8",
+  "series": "lady-khadijah-biography",
+  "month": 4,
+  "langs": [
+   "en",
+   "ar",
+   "fa",
+   "ur"
+  ],
+  "titles": {
+   "en": "Chapter Two: Her Birth and Titles — Part Two",
+   "ar": "الفصل الثاني: ولادتها وألقابها — الجزء الثاني",
+   "fa": "فصل دوم: ولادت و القاب ایشان — قسمت دوم",
+   "ur": "دوسرا باب: ولادت اور القاب — حصہ دوم"
+  },
+  "tags": [],
+  "tags_l": {
+   "en": [],
+   "ar": [],
+   "fa": [],
+   "ur": []
+  },
+  "published": "2026-11-04",
+  "img": true,
+  "descs": {
+   "en": "Continued: The Title \"Tahira\" of Lady Khadijah al-Kubra (Salam Allah alayha) Scholars have written in their books:",
+   "ar": "تتمة التعريف بلقب «الطاهرة» للسيدة خديجة الكبرى عليها السلام كتب العلماء في كتبهم: 📜 ❝ وكانت في الجاهلية الطاهرة ❞ (1)",
+   "fa": "ادامه بخش معرفی لقب طاهره حضرت خانم خدیجه کبری سلام الله علیها دانشمندان در کتب خود نوشته اند: 📜 ❝ وكانت في الجاهلية الطاهرة ❞",
+   "ur": "علما نے اپنی کتابوں میں لکھا ہے: 📜 ❝ وكانت في الجاهلية الطاهرة ❞ اور ایک دوسرے عالم لکھتے ہیں: عمر رضا کحالہ نے کہا (قال عمر رضا كحالة):"
+  }
+ },
+ "lady-khadijah-ziyarat/6": {
+  "slug": "lady-khadijah-ziyarat/6",
+  "series": "lady-khadijah-ziyarat",
+  "month": 4,
+  "langs": [
+   "en",
+   "ar",
+   "fa",
+   "ur"
+  ],
+  "titles": {
+   "en": "Explanation of the Ziyarat of Ummul Muminin (p) — Part 6",
+   "ar": "شرح زيارة أم المؤمنين سلام الله عليها — فقرة «يا مَنْ أَنْفَقَتْ مالَها فِي نُصْرَةِ سَيِّدِ الْأَنْبِياءِ»",
+   "fa": "شرح زیارت حضرت ام المومنین سلام الله علیها — فراز «یا مَنْ أَنْفَقَتْ مالَها فِي نُصْرَةِ سَيِّدِ الْأَنْبِياءِ»",
+   "ur": "شرحِ زیارتِ حضرت ام المومنین سلام اللہ علیہا — فقرہ «یا مَنْ أَنْفَقَتْ مالَها فِي نُصْرَةِ سَيِّدِ الْأَنْبِياءِ»"
+  },
+  "tags": [],
+  "tags_l": {
+   "en": [],
+   "ar": [],
+   "fa": [],
+   "ur": []
+  },
+  "published": "2026-11-06",
+  "img": true,
+  "descs": {
+   "en": "Explanation of the Ziyarat of Umm al-Muminin (peace be upon Her) The passage: \"O You Who Spent Your Wealth in Support of the Master of the Prophets\"",
+   "ar": "1️⃣ إنفاق المال في نصرة سيد الأنبياء (صلى الله عليه وآله) 2️⃣ نصرة سيد الأنبياء (صلى الله عليه وآله) والوفاء له",
+   "fa": "سلام بر تو ای بانویی که مال و دارایی خود را در راه یاری سید و سرور پیامبران انفاق کردی، و تا آنجا که در توان داشتی او را یاری نمودی و در برابر دشمنان از آن…",
+   "ur": "▫️❞ اللہ اور اس کے رسول پر ایمان لاؤ اور اپنے مالوں اور اپنی جانوں سے اللہ کی راہ میں جہاد کرو؛ یہ تمہارے لیے بہتر ہے اگر تم جانو۔ ❝"
+  }
+ },
+ "al-kawthar/part-7": {
+  "langs": [
+   "en",
+   "fa"
+  ],
+  "slug": "al-kawthar/part-7",
+  "series": "al-kawthar",
+  "month": 0,
+  "titles": {
+   "en": "The Series of Al-Kawthar — Part 7",
+   "fa": "سلسله مباحث کوثر — بخش هفتم"
+  },
+  "tags": [],
+  "tags_l": {
+   "en": [],
+   "fa": []
+  },
+  "published": "2026-11-06",
+  "img": true,
+  "descs": {
+   "en": "In the previous discussion, we explained that the role model of Imam al-Mahdi, may Allah hasten his reappearance, is Lady Sayyidah Fatimah al-Zahra, and that…",
+   "fa": "در مبحثِ گذشته بیان شد که الگویِ حضرت مهدی عجل الله تعالی فرجه الشریف، حضرت فاطمۀ زهرا علیها السلام است، و حضرت فاطمه حجتِ خدا بر اهلِ بیت علیهم السلام می…"
+  }
+ },
+ "behind-that-door/1": {
+  "slug": "behind-that-door/1",
+  "series": "behind-that-door",
+  "month": 5,
+  "langs": [
+   "en",
+   "ar",
+   "fa",
+   "ur"
+  ],
+  "titles": {
+   "en": "A Mother’s Legacy",
+   "ar": "ميراثُ الأمّ",
+   "fa": "میراثِ مادر",
+   "ur": "ماں کی میراث"
+  },
+  "tags": [],
+  "tags_l": {
+   "en": [],
+   "ar": [],
+   "fa": [],
+   "ur": []
+  },
+  "published": "2026-10-26",
+  "img": true,
+  "descs": {
+   "en": "O mother of the nation and of the righteous! Before there was a door, or a wall, before any alley had a name, before your blessed feet ever touched this dusty…",
+   "ar": "يا أمَّ الأمّةِ والأبرار! قبلَ أن يكونَ بابٌ وجدار، قبلَ أن يُسمّى زُقاقٌ باسمه، قبلَ أن تطأَ قدماكِ المباركتان دنيانا الترابيّة هذه... كان اللهُ قد امتحنكِ…",
+   "fa": "یا ام الأمة و الابرار! پیش از آن‌که دری باشد و دیواری، پیش از آن‌که کوچه‌ای نام بگیرد، پیش از آن‌که شما قدم مبارک را به این دنیای خاکی ما بگذارید... خدا شما را…",
+   "ur": "اے امت اور ابرار کی ماں! اس سے پہلے کہ کوئی دروازہ ہوتا اور کوئی دیوار، اس سے پہلے کہ کسی گلی کا نام رکھا جاتا، اس سے پہلے کہ آپ کے مبارک قدم ہماری اس خاکی…"
+  }
+ },
+ "behind-that-door/2": {
+  "slug": "behind-that-door/2",
+  "series": "behind-that-door",
+  "month": 5,
+  "langs": [
+   "en",
+   "ar",
+   "fa",
+   "ur"
+  ],
+  "titles": {
+   "en": "Medina, After Her Father",
+   "ar": "المدينةُ بعدَ الأب",
+   "fa": "مدینه، بعد از پدر",
+   "ur": "بابا کے بعد مدینہ"
+  },
+  "tags": [],
+  "tags_l": {
+   "en": [],
+   "ar": [],
+   "fa": [],
+   "ur": []
+  },
+  "published": "2026-10-28",
+  "img": true,
+  "descs": {
+   "en": "When the Messenger of God departed, his daughter was no longer the daughter she had been. The narration describes her state in a few words; words that are each…",
+   "ar": "لمّا رحلَ رسولُ الله، لم تعد ابنتُه تلك الابنةَ التي كانت. وقد وصفت الروايةُ حالَها في كلماتٍ قليلة؛ كلُّ كلمةٍ منها مأتمٌ بذاته: سيّدةٌ في الثامنةَ عشرةَ من…",
+   "fa": "رسول خدا که رفتند، دخترشان دیگر آن دخترِ پیشین نبود. روایت، حالِ ایشان را در چند کلمه گفته است؛ کلماتی که هر کدام، روضه‌ای است: بانویی هجده‌ساله... (۲) با سری…",
+   "ur": "رسولِ خدا رخصت ہوئے تو ان کی بیٹی پہلے والی بیٹی نہ رہیں۔ روایت نے ان کا حال چند لفظوں میں بیان کیا ہے؛ ایسے لفظ جن میں سے ہر ایک اپنی جگہ ایک مصیبت ہے: اٹھارہ…"
+  }
+ },
+ "behind-that-door/3": {
+  "slug": "behind-that-door/3",
+  "series": "behind-that-door",
+  "month": 5,
+  "langs": [
+   "en",
+   "ar",
+   "fa",
+   "ur"
+  ],
+  "titles": {
+   "en": "That Door",
+   "ar": "ذلك الباب",
+   "fa": "آن در",
+   "ur": "وہ دروازہ"
+  },
+  "tags": [],
+  "tags_l": {
+   "en": [],
+   "ar": [],
+   "fa": [],
+   "ur": []
+  },
+  "published": "2026-10-31",
+  "img": true,
+  "descs": {
+   "en": "One day the Messenger of God wept, and the Commander of the Faithful asked him why. He said: The father, years before that day, had wept for his daughter’s…",
+   "ar": "بكى رسولُ الله يومًا، فسأله أميرُ المؤمنين عن سببِ بكائه، فقال: الأبُ، قبلَ ذلك اليوم بسنين، كان قد بكى لخدِّ ابنته... وفي تلك الجملةِ الواحدة، سكبَ دموعَ…",
+   "fa": "رسول خدا روزی گریستند، و امیرالمؤمنین سببِ گریه را پرسیدند. فرمودند: پدر، سال‌ها پیش از آن روز، برای گونهٔ دخترش گریسته بود... و در همان یک جمله، اشکِ مدینه و…",
+   "ur": "ایک دن رسولِ خدا روئے، اور امیر المومنینؑ نے رونے کا سبب پوچھا۔ فرمایا: بابا نے برسوں پہلے بیٹی کے رخسار پر آنسو بہائے تھے... اور اسی ایک جملے میں مدینہ اور…"
+  }
+ },
+ "behind-that-door/4": {
+  "slug": "behind-that-door/4",
+  "series": "behind-that-door",
+  "month": 5,
+  "langs": [
+   "en",
+   "ar",
+   "fa",
+   "ur"
+  ],
+  "titles": {
+   "en": "The Wounds She Hid",
+   "ar": "جراحٌ بقيت مستورة",
+   "fa": "زخم‌هایی که پنهان ماند",
+   "ur": "وہ زخم جو چھپے رہے"
+  },
+  "tags": [],
+  "tags_l": {
+   "en": [],
+   "ar": [],
+   "fa": [],
+   "ur": []
+  },
+  "published": "2026-11-02",
+  "img": true,
+  "descs": {
+   "en": "It was the night of the Ghusl (wash). Later, Amir al-Muminin (p) poured out his heart to Ammar ibn Yasir: And what tore the Master's heart apart was this: For…",
+   "ar": "كانت ليلةَ الغُسل. وفيما بعد، بثَّ أميرُ المؤمنين شكواه إلى عمّار بن ياسر: وما مزّقَ قلبَ المولى كان هذا: خمسةٌ وسبعونَ يومًا على فراشِ المرض، وزوجُها لا…",
+   "fa": "امیرالمؤمنین، بعدها، با عمار یاسر درد دل کردند: و آنچه قلبِ مولا را از هم پاشید، این بود: هفتاد و پنج روز در بسترِ بیماری بودند، و به همسرشان هیچ نگفتند... شبِ…",
+   "ur": "غسل کی رات تھی۔ بعد میں امیر المومنینؑ نے عمار یاسر سے دل کا درد بیان کیا: اور جس بات نے مولا کا دل پارہ پارہ کر دیا، وہ یہ تھی: پچہتر دن بسترِ بیماری پر رہیں…"
+  }
+ },
+ "behind-that-door/5": {
+  "slug": "behind-that-door/5",
+  "series": "behind-that-door",
+  "month": 5,
+  "langs": [
+   "en",
+   "ar",
+   "fa",
+   "ur"
+  ],
+  "titles": {
+   "en": "\"Mother, Speak to Me...\"",
+   "ar": "«أمّاه، كلّميني...»",
+   "fa": "«مادر، با من سخن بگو...»",
+   "ur": "«اماں، مجھ سے بات کیجیے...»"
+  },
+  "tags": [],
+  "tags_l": {
+   "en": [],
+   "ar": [],
+   "fa": [],
+   "ur": []
+  },
+  "published": "2026-11-04",
+  "img": true,
+  "descs": {
+   "en": "Moment by moment, the shadow of parting grew heavier, and every breath carried the scent of farewell... The Lady asked Asma to bring what remained of her…",
+   "ar": "لحظةً بعدَ لحظة، كان ظلُّ الفراقِ يثقل، وكانت اللحظاتُ تفوحُ برائحةِ الوداع... طلبت السيّدةُ من أسماءَ أن تأتيَ ببقيّةِ حَنوطِ أبيها وتضعَه عند رأسها. ثمّ…",
+   "fa": "دم‌به‌دم، سایهٔ هجران سنگین‌تر می‌شد و لحظه‌ها بوی وداع می‌داد... بانو به اسماء فرمودند باقی‌ماندهٔ حنوطِ پدر را بیاورد و کنارِ سرشان بگذارد. آن‌گاه جامه را بر…",
+   "ur": "لمحہ بہ لمحہ جدائی کا سایہ گہرا ہوتا جا رہا تھا اور ہر گھڑی سے وداع کی خوشبو آ رہی تھی... بی بی نے اسماء سے فرمایا کہ بابا کے حنوط کا بچا ہوا حصہ لا کر ان کے…"
+  }
+ },
+ "behind-that-door": {
+  "slug": "behind-that-door",
+  "kind": "series",
+  "month": 5,
+  "langs": [
+   "en",
+   "ar",
+   "fa",
+   "ur"
+  ],
+  "titles": {
+   "en": "Behind That Door…",
+   "ar": "خلفَ ذلك الباب…",
+   "fa": "پشتِ آن در…",
+   "ur": "اُس دروازے کے پیچھے…"
+  },
+  "tags": [],
+  "tags_l": {},
+  "published": "2026-11-04",
+  "img": true,
+  "descs": {
+   "en": "A Fatimiyya series from the Misbah channels in Jumada al-Ula on the sufferings of Lady Fatimah al-Zahra (p), told through the narrations.",
+   "ar": "سلسلة فاطمية من قنوات مصباح في شهر جمادى الأولى عن مصائب السيدة فاطمة الزهراء (ع)، من خلال الروايات.",
+   "fa": "مجموعه‌ای فاطمی از کانال‌های مصباح در ماه جمادی‌الاول درباره‌ی مصائب حضرت فاطمه زهرا (س)، از زبان روایات.",
+   "ur": "ماہِ جمادی الاول میں مصباح چینلز کا فاطمی سلسلہ، حضرت فاطمہ زہرا (س) کے مصائب کے بارے میں، روایات کی روشنی میں۔"
   }
  }
 }

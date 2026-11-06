@@ -1,7 +1,17 @@
 # Changelog
 
 All notable changes to the Misbah Inc. website are recorded here.
-Format: `## 2026-10-31
+Format: `## 2026-11-06
+
+- Caught up with the Telegram channels (posts of 29 Oct – 6 Nov, all four languages):
+  - Poems of Lady Khadijah: Poems 9, 10, 12 and 13 (`/9`, `/10`, `/12`, `/13`). The channels never posted a Poem 11; `/11` is left free so the URLs keep the poem numbers.
+  - Biography of Lady Khadijah: Parts 5–8 (Chapter One, Parts 5–6; Chapter Two, Parts 1–2). Chapter One's restructured Part 1 is unchanged.
+  - Ziyarat of Umm al-Muminin: Part 6 ("O you who spent her wealth in support of the Master of the Prophets").
+  - Kawthar of the Qur'an: Part 6 in Arabic and Urdu; Part 7 in English and Farsi (Arabic and Urdu not posted yet).
+  - New series "Behind That Door…" (`/articles/behind-that-door/`, `tools/wix_import/build_behind_door.py`): the five Fatimiyya evening posts of 26 Oct – 4 Nov, four languages, quotation boxes with their translations and a Sources list. Series description is my wording (unreviewed).
+- What's new line, feed (Kawthar parts) and sitemap updated.
+
+## 2026-10-31
 
 - Added the Google Ads tag (gtag.js, `AW-18517033323`, Google Ad Grants) to the `<head>` of every page, inserted by `tools/wix_import/fix_header.py` so new pages get it on every build.
 - Added the Google Ads "Sign-up" conversion (`AW-18517033323/JNY9CNeluqAdEOuCzv1E`): its snippet sits right after the Google tag on every page, and `assets/script.js` reports one conversion each time a visitor clicks a link that joins a Misbah Telegram channel (t.me) or WhatsApp group (chat.whatsapp.com). The links still open normally in a new tab.
